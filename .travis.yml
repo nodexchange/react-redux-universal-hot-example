@@ -1,19 +1,38 @@
-language: node_js
-
-node_js:
-  - "0.12"
-  - "4.0"
-  - "4"
-  - "5"
-  - "stable"
-
-sudo: false
-
+sudo: required
+language: ruby
+services:
+- docker
+env:
+  matrix:
+  - DOCKER_FILE=Dockerfile-dev IMAGE_TAG_PREFIX=dev_
+  - DOCKER_FILE=Dockerfile     IMAGE_TAG_PREFIX=
+  global:
+  - CI_BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+  - CI_REGISTRY_IMAGE=$TRAVIS_REPO_SLUG
+  - HEROKU_USER_NAME=_
+  - HEROKU_REGISTRY=registry.heroku.com
+  - HEROKU_IMAGE_PROCESS_TYPE=web
+  - HEROKU_IMAGE=$HEROKU_REGISTRY/$HEROKU_APP_NAME/$HEROKU_IMAGE_PROCESS_TYPE
+  - secure: x+u1e+B04ln1Bn+0RebmZvqmcLaW+e57/euPClxgITrPANIpc2tG0PoPOZP9AUi5AT73o7bsTguFjbhUJDDFB3c773MQGXd5p7H0HESSiCAu9fKIJ62B9Lj/vbyvpHXpMLKU/W4PJeq3/oz5gZ+QDZPlNe6aGru0cPf9PsdT5I3iCb3fhnk6PDNppWWawQXSPw1xwS1eZlF+NPXx7wmbZl4e4Y6nQaz+93hbuLGSVNzwahCNWIr5vR36sqTDH4duoO6J2rwe3rGTmL/S98WxuNNhm1SObjJnuvNaffy50ud+6PFBsA657TqWAxqbIwKuK0uAcuVujs46VukSqPmd8Ez/Yr3zIHepzC486K8rWPJN6YISP55q9seKqHfcBW4wbfrkCExgTYIUYciNkcDHGOhgxl33/2jpq1qS7II5qv9V3uGMWaTduijZ76zyLk2Q1PBeEyZaW1YV/3eOm4xHfhn5v/VDoa4GZLQnW9LvwsSoWYqy7Sac90/Hvzwr6iBZQy0k/J6xCeT8lUMlzsU73qGRGVsnUPtsWvW/XVrTz83PjI+6/D8qfgAdCakUYxgj356NPBaaj4jDG4pb1jkHOjVAIlhB9izJ42mNlkRH38VzFPRW4dCZgwbn9h5qF5xJzmZBBnHMiI3QFlfaeoL9DqqtPYXNNKqCwtS+oDLpARI=
+  - secure: ev/ybYkNy3jB2g7VxY+nlyjWOdA+phpE7Lloq2arAOv6UuhD9KRmf0RFufWcqXFNyTrlP3hw/qE065mQ2r2kCrw93Z/jj3wjpLKOuCxva+iGduDVVv//RV81soclaqti/6PnspAUlXvTHQg5FkwIEPynWNkRSoQD55L6UV621Hhrci1PJ717DFpg3LHSDokYlxezG6ObwAMUm5YBkpKfMwujlspznRCc4D0p2XawQROg6HNesfNv711wDYy5Aquikyd4uUfG5kIVspOvE0Zkhph2K2/9eXpiDPqvtzUYEVTEnMZ8n0UN1JU7KfOKlFfCbqaWFnbTCxi7fxr0dT/xXCqKqr8ayAvxqpnfpYMeLiXWLT09B1Kvex7KV1z69LqsEh0yl/M0T5Q4atI+jROxpPMwJH0Dknlnu30W2welcWHu6+ZwAabAx7MKyNCatx/59ze+AuSTCap7+mRzYVSsrZNUApMKnQDMTfwaIpR5LP0l4IdAeHW0Da26a771b4h1v4N/pqu6zBwGOwNlwvTdRs5om8R5Wsv26h5tpfQNJrWnJIe022ReokZGvPBuDCZFfO/RfS2iop3V6VhG+3GhzHK8o3mRUXoEiyMDfWPZRL+aaPw8nPayeSeJ6zw18wylU+HzOeJTnuHvmSgZOC6bohtnZE9CQfPGRoff/teI8mQ=
+  - secure: Gb5e9LcF8r27qoB4oFjFXVDFaJzxXUxW4ZLLuLYrFQ/t646Vxz6bNDHvADsyuzgJlZ4WKCEf5fUYU2VqhRA4vGi+EcCZMvlZPn/GpnFZvuopVun2seVv9FcyEP9LuMnjj7BG81mAjpu3xXhp87UklwlUHi36vtOOE9JrO5buP59/ZKC1jDG/gzja3YZV3QNtkgBl4yvCVwM+ttZ8QrpsDk9LXu1uWjJKkAQvefi7HEMija6mWsLCymRBhIB4VpTDYsTsbtKzM8XELVg6mSQCBKDSnpBT0lnBtrJrscrpKbkjY796aA2WfHoudi74RafyBR9/93gC6DVORV50Uu8HC25nE4dyhs2U3RMadfgW+J5GbUngmmi2JD61N6OWXwjuTVx8e+Rg0jbgX3zyhYOs+aUoMKBVjGpo9DVbn/Y5poqCDKAgH4kcvSlv7CEUX3vHEMcwjQUUVU1yntZJW3kx3qWFevIogNh7doifDk1uwbS7KVnC3RkLARRoc/XyhhvOPR61D1CVJWaC7todqJ8WGmHGYcHNvpgRQ1LHQx0ZUcbLYApk7v5uJIEQ4qH9PUgac90O+e63zmhDluq+DaoHxzNQrFAAwwodqWaF5Gvgu+3RLbL4MZqSECnVOt7XtLD0NU4iMZA19ERCCZcjyk+ENBWoV04VjBRxOleCZhwBj18=
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-
+- export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
+- export CONTAINER_IMAGE=$CI_REGISTRY_IMAGE:$IMAGE_TAG_PREFIX$TAG
+- docker build -f $DOCKER_FILE --build-arg CI_BUILD_ID=$TRAVIS_BUILD_ID --build-arg
+  CI_BUILD_REF=$TRAVIS_COMMIT --build-arg CI_BUILD_REF_NAME=$TRAVIS_BRANCH --build-arg
+  CI_BUILD_TIME=$CI_BUILD_TIME --build-arg CI_REGISTRY_IMAGE=$CI_REGISTRY_IMAGE --build-arg
+  CI_PROJECT_NAME=$TRAVIS_REPO_SLUG --pull -t $CONTAINER_IMAGE .
 script:
-  - npm run lint
-  - npm test
-  - npm run test-node
+- docker run -v $(pwd):/opt/app -v /opt/app/node_modules $CONTAINER_IMAGE npm run
+  lint
+- docker run -v $(pwd):/opt/app -v /opt/app/node_modules -e CI=$CI $CONTAINER_IMAGE
+  npm run test
+- docker run -v $(pwd):/opt/app -v /opt/app/node_modules $CONTAINER_IMAGE npm run
+  test-node
+after_success:
+- docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
+- docker push $CONTAINER_IMAGE
+deploy:
+  provider: script
+  script: scripts/deploy_heroku.sh

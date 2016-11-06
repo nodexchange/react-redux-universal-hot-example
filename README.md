@@ -37,19 +37,51 @@ This is a starter boilerplate app I've put together using the following technolo
 
 I cobbled this together from a wide variety of similar "starter" repositories. As I post this in June 2015, all of these libraries are right at the bleeding edge of web development. They may fall out of fashion as quickly as they have come into it, but I personally believe that this stack is the future of web development and will survive for several years. I'm building my new projects like this, and I recommend that you do, too.
 
-## Installation
+## Getting Started With Docker
 
-```bash
-npm install
+Make sure you have the latest Docker and docker-compose installed.
+
+- If you're on Mac, install both with:
+
+```
+$ brew cask install https://gist.githubusercontent.com/hoatle/c52cb91d759aab2fdfe1242370893511/raw/f654076680bf46c3d9493401fe1a9f6a83131dc2/docker.rb
 ```
 
-## Running Dev Server
+- Start the docker by pressing Cmd + space to find Docker installed on your Mac and clicking it.
 
-```bash
-npm run dev
+- Then back to Terminal and log in to gitlab registry:
+
+```
+$ docker login
+```
+or if you want to use gitlab:
+
+```
+$ docker login registry.gitlab.com
 ```
 
-The first time it may take a little while to generate the first `webpack-assets.json` and complain with a few dozen `[webpack-isomorphic-tools] (waiting for the first Webpack build to finish)` printouts, but be patient. Give it 30 seconds.
+- Clone the project to your workspace:
+
+```
+$ cd ~/teracy-dev/workspace
+$ git clone <this_repo>
+```
+
+
+- And finally:
+
+```
+$ cd <this_repo_name>
+$ docker-compose pull && docker-compose up
+```
+
+After that, open http://localhost:3000 to start developing. That's all with Docker, very easy.
+
+- Note: to access the running container's bash session:
+
+```
+$ docker-compose exec dev /bin/bash
+```
 
 ### Using Redux DevTools
 
@@ -65,16 +97,8 @@ If you have the
 If you want to disable the dev tools during development, set `__DEVTOOLS__` to `false` in `/webpack/dev.config.js`.  
 DevTools are not enabled during production.
 
-## Building and Running Production Server
-
-```bash
-npm run build
-npm run start
-```
-
 ## Demo
 
-A demonstration of this app can be seen [running on heroku](https://react-redux.herokuapp.com), which is a deployment of the [heroku branch](https://github.com/erikras/react-redux-universal-hot-example/tree/heroku).
 
 ## Documentation
 
@@ -225,15 +249,7 @@ To keep watching your test suites that you are working on, just set `singleRun: 
 
 ## Deployment on Heroku
 
-To get this project to work on Heroku, you need to:
-
-1. Remove the `"PORT": 8080` line from the `betterScripts` / `start-prod` section of `package.json`.
-2. `heroku config:set NODE_ENV=production`
-3. `heroku config:set NODE_PATH=./src`
-4. `heroku config:set NPM_CONFIG_PRODUCTION=false`
-  * This is to enable webpack to run the build on deploy.
-
-The first deploy might take a while, but after that your `node_modules` dir should be cached.
+See docs/dev-guide/how-to-deploy-on-heroku.md
 
 ## FAQ
 

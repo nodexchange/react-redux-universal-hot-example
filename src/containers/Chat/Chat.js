@@ -1,13 +1,13 @@
-import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
 @connect(
-  state => ({user: state.auth.user})
+  state => ({ user: state.auth.user })
 )
 export default class Chat extends Component {
 
   static propTypes = {
-    user: PropTypes.object
+    user: PropTypes.object // eslint-disable-line react/forbid-prop-types
   };
 
   state = {
@@ -19,7 +19,7 @@ export default class Chat extends Component {
     if (socket) {
       socket.on('msg', this.onMessageReceived);
       setTimeout(() => {
-        socket.emit('history', {offset: 0, length: 100});
+        socket.emit('history', { offset: 0, length: 100 });
       }, 100);
     }
   }
@@ -33,44 +33,49 @@ export default class Chat extends Component {
   onMessageReceived = (data) => {
     const messages = this.state.messages;
     messages.push(data);
-    this.setState({messages});
-  }
+    this.setState({ messages });
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
 
     const msg = this.state.message;
 
-    this.setState({message: ''});
+    this.setState({ message: '' });
 
     socket.emit('msg', {
       from: this.props.user.name,
       text: msg
     });
-  }
+  };
 
   render() {
+    // eslint-disable-next-line global-require
     const style = require('./Chat.scss');
-    const {user} = this.props;
+
+    const { user } = this.props;
 
     return (
-      <div className={style.chat + ' container'}>
+      <div className={`${style.chat} container`}>
         <h1 className={style}>Chat</h1>
 
         {user &&
         <div>
           <ul>
-          {this.state.messages.map((msg) => {
-            return <li key={`chat.msg.${msg.id}`}>{msg.from}: {msg.text}</li>;
-          })}
+            {
+              this.state.messages.map(msg => <li key={`chat.msg.${msg.id}`}>{msg.from}: {msg.text}</li>)
+            }
           </ul>
           <form className="login-form" onSubmit={this.handleSubmit}>
-            <input type="text" ref="message" placeholder="Enter your message"
-             value={this.state.message}
-             onChange={(event) => {
-               this.setState({message: event.target.value});
-             }
-            }/>
+            <input
+              type="text"
+              ref={(node) => { this.message = node; }}
+              placeholder="Enter your message"
+              value={this.state.message}
+              onChange={(event) => {
+                this.setState({ message: event.target.value });
+              }}
+            />
             <button className="btn" onClick={this.handleSubmit}>Send</button>
           </form>
         </div>

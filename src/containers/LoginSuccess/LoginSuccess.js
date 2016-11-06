@@ -1,19 +1,21 @@
-import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+
+// eslint-disable-next-line import/extensions
 import * as authActions from 'redux/modules/auth';
 
 @connect(
-    state => ({user: state.auth.user}),
-    authActions)
-export default
-class LoginSuccess extends Component {
+    state => ({ user: state.auth.user }),
+    authActions
+)
+export default class LoginSuccess extends Component {
   static propTypes = {
-    user: PropTypes.object,
+    user: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     logout: PropTypes.func
-  }
+  };
 
   render() {
-    const {user, logout} = this.props;
+    const { user, logout } = this.props;
     return (user &&
       <div className="container">
         <h1>Login Success</h1>
@@ -29,7 +31,7 @@ class LoginSuccess extends Component {
           </p>
 
           <div>
-            <button className="btn btn-danger" onClick={logout}><i className="fa fa-sign-out"/>{' '}Log Out</button>
+            <button className="btn btn-danger" onClick={logout}><i className="fa fa-sign-out" />{' '}Log Out</button>
           </div>
         </div>
       </div>

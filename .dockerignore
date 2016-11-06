@@ -9,4 +9,7 @@ npm-debug.log
 .babel.json
 
 # docker
+.bash_history
 .env
+.npm
+.git

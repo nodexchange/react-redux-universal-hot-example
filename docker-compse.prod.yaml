@@ -1,0 +1,35 @@
+# thanks to https://www.brianchristner.io/how-to-scale-a-docker-container-with-docker-compose/
+version: '2'
+
+services:
+  web:
+    image: hoatle/react-redux-universal-hot-example:latest
+    environment:
+      PORT: 3000
+    ports:
+      - 3000
+    networks:
+      - front-tier
+      - back-tier
+    restart: always
+
+  lb:
+    image: dockercloud/haproxy
+    ports:
+      - 80:80
+    links:
+      - web
+    depends_on:
+      - web
+    networks:
+      - front-tier
+      - back-tier
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock 
+
+networks:
+  front-tier:
+    driver: bridge
+  back-tier:
+    driver: bridge

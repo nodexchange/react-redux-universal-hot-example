@@ -1,4 +1,5 @@
-import {createValidator, required, maxLength, integer, oneOf} from 'utils/validation';
+// eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
+import { createValidator, required, maxLength, integer, oneOf } from 'utils/validation';
 
 export const colors = ['Blue', 'Fuchsia', 'Green', 'Orange', 'Red', 'Taupe'];
 

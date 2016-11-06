@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {renderIntoDocument} from 'react-addons-test-utils';
-import { expect} from 'chai';
-import { InfoBar } from 'components';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { renderIntoDocument } from 'react-addons-test-utils';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { expect } from 'chai';
+// eslint-disable-next-line import/extensions
 import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router';
+// eslint-disable-next-line import/extensions
 import createStore from 'redux/create';
+
+// eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 import ApiClient from 'helpers/ApiClient';
+// eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
+import { InfoBar } from 'components';
+
 const client = new ApiClient();
 
 describe('InfoBar', () => {
@@ -24,14 +32,13 @@ describe('InfoBar', () => {
   const store = createStore(browserHistory, client, mockStore);
   const renderer = renderIntoDocument(
     <Provider store={store} key="provider">
-      <InfoBar/>
+      <InfoBar />
     </Provider>
   );
+  // eslint-disable-next-line react/no-find-dom-node
   const dom = ReactDOM.findDOMNode(renderer);
 
-  it('should render correctly', () => {
-    return expect(renderer).to.be.ok;
-  });
+  it('should render correctly', () => expect(renderer).to.be.ok);
 
   it('should render with correct value', () => {
     const text = dom.getElementsByTagName('strong')[0].textContent;
@@ -44,7 +51,9 @@ describe('InfoBar', () => {
   });
 
   it('should render the correct className', () => {
+    // eslint-disable-next-line global-require, import/no-extraneous-dependencies
     const styles = require('components/InfoBar/InfoBar.scss');
+
     expect(styles.infoBar).to.be.a('string');
     expect(dom.className).to.include(styles.infoBar);
   });

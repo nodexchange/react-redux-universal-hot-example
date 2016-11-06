@@ -6,8 +6,9 @@ const initialState = {
 
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
+    // eslint-disable-next-line no-case-declarations
     case INCREMENT:
-      const {count} = state;
+      const { count } = state;
       return {
         count: count + 1
       };

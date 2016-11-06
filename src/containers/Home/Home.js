@@ -1,22 +1,29 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { CounterButton, GithubButton } from 'components';
-import config from '../../config';
 import Helmet from 'react-helmet';
 
+// eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
+import { CounterButton, GithubButton } from 'components';
+import config from '../../config';
+
+// eslint-disable-next-line react/prefer-stateless-function
 export default class Home extends Component {
   render() {
+    // eslint-disable-next-line global-require
     const styles = require('./Home.scss');
     // require the logo image both from client and server
+    // eslint-disable-next-line global-require
     const logoImage = require('./logo.png');
+
     return (
       <div className={styles.home}>
-        <Helmet title="Home"/>
+        <Helmet title="Home" />
         <div className={styles.masthead}>
           <div className="container">
             <div className={styles.logo}>
               <p>
-                <img src={logoImage}/>
+                <img src={logoImage} alt="" />
               </p>
             </div>
             <h1>{config.app.title}</h1>
@@ -24,35 +31,41 @@ export default class Home extends Component {
             <h2>{config.app.description}</h2>
 
             <p>
-              <a className={styles.github} href="https://github.com/erikras/react-redux-universal-hot-example"
-                 target="_blank">
-                <i className="fa fa-github"/> View on Github
+              <a
+                className={styles.github}
+                href="https://github.com/erikras/react-redux-universal-hot-example"
+              >
+                <i className="fa fa-github" /> View on Github
               </a>
             </p>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
-                          type="star"
-                          width={160}
-                          height={30}
-                          count large/>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
-                          type="fork"
-                          width={160}
-                          height={30}
-                          count large/>
+            <GithubButton
+              user="erikras"
+              repo="react-redux-universal-hot-example"
+              type="star"
+              width={160}
+              height={30}
+              count large
+            />
+            <GithubButton
+              user="erikras"
+              repo="react-redux-universal-hot-example"
+              type="fork"
+              width={160}
+              height={30}
+              count large
+            />
 
             <p className={styles.humility}>
-              Created and maintained by <a href="https://twitter.com/erikras" target="_blank">@erikras</a>.
+              Created and maintained by <a href="https://twitter.com/erikras">@erikras</a>.
             </p>
           </div>
         </div>
 
         <div className="container">
           <div className={styles.counterContainer}>
-            <CounterButton multireducerKey="counter1"/>
-            <CounterButton multireducerKey="counter2"/>
-            <CounterButton multireducerKey="counter3"/>
+            <CounterButton as="counter1" />
+            <CounterButton as="counter2" />
+            <CounterButton as="counter3" />
           </div>
 
           <p>This starter boilerplate app uses the following technologies:</p>
@@ -64,36 +77,41 @@ export default class Home extends Component {
               <a href="https://medium.com/@mjackson/universal-javascript-4761051b7ae9">Universal</a> rendering
             </li>
             <li>Both client and server make calls to load data from separate API server</li>
-            <li><a href="https://github.com/facebook/react" target="_blank">React</a></li>
-            <li><a href="https://github.com/rackt/react-router" target="_blank">React Router</a></li>
-            <li><a href="http://expressjs.com" target="_blank">Express</a></li>
-            <li><a href="http://babeljs.io" target="_blank">Babel</a> for ES6 and ES7 magic</li>
-            <li><a href="http://webpack.github.io" target="_blank">Webpack</a> for bundling</li>
-            <li><a href="http://webpack.github.io/docs/webpack-dev-middleware.html" target="_blank">Webpack Dev Middleware</a>
+            <li><a href="https://github.com/facebook/react">React</a></li>
+            <li><a href="https://github.com/rackt/react-router">React Router</a></li>
+            <li><a href="http://expressjs.com">Express</a></li>
+            <li><a href="http://babeljs.io">Babel</a> for ES6 and ES7 magic</li>
+            <li><a href="http://webpack.github.io">Webpack</a> for bundling</li>
+            <li><a href="http://webpack.github.io/docs/webpack-dev-middleware.html">Webpack Dev Middleware</a>
             </li>
-            <li><a href="https://github.com/glenjamin/webpack-hot-middleware" target="_blank">Webpack Hot Middleware</a></li>
-            <li><a href="https://github.com/rackt/redux" target="_blank">Redux</a>'s futuristic <a
-              href="https://facebook.github.io/react/blog/2014/05/06/flux.html" target="_blank">Flux</a> implementation
+            <li><a href="https://github.com/glenjamin/webpack-hot-middleware">Webpack Hot Middleware</a></li>
+            <li>
+              <a href="https://github.com/rackt/redux">Redux</a>&#39;s futuristic
+              <a href="https://facebook.github.io/react/blog/2014/05/06/flux.html">Flux</a> implementation
             </li>
-            <li><a href="https://github.com/gaearon/redux-devtools" target="_blank">Redux Dev Tools</a> for next
+            <li><a href="https://github.com/gaearon/redux-devtools">Redux Dev Tools</a> for next
               generation DX (developer experience).
-              Watch <a href="https://www.youtube.com/watch?v=xsSnOQynTHs" target="_blank">Dan Abramov's talk</a>.
+              Watch <a href="https://www.youtube.com/watch?v=xsSnOQynTHs">Dan Abramov&#39;s talk</a>.
             </li>
-            <li><a href="https://github.com/rackt/redux-router" target="_blank">Redux Router</a> Keep
+            <li><a href="https://github.com/rackt/redux-router">Redux Router</a> Keep
               your router state in your Redux store
             </li>
-            <li><a href="http://eslint.org" target="_blank">ESLint</a> to maintain a consistent code style</li>
-            <li><a href="https://github.com/erikras/redux-form" target="_blank">redux-form</a> to manage form state
+            <li><a href="http://eslint.org">ESLint</a> to maintain a consistent code style</li>
+            <li><a href="https://github.com/erikras/redux-form">redux-form</a> to manage form state
               in Redux
             </li>
-            <li><a href="https://github.com/erikras/multireducer" target="_blank">multireducer</a> combine several
-              identical reducer states into one key-based reducer</li>
-            <li><a href="https://github.com/webpack/style-loader" target="_blank">style-loader</a> and <a
-              href="https://github.com/jtangelder/sass-loader" target="_blank">sass-loader</a> to allow import of
-              stylesheets
+            <li>
+              <a href="https://github.com/erikras/multireducer">multireducer</a> combine several
+              identical reducer states into one key-based reducer
             </li>
-            <li><a href="https://github.com/shakacode/bootstrap-sass-loader" target="_blank">bootstrap-sass-loader</a> and <a
-              href="https://github.com/gowravshekar/font-awesome-webpack" target="_blank">font-awesome-webpack</a> to customize Bootstrap and FontAwesome
+            <li>
+              <a href="https://github.com/webpack/style-loader">style-loader</a> and
+              <a href="https://github.com/jtangelder/sass-loader">sass-loader</a> to allow import of stylesheets
+            </li>
+            <li>
+              <a href="https://github.com/shakacode/bootstrap-sass-loader">bootstrap-sass-loader</a> and
+              <a href="https://github.com/gowravshekar/font-awesome-webpack">font-awesome-webpack</a> to customize
+              Bootstrap and FontAwesome
             </li>
             <li><a href="http://socket.io/">socket.io</a> for real-time communication</li>
           </ul>
@@ -111,7 +129,7 @@ export default class Home extends Component {
             <dt>Server-side data loading</dt>
             <dd>
               The <Link to="/widgets">Widgets page</Link> demonstrates how to fetch data asynchronously from
-              some source that is needed to complete the server-side rendering. <code>Widgets.js</code>'s
+              some source that is needed to complete the server-side rendering. <code>Widgets.js</code>&#39;s
               <code>asyncConnect()</code> function is called before the widgets page is loaded, on either the server
               or the client, allowing all the widget data to be loaded and ready for the page to render.
             </dd>
@@ -144,7 +162,7 @@ export default class Home extends Component {
             <dt>Forms</dt>
             <dd>
               The <Link to="/survey">Survey page</Link> uses the
-              still-experimental <a href="https://github.com/erikras/redux-form" target="_blank">redux-form</a> to
+              still-experimental <a href="https://github.com/erikras/redux-form">redux-form</a> to
               manage form state inside the Redux store. This includes immediate client-side validation.
             </dd>
             <dt>WebSockets / socket.io</dt>

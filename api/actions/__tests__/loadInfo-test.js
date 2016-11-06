@@ -1,14 +1,17 @@
-import {expect} from 'chai';
-import loadInfo from '../loadInfo';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { expect } from 'chai';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import timekeeper from 'timekeeper';
+
+import loadInfo from '../loadInfo';
 
 describe('loadInfo', () => {
   it('loads the current date', () => {
     const now = Date.now();
     timekeeper.freeze(now);
 
-    return loadInfo().then(data => {
-      expect(data).to.deep.equal({time: now, message: 'This came from the api server'});
+    return loadInfo().then((data) => {
+      expect(data).to.deep.equal({ time: now, message: 'This came from the api server' });
     });
   });
 });

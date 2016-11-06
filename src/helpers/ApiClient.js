@@ -4,18 +4,19 @@ import config from '../config';
 const methods = ['get', 'post', 'put', 'patch', 'del'];
 
 function formatUrl(path) {
-  const adjustedPath = path[0] !== '/' ? '/' + path : path;
+  const adjustedPath = path[0] !== '/' ? `/${path}` : path;
   if (__SERVER__) {
     // Prepend host and port of the API server to the path.
-    return 'http://' + config.apiHost + ':' + config.apiPort + adjustedPath;
+    return `http://${config.apiHost}:${config.apiPort}${adjustedPath}`;
   }
   // Prepend `/api` to relative URL, to proxy to API server.
-  return '/api' + adjustedPath;
+  return `/api${adjustedPath}`;
 }
 
 export default class ApiClient {
   constructor(req) {
-    methods.forEach((method) =>
+    // eslint-disable-next-line no-return-assign
+    methods.forEach(method =>
       this[method] = (path, { params, data } = {}) => new Promise((resolve, reject) => {
         const request = superagent[method](formatUrl(path));
 
@@ -30,7 +31,7 @@ export default class ApiClient {
         if (data) {
           request.send(data);
         }
-
+        // eslint-disable-next-line no-confusing-arrow
         request.end((err, { body } = {}) => err ? reject(body || err) : resolve(body));
       }));
   }
@@ -44,5 +45,5 @@ export default class ApiClient {
    *
    * Remove it at your own risk.
    */
-  empty() {}
+  empty() {} // eslint-disable-line class-methods-use-this
 }
