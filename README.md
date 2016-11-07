@@ -49,18 +49,7 @@ $ brew cask install https://gist.githubusercontent.com/hoatle/c52cb91d759aab2fdf
 
 - Start the docker by pressing Cmd + space to find Docker installed on your Mac and clicking it.
 
-- Then back to Terminal and log in to gitlab registry:
-
-```
-$ docker login
-```
-or if you want to use gitlab:
-
-```
-$ docker login registry.gitlab.com
-```
-
-- Clone the project to your workspace:
+- Then back to Terminal clone the project to your workspace:
 
 ```
 $ cd ~/teracy-dev/workspace
