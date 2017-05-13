@@ -41,7 +41,7 @@ deploy:
         name: install supervisor
         code: npm install -g supervisor
     - internal/docker-push:
-        username: $DOCKER_USERNAME
+        username: $DOCKER_LOGIN
         password: $DOCKER_PASSWORD
         repository: https://registry.hub.docker.com/v2/repositories/nodexchange/marcin-js-app/tags/latest
         ports:
