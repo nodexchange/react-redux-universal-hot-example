@@ -1,14 +1,14 @@
 {
-  "name": "numerologist-app",
-  "description": "numerologist client app with React",
-  "author": "Erik Rasmussen <rasmussenerik@gmail.com> (http://github.com/erikras)",
+  "name": "marcin-js-app",
+  "description": "Marcin JS new url",
+  "author": "Marcin Wojtala <nodexchange@outlook.com> (https://github.com/nodexchange/)",
   "license": "MIT",
   "version": "0.1.0-SNAPSHOT",
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:teracy/numerologist-app.git"
+    "url": "https://github.com/nodexchange/react-redux-universal-hot-example.git"
   },
-  "homepage": "git@gitlab.com:teracy/numerologist-app.git",
+  "homepage": "http://marcin-js.com/",
   "keywords": [
     "react",
     "isomorphic",
