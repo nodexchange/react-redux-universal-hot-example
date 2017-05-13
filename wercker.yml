@@ -70,4 +70,4 @@ deploy:
         code: ssh root@159.203.118.212 docker tag nodexchange/marcin-js-app:latest nodexchange/marcin-js-app:current
     - script:
         name: run new container
-        code: ssh root@159.203.118.212 docker run -d -p 8080:3000-3031 --name marcin-js-app nodexchange/marcin-js-app:current
+        code: ssh root@159.203.118.212 docker run -d -p 8080:8080 -p 3000-3031:3000-3031 --name marcin-js-app nodexchange/marcin-js-app:current
