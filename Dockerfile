@@ -1,6 +1,6 @@
 FROM node:6.9
 
-MAINTAINER hoatle <hoatle@teracy.com>
+MAINTAINER NodeXchange <nodexchange@outlook.com>
 
 RUN useradd --user-group --create-home --shell /bin/false app && mkdir -p /opt/app
 

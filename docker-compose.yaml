@@ -10,6 +10,7 @@ services:
     command: bash -c "yarn install && npm run dev"
     environment:
       NODE_ENV: development
+      HOST: 192.168.99.100
     volumes:
       - .:/opt/app
       - /opt/app/node_modules
