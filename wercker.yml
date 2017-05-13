@@ -43,7 +43,7 @@ deploy:
     - internal/docker-push:
         username: $DOCKER_LOGIN
         password: $DOCKER_PASSWORD
-        repository: https://registry.hub.docker.com/v2/repositories/nodexchange/marcin-js-app/tags/latest
+        repository: nodexchange/marcin-js-app
         ports:
           - "3000:3000"
           - "3001:3001"
