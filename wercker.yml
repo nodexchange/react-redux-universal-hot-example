@@ -37,9 +37,9 @@ build:
 deploy:
   steps:
     - npm-install
- #    - script:
- #      name: install supervisor
- #      code: npm install -g supervisor
+    - script:
+      name: install concurrently
+      code: npm install -g concurrently
     - internal/docker-push:
         username: $DOCKER_LOGIN
         password: $DOCKER_PASSWORD
@@ -48,7 +48,7 @@ deploy:
           - "3000:3000"
           - "3001:3001"
           - "3030:3030"
-        cmd: /bin/bash -c "cd /pipeline/source && npm start"
+        cmd: /bin/bash -c "cd /pipeline/source && npm run dev"
     - add-ssh-key:
         keyname: digitalocean
     - add-to-known_hosts:
