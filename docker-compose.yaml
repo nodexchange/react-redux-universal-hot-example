@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile-dev
     # we use image for faster developing with `npm install` already run
-    image: hoatle/react-redux-universal-hot-example:dev_latest
+    image: nodexchange/marcin-js-app:dev
     command: bash -c "yarn install && npm run dev"
     environment:
       NODE_ENV: development

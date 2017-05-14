@@ -3,7 +3,7 @@ version: '2'
 
 services:
   web:
-    image: hoatle/react-redux-universal-hot-example:latest
+    image: nodexchange/marcin-js-app:prod
     environment:
       PORT: 3000
     ports:
@@ -26,7 +26,7 @@ services:
       - back-tier
     restart: always
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock 
+      - /var/run/docker.sock:/var/run/docker.sock
 
 networks:
   front-tier:
