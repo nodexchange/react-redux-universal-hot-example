@@ -22,3 +22,8 @@ docker images
 ~~~~
 docker run -d -p 3000:3000 -p 3001:3001 -p 3030:3030 -p 3002:3002 -v $(pwd):/opt/app -v /opt/app/node_modules nodexchange/marcin-js-app:dev /bin/bash -c 'yarn install && npm run dev'
 ~~~~
+
+# test command
+~~~~
+docker run -d -p 8080:8080 -p 3000:3000 -p 3001:3001 -p 3030:3030 -p 3002:3002 -v $(pwd):/opt/app -v /opt/app/node_modules -e "NODE_ENV=development" -e "HOST=159.203.118.212" --name marcin-js-app nodexchange/marcin-js-app:current /bin/bash -c 'yarn install && npm run dev'
+~~~~

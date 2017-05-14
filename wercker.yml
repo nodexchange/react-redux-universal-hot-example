@@ -44,10 +44,10 @@ deploy:
         username: $DOCKER_LOGIN
         password: $DOCKER_PASSWORD
         repository: nodexchange/marcin-js-app
-        ports:
-          - "3000:3000"
-          - "3001:3001"
-          - "3030:3030"
+        tag: wercker
+        env: "NODE_ENV=development, HOST=159.203.118.212"
+        volumes: ".:/opt/app, /opt/app/node_modules"
+        ports: "3000, 3001, 3002, 3030"
         cmd: /bin/bash -c "cd /pipeline/source && yarn install && npm run dev"
     - add-ssh-key:
         keyname: digitalocean
@@ -55,7 +55,7 @@ deploy:
         hostname: 159.203.118.212
     - script:
         name: pull latest image
-        code: ssh root@159.203.118.212 docker pull nodexchange/marcin-js-app:latest
+        code: ssh root@159.203.118.212 docker pull nodexchange/marcin-js-app:wercker
     - script:
         name: stop running container
         code: ssh root@159.203.118.212 docker stop marcin-js-app || echo ‘failed to stop running container’
@@ -67,7 +67,7 @@ deploy:
         code: ssh root@159.203.118.212 docker rmi nodexchange/marcin-js-app:current || echo ‘failed to remove image behind stopped container’
     - script:
         name: tag newly pulled image
-        code: ssh root@159.203.118.212 docker tag nodexchange/marcin-js-app:latest nodexchange/marcin-js-app:current
+        code: ssh root@159.203.118.212 docker tag nodexchange/marcin-js-app:wercker nodexchange/marcin-js-app:current
     - script:
         name: run new container
-        code: ssh root@159.203.118.212 docker run -d -p 8080:8080 -p 3000-3031:3000-3031 --name marcin-js-app nodexchange/marcin-js-app:current
+        code: ssh root@159.203.118.212 docker run -d -p 8080:8080 -p 3000:3000 -p 3001:3001 -p 3030:3030 -p 3002:3002 -v $(pwd):/opt/app -v /opt/app/node_modules -e "NODE_ENV=development" -e "HOST=159.203.118.212" --name marcin-js-app nodexchange/marcin-js-app:current /bin/bash -c 'yarn install && npm run dev'

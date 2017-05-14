@@ -55,7 +55,7 @@ deploy:
         hostname: 159.203.118.212
     - script:
         name: pull latest image
-        code: ssh root@159.203.118.212
+        code: ssh root@159.203.118.212 docker pull nodexchange/marcin-js-app:latest
     - script:
         name: stop running container
         code: ssh root@159.203.118.212 docker stop marcin-js-app || echo ‘failed to stop running container’
