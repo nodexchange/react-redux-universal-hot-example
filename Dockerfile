@@ -28,7 +28,7 @@ RUN chown -R app $APP && chgrp -R app $APP && chown -R app /usr/local
 USER app
 
 RUN npm install --global yarn
-
+RUN echo '[marcin-js] global yarn installed'
 # RUN yarn install && yarn upgrade
 RUN rm -rf node_modules && yarn install && yarn cache clean && npm cache clean && rm -rf ~/tmp/*
 
@@ -41,5 +41,5 @@ RUN chown -R app $APP && chgrp -R app $APP
 USER app
 
 RUN npm run build
-
 CMD npm run start
+RUN echo '[marcin-js] build and start successful'
