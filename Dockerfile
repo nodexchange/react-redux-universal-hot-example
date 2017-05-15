@@ -35,6 +35,11 @@ RUN rm -rf node_modules && yarn install && yarn cache clean && npm cache clean &
 ADD . $APP
 
 USER root
+EXPOSE 8080:8080
+EXPOSE 3000:3000
+EXPOSE 3001:3001
+EXPOSE 3002:3002
+EXPOSE 3030:3030
 
 RUN chown -R app $APP && chgrp -R app $APP
 

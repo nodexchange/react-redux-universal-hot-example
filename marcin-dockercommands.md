@@ -13,6 +13,11 @@ docker stop marcin-js-app && docker rm marcin-js-app && docker rmi nodexchange/m
 docker ps -a
 ~~~~
 
+# build 
+~~~~
+$ docker build -t nodexchange/marcin-js-app:dev .
+~~~~
+
 # list local builds
 docker images
 
@@ -22,6 +27,9 @@ docker images
 ~~~~
 docker run -d -p 3000:3000 -p 3001:3001 -p 3030:3030 -p 3002:3002 -v $(pwd):/opt/app -v /opt/app/node_modules nodexchange/marcin-js-app:dev /bin/bash -c 'yarn install && npm run dev'
 ~~~~
+
+# simple functional run 
+docker run -p 3000:3000 -e'PORT=3000' nodexchange/marcin-js-app:dev
 
 # test command
 ~~~~
