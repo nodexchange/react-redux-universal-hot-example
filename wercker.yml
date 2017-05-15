@@ -58,7 +58,7 @@ deploy:
         code: ssh root@159.203.118.212 docker rmi nodexchange/marcin-js-app:current || echo ‘failed to remove image behind stopped container’
     - script:
         name: tag newly pulled image
-        code: ssh root@159.203.118.212 docker tag nodexchange/marcin-js-app:wercker nodexchange/marcin-js-app:current
+        code: ssh root@159.203.118.212 docker tag nodexchange/marcin-js-app:dev nodexchange/marcin-js-app:current
     - script:
         name: run new container
         code: ssh root@159.203.118.212 docker run -d -p 3000:3000 -e'PORT=3000' -e 'HOST=159.203.118.212' nodexchange/marcin-js-app:current
