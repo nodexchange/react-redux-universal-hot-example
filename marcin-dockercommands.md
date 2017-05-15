@@ -1,11 +1,16 @@
 # basic stop and restart #
-
 ~~~~
 docker pull nodexchange/marcin-js-app:latest
 ~~~~
 
+# short hand for manual stopping and removing
 ~~~~
 docker stop marcin-js-app && docker rm marcin-js-app && docker rmi nodexchange/marcin-js-app:current && docker tag nodexchange/marcin-js-app:1.0 nodexchange/marcin-js-app:current && docker run -d -p 8080:8080 -p 3000-3031:3000-3031 --name marcin-js-app nodexchange/marcin-js-app:current
+~~~~
+
+# docker list all images
+~~~~
+docker images
 ~~~~
 
 # docker list all containers
