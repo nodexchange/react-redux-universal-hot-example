@@ -5,12 +5,16 @@
 
 .navbar-brand {
   position: relative;
-  padding-left: 50px;
+  padding: 10px 100px;
+}
+.navbar-default {
+  background-color: #040404;
+  border-color: #3c3939;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #33e0ff;
+  color: #e6272d;
   background-color: transparent;
 }

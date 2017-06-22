@@ -34,6 +34,17 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+push-docker:
+  steps:
+    internal/docker-push:
+        username: $DOCKER_LOGIN
+        password: $DOCKER_PASSWORD
+        repository: nodexchange/marcin-js-app
+        tag: wercker
+        env: "NODE_ENV=development, HOST=159.203.118.212"
+        volumes: ".:/opt/app, /opt/app/node_modules"
+        ports: "3000, 3001, 3002, 3030"
+        cmd: /bin/bash -c "cd /pipeline/source && yarn install && npm run dev"
 deploy:
   steps:
     - npm-install

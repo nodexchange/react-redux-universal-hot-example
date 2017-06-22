@@ -5,6 +5,7 @@
  *
  */
 
+export CanvasBall from './CanvasBall/CanvasBall';
 export CounterButton from './CounterButton/CounterButton';
 export GithubButton from './GithubButton/GithubButton';
 export InfoBar from './InfoBar/InfoBar';

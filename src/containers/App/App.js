@@ -68,6 +68,19 @@ export default class App extends Component {
     // eslint-disable-next-line global-require
     const styles = require('./App.scss');
 
+    /*
+     {!user &&
+              <LinkContainer to="/login">
+                <NavItem eventKey={6}>Login</NavItem>
+              </LinkContainer>}
+              {user &&
+              <LinkContainer to="/logout">
+                <NavItem eventKey={7} className="logout-link" onClick={this.handleLogout}>
+                  Logout
+                </NavItem>
+              </LinkContainer>}
+    */
+
     return (
       <div className={styles && styles.app}>
         <Helmet {...config.app.head} />
@@ -76,50 +89,54 @@ export default class App extends Component {
             <Navbar.Brand>
               <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
                 <div className={styles.brand} />
-                <span>{config.app.title}</span>
               </IndexLink>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
 
           <Navbar.Collapse eventKey={0}>
-            <Nav navbar>
+            <Nav navbar className={styles.navBar}>
               {user && <LinkContainer to="/chat">
                 <NavItem eventKey={1}>Chat</NavItem>
               </LinkContainer>}
-
+              <LinkContainer to="/">
+                <NavItem eventKey={0}>Home</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/solutions">
+                <NavItem eventKey={2}>Solutions</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/products">
+                <NavItem eventKey={2}>Products</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/about">
+                <NavItem eventKey={2}>About</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/blog">
+                <NavItem eventKey={2}>Blog</NavItem>
+              </LinkContainer>
               <LinkContainer to="/widgets">
                 <NavItem eventKey={2}>Widgets</NavItem>
               </LinkContainer>
-              <LinkContainer to="/survey">
-                <NavItem eventKey={3}>Survey</NavItem>
+              <LinkContainer to="/canvas">
+                <NavItem eventKey={5}>Canvas</NavItem>
               </LinkContainer>
-              <LinkContainer to="/about">
-                <NavItem eventKey={4}>About Us</NavItem>
-              </LinkContainer>
-
-              {!user &&
-              <LinkContainer to="/login">
-                <NavItem eventKey={5}>Login</NavItem>
-              </LinkContainer>}
-              {user &&
-              <LinkContainer to="/logout">
-                <NavItem eventKey={6} className="logout-link" onClick={this.handleLogout}>
-                  Logout
-                </NavItem>
-              </LinkContainer>}
             </Nav>
             {user &&
             <p className={`${styles.loggedInMessage} navbar-text`}>Logged in as <strong>{user.name}</strong>.</p>}
             <Nav navbar pullRight>
-              <NavItem
-                eventKey={1}
-                target="_blank"
-                title="View on Github"
-                href="https://github.com/erikras/react-redux-universal-hot-example"
+              <LinkContainer to="/login" className={styles.btn + ' ' + styles.btnBlue}>
+                <NavItem eventKey={1}>
+                  Login <i className="fa fa-sign-in" id={styles.envolopeIcon} />
+                </NavItem>
+              </LinkContainer>
+              <LinkContainer
+                className={styles.btn + ' ' + styles.btnRed}
+                to="/survey"
               >
-                <i className="fa fa-github" />
-              </NavItem>
+                <NavItem eventKey={2}>
+                  Contact <i className="fa fa-envelope" id={styles.envolopeIcon} />
+                </NavItem>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

@@ -14,7 +14,7 @@ export default class Home extends Component {
     const styles = require('./Home.scss');
     // require the logo image both from client and server
     // eslint-disable-next-line global-require
-    const logoImage = require('./logo.png');
+    const logoImage = require('./qlogo.png');
 
     return (
       <div className={styles.home}>

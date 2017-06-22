@@ -1,0 +1,63 @@
+@import "../../theme/variables.scss";
+
+.home {
+  dd {
+    margin-bottom: 15px;
+  }
+}
+.masthead {
+  background: #13092d;
+  padding: 0px 20px;
+  color: white;
+  text-align: center;
+  h1 {
+    color: #ddd;
+    font-size: 4em;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+  h2 {
+    color: #ddd;
+    font-size: 2em;
+    margin: 20px;
+  }
+  a {
+    color: #ddd;
+  }
+  p {
+    margin: 10px;
+  }
+  .humility {
+    color: $humility;
+    a {
+      color: $humility;
+    }
+  }
+  .github {
+    font-size: 1.5em;
+  }
+}
+
+.counterContainer {
+  text-align: center;
+  margin: 20px;
+}
+
+.home-page-layout .section:before {
+    padding: 0;
+    opacity: 0.75;
+    height: 340px;
+    width: calc(100% - -20%);
+    position: absolute;
+    left: -30px;
+    z-index: -1;
+}
+
+.custom-home-page-row2:before {
+  content: "";
+  background-image: linear-gradient(-90deg, #92D798 0%, #62AD8E 48%, #51A4A7 100%);
+  transform: rotate(5deg);
+  margin-top: 150px;
+  z-index: -1;
+}
