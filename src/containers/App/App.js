@@ -123,15 +123,7 @@ export default class App extends Component {
             <Nav navbar pullRight>
               <LinkContainer to="/login" className={styles.btn + ' ' + styles.btnBlue}>
                 <NavItem eventKey={1}>
-                  Login <i className="fa fa-sign-in" id={styles.envolopeIcon} />
-                </NavItem>
-              </LinkContainer>
-              <LinkContainer
-                className={styles.navButton}
-                to="/survey"
-              >
-                <NavItem eventKey={2}>
-                  Contact <i className="fa fa-envelope" id={styles.envolopeIcon} />
+                  Contact <i className="fa fa-sign-in" id={styles.envolopeIcon} />
                 </NavItem>
               </LinkContainer>
             </Nav>

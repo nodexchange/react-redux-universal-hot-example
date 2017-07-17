@@ -15,21 +15,21 @@ module.exports = Object.assign({
   apiHost: process.env.APIHOST || 'localhost',
   apiPort: process.env.APIPORT,
   app: {
-    title: 'quartile',
-    description: 'All the modern best practices in one example.',
+    title: 'Quartile',
+    description: 'Data-driven advertising solutions experts',
     head: {
-      titleTemplate: 'quartile',
+      titleTemplate: 'Quartile',
       meta: [
-        { name: 'description', content: 'All the modern best practices in one example.' },
+        { name: 'description', content: 'Data-driven advertising solutions experts' },
         { charset: 'utf-8' },
         { property: 'og:site_name', content: 'quartile' },
-        { property: 'og:image', content: 'https://react-redux.herokuapp.com/logo.jpg' },
+        { property: 'og:image', content: 'http://quartile.io/qlogo.jpg' },
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:title', content: 'quartile' },
-        { property: 'og:description', content: 'All the modern best practices in one example.' },
+        { property: 'og:description', content: 'Data-driven advertising solutions experts' },
         { property: 'og:card', content: 'summary' },
-        { property: 'og:site', content: '@erikras' },
-        { property: 'og:creator', content: '@erikras' },
+        { property: 'og:site', content: '@quartile' },
+        { property: 'og:creator', content: '@quartile' },
         { property: 'og:image:width', content: '200' },
         { property: 'og:image:height', content: '200' }
       ]

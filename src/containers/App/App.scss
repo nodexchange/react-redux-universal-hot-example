@@ -100,7 +100,10 @@
     @include button-bg(#2ecc71);
   }
   .btnBlue {
-    @include button-bg(#3498db);
+    @include button-bg(#e6272d);
+    a {
+      color: #fff !important;
+    }
   }
   .btnYellow {
     @include button-bg(#f1c40f);
@@ -121,10 +124,22 @@
     }
   }
 }
+.navbar-brand.fixed-theme,
+.navbar-container.fixed-theme,
+.navbar.navbar-fixed-top.fixed-theme,
+.navbar-brand,
+.navbar-container{
+    transition: 0.8s;
+    -webkit-transition:  0.8s;
+}
 .appContent {
   margin: 50px 0; // for fixed navbar
 }
 
 .navbar-default .navbar-nav > li > a {
   color: #f9f0f0;
+}
+
+body {
+  background-color: #f5f5f5;
 }
