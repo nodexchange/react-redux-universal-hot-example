@@ -8,7 +8,6 @@ import {
     App,
     Chat,
     Home,
-    Canvas,
     Widgets,
     About,
     Login,
@@ -51,7 +50,6 @@ export default (store) => {
 
       { /* Routes */ }
       <Route path="about" component={About} />
-      <Route path="canvas" component={Canvas} />
       <Route path="login" component={Login} />
       <Route path="survey" component={Survey} />
       <Route path="widgets" component={Widgets} />

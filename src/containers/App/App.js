@@ -117,9 +117,6 @@ export default class App extends Component {
               <LinkContainer to="/widgets">
                 <NavItem eventKey={2}>Widgets</NavItem>
               </LinkContainer>
-              <LinkContainer to="/canvas">
-                <NavItem eventKey={5}>Canvas</NavItem>
-              </LinkContainer>
             </Nav>
             {user &&
             <p className={`${styles.loggedInMessage} navbar-text`}>Logged in as <strong>{user.name}</strong>.</p>}
@@ -130,7 +127,7 @@ export default class App extends Component {
                 </NavItem>
               </LinkContainer>
               <LinkContainer
-                className={styles.btn + ' ' + styles.btnRed}
+                className={styles.navButton}
                 to="/survey"
               >
                 <NavItem eventKey={2}>

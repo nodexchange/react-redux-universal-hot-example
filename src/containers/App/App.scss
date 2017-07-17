@@ -13,6 +13,20 @@
     margin: 0 10px 0 0;
     border-radius: $size / 2;
   }
+  .navButton {
+    margin-top: 2px;
+    margin-left: 9px;
+    padding: 9px 23px 8px 22px;
+    font-size: 16px;
+    font-family: "AvenirLTStd-Light", sans-serif;
+    opacity: 0.97;
+    background: #41C3B6;
+    box-shadow: 0 2px 7px 0 rgba(69, 119, 126, 0.37);
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    margin-right: 4px;
+  }
   .contactButton {
     font-size: 16px;
     font-family: Arial;
@@ -54,6 +68,8 @@
     font-size: 16px;
   }
   @import url(https://fonts.googleapis.com/css?family=Quicksand);
+  // @import url(AvenirLTStd-Light);
+
   @mixin button-bg($bg) {
     background: $bg;
     &:hover {
