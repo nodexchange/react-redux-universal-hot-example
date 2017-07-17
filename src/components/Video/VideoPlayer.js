@@ -5,12 +5,16 @@ export default class VideoPlayer extends Component {
   static propTypes = {
     type: PropTypes.string,
     src: PropTypes.string,
-    width: PropTypes.number
-
+    width: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ])
   }
+
   render() {
+    // controls
     return (
-      <video width={this.props.width} id="video-player" preload="metadata" controls>
+      <video width={this.props.width} id="video-player" preload="metadata" autoPlay loop>
         <source src={this.props.src} type={this.props.type} />
       </video>
     );

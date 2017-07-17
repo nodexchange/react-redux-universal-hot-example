@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import Helmet from 'react-helmet';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
-import { BackgroundRow, Canvas, CounterButton, ProductItem } from 'components';
+import { BackgroundRow, Canvas, CounterButton, ProductItem, VideoPlayer } from 'components';
 import config from '../../config';
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -18,11 +18,9 @@ export default class Home extends Component {
       <div className={styles.home}>
         <Helmet title="Home" />
         <div className={styles.masthead}>
-          <div className="container">
+          <div className={styles.mastheadCopy}>
             <h1>{config.app.title}</h1>
-
             <h2>{config.app.description}</h2>
-
             <p>
               <a
                 className={styles.github}
@@ -31,10 +29,12 @@ export default class Home extends Component {
                 <i className="fa fa-github" /> View on Github
               </a>
             </p>
-
             <p className={styles.humility}>
               Created and maintained by <a href="https://twitter.com/erikras">@erikras</a>.
             </p>
+          </div>
+          <div className={styles.mastheadVideo}>
+            <VideoPlayer src="/test.mp4" type="video/mp4" width="100%" />
           </div>
         </div>
         <div>
@@ -45,12 +45,15 @@ export default class Home extends Component {
           <Canvas h1Text="Programmatic Data-driven RichMedia products" />
           <h2>Machine Learning algorithm</h2>
           <h2>Standard creative display and new 3D and 360 creative executions</h2>
-          <h2>Our talented creative team can assist with simple standard IAB executions, templates production as well as full scale, responsive, true cross-screen ads and home page takeovers</h2>
+          <h2>Our talented creative team can assist with simple standard IAB executions,
+              templates production as well as full scale, responsive, true cross-screen ads and home page takeovers</h2>
           <h2>Asset level dynamic optimisation</h2>
           <h2>Cross-screen 360' formats</h2>
           <h2>Ad server agnostic optimisation and solutions</h2>
           <h2>VPAID HTML5 and RichMedia</h2>
-          <h3> We are a platform agnostic digital creative advertising agency, specilising in creation of cross-screen, data-driven advertisment. Our personlised unique solutions accelarate conversions and drive higher campaign's performance.</h3>
+          <h3> We are a platform agnostic digital creative advertising agency, specilising in creation of cross-screen,
+          data-driven advertisment.
+          Our personlised unique solutions accelarate conversions and drive higher campaign's performance.</h3>
         </div>
         <div className="container">
           <div className={styles.counterContainer}>

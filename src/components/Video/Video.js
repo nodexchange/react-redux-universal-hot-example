@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import videoOptions from './config';
 import VideoPlayer from './components/VideoPlayer';
 import ControlPanel from './components/ControlPanel';
@@ -24,7 +24,7 @@ export default class Video extends Component { // eslint-disable-line react/pref
   }
 
   handleResize() {
-    const master = this.refs.master.getDOMNode();
+    const master = this.refs.master.getDOMNode();  // eslint-disable-line react/no-string-refs
     this.setState({
       vidWidth: master.clientWidth,
       offsetLeft: master.offsetLeft
@@ -32,7 +32,7 @@ export default class Video extends Component { // eslint-disable-line react/pref
   }
 
   initPlayerApi() {
-    const player = this.refs.player.getDOMNode();
+    const player = this.refs.player.getDOMNode(); // eslint-disable-line react/no-string-refs
     player.addEventListener('loadedmetadata', this.loadedMetaData);
     this.setState({ api: player });
   }
@@ -48,8 +48,10 @@ export default class Video extends Component { // eslint-disable-line react/pref
     }
 
     return (
+      // eslint-disable-next-line react/no-string-refs
       <div className="row" ref="master">
         <VideoPlayer
+      // eslint-disable-next-line react/no-string-refs
           ref="player"
           width={this.state.vidWidth}
           src={videoOptions.src}

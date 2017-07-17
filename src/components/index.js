@@ -15,3 +15,4 @@ export MiniInfoBar from './MiniInfoBar/MiniInfoBar';
 export ProductItem from './ProductItem/ProductItem';
 export SurveyForm from './SurveyForm/SurveyForm';
 export WidgetForm from './WidgetForm/WidgetForm';
+export VideoPlayer from './Video/VideoPlayer';
