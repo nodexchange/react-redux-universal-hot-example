@@ -12,9 +12,9 @@ export default class VideoPlayer extends Component {
   }
 
   render() {
-    // controls
+    // controls autoPlay
     return (
-      <video width={this.props.width} id="video-player" preload="metadata" autoPlay loop muted>
+      <video width={this.props.width} id="video-player" preload="metadata" loop muted>
         <source src={this.props.src} type={this.props.type} />
       </video>
     );

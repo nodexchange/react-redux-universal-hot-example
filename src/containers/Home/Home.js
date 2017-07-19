@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
-import { Canvas, VideoPlayer } from 'components';
+import { Arrow, Canvas, VideoPlayer } from 'components';
 import config from '../../config';
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -70,6 +70,7 @@ export default class Home extends Component {
               Our personlised unique solutions accelarate conversions and drive higher campaign's performance.
             </dd>
           </dl>
+          <Arrow />
         </div>
       </div>
     );

@@ -94,17 +94,17 @@ export default class Widgets extends Component {
             // eslint-disable-next-line no-confusing-arrow
             widgets.map(widget => editing[widget.id] ?
               <WidgetForm formKey={String(widget.id)} key={String(widget.id)} initialValues={widget} /> :
-                <tr key={widget.id}>
-                  <td className={styles.idCol}>{widget.id}</td>
-                  <td className={styles.colorCol}>{widget.color}</td>
-                  <td className={styles.sprocketsCol}>{widget.sprocketCount}</td>
-                  <td className={styles.ownerCol}>{widget.owner}</td>
-                  <td className={styles.buttonCol}>
-                    <button className="btn btn-primary" onClick={handleEdit(widget)}>
-                      <i className="fa fa-pencil" /> Edit
-                    </button>
-                  </td>
-                </tr>)
+              <tr key={widget.id}>
+                <td className={styles.idCol}>{widget.id}</td>
+                <td className={styles.colorCol}>{widget.color}</td>
+                <td className={styles.sprocketsCol}>{widget.sprocketCount}</td>
+                <td className={styles.ownerCol}>{widget.owner}</td>
+                <td className={styles.buttonCol}>
+                  <button className="btn btn-primary" onClick={handleEdit(widget)}>
+                    <i className="fa fa-pencil" /> Edit
+                  </button>
+                </td>
+              </tr>)
             }
           </tbody>
         </table>}

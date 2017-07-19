@@ -23,7 +23,8 @@ export default class Canvas extends Component {
 
   updateCanvas() {
     this.canvas.width = document.getElementsByClassName(this.styles.masthead)[0].clientWidth;
-    this.canvas.height = document.getElementsByClassName(this.styles.masthead)[0].clientHeight + 100;
+    this.canvas.height = document.getElementsByClassName(this.styles.masthead)[0].clientHeight + 400;
+    console.log('____ ' + this.canvas.height);
     this.ctx = this.canvas.getContext('2d');
     this.ctx.fillRect(0, 0, 100, 100);
     this.TAU = 2 * Math.PI;
@@ -102,7 +103,7 @@ export default class Canvas extends Component {
         <Helmet title="Canvas" />
         <div className={this.styles.masthead}>
           <h1>{this.props.h1Text}</h1>
-          <canvas ref={(c) => { this.canvas = c; }} width={300} height={300} />
+          <canvas className={this.styles.masterCanvas} ref={(c) => { this.canvas = c; }} width={300} height={300} />
         </div>
       </div>
     );

@@ -5,6 +5,7 @@
  *
  */
 
+export Arrow from './Arrow/Arrow';
 export BackgroundRow from './BackgroundRow/BackgroundRow';
 export CanvasBall from './CanvasBall/CanvasBall';
 export Canvas from './Canvas/Canvas';
