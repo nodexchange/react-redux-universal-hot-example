@@ -25,6 +25,11 @@ export default class Html extends Component { // eslint-disable-line react/prefe
     const content = component ? ReactDOM.renderToString(component) : '';
     const head = Helmet.rewind();
 
+    const contentStyle = {
+      height: '100%',
+      minHeight: '100%'
+    };
+
     return (
       <html lang="en-US">
         <head>
@@ -55,7 +60,7 @@ export default class Html extends Component { // eslint-disable-line react/prefe
           }
         </head>
         <body>
-          <div id="content" dangerouslySetInnerHTML={{ __html: content }} />
+          <div id="content" className="content" dangerouslySetInnerHTML={{ __html: content }} style={contentStyle} />
           <script
             dangerouslySetInnerHTML={{ __html: `window.__data=${serialize(store.getState())};` }}
             charSet="UTF-8"

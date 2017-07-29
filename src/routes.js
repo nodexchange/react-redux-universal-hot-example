@@ -7,9 +7,10 @@ import { isLoaded as isAuthLoaded, load as loadAuth } from 'redux/modules/auth';
 import {
     App,
     Chat,
-    Home,
+    // Home,
     Widgets,
     About,
+    Front,
     Login,
     LoginSuccess,
     Survey,
@@ -40,7 +41,7 @@ export default (store) => {
   return (
     <Route path="/" component={App}>
       { /* Home (main) route */ }
-      <IndexRoute component={Home} />
+      <IndexRoute component={Front} />
 
       { /* Routes requiring login */ }
       <Route onEnter={requireLogin}>

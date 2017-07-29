@@ -130,7 +130,7 @@ export default class App extends Component {
           </Navbar.Collapse>
         </Navbar>
 
-        <div className={styles.appContent}>
+        <div className={styles.content}>
           {this.props.children}
         </div>
         <InfoBar />
