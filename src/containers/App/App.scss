@@ -1,66 +1,6 @@
 .app {
   height: 100%;
-  .brand {
-    position: absolute;
-    $size: 40px;
-    $logoWidth: 160px;
-    top: 8px;
-    left: 8px;
-    display: inline-block;
-    background: url('../Home/qlogo.png') no-repeat center center;
-    width: $logoWidth;
-    height: $size;
-    background-size: 80%;
-    margin: 0 10px 0 0;
-    border-radius: $size / 2;
-  }
-  .navButton {
-    margin-top: 2px;
-    margin-left: 9px;
-    padding: 9px 23px 8px 22px;
-    font-size: 16px;
-    font-family: "AvenirLTStd-Light", sans-serif;
-    opacity: 0.97;
-    background: #41C3B6;
-    box-shadow: 0 2px 7px 0 rgba(69, 119, 126, 0.37);
-    border-radius: 3px;
-    border: none;
-    color: #fff;
-    margin-right: 4px;
-  }
-  .contactButton {
-    font-size: 16px;
-    font-family: Arial;
-    font-weight: normal;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    border: 1px solid #d02718;
-    padding: 4px 12px;
-    text-decoration: none;
-    background: -moz-linear-gradient( center top, #f24537 5%, #c62d1f 100%);
-    background: -ms-linear-gradient( top, #f24537 5%, #c62d1f 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
-    background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #f24537), color-stop(100%, #c62d1f));
-    background-color: #f24537;
-    color: #ffffff;
-    display: inline-block;
-    text-shadow: 1px 1px 0px #810e05;
-    -webkit-box-shadow: inset 1px 1px 0px 0px #f5978e;
-    -moz-box-shadow: inset 1px 1px 0px 0px #f5978e;
-    box-shadow: inset 1px 1px 0px 0px #f5978e;
-  }
-  .contactButton:hover {
-    background: -moz-linear-gradient( center top, #c62d1f 5%, #f24537 100%);
-    background: -ms-linear-gradient( top, #c62d1f 5%, #f24537 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
-    background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #c62d1f), color-stop(100%, #f24537));
-    background-color: #c62d1f;
-  }
-  .contactButton:active {
-    position: relative;
-    top: 1px;
-  }
+
   nav :global(.fa) {
     font-size: 2em;
     line-height: 20px;
@@ -113,32 +53,9 @@
     @include button-bg(#e74c3c);
   }
 }
-.navBar {
-  font-family: 'Quicksand', sans-serif;
-  color: #ffffff;
-  margin-top: 3px;
-  font-weight: bold;
-  font-size: 17px;
-  li {
-    a {
-      color: #ffffff;
-    }
-  }
-}
-.navbar-brand.fixed-theme,
-.navbar-container.fixed-theme,
-.navbar.navbar-fixed-top.fixed-theme,
-.navbar-brand,
-.navbar-container{
-    transition: 0.8s;
-    -webkit-transition:  0.8s;
-}
+
 .appContent {
   margin: 50px 0; // for fixed navbar
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: #f9f0f0;
 }
 
 html, body {
@@ -153,9 +70,5 @@ body {
 .content {
   height:100%;
   min-height:100%;/*for mozilla*/
+  overflow: hidden;
 }
-/*
-html>body .content {
-  height:100%;
-}
-*/

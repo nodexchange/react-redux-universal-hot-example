@@ -1,10 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { IndexLink } from 'react-router';
-import { LinkContainer } from 'react-router-bootstrap';
-import Navbar from 'react-bootstrap/lib/Navbar';
-import Nav from 'react-bootstrap/lib/Nav';
-import NavItem from 'react-bootstrap/lib/NavItem';
+// import { LinkContainer } from 'react-router-bootstrap';
+// import Navbar from 'react-bootstrap/lib/Navbar';
+// import Nav from 'react-bootstrap/lib/Nav';
+// import NavItem from 'react-bootstrap/lib/NavItem';
 import Helmet from 'react-helmet';
 import { push } from 'react-router-redux';
 import { asyncConnect } from 'redux-async-connect';
@@ -15,6 +14,7 @@ import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import { InfoBar } from 'components';
+import { NavBar } from 'containers';
 import config from '../../config';
 
 
@@ -84,51 +84,7 @@ export default class App extends Component {
     return (
       <div className={styles && styles.app}>
         <Helmet {...config.app.head} />
-        <Navbar fixedTop>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
-                <div className={styles.brand} />
-              </IndexLink>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-
-          <Navbar.Collapse eventKey={0}>
-            <Nav navbar className={styles.navBar}>
-              {user && <LinkContainer to="/chat">
-                <NavItem eventKey={1}>Chat</NavItem>
-              </LinkContainer>}
-              <LinkContainer to="/">
-                <NavItem eventKey={0}>Home</NavItem>
-              </LinkContainer>
-              <LinkContainer to="/solutions">
-                <NavItem eventKey={2}>Solutions</NavItem>
-              </LinkContainer>
-              <LinkContainer to="/products">
-                <NavItem eventKey={2}>Products</NavItem>
-              </LinkContainer>
-              <LinkContainer to="/about">
-                <NavItem eventKey={2}>About</NavItem>
-              </LinkContainer>
-              <LinkContainer to="/blog">
-                <NavItem eventKey={2}>Blog</NavItem>
-              </LinkContainer>
-              <LinkContainer to="/widgets">
-                <NavItem eventKey={2}>Widgets</NavItem>
-              </LinkContainer>
-            </Nav>
-            {user &&
-            <p className={`${styles.loggedInMessage} navbar-text`}>Logged in as <strong>{user.name}</strong>.</p>}
-            <Nav navbar pullRight>
-              <LinkContainer to="/login" className={styles.btn + ' ' + styles.btnBlue}>
-                <NavItem eventKey={1}>
-                  Contact <i className="fa fa-sign-in" id={styles.envolopeIcon} />
-                </NavItem>
-              </LinkContainer>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+        <NavBar user={user} />
 
         <div className={styles.content}>
           {this.props.children}

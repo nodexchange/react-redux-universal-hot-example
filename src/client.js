@@ -69,13 +69,16 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (__DEVTOOLS__ && !window.devToolsExtension) {
   // eslint-disable-next-line global-require
-  const DevTools = require('./containers/DevTools/DevTools');
+  // const DevTools = require('./containers/DevTools/DevTools');
+  // <DevTools />
+  const mainStyle = {
+    height: '100%'
+  };
 
   ReactDOM.render(
     <Provider store={store} key="provider">
-      <div>
+      <div id="main-client" style={mainStyle}>
         {component}
-        <DevTools />
       </div>
     </Provider>,
     dest

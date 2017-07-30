@@ -12,14 +12,6 @@ export default class Front extends Component {
     const styles = require('./Front.scss');
     // require the logo image both from client and server
     // eslint-disable-next-line global-require
-    /*
-        <div className={styles.section}>
-          <ProductItem />
-        </div>
-        <div className={styles.section}>
-          <BackgroundRow />
-        </div>
-    */
     return (
       <div className={styles.front}>
         <Helmet title="Home" />
