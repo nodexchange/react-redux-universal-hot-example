@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { ProgressBar } from 'react-bootstrap';
+// import { ProgressBar } from 'react-bootstrap';
 import { toVideoDuration } from '../utils/';
 import Thumbnail from './Thumbnail';
 import BarMarker from './BarMarker';
@@ -63,6 +63,10 @@ export default class ProgressControl extends Component {
   }
 
   render() {
+        // <ProgressBar ref="seekbar"
+        //   now={this.state.progress}
+        //   style={{ width: this.props.vidWidth + 'px' }}
+        // />
     return (
       <div
         className="progress-controls"
@@ -72,10 +76,6 @@ export default class ProgressControl extends Component {
         onMouseOut={this.onMouseOutHandler}
       >
 
-        <ProgressBar ref="seekbar"
-          now={this.state.progress}
-          style={{ width: this.props.vidWidth + 'px' }}
-        />
 
         <BarMarker
           timeMarks={this.props.thumbnail.timeMarks}

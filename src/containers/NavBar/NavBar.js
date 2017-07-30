@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import { IndexLink } from 'react-router';
 import debounce from '../../helpers/Debounce';
+import throttle from '../../helpers/Throttle';
+import scrollToY from '../../helpers/Scroll';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 // import config from '../../config';
@@ -12,6 +14,7 @@ export default class NavBar extends Component {
     super(props);
     this.scrollPageHandler = debounce(this.scrollPageHandler, 100);
     this.mouseScrollHandler = debounce(this.mouseScrollHandler, 100);
+    this.mScrollHandler = throttle(this.mScrollHandler, 50);
   }
 
   /*
@@ -53,17 +56,50 @@ $('nav a').click(function(event) {
 });
   */
   componentDidMount() {
-    window.addEventListener('scroll', (e) => { this.scrollPageHandler(e); });
-    window.addEventListener('DOMMouseScroll', (e) => { this.mouseScrollHandler(e); });
+    /*
+      window.addEventListener('scroll', (e) => { this.scrollPageHandler(e); });
+      window.addEventListener('DOMMouseScroll', (e) => { this.mouseScrollHandler(e); });
+      window.addEventListener('mousewheel', (e) => { this.mScrollHandler(e); });
+      console.log('HERE???' + window);
+    */
     window.addEventListener('mousewheel', (e) => { this.mouseScrollHandler(e); });
-    console.log('HERE???' + window);
+    if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', this.wheel, false);
+    }
+    window.onmousewheel = document.onmousewheel = this.wheel;
   }
 
   scrollPageHandler = (e) => {
     console.log('Math.random ' + Math.random() + ' e ' + e);
   }
 
+  wheel = (event) => {
+    let delta = 0;
+    if (event.wheelDelta) delta = event.wheelDelta / 120;
+    else if (event.detail) delta = -event.detail / 3;
+    this.handle(delta);
+    if (event.preventDefault) event.preventDefault();
+    event.returnValue = false;
+  }
+
+  handle = () => {
+    // let time = 1000;
+    // const distance = 300;
+    // const place = delta * distance;
+    // const currentTop = window.pageYOffset;
+
+    // window.scrollTo(0, currentTop - place);
+
+    // scroll it!
+    // $('html, body').stop().animate({
+        // scrollTop: $(window).scrollTop() - (distance * delta)
+    // }, time );
+  }
+
   mouseScrollHandler = (e) => {
+    scrollToY(500, 13500, 'easeInOutQuint');
+    console.log(e);
+    /*
     if (!e) e = {};
     const direction = (e.detail < 0 || e.wheelDelta > 0) ? 1 : -1;
     console.log(direction + ' | deltaY : ');
@@ -71,8 +107,14 @@ $('nav a').click(function(event) {
     if (direction === -1) {
       window.scrollTo(0, 400);
     }
+    */
     // Use the value as you will
   };
+  mScrollHandler = (e) => {
+    // console.log(e.detail);
+    console.log(e.wheelDelta);
+    // window.scrollTo(0, e.wheelDelta);
+  }
   render() {
     // eslint-disable-next-line global-require
     const styles = require('./NavBar.scss');
