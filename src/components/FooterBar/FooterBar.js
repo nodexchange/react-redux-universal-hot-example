@@ -9,7 +9,7 @@ import { load } from 'redux/modules/info';
     state => ({ info: state.info.data }),
     dispatch => bindActionCreators({ load }, dispatch)
 )
-export default class InfoBar extends Component { // eslint-disable-line react/prefer-stateless-function
+export default class FooterBar extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     info: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     load: PropTypes.func.isRequired
@@ -18,7 +18,7 @@ export default class InfoBar extends Component { // eslint-disable-line react/pr
   render() {
     const { info, load } = this.props; // eslint-disable-line no-shadow
     // eslint-disable-next-line global-require
-    const styles = require('./InfoBar.scss');
+    const styles = require('./FooterBar.scss');
 
     return (
       <div className={`${styles.infoBar}  well`}>

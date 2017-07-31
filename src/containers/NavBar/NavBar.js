@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
-import { IndexLink } from 'react-router';
-import debounce from '../../helpers/Debounce';
+import { IndexLink, Link } from 'react-router';
 import throttle from '../../helpers/Throttle';
-import scrollToY from '../../helpers/Scroll';
+// import debounce from '../../helpers/Debounce';
+// import scrollToY from '../../helpers/Scroll';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 // import config from '../../config';
@@ -12,21 +12,14 @@ import scrollToY from '../../helpers/Scroll';
 export default class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.scrollPageHandler = debounce(this.scrollPageHandler, 100);
-    this.mouseScrollHandler = debounce(this.mouseScrollHandler, 100);
-    this.mScrollHandler = throttle(this.mScrollHandler, 50);
+    this.state = { navbar: 'sticky' };
+    // this.scrollPageHandler = debounce(this.scrollPageHandler, 100);
+    // this.mouseScrollHandler = debounce(this.mouseScrollHandler, 100);
+
+    this.mScrollHandler = throttle(this.mScrollHandler, 150);
   }
 
   /*
-// Sticky Header
-$(window).scroll(function() {
-
-    if ($(window).scrollTop() > 100) {
-        $('.main_h').addClass('sticky');
-    } else {
-        $('.main_h').removeClass('sticky');
-    }
-});
 
 // Mobile Navigation
 $('.mobile-toggle').click(function() {
@@ -44,29 +37,29 @@ $('.main_h li a').click(function() {
     }
 });
 
-// navigation scroll lijepo radi materem
-$('nav a').click(function(event) {
-    var id = $(this).attr("href");
-    var offset = 70;
-    var target = $(id).offset().top - offset;
-    $('html, body').animate({
-        scrollTop: target
-    }, 500);
-    event.preventDefault();
-});
+  // navigation scroll lijepo radi materem
+  $('nav a').click(function(event) {
+      var id = $(this).attr("href");
+      var offset = 70;
+      var target = $(id).offset().top - offset;
+      $('html, body').animate({
+          scrollTop: target
+      }, 500);
+      event.preventDefault();
+  });
   */
   componentDidMount() {
+    window.addEventListener('scroll', (e) => { this.mScrollHandler(e); });
     /*
-      window.addEventListener('scroll', (e) => { this.scrollPageHandler(e); });
       window.addEventListener('DOMMouseScroll', (e) => { this.mouseScrollHandler(e); });
       window.addEventListener('mousewheel', (e) => { this.mScrollHandler(e); });
       console.log('HERE???' + window);
     */
-    window.addEventListener('mousewheel', (e) => { this.mouseScrollHandler(e); });
-    if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', this.wheel, false);
-    }
-    window.onmousewheel = document.onmousewheel = this.wheel;
+    // window.addEventListener('mousewheel', (e) => { this.mouseScrollHandler(e); });
+    // if (window.addEventListener) {
+    //   window.addEventListener('DOMMouseScroll', this.wheel, false);
+    // }
+    // window.onmousewheel = document.onmousewheel = this.wheel;
   }
 
   scrollPageHandler = (e) => {
@@ -97,7 +90,7 @@ $('nav a').click(function(event) {
   }
 
   mouseScrollHandler = (e) => {
-    scrollToY(500, 13500, 'easeInOutQuint');
+    // scrollToY(500, 13500, 'easeInOutQuint');
     console.log(e);
     /*
     if (!e) e = {};
@@ -112,7 +105,23 @@ $('nav a').click(function(event) {
   };
   mScrollHandler = (e) => {
     // console.log(e.detail);
-    console.log(e.wheelDelta);
+    const currentTop = window.pageYOffset;
+    const scrollPercentage = Math.round((currentTop / document.body.clientHeight) * 100);
+    if (scrollPercentage > 20) {
+      if (this.state) {
+        if (this.state.navbar !== 'scroll') {
+          this.setState({ navbar: 'scroll' });
+        }
+        return;
+      }
+    } else {
+      if (this.state.navbar !== 'sticky') {
+        this.setState({ navbar: 'sticky' });
+      }
+      return;
+    }
+
+    console.log(scrollPercentage + ' e ' + e);
     // window.scrollTo(0, e.wheelDelta);
   }
   render() {
@@ -122,14 +131,6 @@ $('nav a').click(function(event) {
     // eslint-disable-next-line global-require
     /*
     <Navbar fixedTop>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
-                <div className={styles.brand} />
-              </IndexLink>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
 
           <Navbar.Collapse eventKey={0}>
             <Nav navbar className={styles.navBar}>
@@ -167,9 +168,14 @@ $('nav a').click(function(event) {
           </Navbar.Collapse>
         </Navbar>
     */
-
+    let navType = styles.sticky;
+    if (this.state) {
+      if (this.state.navbar === 'scroll') {
+        navType = styles.scroll;
+      }
+    }
     return (
-      <header className={styles.mainHeader + ' ' + styles.sticky}>
+      <header className={styles.mainHeader + ' ' + navType}>
         <div className={styles.row}>
           <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
             <div className={styles.brand} />
@@ -181,10 +187,10 @@ $('nav a').click(function(event) {
           </div>
           <nav className={styles.navBar}>
             <ul>
-              <li><a href=".sec01">Section 01</a></li>
-              <li><a href=".sec02">Section 02</a></li>
-              <li><a href=".sec03">Section 03</a></li>
-              <li><a href=".sec04">Section 04</a></li>
+              <li><Link to="/">Solutions</Link></li>
+              <li><Link to="/products">Products</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </nav>
         </div>

@@ -9,7 +9,7 @@ import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 // eslint-disable-next-line import/extensions
 import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
-import { InfoBar } from 'components';
+import { FooterBar } from 'components';
 import { NavBar } from 'containers';
 import config from '../../config';
 
@@ -85,18 +85,7 @@ export default class App extends Component {
         <div className={styles.content}>
           {this.props.children}
         </div>
-        <InfoBar />
-
-        <div className="well text-center">
-          Have questions? Ask for help
-          <a
-            href="https://github.com/erikras/react-redux-universal-hot-example/issues"
-            target="_blank" rel="noopener noreferrer"
-          >on Github</a> or in the
-          <a
-            href="https://discord.gg/0ZcbPKXt5bZZb1Ko" target="_blank" rel="noopener noreferrer"
-          >#react-redux-universal</a> Discord channel.
-        </div>
+        <FooterBar />
       </div>
     );
   }
