@@ -23,7 +23,7 @@ export default class FooterBar extends Component { // eslint-disable-line react/
     return (
       <div className={`${styles.infoBar}  well`}>
         <div className="container">
-          This is an info bar
+          ©Quartile 2017. All rights reserved.
           {' '}
           <strong>{info ? info.message : 'no info!'}</strong>
           <span className={styles.time}>{info && new Date(info.time).toString()}</span>
