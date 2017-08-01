@@ -92,6 +92,7 @@ export default class Widgets extends Component {
           <tbody>
             {
             // eslint-disable-next-line no-confusing-arrow
+            /* eslint-disable */
             widgets.map(widget => editing[widget.id] ?
               <WidgetForm formKey={String(widget.id)} key={String(widget.id)} initialValues={widget} /> :
                 <tr key={widget.id}>
@@ -105,6 +106,7 @@ export default class Widgets extends Component {
                     </button>
                   </td>
                 </tr>)
+              /* eslint-enabled */
             }
           </tbody>
         </table>}

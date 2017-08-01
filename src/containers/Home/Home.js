@@ -63,6 +63,7 @@ export default class Home extends Component {
             <dt>Ad server agnostic optimisation and solutions</dt>
             <dd>[desc]</dd>
             <dt>VPAID HTML5 and RichMedia</dt>
+            <dt>Contextually enhanced creatives</dt>
             <dd>[desc]</dd>
             <dt>[title]</dt>
             <dd>We are a platform agnostic digital creative advertising agency, specilising in creation of cross-screen,
