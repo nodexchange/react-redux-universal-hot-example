@@ -16,18 +16,29 @@ export default class FooterBar extends Component { // eslint-disable-line react/
   };
 
   render() {
-    const { info, load } = this.props; // eslint-disable-line no-shadow
+    // const { info, load } = this.props; // eslint-disable-line no-shadow
     // eslint-disable-next-line global-require
     const styles = require('./FooterBar.scss');
+    /*
+      <div className={`${styles.infoBar}  well`}>
+        <div className="container">
+          <strong>
+            ©Quartile 2017. All rights reserved.
+            {' '}
+            {info ? info.message : 'no info!'}
+          </strong>
+          <span className={styles.time}>{info && new Date(info.time).toString()}</span>
+          <button className="btn btn-primary" onClick={load}>Reload from server</button>
+        </div>
+      </div>
+    */
 
     return (
       <div className={`${styles.infoBar}  well`}>
         <div className="container">
-          ©Quartile 2017. All rights reserved.
-          {' '}
-          <strong>{info ? info.message : 'no info!'}</strong>
-          <span className={styles.time}>{info && new Date(info.time).toString()}</span>
-          <button className="btn btn-primary" onClick={load}>Reload from server</button>
+          <strong>
+            ©Quartile 2017. All rights reserved.
+          </strong>
         </div>
       </div>
     );

@@ -10,9 +10,8 @@ import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import { FooterBar } from 'components';
-import { NavBar } from 'containers';
+import { ArrowNav, NavBar } from 'containers';
 import config from '../../config';
-
 
 @asyncConnect([{
   promise: ({ store: { dispatch, getState } }) => {
@@ -85,6 +84,7 @@ export default class App extends Component {
         <div className={styles.content}>
           {this.props.children}
         </div>
+        <ArrowNav />
         <FooterBar />
       </div>
     );

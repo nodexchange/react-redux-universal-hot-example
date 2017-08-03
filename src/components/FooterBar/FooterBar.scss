@@ -2,8 +2,15 @@
   font-variant: italics;
   margin-top: -100px;
   position: fixed;
-  bottom:0;
-  left:0;
+  bottom:4px;
+  left:4px;
+  text-shadow: 1px 1px 1px #000000;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  opacity: .5;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .time {

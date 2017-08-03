@@ -1,4 +1,5 @@
 export App from './App/App';
+export ArrowNav from './ArrowNav/ArrowNav';
 export Chat from './Chat/Chat';
 export Home from './Home/Home';
 export Front from './Front/Front';
