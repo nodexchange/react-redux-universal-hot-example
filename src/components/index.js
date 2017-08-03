@@ -12,6 +12,7 @@ export Canvas from './Canvas/Canvas';
 export CounterButton from './CounterButton/CounterButton';
 export GithubButton from './GithubButton/GithubButton';
 export FooterBar from './FooterBar/FooterBar';
+export FrontItem from './FrontItem/FrontItem';
 export MiniInfoBar from './MiniInfoBar/MiniInfoBar';
 export ProductItem from './ProductItem/ProductItem';
 export SurveyForm from './SurveyForm/SurveyForm';

@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import { FrontItem } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 // import config from '../../config';
@@ -15,7 +16,7 @@ export default class Front extends Component {
     return (
       <div className={styles.front}>
         <Helmet title="Home" />
-        <div id={styles.one} className={styles.section}>.</div>
+        <FrontItem />
         <div id={styles.two} className={styles.section}>.</div>
         <div id={styles.three} className={styles.section}>.</div>
         <div id={styles.four} className={styles.section}>.</div>

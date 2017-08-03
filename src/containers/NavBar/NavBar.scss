@@ -201,9 +201,16 @@ nav ul a {
   margin-top: 3px;
   font-weight: bold;
   font-size: 17px;
+  h1 {
+    font-size: 30px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+  }
   li {
     a {
       color: #ffffff;
+      text-decoration: none;
     }
   }
 }
@@ -219,24 +226,13 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
-
-a {
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 30px;
-  line-height: 1.8;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-}
-
+/*
 p {
   margin-bottom: 20px;
   font-size: 17px;
   line-height: 2;
 }
-
+*/
 .content {
   padding: 50px 2% 250px;
 }

@@ -1,18 +1,19 @@
 .arrowNav {
   position: fixed;
-  right: 20px;
+  right: 5px;
   top: 50%;
+  opacity: .7;
   .arrowUp {
     background: url('./slideup.png') no-repeat center center !important;
     display: block;
     opacity: 1;
-    margin-top: -45px;
+    margin-top: 0px;
   }
   .arrowDown {
     background: url('./slidedown.png') no-repeat center center !important;
     display: block;
     opacity: 1;
-    margin-top: 45px;
+    margin-top: 38px;
   }
   .baseArrow {
     display: block;
@@ -26,5 +27,11 @@
     padding: 0;
     border: none;
     outline: 0;
+  }
+  .counter {
+    color: white;
+    margin-left: -10px;
+    margin-top: -48px;
+    font-family: 'Quicksand', sans-serif;
   }
 }

@@ -1,0 +1,48 @@
+.section {
+  height: 100%;
+}
+#one {
+  background: url(http://cloud.niklausgerber.com/432W0y1g2h05/orange.png) center center no-repeat scroll #FF905E;
+}
+.info {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  z-index: 2;
+  margin-top: -140px;
+  width: 406px;
+  color: white;
+  line-height: 1.42857;
+  font-family: "Cardo", serif;
+  .smallHeader {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    display: block;
+  }
+  .header {
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+    margin: -6px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .line {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    margin: 30px 0 33px 5px;
+  }
+  .line:after {
+    content: " ";
+  }
+  .description {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 0 10px;
+  }
+}
