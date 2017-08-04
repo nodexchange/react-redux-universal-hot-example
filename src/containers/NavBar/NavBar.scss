@@ -211,6 +211,10 @@ nav ul a {
     a {
       color: #ffffff;
       text-decoration: none;
+      transition: all 1s;
+    }
+    a:hover {
+      color: #ffbcb5;
     }
   }
 }

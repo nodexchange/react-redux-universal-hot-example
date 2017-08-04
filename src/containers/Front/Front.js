@@ -16,7 +16,7 @@ export default class Front extends Component {
     return (
       <div className={styles.front}>
         <Helmet title="Home" />
-        <FrontItem />
+        <FrontItem inView />
         <div id={styles.two} className={styles.section}>.</div>
         <div id={styles.three} className={styles.section}>.</div>
         <div id={styles.four} className={styles.section}>.</div>
