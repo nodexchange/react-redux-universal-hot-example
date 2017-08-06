@@ -8,11 +8,13 @@ import auth from './auth';
 import counter from './counter';
 import info from './info';
 import widgets from './widgets';
+import resize from './resize';
 
 export default combineReducers({
   routing: routerReducer,
   reduxAsyncConnect,
   auth,
+  resize,
   form,
   multireducer: multireducer({
     counter1: counter,
