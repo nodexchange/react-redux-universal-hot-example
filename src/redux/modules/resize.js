@@ -1,8 +1,9 @@
 const RESIZE = 'quartile/WINDOW_RESIZE';
 
 const initialState = {
-  windowWidth: window.innerWidth,
-  windowHeight: window.innerHeight,
+  windowWidth: 0,
+  windowHeight: 0,
+  isLandscape: false
 };
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {

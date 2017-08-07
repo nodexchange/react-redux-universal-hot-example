@@ -20,13 +20,18 @@
   }
 }
 .brand {
-  $size: 40px;
-  $logoWidth: 160px;
+  //$size: 40px;
+  //$logoWidth: 160px;
+  
+  $size: 80px;
+  $logoWidth: 80px;
+  
   position: absolute;
-  top: 8px;
+  top: -18px;
   left: 8px;
   display: inline-block;
-  background: url('./qlogo.png') no-repeat center center;
+  /* background: url('./qlogo.png') no-repeat center center; */
+  background: url('./act.png') no-repeat center center;
   width: $logoWidth;
   height: $size;
   background-size: 80%;
