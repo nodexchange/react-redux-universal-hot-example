@@ -72,6 +72,7 @@ $('.main_h li a').click(function() {
     else if (event.detail) delta = -event.detail / 3;
     this.handle(delta);
     if (event.preventDefault) event.preventDefault();
+    // eslint-disable-next-line
     event.returnValue = false;
   }
 

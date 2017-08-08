@@ -15,7 +15,9 @@ export default class ArrowNav extends Component {
         <button className={styles.baseArrow + ' ' + styles.arrowUp} />
         <button className={styles.baseArrow + ' ' + styles.arrowDown} />
         <div className={styles.counter}>
-          <span className={styles.counterCurrent}>1</span><span className={styles.counterOf}> of </span><span className={styles.currentMax}>9</span>
+          <span className={styles.counterCurrent}>1</span>
+          <span className={styles.counterOf}> of </span>
+          <span className={styles.currentMax}>9</span>
         </div>
       </div>
     );

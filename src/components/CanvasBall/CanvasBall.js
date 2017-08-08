@@ -10,7 +10,9 @@ class CanvasBall {
 
   draw(ctxInstance) {
     ctxInstance.beginPath();
+    // eslint-disable-next-line
     ctxInstance.globalAlpha = 0.1;
+    // eslint-disable-next-line
     ctxInstance.fillStyle = '#ddd';
     ctxInstance.arc((0.5 + this.x) | 0, (0.5 + this.y) | 0, 3, 0, this.TAU, false);
     ctxInstance.fill();
