@@ -26,6 +26,7 @@ export default class Front extends Component {
     // resize: PropTypes.func,
     mainWindowScrollAction: PropTypes.func.isRequired,
     mainImageResizeAction: PropTypes.func.isRequired,
+    updateMaxPages: PropTypes.func.isRequired,
     // isLandscape: PropTypes.bool,
     // windowWidth: PropTypes.number,
     offsetRatio: PropTypes.number
@@ -40,7 +41,7 @@ export default class Front extends Component {
     window.addEventListener('scroll', throttle(this.props.mainWindowScrollAction, 100));
     this.props.mainWindowScrollAction();
     this.props.mainImageResizeAction();
-    // console.log(this.)
+    this.props.updateMaxPages(6);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -62,7 +63,6 @@ export default class Front extends Component {
         rows.push(<FrontItem inView={false} key={i} order={i} />);
       }
     }
-    console.log(rows);
     return (
       <div className={styles.front}>
         <Helmet title="Home" />

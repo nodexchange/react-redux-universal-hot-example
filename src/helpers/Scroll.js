@@ -14,6 +14,20 @@ export default class Scroll {
     const ratioValue = Math.round((scrollBarPosition / clientH) * 100) / 100;
     return ratioValue; 
   }
+  static scrollToSection(requestedSection, direction) {
+    const clientH = window.innerHeight;
+    if (direction === 'down') {
+      requestedSection -= 1;
+    }
+    if (direction === 'up') {
+      requestedSection -= 1;
+      if (requestedSection === -1) {
+        return;
+      } 
+    }
+    let requestedY = clientH * requestedSection;
+    this.scrollToY(requestedY);
+  }
   static scrollToY(scrollTargetY, speed, easing) {
     // scrollTargetY: the target scrollY property of the window
     // speed: time in pixels per second
@@ -63,7 +77,6 @@ export default class Scroll {
         requestAnimFrame(tick);
         window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
       } else {
-        console.log('scroll done');
         window.scrollTo(0, scrollTargetY);
       }
     }
