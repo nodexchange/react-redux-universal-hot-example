@@ -51,16 +51,52 @@ export default class Front extends Component {
     }
   }
 
+  panelCopyObject = () => {
+    const copy = [];
+    copy.push({
+      smallHeader: 'Quartile',
+      header: 'Ad Agency',
+      description: 'We are data innovators, day dreamers, creative execution specialists, always striving to push the boundries of our bleeding edge digital creative executions to the next level',
+    });
+    copy.push({
+      smallHeader: 'Data-driven Ads',
+      header: '',
+      description: 'description 2',
+    });
+    copy.push({
+      smallHeader: 'small header 3',
+      header: '',
+      description: '',
+    });
+    copy.push({
+      smallHeader: 'small header 4',
+      header: '',
+      description: '',
+    });
+    copy.push({
+      smallHeader: 'small header 5',
+      header: '',
+      description: '',
+    });
+    copy.push({
+      smallHeader: 'small header 6',
+      header: '',
+      description: '',
+    });
+    return copy;
+  }
+
   render() {
     // eslint-disable-next-line global-require
     const styles = require('./Front.scss');
 
+    const panelsCopy = this.panelCopyObject();
     const rows = [];
     for (let i = 0; i < 6; i++) {
       if (this.currentPanel === i) {
-        rows.push(<FrontItem inView key={i} order={i} />);
+        rows.push(<FrontItem inView key={i} order={i} {...panelsCopy[i]} />);
       } else {
-        rows.push(<FrontItem inView={false} key={i} order={i} />);
+        rows.push(<FrontItem inView={false} key={i} order={i} {...panelsCopy[i]} />);
       }
     }
     return (
