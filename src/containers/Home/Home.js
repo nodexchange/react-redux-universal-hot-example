@@ -50,26 +50,6 @@ export default class Home extends Component {
         <div className={styles.section}>
           <dl>
             <dt>Machine Learning algorithm</dt>
-            <dd>[desc]</dd>
-            <dt>Standard creative display and new 3D and 360 creative executions</dt>
-            <dd>[desc]</dd>
-            <dt>[title]</dt>
-            <dd>Our talented creative team can assist with simple standard IAB executions,
-              templates production as well as full scale, responsive, true cross-screen ads and home page takeovers</dd>
-            <dt>Asset level dynamic optimisation</dt>
-            <dd>[desc]</dd>
-            <dt>Cross-screen 360' formats</dt>
-            <dd>[desc]</dd>
-            <dt>Ad server agnostic optimisation and solutions</dt>
-            <dd>[desc]</dd>
-            <dt>VPAID HTML5 and RichMedia</dt>
-            <dt>Contextually enhanced creatives</dt>
-            <dd>[desc]</dd>
-            <dt>[title]</dt>
-            <dd>We are a platform agnostic digital creative advertising agency, specilising in creation of cross-screen,
-              data-driven advertisment.
-              Our personlised unique solutions accelarate conversions and drive higher campaign's performance.
-            </dd>
           </dl>
           <Arrow />
         </div>

@@ -54,33 +54,33 @@ export default class Front extends Component {
   panelCopyObject = () => {
     const copy = [];
     copy.push({
-      smallHeader: 'Quartile',
-      header: 'Ad Agency',
-      description: 'We are data innovators, day dreamers, creative execution specialists, always striving to push the boundries of our bleeding edge digital creative executions to the next level',
+      smallHeader: 'Data-driven',
+      header: 'Creative Solutions',
+      description: 'We are data obsessed innovators, day dreamers, creative ad specialists, always striving to push the boundries of our bleeding edge digital executions to the next level.',
     });
     copy.push({
-      smallHeader: 'Data-driven Ads',
-      header: '',
-      description: 'description 2',
+      smallHeader: 'Drive Performance',
+      header: 'Through Data-first approach',
+      description: 'Ads are dead. That\'s why produce personlised eye-catching experiences. Our focus is to engage new audiences through experiences. Ad server agnostic optimisation and solutions. Personlised to the user through various input points.  Asset level dynamic optimisation Machine Learning algorithm',
     });
     copy.push({
-      smallHeader: 'small header 3',
-      header: '',
-      description: '',
+      smallHeader: 'Immersive',
+      header: '360 & VR Experiences',
+      description: 'Cross-screen 360* formats',
     });
     copy.push({
-      smallHeader: 'small header 4',
+      smallHeader: 'Standard creative display and new 3D',
       header: '',
-      description: '',
+      description: 'VPAID HTML5 and RichMedia. Our talented creative team can assist with simple standard IAB executions, templates production as well as full scale, responsive, true cross-screen ads and home page takeovers',
     });
     copy.push({
-      smallHeader: 'small header 5',
-      header: '',
-      description: '',
+      smallHeader: 'Cross platform',
+      header: 'AGNOSTIC SOLUTIONS',
+      description: 'Our true cross-screen personlised solutions accelarate conversions and drive higher campaign performance.',
     });
     copy.push({
-      smallHeader: 'small header 6',
-      header: '',
+      smallHeader: 'Contextually enhanced',
+      header: 'executions',
       description: '',
     });
     return copy;
