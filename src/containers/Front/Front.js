@@ -57,31 +57,43 @@ export default class Front extends Component {
       smallHeader: 'Data-driven',
       header: 'Creative Solutions',
       description: 'We are data obsessed innovators, day dreamers, creative ad specialists, always striving to push the boundries of our bleeding edge digital executions to the next level.',
+      buttonText: 'Learn More',
+      link: '/contact'
     });
     copy.push({
-      smallHeader: 'Drive Performance',
-      header: 'Through Data-first approach',
-      description: 'Ads are dead. That\'s why produce personlised eye-catching experiences. Our focus is to engage new audiences through experiences. Ad server agnostic optimisation and solutions. Personlised to the user through various input points.  Asset level dynamic optimisation Machine Learning algorithm',
+      smallHeader: 'Accelerate',
+      header: 'Conversions',
+      description: 'Ads are dead. That\'s why produce personlised eye-catching experiences. Our focus is to engage new audiences through user-centric data-first approach. Personlised to the user through various input points.  Asset level dynamic optimisation Machine Learning algorithm',
+      buttonText: 'Learn More',
+      link: '/contact'
     });
     copy.push({
       smallHeader: 'Immersive',
       header: '360 & VR Experiences',
       description: 'Cross-screen 360* formats',
+      buttonText: 'Learn More',
+      link: '/contact'
     });
     copy.push({
-      smallHeader: 'Standard creative display and new 3D',
-      header: '',
+      smallHeader: 'Standard creative display',
+      header: 'Contextually enhanced',
       description: 'VPAID HTML5 and RichMedia. Our talented creative team can assist with simple standard IAB executions, templates production as well as full scale, responsive, true cross-screen ads and home page takeovers',
+      buttonText: 'Learn More',
+      link: '/contact'
     });
     copy.push({
       smallHeader: 'Cross platform',
       header: 'AGNOSTIC SOLUTIONS',
-      description: 'Our true cross-screen personlised solutions accelarate conversions and drive higher campaign performance.',
+      description: 'Ad server agnostic optimisation and solutions. Our true cross-screen personlised solutions accelarate conversions and drive higher campaign performance.',
+      buttonText: 'Learn More',
+      link: '/contact'
     });
     copy.push({
-      smallHeader: 'Contextually enhanced',
-      header: 'executions',
+      smallHeader: '',
+      header: 'Talk to us',
       description: '',
+      buttonText: 'Learn More',
+      link: '/contact'
     });
     return copy;
   }

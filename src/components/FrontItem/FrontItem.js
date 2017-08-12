@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 export default class FrontItem extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -6,7 +7,9 @@ export default class FrontItem extends Component { // eslint-disable-line react/
     order: PropTypes.number.isRequired,
     smallHeader: PropTypes.string.isRequired,
     header: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired
+    description: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
   };
 
   render() {
@@ -30,7 +33,7 @@ export default class FrontItem extends Component { // eslint-disable-line react/
           <p className={styles.description + ' ' + outOrInView}>
             {this.props.description}
           </p>
-          <a href="/" className={styles.btn + ' ' + outOrInView}>Learn more</a>
+          <Link to={this.props.link} className={styles.btn + ' ' + outOrInView}>{this.props.buttonText}</Link>
         </div>
       </div>
     );
