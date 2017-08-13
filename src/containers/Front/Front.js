@@ -106,9 +106,9 @@ export default class Front extends Component {
     const rows = [];
     for (let i = 0; i < 6; i++) {
       if (this.currentPanel === i) {
-        rows.push(<FrontItem inView key={i} order={i} {...panelsCopy[i]} />);
+        rows.push(<FrontItem inView key={i} order={i} {...panelsCopy[i]} offset={this.props.offsetRatio} />);
       } else {
-        rows.push(<FrontItem inView={false} key={i} order={i} {...panelsCopy[i]} />);
+        rows.push(<FrontItem inView={false} key={i} order={i} {...panelsCopy[i]} offset={this.props.offsetRatio} />);
       }
     }
     return (

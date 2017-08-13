@@ -2,23 +2,24 @@
   height: 100%;
 }
 #one {
-  background: url(http://cloud.niklausgerber.com/432W0y1g2h05/orange.png) center center no-repeat scroll #FF905E;
+  /* background: url(http://cloud.niklausgerber.com/432W0y1g2h05/orange.png) center center no-repeat scroll #FF905E; */
+  background: url(./panel1.jpg) center center no-repeat scroll #FF905E;
 }
 
 #two {
-  background: url(http://cloud.niklausgerber.com/1a2n2I3J1h0M/red.png) center center no-repeat scroll #8F2041;
+  background: url(./panel2.jpg) center center no-repeat scroll #8F2041;
 }
 
 #three {
-  background: url(http://cloud.niklausgerber.com/1X180T1X2v3d/dark-orange.png) center center no-repeat scroll #DC554F;
+  background: url(./panel3.jpg) center center no-repeat scroll #DC554F;
 }
 
 #four {
-  background: url(http://cloud.niklausgerber.com/1b0r2D2Z1y0J/dark-red.png) center center no-repeat scroll #520E24;
+  background: url(./panel4.jpg) center center no-repeat scroll #520E24;
 }
 
 #five {
-  background: url(http://cloud.niklausgerber.com/2N002H122B0d/yellow.png) center center no-repeat scroll #FFDB77;
+  background: url(./panel5.jpg) center center no-repeat scroll #FFDB77;
 }
 
 #six {
@@ -31,7 +32,7 @@
 
 .info {
   position: relative;
-  top: 35%;
+  top: 15%;
   left: 8%;
   z-index: 2;
   // margin-top: -140px;
@@ -39,6 +40,7 @@
   color: white;
   line-height: 1.42857;
   font-family: 'Didact Gothic', sans-serif;
+  transition: all 0.4s ease 0s;
   .smallHeader {
     font-size: 24px;
     font-weight: 400;

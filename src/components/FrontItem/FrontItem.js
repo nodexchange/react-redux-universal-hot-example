@@ -9,8 +9,24 @@ export default class FrontItem extends Component { // eslint-disable-line react/
     header: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired
+    link: PropTypes.string.isRequired,
+    offset: PropTypes.number
   };
+
+  calculateTop() {
+    let tValue = 10;
+    if (this.props.offset >= this.props.order && this.props.offset < (this.props.order + 1)) {
+      const value = this.props.offset - this.props.order;
+      tValue += (50 * value);
+      if (value > 0.5) {
+        tValue = 45;
+      }
+    }
+    if (tValue > 45) {
+      tValue = 45;
+    }
+    return Math.round(tValue);
+  }
 
   render() {
     // const { info, load } = this.props; // eslint-disable-line no-shadow
@@ -24,9 +40,14 @@ export default class FrontItem extends Component { // eslint-disable-line react/
     if (this.props.inView) {
       outOrInView = styles.inView;
     }
+    const topValue = this.calculateTop();
+    const topStyle = { top: topValue + '%' };
+    if (this.props.inView) {
+      console.log(' topValue : ' + topValue + ' : topStyle : ' + topStyle.top);
+    }
     return (
       <div id={selectedClass} className={styles.section}>
-        <div className={styles.info}>
+        <div className={styles.info} style={topStyle}>
           <span className={styles.smallHeader + ' ' + outOrInView}>{this.props.smallHeader}</span>
           <h1 className={styles.header + ' ' + outOrInView}>{this.props.header}</h1>
           <span className={styles.line + ' ' + outOrInView}>{/* eslint-disable-line no-shadow */}</span>
