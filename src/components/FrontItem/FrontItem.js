@@ -16,8 +16,8 @@ export default class FrontItem extends Component { // eslint-disable-line react/
   calculateTop() {
     let tValue = 10;
     if (this.props.offset >= this.props.order && this.props.offset < (this.props.order + 1)) {
-      const value = this.props.offset - this.props.order;
-      tValue += (50 * value);
+      const value = (this.props.offset - this.props.order) * 1.2;
+      tValue += (70 * value);
       if (value > 0.5) {
         tValue = 45;
       }
