@@ -9,6 +9,7 @@ export Arrow from './Arrow/Arrow';
 export BackgroundRow from './BackgroundRow/BackgroundRow';
 export CanvasBall from './CanvasBall/CanvasBall';
 export Canvas from './Canvas/Canvas';
+export ContactItem from './ContactItem/ContactItem';
 export CounterButton from './CounterButton/CounterButton';
 export GithubButton from './GithubButton/GithubButton';
 export FooterBar from './FooterBar/FooterBar';

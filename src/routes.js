@@ -11,6 +11,7 @@ import {
     Widgets,
     About,
     Front,
+    Contact,
     Login,
     LoginSuccess,
     Survey,
@@ -54,6 +55,7 @@ export default (store) => {
       <Route path="login" component={Login} />
       <Route path="survey" component={Survey} />
       <Route path="widgets" component={Widgets} />
+      <Route path="contact" component={Contact} />
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

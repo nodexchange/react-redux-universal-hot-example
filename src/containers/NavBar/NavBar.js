@@ -168,6 +168,9 @@ $('.main_h li a').click(function() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+
+              <li><Link to="/products">Products</Link></li>
+              <li><Link to="/about">About</Link></li>
     */
     let navType = styles.sticky;
     if (this.state) {
@@ -189,8 +192,6 @@ $('.main_h li a').click(function() {
           <nav className={styles.navBar}>
             <ul>
               <li><Link to="/">Solutions</Link></li>
-              <li><Link to="/products">Products</Link></li>
-              <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </nav>

@@ -23,15 +23,15 @@
   //$size: 40px;
   //$logoWidth: 160px;
   
-  $size: 80px;
-  $logoWidth: 80px;
+  $size: 85px;
+  $logoWidth: 220px;
   
   position: absolute;
   top: -18px;
   left: 8px;
   display: inline-block;
-  /* background: url('./qlogo.png') no-repeat center center; */
-  background: url('./act.png') no-repeat center center;
+  background: url('./qlogo2.png') no-repeat center center;
+  /* background: url('./act.png') no-repeat center center; */
   width: $logoWidth;
   height: $size;
   background-size: 80%;

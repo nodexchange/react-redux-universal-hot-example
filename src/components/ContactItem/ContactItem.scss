@@ -3,32 +3,7 @@
   background-size: cover !important;
 }
 #one {
-  /* background: url(http://cloud.niklausgerber.com/432W0y1g2h05/orange.png) center center no-repeat scroll #FF905E; */
-  background: url(./panel1.jpg) center center no-repeat scroll #FF905E;
-}
-
-#two {
-  background: url(./panel2.jpg) center center no-repeat scroll #8F2041;
-}
-
-#three {
-  background: url(./panel3.jpg) center center no-repeat scroll #DC554F;
-}
-
-#four {
-  background: url(./panel4.jpg) center center no-repeat scroll #520E24;
-}
-
-#five {
-  background: url(./panel5.jpg) center center no-repeat scroll #FFDB77;
-}
-
-#six {
-  background: url(./panel6.jpg) center center no-repeat scroll #16a7f6;
-}
-
-#seven {
-  background: url(http://cloud.niklausgerber.com/2N002H122B0d/blue.png) center center no-repeat scroll #DC554F;
+  background: url(./panel6.jpg) center center no-repeat scroll #FF905E;
 }
 
 .info {
@@ -43,7 +18,6 @@
   font-family: 'Didact Gothic', sans-serif;
   transition: all 0.4s ease 0s;
   background-color: rgba(0,0,0,0.5);
-  padding: 30px;
   .smallHeader {
     font-size: 24px;
     font-weight: 400;
@@ -89,12 +63,16 @@
     content: " ";
   }
   .description {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     font-style: normal;
     margin: 0 0 10px;
     -webkit-transition-delay: .31s;
     transition-delay: .31s;
+    div {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
   .btn {
     margin-top: 15px;

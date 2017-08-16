@@ -2,6 +2,7 @@ export App from './App/App';
 export ArrowNav from './ArrowNav/ArrowNav';
 export Chat from './Chat/Chat';
 export Home from './Home/Home';
+export Contact from './Contact/Contact';
 export Front from './Front/Front';
 export NavBar from './NavBar/NavBar';
 export Widgets from './Widgets/Widgets';
