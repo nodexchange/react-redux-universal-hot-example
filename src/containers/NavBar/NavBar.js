@@ -21,22 +21,6 @@ export default class NavBar extends Component {
 
   /*
 
-// Mobile Navigation
-$('.mobile-toggle').click(function() {
-    if ($('.main_h').hasClass('open-nav')) {
-        $('.main_h').removeClass('open-nav');
-    } else {
-        $('.main_h').addClass('open-nav');
-    }
-});
-
-$('.main_h li a').click(function() {
-    if ($('.main_h').hasClass('open-nav')) {
-        $('.navigation').removeClass('open-nav');
-        $('.main_h').removeClass('open-nav');
-    }
-});
-
   // navigation scroll lijepo radi materem
   $('nav a').click(function(event) {
       var id = $(this).attr("href");
@@ -125,6 +109,24 @@ $('.main_h li a').click(function() {
     console.log(scrollPercentage + ' e ' + e);
     // window.scrollTo(0, e.wheelDelta);
   }
+  navClickHandler = () => {
+    console.log('CLICK HERE???' + this.state.mobileNav);
+    if (this.state) {
+      if (this.state.mobileNav === 'open-nav') {
+        this.setState({ mobileNav: '' });
+        return;
+      }
+      this.setState({ mobileNav: 'open-nav' });
+    }
+    /*
+  $('.main_h li a').click(function() {
+      if ($('.main_h').hasClass('open-nav')) {
+          $('.navigation').removeClass('open-nav');
+          $('.main_h').removeClass('open-nav');
+      }
+  });
+  */
+  }
   render() {
     // eslint-disable-next-line global-require
     const styles = require('./NavBar.scss');
@@ -173,30 +175,42 @@ $('.main_h li a').click(function() {
               <li><Link to="/about">About</Link></li>
     */
     let navType = styles.sticky;
+    let mobileNavType = 'close-nav';
+    let brandType = styles.brandNormal;
     if (this.state) {
       if (this.state.navbar === 'scroll') {
         navType = styles.scroll;
+        brandType = styles.brandScrolled;
+      }
+      if (this.state.mobileNav === 'open-nav') {
+        mobileNavType = styles.openNav;
       }
     }
+    /* eslint-disable */
     return (
-      <header className={styles.mainHeader + ' ' + navType}>
+      <header className={styles.mainHeader + ' ' + navType + ' ' + mobileNavType }>
         <div className={styles.row}>
           <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
-            <div className={styles.brand} />
+            <div className={styles.brand + ' ' + brandType} />
           </IndexLink>
-          <div className={styles.mobileToggle}>
-            <span>.</span>
-            <span>.</span>
-            <span>.</span>
+          <div
+            role="button"
+            tabIndex="0"
+            className={styles.mobileToggle}
+            onClick={this.navClickHandler}>
+            <span>{}</span>
+            <span>{}</span>
+            <span>{}</span>
           </div>
           <nav className={styles.navBar}>
             <ul>
-              <li><Link to="/">Solutions</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/" onClick={this.navClickHandler}>Solutions</Link></li>
+              <li><Link to="/contact" onClick={this.navClickHandler}>Contact Us</Link></li>
             </ul>
           </nav>
         </div>
       </header>
     );
+    /* eslint-enable */
   }
 }

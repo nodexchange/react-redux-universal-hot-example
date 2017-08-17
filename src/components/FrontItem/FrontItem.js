@@ -37,8 +37,10 @@ export default class FrontItem extends Component { // eslint-disable-line react/
     const selectedClass = styles[classes[this.props.order]];
 
     let outOrInView = styles.outView;
+    let infoOutOrInView = styles.infoOutView;
     if (this.props.inView) {
       outOrInView = styles.inView;
+      infoOutOrInView = styles.infoInView;
     }
     const topValue = this.calculateTop();
     const topStyle = { top: topValue + '%' };
@@ -47,7 +49,7 @@ export default class FrontItem extends Component { // eslint-disable-line react/
     }
     return (
       <div id={selectedClass} className={styles.section}>
-        <div className={styles.info} style={topStyle}>
+        <div className={styles.info + ' ' + infoOutOrInView} style={topStyle}>
           <span className={styles.smallHeader + ' ' + outOrInView}>{this.props.smallHeader}</span>
           <h1 className={styles.header + ' ' + outOrInView}>{this.props.header}</h1>
           <span className={styles.line + ' ' + outOrInView}>{/* eslint-disable-line no-shadow */}</span>

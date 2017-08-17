@@ -56,43 +56,43 @@ export default class Front extends Component {
     copy.push({
       smallHeader: 'Data-driven',
       header: 'Creative Solutions',
-      description: 'We are data obsessed innovators, day dreamers, creative ad specialists, always striving to push the boundries of our bleeding edge digital executions to the next level.',
+      description: 'We are data obsessed, London based innovators, day dreamers, creative ad specialists, always striving to push the boundaries of our bleeding edge digital executions to the next level.',
       buttonText: 'Learn More',
       link: '/contact'
     });
     copy.push({
       smallHeader: 'Accelerate',
       header: 'Conversions',
-      description: 'Ads are dead. That\'s why produce personlised eye-catching experiences. Our focus is to engage new audiences through user-centric data-first approach. Personlised to the user through various input points.  Asset level dynamic optimisation Machine Learning algorithm',
+      description: 'Ads are dead. That\'s why to produce eye-catching personalised experiences. Our focus is to engage new audiences through the user-centric data-first approach and adapt it real-time through various input points. By applying our asset level targeting and dynamic creative optimisation based on our proprietary machine learning algorithm, we produce ads that deliver premium performance.',
       buttonText: 'Learn More',
       link: '/contact'
     });
     copy.push({
       smallHeader: 'Immersive',
-      header: '360 & VR Experiences',
-      description: 'Cross-screen 360* formats',
+      header: '360° & VR Experiences',
+      description: 'Innovation is in our DNA. Our personalised 360° Cross-screen video player\'s intelligence adjusts the content in the real time, exposing the audience to the most interactive areas. Our VR experiences can seamlessly deliver immersive ground-breaking visuals that no other static media can offer.',
       buttonText: 'Learn More',
       link: '/contact'
     });
     copy.push({
       smallHeader: 'Standard creative display',
       header: 'Contextually enhanced',
-      description: 'VPAID HTML5 and RichMedia. Our talented creative team can assist with simple standard IAB executions, templates production as well as full scale, responsive, true cross-screen ads and home page takeovers',
+      description: 'Across web, mobile, in-app or video inventory, our talented creative team can assist with simple standard IAB executions, templates production as well as full scale, responsive, true cross-screen ads and home page takeovers',
       buttonText: 'Learn More',
       link: '/contact'
     });
     copy.push({
-      smallHeader: 'Cross platform',
+      smallHeader: 'Open cross platform',
       header: 'AGNOSTIC SOLUTIONS',
-      description: 'Ad server agnostic optimisation and solutions. Our true cross-screen personlised solutions accelarate conversions and drive higher campaign performance.',
+      description: 'Our services are not designed to lock-in our customers. Our product and optimisation processes are Ad server agnostic and can across various cross-environment inventory simultaneously. Our true cross-screen personalised solutions accelerate conversions and drive higher campaign performance.',
       buttonText: 'Learn More',
       link: '/contact'
     });
     copy.push({
-      smallHeader: '',
+      smallHeader: 'Have an idea',
       header: 'Talk to us',
-      description: '',
-      buttonText: 'Learn More',
+      description: 'We love to brainstorm ideas, and we do believe that the inspiration can come from anywhere. Inspire us to innovate, challenge us, tell us what you think, we are always happy to learn new things.',
+      buttonText: 'Contact us',
       link: '/contact'
     });
     return copy;

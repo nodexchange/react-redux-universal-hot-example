@@ -18,25 +18,30 @@
   .mainHeader {
     padding-top: 25px;
   }
+  .brandNormal {
+    margin-top: -11px !important;
+  }
+  .brandScrolled {
+    margin-top: -7px !important;
+  }
 }
 .brand {
-  //$size: 40px;
-  //$logoWidth: 160px;
-  
-  $size: 85px;
-  $logoWidth: 220px;
-  
   position: absolute;
   top: -18px;
   left: 8px;
   display: inline-block;
   background: url('./qlogo2.png') no-repeat center center;
-  /* background: url('./act.png') no-repeat center center; */
-  width: $logoWidth;
-  height: $size;
   background-size: 80%;
   margin: 0 10px 0 0;
-  border-radius: $size / 2;
+  transition: all 0.4s ease 0s;
+}
+.brandScrolled {
+  height: 95px;
+  width: 180px;
+}
+.brandNormal {
+  height: 85px;
+  width: 220px;
 }
 .navButton {
     margin-top: 2px;
@@ -86,10 +91,10 @@
     top: 1px;
   }
 
-.open-nav {
+.openNav {
   max-height: 400px !important;
 }
-.open-nav .mobile-toggle {
+.openNav .mobileToggle {
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
 }
@@ -105,6 +110,11 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.63);
   opacity: 1;
   top: -20px;
+  nav ul a {
+    font-size: 15px;
+    position: relative;
+    top: -4px; 
+  }
 }
 
 .logo {
@@ -131,6 +141,9 @@ nav {
 @media only screen and (max-width: 766px) {
   nav {
     width: 100%;
+  }
+  nav li {
+    margin-top: 7px !important;
   }
 }
 nav ul {
@@ -163,7 +176,7 @@ nav ul li {
 nav ul a {
   color: #888888;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .mobileToggle {
@@ -182,7 +195,7 @@ nav ul a {
     height: 4px;
     margin-bottom: 6px;
     border-radius: 1000px;
-    background: #8f8f8f;
+    background: #ffffff;
     display: block;
   }
 }
@@ -190,7 +203,13 @@ nav ul a {
   .mobileToggle {
     display: block;
   }
+  .scroll {
+    .mobileToggle {
+      margin-top: 7px;
+    }
+  }
 }
+
 
 .row {
   width: 100%;
@@ -219,7 +238,7 @@ nav ul a {
       transition: all 1s;
     }
     a:hover {
-      color: #ffbcb5;
+      color: #437eb2;
     }
   }
 }
