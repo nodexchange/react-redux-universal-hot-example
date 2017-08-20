@@ -2,33 +2,56 @@
   height: 100%;
   background-size: cover !important;
 }
+.inset {
+  -webkit-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
+}
 #one {
   /* background: url(http://cloud.niklausgerber.com/432W0y1g2h05/orange.png) center center no-repeat scroll #FF905E; */
-  background: url(./panel1.jpg) center center no-repeat scroll #FF905E;
+  background: url(./panel1.jpg) center center no-repeat scroll #DC554F;
 }
 
 #two {
-  background: url(./panel2.jpg) center center no-repeat scroll #8F2041;
+  background: url(./1x1.png) center center no-repeat scroll #ffffff;
 }
 
 #three {
-  background: url(./panel3.jpg) center center no-repeat scroll #DC554F;
+  background: url(./panel2.jpg) center center no-repeat scroll #DC554F;
 }
 
 #four {
-  background: url(./panel4.jpg) center center no-repeat scroll #520E24;
+  background: url(./1x1.png) center center no-repeat scroll #ffffff;
 }
 
 #five {
-  background: url(./panel5.jpg) center center no-repeat scroll #FFDB77;
+  background: url(./panel3.jpg) center center no-repeat scroll #DC554F;
 }
 
 #six {
-  background: url(./panel6.jpg) center center no-repeat scroll #16a7f6;
+  background: url(./1x1.png) center center no-repeat scroll #ffffff;
 }
 
+
 #seven {
-  background: url(http://cloud.niklausgerber.com/2N002H122B0d/blue.png) center center no-repeat scroll #DC554F;
+  background: url(./panel4.jpg) center center no-repeat scroll #DC554F;
+}
+
+
+#nine {
+  background: url(./1x1.png) center center no-repeat scroll #ffffff;
+}
+
+#ten {
+  background: url(./panel5.jpg) center center no-repeat scroll #DC554F;
+}
+
+#eleven {
+  background: url(./1x1.png) center center no-repeat scroll #ffffff;
+}
+
+#twelve {
+  background: url(./panel6.jpg) center center no-repeat scroll #DC554F;
 }
 
 .infoOutView {

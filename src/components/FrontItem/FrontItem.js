@@ -38,6 +38,10 @@ export default class FrontItem extends Component { // eslint-disable-line react/
 
     let outOrInView = styles.outView;
     let infoOutOrInView = styles.infoOutView;
+    let inset = styles.inset;
+    if ((this.props.order % 2) === 0) {
+      inset = '';
+    }
     if (this.props.inView) {
       outOrInView = styles.inView;
       infoOutOrInView = styles.infoInView;
@@ -45,10 +49,10 @@ export default class FrontItem extends Component { // eslint-disable-line react/
     const topValue = this.calculateTop();
     const topStyle = { top: topValue + '%' };
     if (this.props.inView) {
-      console.log(' topValue : ' + topValue + ' : topStyle : ' + topStyle.top);
+      // console.log(' topValue : ' + topValue + ' : topStyle : ' + topStyle.top);
     }
     return (
-      <div id={selectedClass} className={styles.section}>
+      <div id={selectedClass} className={styles.section + ' ' + inset}>
         <div className={styles.info + ' ' + infoOutOrInView} style={topStyle}>
           <span className={styles.smallHeader + ' ' + outOrInView}>{this.props.smallHeader}</span>
           <h1 className={styles.header + ' ' + outOrInView}>{this.props.header}</h1>

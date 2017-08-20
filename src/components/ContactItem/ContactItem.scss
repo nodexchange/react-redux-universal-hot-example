@@ -5,7 +5,6 @@
 #one {
   background: url(./panel6.jpg) center center no-repeat scroll #FF905E;
 }
-
 .info {
   position: relative;
   top: 15%;
@@ -18,6 +17,10 @@
   font-family: 'Didact Gothic', sans-serif;
   transition: all 0.4s ease 0s;
   background-color: rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.6);
+  padding: 30px;
   .smallHeader {
     font-size: 24px;
     font-weight: 400;
@@ -69,10 +72,6 @@
     margin: 0 0 10px;
     -webkit-transition-delay: .31s;
     transition-delay: .31s;
-    div {
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
   }
   .btn {
     margin-top: 15px;
@@ -105,5 +104,47 @@
     color: #fff;
     border-color: #16a7f6;
     background-color: #16a7f6;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .info {
+    width: 98%;
+    left: 0px;
+    margin-left: 1%;
+    line-height: 1.5;
+    padding: 40px;
+    .smallHeader {
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
+    .header {
+      font-size: 24px;
+    }
+    .description {
+      font-size: 18px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+  .info {
+    width: 98%;
+    left: 0px;
+    margin-left: 1%;
+    line-height: 1.5;
+    padding: 40px;
+    .smallHeader {
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    .header {
+      font-size: 20px;
+    }
+
+    .description {
+      font-size: 14px;
+    }
   }
 }
