@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { ContactItem } from 'components';
+import { SectionItem } from 'components';
 
 export default class Contact extends Component {
   panelCopyObject = () => {
@@ -11,6 +11,7 @@ export default class Contact extends Component {
       header: 'AD AGENCY',
       description: 'Use our team as an extension to yours and take advantage of our technical and creative expertise.\nIf you have any questions or would like to pick up brain on something do not hestiate, message us now.',
       buttonText: 'Contact us',
+      sectionClass: 'contact'
     });
     return copy;
   }
@@ -23,7 +24,7 @@ export default class Contact extends Component {
     return (
       <div className={styles.contact}>
         <Helmet title="Contact" />
-        <ContactItem inView key={0} order={0} {...panelsCopy[0]} />
+        <SectionItem inView key={0} order={0} {...panelsCopy[0]} />
       </div>
     );
   }

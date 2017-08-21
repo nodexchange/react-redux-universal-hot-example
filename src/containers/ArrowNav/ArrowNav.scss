@@ -27,6 +27,8 @@
     padding: 0;
     border: none;
     outline: 0;
+    -webkit-filter: drop-shadow(1px 1px 1px #222);
+    filter: drop-shadow(1px 1px 1px #222);
   }
   .counter {
     color: white;
@@ -34,5 +36,19 @@
     margin-top: -48px;
     font-family: 'Quicksand', sans-serif;
     width: 44px;
+    text-shadow: 1px 1px 1px #000000;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .arrowNav {
+    position: fixed;
+    right: 45%;
+    bottom: 0%;
+    opacity: 0.9;
+    top: auto;
+    .baseArrow {
+      display: none;
+    }
   }
 }

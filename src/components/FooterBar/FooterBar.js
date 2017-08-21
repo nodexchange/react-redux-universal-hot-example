@@ -34,7 +34,7 @@ export default class FooterBar extends Component { // eslint-disable-line react/
     */
 
     return (
-      <div className={`${styles.infoBar}  well`}>
+      <div className={`${styles.footerbar}  well`}>
         <div className="container">
           <strong>
             ©Quartile 2017. All rights reserved.

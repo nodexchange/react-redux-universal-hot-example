@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import { SectionItem } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
-import { MiniInfoBar } from 'components';
 
 export default class About extends Component {
 
@@ -12,7 +12,29 @@ export default class About extends Component {
 
   handleToggleKitten = () => this.setState({ showKitten: !this.state.showKitten });
 
+  panelCopyObject = () => {
+    const copy = [];
+    copy.push({
+      smallHeader: 'QUARTILE',
+      header: 'ABOUT US',
+      description: 'Transparency',
+      buttonText: 'Contact US',
+      sectionClass: 'about'
+    });
+    return copy;
+  }
+
   render() {
+    const styles = require('./About.scss');
+
+    const panelsCopy = this.panelCopyObject();
+    return (
+      <div className={styles.about}>
+        <Helmet title="About" />
+        <SectionItem inView key={0} order={0} {...panelsCopy[0]} />
+      </div>
+    );
+/*
     const { showKitten } = this.state;
     // eslint-disable-next-line global-require
     const kitten = require('./kitten.jpg');
@@ -55,5 +77,6 @@ export default class About extends Component {
         {showKitten && <div><img src={kitten} alt="" /></div>}
       </div>
     );
+    */
   }
 }

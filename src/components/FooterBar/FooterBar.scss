@@ -1,4 +1,4 @@
-.infoBar {
+.footerbar {
   font-variant: italics;
   margin-top: -100px;
   position: fixed;
@@ -15,4 +15,11 @@
 
 .time {
   margin: 0 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footerbar {
+    font-size: 14px;
+    opacity: .8;
+  }
 }

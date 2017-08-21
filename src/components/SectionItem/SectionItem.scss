@@ -1,9 +1,13 @@
 .section {
   height: 100%;
   background-size: cover !important;
+  overflow: hidden;
 }
-#one {
-  background: url(./panel6.jpg) center center no-repeat scroll #FF905E;
+#contact {
+  background: url(./contact.jpg) center center no-repeat scroll #FF905E;
+}
+#about {
+  background: url(./about.jpg) center center no-repeat scroll #FF905E;
 }
 .info {
   position: relative;

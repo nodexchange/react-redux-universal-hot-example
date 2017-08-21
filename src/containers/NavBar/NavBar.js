@@ -110,7 +110,6 @@ export default class NavBar extends Component {
     // window.scrollTo(0, e.wheelDelta);
   }
   navClickHandler = () => {
-    console.log('CLICK HERE???' + this.state.mobileNav);
     if (this.state) {
       if (this.state.mobileNav === 'open-nav') {
         this.setState({ mobileNav: '' });
@@ -205,6 +204,7 @@ export default class NavBar extends Component {
           <nav className={styles.navBar}>
             <ul>
               <li><Link to="/" onClick={this.navClickHandler}>Solutions</Link></li>
+              <li><Link to="/about" onClick={this.navClickHandler}>About</Link></li>
               <li><Link to="/contact" onClick={this.navClickHandler}>Contact Us</Link></li>
             </ul>
           </nav>

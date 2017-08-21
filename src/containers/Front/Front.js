@@ -45,7 +45,7 @@ export default class Front extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const panelValue = Math.round(nextProps.offsetRatio) + 0.3;
+    const panelValue = Math.round(nextProps.offsetRatio) + 0.2;
     if (panelValue !== this.currentPanel) {
       this.currentPanel = Math.round(nextProps.offsetRatio);
     }

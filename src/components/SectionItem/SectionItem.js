@@ -7,15 +7,15 @@ export default class ContactItem extends Component { // eslint-disable-line reac
     header: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
+    sectionClass: PropTypes.string.isRequired
   };
 
   render() {
     // const { info, load } = this.props; // eslint-disable-line no-shadow
     // eslint-disable-next-line global-require
-    const styles = require('./ContactItem.scss');
+    const styles = require('./SectionItem.scss');
 
-    const classes = ['one'];
-    const selectedClass = styles[classes[0]];
+    const selectedClass = styles[this.props.sectionClass];
 
     let outOrInView = styles.outView;
     if (this.props.inView) {
