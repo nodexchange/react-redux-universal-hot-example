@@ -38,7 +38,8 @@ export default class Html extends Component { // eslint-disable-line react/prefe
           {head.meta.toComponent()}
           {head.link.toComponent()}
           {head.script.toComponent()}
-
+          <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+          <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />          
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {/* styles (will be present only in production with webpack extract text plugin) */}

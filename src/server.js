@@ -52,7 +52,13 @@ proxy.on('error', (error, req, res) => {
     console.error('proxy error', error);
   }
   if (!res.headersSent) {
-    res.writeHead(500, { 'content-type': 'application/json' });
+    try {
+      res.status(500).send({ status: 500, message: 'internal error', type: 'internal', 'content-type': 'application/json' });
+    } catch (e) {
+      console.error(error);
+      res.status(500).send();
+    }
+    // res.writeHead(500, { 'content-type': 'application/json' });
   }
 
   const json = { error: 'proxy_error', reason: error.message };

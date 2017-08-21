@@ -6,8 +6,8 @@ npm run prod
 
 # release
 
-1. sudo docker build -t nodexchange/marcin-js-app:dev .
-2. sudo docker push nodexchange/marcin-js-app:dev
+1. (sudo) docker build -t nodexchange/marcin-js-app:dev .
+2. (sudo) docker push nodexchange/marcin-js-app:dev
 3. ssh root@104.236.36.61
 4. docker ps -a
 5. docker stop [container id]
