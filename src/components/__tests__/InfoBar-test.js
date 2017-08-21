@@ -17,7 +17,7 @@ import { InfoBar } from 'components';
 
 const client = new ApiClient();
 
-describe('InfoBar', () => {
+describe('FooterBar', () => {
   const mockStore = {
     info: {
       load: () => {},
@@ -52,7 +52,7 @@ describe('InfoBar', () => {
 
   it('should render the correct className', () => {
     // eslint-disable-next-line global-require, import/no-extraneous-dependencies
-    const styles = require('components/InfoBar/InfoBar.scss');
+    const styles = require('components/FooterBar/FooterBar.scss');
 
     expect(styles.infoBar).to.be.a('string');
     expect(dom.className).to.include(styles.infoBar);
