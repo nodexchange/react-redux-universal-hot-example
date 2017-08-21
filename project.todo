@@ -1,6 +1,45 @@
-☐ mobile navigation.
-☐ arrow page menu (used with scrolling). 
-☐ products page.
+#HOME
+☐ White sections (home page)
+☐ 100% timelapse video (home page)
+☐ last section (footer / social media channels) (home page)
+
+#CONTACT PAGE
+☐ video or token (home page)
+
+#ABOUT
 ☐ about page.
-☐ contact page.
-☐ footer bar.
+
+#PRODUCTS
+☐ Case study
+☐ products page.
+
+#OTHER
+☐ Wercker tests
+☐ Twitter Account
+☐ LinkedIn account
+
+## RELEASED
+1.0
+✔ mobile navigation. @done (21/08/2017, 10:00:35)
+✔ arrow page menu (used with scrolling). @done (21/08/2017, 10:00:42)
+✔ contact page. @done (21/08/2017, 10:00:48)
+✔ footer bar. @done (21/08/2017, 10:00:50)
+
+====
+TODO HINTS:
+    New Task:
+        ☐ Press Cmd+Enter (Ctrl+Enter on Windows and Linux) to add a new task
+        ☐ You can also use the Command pallette to create a new task by typing To Do:New Task
+        ☐ If you are on a new line, it will create a new task on the current line
+        ☐ If you are on a line with some text pressing new task shortcut will convert it to a task
+        ☐ New tasks are nested as much as the previous task
+    More Actions:
+        ✔ Complete a task by pressing Alt+d @done
+        ☐ Re-open a completed task by pressing Alt+d
+        ✘ Cancel a task by pressing Alt+c @cancelled
+        ☐ Complete a cancelled task by pressing Alt+d
+        ☐ You can also use the Command pallette to complete or cancel a task by typing To Do:Complete Task or To Do:Cancel Task
+    Tagging:
+        ☐ You can add tags using @ sign, like this @tag
+        ☐ You can use following pre-existing tags to mark tasks @critical @high @low @today
+        ☐ Auto intellisense is provided to help you in finding tags

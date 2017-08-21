@@ -13,7 +13,7 @@ import createStore from 'redux/create';
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 import ApiClient from 'helpers/ApiClient';
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
-import { InfoBar } from 'components';
+import { FooterBar } from 'components';
 
 const client = new ApiClient();
 
@@ -32,7 +32,7 @@ describe('FooterBar', () => {
   const store = createStore(browserHistory, client, mockStore);
   const renderer = renderIntoDocument(
     <Provider store={store} key="provider">
-      <InfoBar />
+      <FooterBar />
     </Provider>
   );
   // eslint-disable-next-line react/no-find-dom-node
@@ -40,15 +40,15 @@ describe('FooterBar', () => {
 
   it('should render correctly', () => expect(renderer).to.be.ok);
 
-  it('should render with correct value', () => {
-    const text = dom.getElementsByTagName('strong')[0].textContent;
-    expect(text).to.equal(mockStore.info.data.message);
-  });
+  // it('should render with correct value', () => {
+  //   const text = dom.getElementsByTagName('strong')[0].textContent;
+  //   expect(text).to.equal(mockStore.info.data.message);
+  // });
 
-  it('should render with a reload button', () => {
-    const text = dom.getElementsByTagName('button')[0].textContent;
-    expect(text).to.be.a('string');
-  });
+  // it('should render with a reload button', () => {
+  //   const text = dom.getElementsByTagName('button')[0].textContent;
+  //   expect(text).to.be.a('string');
+  // });
 
   it('should render the correct className', () => {
     // eslint-disable-next-line global-require, import/no-extraneous-dependencies
