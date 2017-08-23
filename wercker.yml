@@ -57,7 +57,7 @@ deploy:
         hostname: 104.236.36.61
     - script:
         name: stop running container
-        code: ssh root@104.236.36.61 docker stop marcin-js-app:dev || echo ‘failed to stop running container’
+        code: ssh root@104.236.36.61 docker stop nodexchange/marcin-js-app:dev || echo ‘failed to stop running container’
     - script:
         name: pull latest image
         code: ssh root@104.236.36.61 docker pull nodexchange/marcin-js-app:dev
