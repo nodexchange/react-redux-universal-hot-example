@@ -1,5 +1,6 @@
 import React from 'react';
 import { IndexRoute, Route } from 'react-router';
+import ReactGA from 'react-ga';
 
 // eslint-disable-next-line import/extensions
 import { isLoaded as isAuthLoaded, load as loadAuth } from 'redux/modules/auth';
@@ -35,12 +36,38 @@ export default (store) => {
       checkAuth();
     }
   };
+  let gaActive = false;
+
+  const logPageView = () => {
+    try {
+      ReactGA.set({ page: window.location.pathname });
+      ReactGA.pageview(window.location.pathname);
+      console.log('LOG :: ' + window.location.pathname);
+    } catch (e) {
+      console.log('LOG PAGE VIEW ' + e.message);
+    }
+  };
+
+  const enterTest = () => {
+    setTimeout(() => {
+      try {
+        if (!gaActive) {
+          ReactGA.initialize('UA-105179082-1');
+          gaActive = true;
+        }
+        ReactGA.set({ page: window.location.pathname });
+        ReactGA.pageview(window.location.pathname);
+      } catch (e) {
+        console.log('[GA] LOG PAGE VIEW ' + e.message);
+      }
+    }, 1500);
+  };
 
   /**
    * Please keep routes in alphabetical order
    */
   return (
-    <Route path="/" component={App}>
+    <Route path="/" component={App} onUpdate={logPageView} onEnter={enterTest}>
       { /* Home (main) route */ }
       <IndexRoute component={Front} />
 

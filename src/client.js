@@ -4,7 +4,6 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactGA from 'react-ga';
 import io from 'socket.io-client';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
@@ -22,7 +21,6 @@ const dest = document.getElementById('content');
 // eslint-disable-next-line no-underscore-dangle
 const store = createStore(browserHistoryScroll, client, window.__data);
 const history = syncHistoryWithStore(browserHistoryScroll, store);
-ReactGA.initialize('UA-105179082-1');
 
 function initSocket() {
   const socket = io('', { path: '/ws' });
