@@ -62,9 +62,6 @@ deploy:
         name: pull latest image
         code: ssh root@104.236.36.61 docker pull nodexchange/marcin-js-app:dev
     - script:
-        name: tag newly pulled image
-        code: ssh root@104.236.36.61 docker tag nodexchange/marcin-js-app:dev nodexchange/marcin-js-app:dev
-    - script:
         name: run new container
         code: ssh root@104.236.36.61 docker run -d -p 3000:3000 -e'PORT=3000' nodexchange/marcin-js-app:dev
     - script:
