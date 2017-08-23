@@ -15,3 +15,9 @@ npm run prod
 7. docker run -d -p 3000:3000 -e'PORT=3000' nodexchange/marcin-js-app:dev
 8. docker rm `docker ps --no-trunc -aq`
 9. exit
+
+# with wercker
+1. git commit
+2. docker build -t nodexchange/marcin-js-app:dev
+3. docker push nodexchange/marcin-js-app:dev
+4. git push (this will start wercker etc.);
