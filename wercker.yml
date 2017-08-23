@@ -57,7 +57,7 @@ deploy:
         hostname: 104.236.36.61
     - script:
         name: stop running container
-        code: ssh root@104.236.36.61 docker stop nodexchange/marcin-js-app:dev || echo ‘failed to stop running container’
+        code: ssh root@104.236.36.61 docker stop quartile || echo ‘failed to stop running container’
     - script:
         name: clean old containers
         code: ssh root@104.236.36.61 docker rm nodexchange/marcin-js-app:dev || echo ‘failed to delete stopped container’
@@ -69,7 +69,7 @@ deploy:
         code: ssh root@104.236.36.61 docker tag nodexchange/marcin-js-app:dev nodexchange/marcin-js-app:dev
     - script:
         name: run new container
-        code: ssh root@104.236.36.61 docker run -d -p 3000:3000 -e'PORT=3000' nodexchange/marcin-js-app:dev
+        code: ssh root@104.236.36.61 docker run -d --name quartile -p 3000:3000 -e'PORT=3000' nodexchange/marcin-js-app:dev
     - script:
         name: ECHO DEPLOY COMPLETED
         code: echo ‘DEPLOYMENT COMPLETED’
