@@ -60,7 +60,7 @@ deploy:
         code: ssh root@104.236.36.61 docker stop quartile || echo ‘failed to stop running container’
     - script:
         name: clean old containers
-        code: ssh root@104.236.36.61 docker rm nodexchange/marcin-js-app:dev || echo ‘failed to delete stopped container’
+        code: ssh root@104.236.36.61 docker rm quartile || echo ‘failed to delete stopped container’
     - script:
         name: pull latest image
         code: ssh root@104.236.36.61 docker pull nodexchange/marcin-js-app:dev
