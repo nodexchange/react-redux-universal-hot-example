@@ -54,7 +54,7 @@ describe('FooterBar', () => {
     // eslint-disable-next-line global-require, import/no-extraneous-dependencies
     const styles = require('components/FooterBar/FooterBar.scss');
 
-    expect(styles.infoBar).to.be.a('string');
-    expect(dom.className).to.include(styles.infoBar);
+    expect(styles.footerbar).to.be.a('string');
+    expect(dom.className).to.include(styles.footerbar);
   });
 });
