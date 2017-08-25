@@ -2,6 +2,69 @@
   height: 100%;
   background-size: cover !important;
   overflow: hidden;
+  position: relative;
+}
+.inset {
+  -webkit-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
+}
+#one {
+  /* background: url(http://cloud.niklausgerber.com/432W0y1g2h05/orange.png) center center no-repeat scroll #FF905E; */
+  background: url(./panel1.jpg) center center no-repeat scroll #DC554F;
+}
+
+#two {
+  background: url(./panel1white.jpg) center center no-repeat scroll #ffffff;
+}
+
+#three {
+  background: url(./panel2.jpg) center center no-repeat scroll #DC554F;
+}
+
+#four {
+  background: url(./panel2white.jpg) center center no-repeat scroll #ffffff;
+}
+
+#five {
+  background: url(./panel3.jpg) center center no-repeat scroll #DC554F;
+}
+
+#six {
+  background: url(./panel3white.jpg) center center no-repeat scroll #ffffff;
+}
+
+
+#seven {
+  background: url(./panel4.jpg) center center no-repeat scroll #DC554F;
+}
+
+
+#nine {
+  background: url(./panel4white.jpg) center center no-repeat scroll #ffffff;
+}
+
+#ten {
+  background: url(./panel5.jpg) center center no-repeat scroll #DC554F;
+}
+
+#eleven {
+  background: url(./panel5white.jpg) center center no-repeat scroll #ffffff;
+}
+
+#twelve {
+  background: url(./panel6.jpg) center center no-repeat scroll #DC554F;
+}
+
+.infoOutView {
+  -webkit-transform: translate3d(0,-100px,0);
+  transform: translate3d(0,-100px,0);
+  opacity: 0;
+}
+.infoInView {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 #contact {
   background: url(./contact.jpg) center center no-repeat scroll #FF905E;
@@ -14,7 +77,6 @@
   top: 15%;
   left: 8%;
   z-index: 2;
-  // margin-top: -140px;
   width: 506px;
   color: white;
   line-height: 1.42857;
@@ -128,6 +190,10 @@
     .description {
       font-size: 18px;
     }
+    .line {
+      width: 30px;
+      margin: 20px 0 23px 5px;
+    }
   }
 
 }
@@ -149,6 +215,10 @@
 
     .description {
       font-size: 14px;
+    }
+    .line {
+      width: 20px;
+      margin: 10px 0 13px 5px;
     }
   }
 }
