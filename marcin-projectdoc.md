@@ -21,3 +21,7 @@ npm run prod
 2. docker build -t nodexchange/marcin-js-app:dev
 3. docker push nodexchange/marcin-js-app:dev
 4. git push (this will start wercker etc.);
+
+# new pipline
+1. git commit 
+2. git push
