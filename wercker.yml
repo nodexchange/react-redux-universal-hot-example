@@ -34,9 +34,9 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
-push-docker:
+push:
   steps:
-    internal/docker-push:
+    - internal/docker-push:
         username: $DOCKER_LOGIN
         password: $DOCKER_PASSWORD
         repository: nodexchange/marcin-js-app
