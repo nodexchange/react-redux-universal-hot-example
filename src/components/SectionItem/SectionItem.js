@@ -12,6 +12,7 @@ export default class SectionItem extends Component { // eslint-disable-line reac
     sectionClass: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     order: PropTypes.number.isRequired,
+    key: PropTypes.number.isRequired,
     offset: PropTypes.number,
     videoLink: PropTypes.string
   };
@@ -70,7 +71,7 @@ export default class SectionItem extends Component { // eslint-disable-line reac
     const text = this.props.description;
     return (
       <div id={selectedClass} className={styles.section + ' ' + inset}>
-        <SectionVideo inView={this.props.inView} videoLink={this.props.videoLink} />
+        <SectionVideo key={this.props.key} inView={this.props.inView} videoLink={this.props.videoLink} />
         <div className={styles.info + ' ' + infoOutOrInView} style={topStyle}>
           <span className={styles.smallHeader + ' ' + outOrInView}>{this.props.smallHeader}</span>
           <h1 className={styles.header + ' ' + outOrInView}>{this.props.header}</h1>

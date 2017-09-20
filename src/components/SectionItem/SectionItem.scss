@@ -12,48 +12,59 @@
 #one {
   /* background: url(http://cloud.niklausgerber.com/432W0y1g2h05/orange.png) center center no-repeat scroll #FF905E; */
   background: url(./panel1.jpg) center center no-repeat scroll #DC554F;
+  z-index: 150;
 }
 
 #two {
   background: url(./panel1white.jpg) center center no-repeat scroll #ffffff;
+  z-index: 160;
 }
 
 #three {
   background: url(./panel2.jpg) center center no-repeat scroll #DC554F;
+  z-index: 170;
 }
 
 #four {
   background: url(./panel2white.jpg) center center no-repeat scroll #ffffff;
+  z-index: 180;
 }
 
 #five {
   background: url(./panel3.jpg) center center no-repeat scroll #DC554F;
+  z-index: 190;
 }
 
 #six {
   background: url(./panel3white.jpg) center center no-repeat scroll #ffffff;
+  z-index: 200;
 }
 
 
 #seven {
   background: url(./panel4.jpg) center center no-repeat scroll #DC554F;
+  z-index: 210;
 }
 
 
 #nine {
   background: url(./panel4white.jpg) center center no-repeat scroll #ffffff;
+  z-index: 220;
 }
 
 #ten {
   background: url(./panel5.jpg) center center no-repeat scroll #DC554F;
+  z-index: 230;
 }
 
 #eleven {
   background: url(./panel5white.jpg) center center no-repeat scroll #ffffff;
+  z-index: 240;
 }
 
 #twelve {
   background: url(./panel6.jpg) center center no-repeat scroll #DC554F;
+  z-index: 250;
 }
 
 .infoOutView {

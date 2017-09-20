@@ -1,8 +1,14 @@
 .videoSection {
-  height: 100%;
+  height: auto;
   background-size: cover !important;
   overflow: hidden;
   width:100%;
   z-index: 1;
-  position: absolute;
+  position: fixed;
+}
+.outView {
+  opacity: 0.6;
+}
+.inView {
+  opacity:1;
 }
