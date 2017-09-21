@@ -18,7 +18,7 @@ export default class SectionVideo extends Component { // eslint-disable-line rea
     // }
     let videoNode = '<div></div>';
     if (this.props.videoLink) {
-      videoNode = (<VideoPlayer src="/test.mp4" type="video/mp4" width="100%" inView={this.props.inView} />);
+      videoNode = (<VideoPlayer src={this.props.videoLink} type="video/mp4" width="100%" inView={this.props.inView} />);
     }
     return (
       <div className={styles.videoSection}>

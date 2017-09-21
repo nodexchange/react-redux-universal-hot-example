@@ -60,7 +60,7 @@ export default class Front extends Component {
       buttonText: 'Learn More',
       link: '/contact',
       sectionClass: 'one',
-      videoLink: '/test.mp4'
+      videoLink: '/top.mp4'
     });
     copy.push({
       smallHeader: 'Accelerate',

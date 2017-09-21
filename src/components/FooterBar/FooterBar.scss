@@ -5,12 +5,15 @@
   bottom:4px;
   left:4px;
   text-shadow: 1px 1px 1px #000000;
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;
   font-weight: 400;
   font-style: normal;
-  opacity: .5;
+  opacity: .8;
   font-family: 'Quicksand', sans-serif;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
 }
 
 .time {
