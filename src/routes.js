@@ -7,7 +7,6 @@ import { isLoaded as isAuthLoaded, load as loadAuth } from 'redux/modules/auth';
 import {
     App,
     Chat,
-    // Home,
     Widgets,
     About,
     Front,
@@ -41,7 +40,6 @@ export default (store) => {
    */
   return (
     <Route path="/" component={App}>
-      { /* Home (main) route */ }
       <IndexRoute component={Front} />
 
       { /* Routes requiring login */ }

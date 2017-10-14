@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-import { SectionVideo } from 'components';
+// import { SectionVideo } from 'components';
 
 export default class SectionItem extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -12,9 +12,9 @@ export default class SectionItem extends Component { // eslint-disable-line reac
     sectionClass: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     order: PropTypes.number.isRequired,
-    key: PropTypes.number.isRequired,
+    // key: PropTypes.number.isRequired,
     offset: PropTypes.number,
-    videoLink: PropTypes.string
+    // videoLink: PropTypes.string
   };
 
   calculateTop() {
@@ -69,9 +69,9 @@ export default class SectionItem extends Component { // eslint-disable-line reac
     const topValue = this.calculateTop();
     const topStyle = { top: topValue + '%' };
     const text = this.props.description;
+    // <SectionVideo key={this.props.key} inView={this.props.inView} videoLink={this.props.videoLink} />
     return (
       <div id={selectedClass} className={styles.section + ' ' + inset}>
-        <SectionVideo key={this.props.key} inView={this.props.inView} videoLink={this.props.videoLink} />
         <div className={styles.info + ' ' + infoOutOrInView} style={topStyle}>
           <span className={styles.smallHeader + ' ' + outOrInView}>{this.props.smallHeader}</span>
           <h1 className={styles.header + ' ' + outOrInView}>{this.props.header}</h1>

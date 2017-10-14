@@ -81,9 +81,9 @@ export default class App extends Component {
         <Helmet {...config.app.head} />
         <NavBar user={user} />
 
-        <div className={styles.content}>
+        <section className={styles.content}>
           {this.props.children}
-        </div>
+        </section>
         <ArrowNav />
         <FooterBar />
       </div>

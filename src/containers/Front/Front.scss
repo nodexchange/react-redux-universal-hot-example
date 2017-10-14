@@ -23,3 +23,9 @@
 #five {
   background: url(http://cloud.niklausgerber.com/2N002H122B0d/yellow.png) center center no-repeat scroll #FFDB77;
 }
+.divider {
+  display: block;
+  width: 100%;
+  min-height: 20vw;
+  pointer-events: none;
+}

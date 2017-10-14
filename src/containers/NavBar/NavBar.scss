@@ -2,7 +2,7 @@
   position: fixed;
   top: 0px;
   max-height: 70px;
-  z-index: 999;
+  z-index: 4;
   width: 100%;
   padding-top: 17px;
   background: none;
@@ -30,7 +30,7 @@
   top: -18px;
   left: 8px;
   display: inline-block;
-  background: url('./qlogo2.png') no-repeat center center;
+  background: url('./quartile-logo.png') no-repeat center center;
   background-size: 80%;
   margin: 0 10px 0 0;
   transition: all 0.4s ease 0s;
@@ -249,7 +249,7 @@ nav ul a {
 
 body {
   color: #8f8f8f;
-  background: white;
+  // background: white;
   font-family: "Cardo", serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;

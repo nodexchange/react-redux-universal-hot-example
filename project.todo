@@ -1,22 +1,47 @@
+
+2.0
+✔ last section (footer / social media channels) (home page) https://www.dogstudio.co/ @done (2017-10-14 02:07:32)
+☐ project links effects on buttons http://www.kikk.be/2016/en/program/workshops/machine-learning-for-artists. 
+☐ project lists https://www.dogstudio.co/projects/ 
+☐ better about us section: https://www.dogstudio.co/studio/
+☐ SVG(snap.js) quartile icon to love symbol <3 (maybe adobe animate cc animation svg animations).
+☐ personality.
+☐ emotional design / algorithm for optimisation.
+☐ media queries for mobile portrait.
+☐ title change for sections.
+✔ media queries for landscape heights. @done (2017-10-14 00:18:59)
+☐ load animation between sections.
+☐ animation as a reward.
+☐ firefox sections calc.
+☐ reproduce quartile logo as SVG (footer).
+☐ social links on footer.
+☐ create instagram.
+☐ create ONE Creative icon.
+☐ footer media queries.
+
+
+#Wercker
+☐ Wercker deploy (404 on docker error)
+☐ Wercker tests
+
+1.0
 #HOME
-☐ White sections (home page)
-☐ 100% timelapse video (home page)
-☐ last section (footer / social media channels) (home page)
+✔ White sections (home page) @done (2017-10-13 22:20:50)
+✔ 100% timelapse video (home page) @done (2017-10-13 22:20:51)
 
 #CONTACT PAGE
 ☐ video or token (home page)
 
 #ABOUT
-☐ about page.
+✔ about page. @done (2017-10-13 22:20:57)
 
 #PRODUCTS
 ☐ Case study
 ☐ products page.
 
 #OTHER
-☐ Wercker tests
-☐ Twitter Account
-☐ LinkedIn account
+✔ Twitter Account @done (2017-10-13 22:20:43)
+✔ LinkedIn account @done (2017-10-13 22:20:44)
 
 ## RELEASED
 1.0

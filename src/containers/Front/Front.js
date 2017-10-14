@@ -122,6 +122,7 @@ export default class Front extends Component {
       <div className={styles.front}>
         <Helmet title="Home" />
         {rows}
+        <div className={styles.divider} />
       </div>
     );
   }
