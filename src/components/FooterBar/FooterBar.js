@@ -19,7 +19,7 @@ export default class FooterBar extends Component { // eslint-disable-line react/
     // const { info, load } = this.props; // eslint-disable-line no-shadow
     // eslint-disable-next-line global-require
     const styles = require('./FooterBar.scss');
-    const certificateImg = require('./soda.png');
+    const certificateImg = require('./one.png');
     const quartileLogoImg = require('./../../containers/NavBar/quartile-logo.png');
 
     return (
@@ -37,13 +37,13 @@ export default class FooterBar extends Component { // eslint-disable-line react/
             <p className={styles.clear}>{''}</p>
             <nav className={styles.footerMenu}>
               <a href="/contact">Contact us</a>
-              <a href="https://twitter.com/dogstudio" target="_blank">Twitter</a>
-              <a href="https://www.facebook.com/dogstudio" target="_blank">LinkedIn</a>
-              <a href="https://www.instagram.com/dogstudio_be/" target="_blank">Instagram</a>
+              <a href="https://twitter.com/HelloQuartile" target="_blank">Twitter</a>
+              <a href="https://www.linkedin.com/company-beta/27015742" target="_blank">LinkedIn</a>
+              <a href="https://www.instagram.com/quartile_io/" target="_blank">Instagram</a>
             </nav>
           </div>
-          <a href="http://sodaspeaks.com/" target="_blank" className={styles.certification}>
-            <img src={certificateImg} alt="A super proud member of SoDA" />
+          <a href="https://www.onebyaol.com/" target="_blank" className={styles.certification}>
+            <img src={certificateImg} alt="A certified partner of ONE CREATIVE" />
           </a>
         </div>
       </footer>
