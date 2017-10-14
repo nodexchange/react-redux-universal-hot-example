@@ -7,7 +7,7 @@
 ☐ SVG(snap.js) quartile icon to love symbol <3 (maybe adobe animate cc animation svg animations).
 ☐ personality.
 ☐ emotional design / algorithm for optimisation.
-☐ media queries for mobile portrait.
+✔ media queries for mobile portrait. @done (2017-10-14 14:32:40)
 ☐ title change for sections.
 ✔ media queries for landscape heights. @done (2017-10-14 00:18:59)
 ☐ load animation between sections.
@@ -17,7 +17,8 @@
 ✔ social links on footer. @done (2017-10-14 04:43:42)
 ☐ create instagram.
 ✔ create ONE Creative icon. @done (2017-10-14 04:43:45)
-☐ footer media queries.
+✔ footer media queries. @done (2017-10-14 14:32:16)
+✔ analytics. @done (2017-10-14 10:29:58)
 
 
 #Wercker

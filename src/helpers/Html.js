@@ -58,7 +58,10 @@ export default class Html extends Component { // eslint-disable-line react/prefe
           {
             // eslint-disable-next-line max-len, react/no-danger, global-require, no-underscore-dangle
             Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{ __html: require('../containers/App/App.scss')._style }} /> : null
-          }
+          }          
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105179082-1"></script>
+          <script src="/ganalytics.js"></script>
+          
         </head>
         <body>
           <div id="content" className="content" dangerouslySetInnerHTML={{ __html: content }} style={contentStyle} />
