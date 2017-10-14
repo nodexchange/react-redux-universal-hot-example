@@ -40,6 +40,7 @@ push:
         username: $DOCKER_LOGIN
         password: $DOCKER_PASSWORD
         repository: nodexchange/marcin-js-app
+        registry: https://registry.hub.docker.com/v2
         tag: dev
         env: "NODE_ENV=development, HOST=104.236.36.61"
         volumes: ".:/opt/app, /opt/app/node_modules"
