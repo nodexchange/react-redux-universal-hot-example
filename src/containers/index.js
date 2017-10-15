@@ -8,6 +8,7 @@ export Login from './Login/Login';
 export LoginSuccess from './LoginSuccess/LoginSuccess';
 export NavBar from './NavBar/NavBar';
 export NotFound from './NotFound/NotFound';
+export ProjectDetails from './ProjectDetails/ProjectDetails';
 export Projects from './Projects/Projects';
 export Survey from './Survey/Survey';
 export Widgets from './Widgets/Widgets';
