@@ -9,6 +9,7 @@ export default class Contact extends Component {
     copy.push({
       smallHeader: 'MORE THAN JUST AN',
       header: 'AD AGENCY',
+      // eslint-disable-next-line max-len
       description: 'Use our team as an extension to yours and take advantage of our technical and creative expertise.\nIf you have any questions or would like to pick up brain on something do not hestiate, message us now.',
       buttonText: 'Contact us',
       sectionClass: 'contact',

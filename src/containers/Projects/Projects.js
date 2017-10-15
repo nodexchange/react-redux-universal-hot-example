@@ -15,25 +15,38 @@ export default class Projects extends Component {
   panelCopyObject = () => {
     const copy = [];
     copy.push({
-      smallHeader: 'QUARTILE',
-      header: 'Projects',
-      description: 'We are advocates of simplicity and transparency. With over ten years experience in the advertising business, it is safe to say that we gained excellent exposure and grasp on all industry leading solutions. We place the strongest emphasis on immersive experience design, where we collaborate with our clients to deliver comprehensive solutions that meet their even most demanding business goals. Our agency originated in the very heart of London\'s silicon roundabout, where most of our tech talent was acquired. Get in touch with us, see how our award winning service differs from others.',
-      buttonText: 'Projects',
-      sectionClass: 'projects',
-      link: ''
-    });
+      header: 'First Project',
+      description: 'Projects Desc',
+      link: 'projects/first'
+    }, {
+      header: 'project 2',
+      description: 'Projects Desc',
+      link: 'projects/second'
+    }, {
+      header: 'project 3',
+      description: 'Projects Desc',
+      link: 'projects/third'
+    }, {
+      header: 'project 4',
+      description: 'Projects Desc',
+      link: 'projects/fourth'
+    }, {
+      header: 'project 5',
+      description: 'Projects Desc',
+      link: 'projects/fifth'
+    },
+    );
     return copy;
   }
 
   render() {
     const styles = require('./Projects.scss');
 
-    // const panelsCopy = this.panelCopyObject();
     // hero as a todo item.
+    const projectsGridCopy = this.panelCopyObject();
     const cards = [];
     for (let i = 0; i < 5; i++) {
-      // {...panelsCopy[i]}
-      cards.push(<GridCard key={i} order={i} h2Text={'Header ' + i} pText={'Paragraph : ' + i} />);
+      cards.push(<GridCard key={i} order={i} {...projectsGridCopy[i]} />);
     }
     // {cards}
     return (

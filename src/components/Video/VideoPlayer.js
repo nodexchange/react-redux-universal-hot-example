@@ -37,13 +37,12 @@ export default class VideoPlayer extends Component {
     } else {
       this.resumePlayer();
     }
-
-    console.log('+++++ ' + this.props.inView);
-
+    /* eslint-disable */
     return (
       <video autoPlay className={styles.videoMain} ref={(videoInstance) => { this.videoInstance = videoInstance; }} width={this.props.width} id="video-player" preload="metadata" loop muted>
         <source src={this.props.src} type={this.props.type} />
       </video>
     );
+    /* eslint-enable */
   }
 }

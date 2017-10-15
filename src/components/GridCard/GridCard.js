@@ -1,11 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class GridCard extends Component {
   static propTypes = {
-    h2Text: PropTypes.string,
-    pText: PropTypes.string
+    header: PropTypes.string,
+    description: PropTypes.string,
+    link: PropTypes.string.isRequired
   };
   render() {
     // eslint-disable-next-line global-require
@@ -13,10 +15,12 @@ export default class GridCard extends Component {
 
     return (
       <li className={styles.gridItem}>
-        <h2>{this.props.h2Text}</h2>
-        <p>
-          {this.props.pText}
-        </p>
+        <Link to={'/' + this.props.link}>
+          <h2>{this.props.header}</h2>
+          <p>
+            {this.props.description}
+          </p>
+        </Link>
       </li>
     );
   }
