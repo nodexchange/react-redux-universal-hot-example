@@ -35,6 +35,7 @@ export default class App extends Component {
     children: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
     user: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     logout: PropTypes.func.isRequired,
+    location: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
     pushState: PropTypes.func.isRequired
   };
 
@@ -75,7 +76,12 @@ export default class App extends Component {
                 </NavItem>
               </LinkContainer>}
     */
-
+    config.app.head.titleTemplate = 'Quartile | home';
+    if (this.props.location) {
+      if (this.props.location.pathname !== '/') {
+        config.app.head.titleTemplate = 'Quartile | ' + this.props.location.pathname.split('/')[1];
+      }
+    }
     return (
       <div className={styles && styles.app}>
         <Helmet {...config.app.head} />

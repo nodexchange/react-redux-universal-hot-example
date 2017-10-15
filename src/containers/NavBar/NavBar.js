@@ -204,6 +204,7 @@ export default class NavBar extends Component {
           <nav className={styles.navBar}>
             <ul>
               <li><Link to="/" onClick={this.navClickHandler}>Solutions</Link></li>
+              <li><Link to="/projects" onClick={this.navClickHandler}>Projects</Link></li>
               <li><Link to="/about" onClick={this.navClickHandler}>About</Link></li>
               <li><Link to="/contact" onClick={this.navClickHandler}>Contact Us</Link></li>
             </ul>

@@ -1,6 +1,8 @@
 
 2.0
 ✔ last section (footer / social media channels) (home page) https://www.dogstudio.co/ @done (2017-10-14 02:07:32)
+✔ divider section to update the math for subsections. @done (2017-10-14 19:37:47)
+✔ pagenumber issue. @done (2017-10-15 00:02:36)
 ☐ project links effects on buttons http://www.kikk.be/2016/en/program/workshops/machine-learning-for-artists. 
 ☐ project lists https://www.dogstudio.co/projects/ 
 ☐ better about us section: https://www.dogstudio.co/studio/
@@ -8,11 +10,11 @@
 ☐ personality.
 ☐ emotional design / algorithm for optimisation.
 ✔ media queries for mobile portrait. @done (2017-10-14 14:32:40)
-☐ title change for sections.
+✔ title change for sections. @done (2017-10-15 00:02:40)
 ✔ media queries for landscape heights. @done (2017-10-14 00:18:59)
 ☐ load animation between sections.
 ☐ animation as a reward.
-☐ firefox sections calc.
+✔ firefox sections calc. @done (2017-10-14 19:37:44)
 ☐ reproduce quartile logo as SVG (footer).
 ✔ social links on footer. @done (2017-10-14 04:43:42)
 ☐ create instagram.
@@ -22,7 +24,8 @@
 
 
 #Wercker
-☐ Wercker deploy (404 on docker error)
+✔ Wercker deploy (404 on docker error) @done (2017-10-14 20:14:09)
+☐ Wercker Docker build to work better.
 ☐ Wercker tests
 
 1.0

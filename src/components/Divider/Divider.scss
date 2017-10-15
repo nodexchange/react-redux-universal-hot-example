@@ -1,0 +1,11 @@
+.divider {
+  display: block;
+  width: 100%;
+  min-height: 20vw;
+  pointer-events: none;
+}
+@media only screen and (max-width: 600px) {
+  .divider {
+    min-height: 30vw;
+  }
+}

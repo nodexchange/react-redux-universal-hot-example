@@ -1,0 +1,45 @@
+.projects {
+  height: 100%;
+  .section {
+    height: 100%;
+    margin: 0 auto;
+    width: 90%;
+    .cards {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        border: 2px solid #490A3D;
+        border-radius:5px;
+        background-color: #BD1550;
+        color: #fff;
+        flex: 1 1 200px;
+      }
+      
+      h2 {
+        background-color: #490A3D;
+        margin: 0;
+        padding: 10px;
+      }
+      
+      p {
+        padding: 10px;
+      }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      /*grid-template-columns: repeat(auto-fill, minmax(200px 1fr));*/
+      grid-gap: 0px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .projects {
+    .section {
+      .grid {
+        grid-template-columns: repeat(1,1fr);
+      }
+    }
+  }
+}

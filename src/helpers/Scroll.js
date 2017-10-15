@@ -11,7 +11,13 @@ export default class Scroll {
     if (scrollBarPosition === 0) {
       scrollBarPosition = 1;
     }
-    const ratioValue = Math.round((scrollBarPosition / clientH) * 100) / 100;
+    let dividerScrollCorrection = 0.8;
+    if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+      // Do Firefox-related activities
+      dividerScrollCorrection = 0.97;
+    }
+    // divider included 0.8
+    const ratioValue = Math.round(((scrollBarPosition * dividerScrollCorrection) / clientH) * 100) / 100;
     return ratioValue; 
   }
   static scrollToSection(requestedSection, direction) {

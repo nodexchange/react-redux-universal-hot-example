@@ -6,15 +6,16 @@ import { isLoaded as isAuthLoaded, load as loadAuth } from 'redux/modules/auth';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
     App,
-    Chat,
-    Widgets,
     About,
-    Front,
+    Chat,
     Contact,
+    Front,
     Login,
     LoginSuccess,
-    Survey,
     NotFound,
+    Projects,
+    Survey,
+    Widgets
   } from 'containers'; // eslint-disable-line import/extensions
 
 export default (store) => {
@@ -54,6 +55,7 @@ export default (store) => {
       <Route path="survey" component={Survey} />
       <Route path="widgets" component={Widgets} />
       <Route path="contact" component={Contact} />
+      <Route path="projects" component={Projects} />
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

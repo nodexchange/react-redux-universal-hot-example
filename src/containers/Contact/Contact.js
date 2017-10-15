@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { SectionItem } from 'components';
+import { Divider, SectionItem } from 'components';
 
 export default class Contact extends Component {
   panelCopyObject = () => {
@@ -26,6 +26,7 @@ export default class Contact extends Component {
       <div className={styles.contact}>
         <Helmet title="Contact" />
         <SectionItem inView key={0} offset={0} order={0} {...panelsCopy[0]} />
+        <Divider />
       </div>
     );
   }

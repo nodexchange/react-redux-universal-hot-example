@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { SectionItem } from 'components';
+import { Divider, SectionItem } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 
@@ -33,6 +33,7 @@ export default class About extends Component {
       <div className={styles.about}>
         <Helmet title="About" />
         <SectionItem inView key={0} offset={0} order={0} {...panelsCopy[0]} />
+        <Divider />
       </div>
     );
 /*

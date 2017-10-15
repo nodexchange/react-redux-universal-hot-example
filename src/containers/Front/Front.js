@@ -2,7 +2,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { SectionItem } from 'components';
+import { Divider, SectionItem } from 'components';
 import { bindActionCreators } from 'redux';
 import * as resizeActions from 'redux/modules/resize';
 import * as scrollActions from 'redux/modules/scroll';
@@ -50,6 +50,10 @@ export default class Front extends Component {
     if (panelValue !== this.currentPanel) {
       this.currentPanel = Math.round(nextProps.offsetRatio);
     }
+  }
+
+  componentWillUnmount() {
+    this.props.updateMaxPages(1);
   }
 
   panelCopyObject = () => {
@@ -123,7 +127,7 @@ export default class Front extends Component {
       <div className={styles.front}>
         <Helmet title="Home" />
         {rows}
-        <div className={styles.divider} />
+        <Divider />
       </div>
     );
   }

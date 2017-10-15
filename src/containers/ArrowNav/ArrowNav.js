@@ -48,6 +48,9 @@ export default class ArrowNav extends Component {
     if (this.props.offsetRatio) {
       this.currentPage = Math.floor(this.props.offsetRatio + 1.3);
     }
+    if (this.props.maxPages === 1) {
+      return (<div className={styles.arrowNav} />);
+    }
 
     return (
       <div className={styles.arrowNav}>
