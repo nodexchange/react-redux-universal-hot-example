@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { Divider, Hero } from 'components';
+import { Divider, GridCard, Hero } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 
@@ -30,27 +30,19 @@ export default class Projects extends Component {
 
     // const panelsCopy = this.panelCopyObject();
     // hero as a todo item.
+    const cards = [];
+    for (let i = 0; i < 5; i++) {
+      // {...panelsCopy[i]}
+      cards.push(<GridCard key={i} order={i} h2Text={'Header ' + i} pText={'Paragraph : ' + i} />);
+    }
+    // {cards}
     return (
       <div className={styles.projects}>
         <Helmet title="Projects" />
         <Hero title="Projects" />
         <div className={styles.section}>
           <ul className={styles.grid + ' ' + styles.cards}>
-            <li><h2>Card 1</h2>
-              <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
-              </p></li>
-            <li><h2>Card 2</h2>
-              <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
-              </p></li>
-            <li><h2>Card 3</h2>
-              <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
-              </p></li>
-            <li><h2>Card 4</h2>
-              <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
-              </p></li>
-            <li><h2>Card 5</h2>
-              <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
-              </p></li>
+            {cards}
           </ul>
         </div>
         <Divider />

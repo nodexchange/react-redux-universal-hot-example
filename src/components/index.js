@@ -12,6 +12,7 @@ export Canvas from './Canvas/Canvas';
 export CounterButton from './CounterButton/CounterButton';
 export Divider from './Divider/Divider';
 export FooterBar from './FooterBar/FooterBar';
+export GridCard from './GridCard/GridCard';
 export GithubButton from './GithubButton/GithubButton';
 export Hero from './Hero/Hero';
 export MiniInfoBar from './MiniInfoBar/MiniInfoBar';
