@@ -16,10 +16,13 @@ export default class GridCard extends Component {
     return (
       <li className={styles.gridItem}>
         <Link to={'/' + this.props.link}>
-          <h2>{this.props.header}</h2>
-          <p>
-            {this.props.description}
-          </p>
+          <div className={styles.gridBackground} />
+          <div className={styles.gridTitle}>
+            <h2>{this.props.header}</h2>
+            <p>
+              {this.props.description}
+            </p>
+          </div>
         </Link>
       </li>
     );

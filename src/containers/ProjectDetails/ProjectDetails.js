@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
-import { Divider, Hero } from 'components';
+import { Divider, GridBack, Hero } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 
@@ -39,6 +39,7 @@ export default class ProjectDetails extends Component {
         <div className={styles.section}>
           {'.'}
         </div>
+        <GridBack link="projects" />
         <Divider />
       </div>
     );
