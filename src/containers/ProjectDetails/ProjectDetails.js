@@ -35,9 +35,9 @@ export default class ProjectDetails extends Component {
     return (
       <div className={styles.projectDetails}>
         <Helmet title="Project Detail" />
-        <Hero title={this.props.params.projectName} />
-        <div className={styles.section}>
-          {'.'}
+        <Hero title={'Details, year, client etc. here with background image :: ' + this.props.params.projectName} />
+        <div className={styles.details}>
+          {'Text frame, description plus screenshots'}
         </div>
         <GridBack link="projects" />
         <Divider />
