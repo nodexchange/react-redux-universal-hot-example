@@ -1,21 +1,22 @@
 
 .gridItem {
-  border: 2px solid #490A3D;
+  border: 1px solid #840510;
   border-radius:5px;
   color: #fff;
   flex: 1 1 200px;
   height: 35vw;
   overflow: hidden;
-  filter: contrast(85%) brightness(80%);
-  -webkit-transition: 1s -webkit-filter linear;
-  -moz-transition: 1s -moz-filter linear;
-  -moz-transition: 1s filter linear;
-  -ms-transition: 1s -ms-filter linear;
-  -o-transition: 1s -o-filter linear;
-  transition: 1s filter linear, 1s -webkit-filter linear;
+  font-family: 'Didact Gothic', sans-serif;
+  filter: contrast(100%) brightness(100%);
+  -webkit-transition: 0.5s -webkit-filter linear;
+  -moz-transition: 0.5s -moz-filter linear;
+  -moz-transition: 0.5s filter linear;
+  -ms-transition: 0.5s -ms-filter linear;
+  -o-transition: 0.5s -o-filter linear;
+  transition: 0.5s filter linear;
   &:hover {
-    filter: contrast(105%) brightness(100%);
     .gridBackground {
+      filter: contrast(85%) brightness(60%);
       -moz-transform: scale(1.1);
       -webkit-transform: scale(1.1);
       transform: scale(1.1);
@@ -26,10 +27,12 @@
       h2 {
         margin-top: 0;
         opacity: 1;
+        color: white;
       }
       p {
         margin-top: 0;
         opacity: 1;
+        color: #e88790;
       }
     }
 
