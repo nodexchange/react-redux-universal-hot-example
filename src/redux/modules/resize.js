@@ -5,7 +5,7 @@ const initialState = {
   windowHeight: 0,
   isLandscape: false
 };
-export default function reducer(state = initialState, action = {}) {
+export default function resize(state = initialState, action = {}) {
   switch (action.type) {
     // eslint-disable-next-line no-case-declarations
     case RESIZE:

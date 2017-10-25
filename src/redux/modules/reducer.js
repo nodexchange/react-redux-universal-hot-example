@@ -7,14 +7,16 @@ import { reducer as form } from 'redux-form';
 import auth from './auth';
 import counter from './counter';
 import info from './info';
-import widgets from './widgets';
+import copy from './copy';
 import resize from './resize';
 import scroll from './scroll';
+import widgets from './widgets';
 
 export default combineReducers({
   routing: routerReducer,
   reduxAsyncConnect,
   auth,
+  copy,
   form,
   multireducer: multireducer({
     counter1: counter,

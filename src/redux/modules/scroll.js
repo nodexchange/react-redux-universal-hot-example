@@ -11,7 +11,7 @@ const initialState = {
   scrollToSection: 0
 };
 
-export default function reducer(state = initialState, action = {}) {
+export default function scroll(state = initialState, action = {}) {
   switch (action.type) {
     // eslint-disable-next-line no-case-declarations
     case SCROLL:
