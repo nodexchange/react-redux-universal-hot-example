@@ -1,43 +1,48 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import * as copyActions from 'redux/modules/copy';
 import Helmet from 'react-helmet';
 import { Divider, GridBack, Hero } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
+@connect(
+  state => ({ localeCopy: state.copy.localeCopy }),
+  copyActions
+)
 
 export default class ProjectDetails extends Component {
   static propTypes = {
-    projectName: PropTypes.string,
+    loadCopy: PropTypes.func.isRequired, // redux-actions
+    localeCopy: PropTypes.array, // eslint-disable-line react/forbid-prop-types
     params: PropTypes.object // eslint-disable-line react/forbid-prop-types
   }
-  state = {
-    showKitten: false
-  };
 
-  handleToggleKitten = () => this.setState({ showKitten: !this.state.showKitten });
+  constructor(props) {
+    super(props);
+    this.localeCopy = this.props.localeCopy || 'loading...';
+  }
 
-  panelCopyObject = () => {
-    const copy = [];
-    copy.push({
-      smallHeader: 'QUARTILE',
-      header: 'Projects',
-      // eslint-disable-next-line max-len
-      description: 'We are advocates of simplicity and transparency. With over ten years experience in the advertising business, it is safe to say that we gained excellent exposure and grasp on all industry leading solutions. We place the strongest emphasis on immersive experience design, where we collaborate with our clients to deliver comprehensive solutions that meet their even most demanding business goals. Our agency originated in the very heart of London\'s silicon roundabout, where most of our tech talent was acquired. Get in touch with us, see how our award winning service differs from others.',
-      buttonText: 'Projects',
-      sectionClass: 'projects',
-      link: ''
-    });
-    return copy;
+  componentDidMount() {
+    const section = this.props.params.projectName;
+    this.props.loadCopy(section);
   }
 
   render() {
     const styles = require('./ProjectDetails.scss');
 
+    if (this.localeCopy === 'loading...' || this.props.localeCopy[0].default) {
+      return (<p>Loading...</p>);
+    }
+    const localeCopy = this.props.localeCopy[0];
+    console.log('____ ', localeCopy);
+    console.log(localeCopy);
+    console.log('===========');
     return (
       <div className={styles.projectDetails}>
         <Helmet title="Project Detail" />
-        <Hero title={'Details, year, client etc. here with background image :: ' + this.props.params.projectName} />
+        <Hero title={'Details, year, client etc. here with background image :: ' + localeCopy.header} />
         <div className={styles.details}>
-          {'Text frame, description plus screenshots'}
+          {localeCopy.description}
         </div>
         <GridBack link="projects" />
         <Divider />

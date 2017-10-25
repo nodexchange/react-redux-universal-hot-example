@@ -3,7 +3,7 @@ import Copy from '../../helpers/Copy';
 const LOAD_COPY = 'quartile/LOAD_COPY';
 
 const initialState = {
-  localeCopy: { default: '' },
+  localeCopy: [{ default: 'action default' }],
 };
 
 export default function copy(state = initialState, action = {}) {

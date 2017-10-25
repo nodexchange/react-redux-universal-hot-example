@@ -13,7 +13,7 @@ import { Divider, GridCard, Hero } from 'components';
 export default class Projects extends Component {
   static propTypes = {
     loadCopy: PropTypes.func.isRequired,
-    localeCopy: PropTypes.object // eslint-disable-line react/forbid-prop-types
+    localeCopy: PropTypes.array // eslint-disable-line react/forbid-prop-types
   }
   constructor(props) {
     super(props);
