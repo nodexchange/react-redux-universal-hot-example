@@ -1,11 +1,24 @@
 
 .gridBack {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: fixed;
+  top: 80px;
+  left: 10px;
   display: block;
   background: url('./backarrow.png') no-repeat center center;
+  background-size: contain;
   margin: 0 0 0 0;
-  width: 200px;
-  height: 200px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  filter: contrast(100%) brightness(200%);
+  -webkit-transition: 0.5s -webkit-filter linear;
+  -moz-transition: 0.5s -moz-filter linear;
+  -moz-transition: 0.5s filter linear;
+  -ms-transition: 0.5s -ms-filter linear;
+  -o-transition: 0.5s -o-filter linear;
+  transition: 0.5s filter linear;
+  &:hover {
+    filter: contrast(100%) brightness(180%);
+    opacity: 0.6;
+  }
 }

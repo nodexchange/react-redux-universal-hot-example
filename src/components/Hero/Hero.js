@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from 'react';
 
 export default class Hero extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
-    title: PropTypes.string
+    title: PropTypes.string,
+    background: PropTypes.string
   }
 
   render() {
@@ -11,7 +12,7 @@ export default class Hero extends Component { // eslint-disable-line react/prefe
     const styles = require('./Hero.scss');
 
     return (
-      <div className={styles.section}>
+      <div className={styles.hero + ' ' + styles[this.props.background]}>
         <div className={styles.info}>
           <span className={styles.smallHeader}>Small Header</span>
           <h1 className={styles.header}>{this.props.title}</h1>

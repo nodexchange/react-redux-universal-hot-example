@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as copyActions from 'redux/modules/copy';
 import Helmet from 'react-helmet';
-import { Divider, GridBack, Hero } from 'components';
+import { Divider, GridBack, Hero, SectionText } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 @connect(
@@ -40,11 +40,13 @@ export default class ProjectDetails extends Component {
     return (
       <div className={styles.projectDetails}>
         <Helmet title="Project Detail" />
-        <Hero title={'Details, year, client etc. here with background image :: ' + localeCopy.header} />
-        <div className={styles.details}>
-          {localeCopy.description}
-        </div>
+        <Hero
+          title={'Details, year, client etc. here with background image :: ' + localeCopy.header}
+          background={localeCopy['hero image']}
+        />
         <GridBack link="projects" />
+        <SectionText header={localeCopy.header} copy={localeCopy.description} tags={localeCopy.tags} />
+        <Divider />
         <Divider />
       </div>
     );

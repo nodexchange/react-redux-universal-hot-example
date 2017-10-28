@@ -19,6 +19,7 @@ export Hero from './Hero/Hero';
 export MiniInfoBar from './MiniInfoBar/MiniInfoBar';
 export ProductItem from './ProductItem/ProductItem';
 export SectionItem from './SectionItem/SectionItem';
+export SectionText from './SectionText/SectionText';
 export SectionVideo from './SectionVideo/SectionVideo';
 export SurveyForm from './SurveyForm/SurveyForm';
 export WidgetForm from './WidgetForm/WidgetForm';
