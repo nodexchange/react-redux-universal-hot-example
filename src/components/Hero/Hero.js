@@ -2,7 +2,9 @@ import React, { Component, PropTypes } from 'react';
 
 export default class Hero extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
-    title: PropTypes.string,
+    smallHeader: PropTypes.string,
+    header: PropTypes.string,
+    smallText: PropTypes.string,
     background: PropTypes.string
   }
 
@@ -14,9 +16,10 @@ export default class Hero extends Component { // eslint-disable-line react/prefe
     return (
       <div className={styles.hero + ' ' + styles[this.props.background]}>
         <div className={styles.info}>
-          <span className={styles.smallHeader}>Small Header</span>
-          <h1 className={styles.header}>{this.props.title}</h1>
+          <span className={styles.smallHeader}>{this.props.smallHeader}</span>
+          <h1 className={styles.header}>{this.props.header}</h1>
           <span className={styles.line}>{/* eslint-disable-line no-shadow */}</span>
+          <span className={styles.smallText}>{this.props.smallText}</span>
         </div>
       </div>
     );

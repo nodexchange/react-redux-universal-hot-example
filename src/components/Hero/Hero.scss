@@ -3,6 +3,7 @@
   background-size: cover !important;
   overflow: hidden;
   position: relative;
+  background-color: #2989d8;
 }
 .inset {
   // -webkit-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
@@ -26,7 +27,7 @@
   top: 15%;
   left: 8%;
   z-index: 2;
-  width: 506px;
+  max-width: 50%;
   color: white;
   line-height: 1.42857;
   font-family: 'Didact Gothic', sans-serif;

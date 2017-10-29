@@ -4,7 +4,7 @@ export default class Copy {
     let copy = {};
     switch (section) {
       case 'projects':
-        copy = require('./../Data/projects.json').data;
+        copy = require('./../Data/projects.json');
         break;
       case 'aib':
         copy = require('./../Data/aib.json').data;

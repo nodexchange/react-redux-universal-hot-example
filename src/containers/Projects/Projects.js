@@ -22,21 +22,30 @@ export default class Projects extends Component {
   componentDidMount() {
     this.props.loadCopy('projects');
   }
+  selectRandomQuote() {
+    const quotes = this.props.localeCopy.quotes;
+    return quotes[Math.floor(Math.random() * quotes.length)];
+  }
 
   render() {
     const styles = require('./Projects.scss');
 
     // hero as a todo item.
-    const projectsGridCopy = this.props.localeCopy;
+    const projectsGridCopy = this.props.localeCopy.data;
     const cards = [];
+    if (!projectsGridCopy) {
+      return (<p>empty</p>);
+    }
     for (let i = 0; i < projectsGridCopy.length; i++) {
       cards.push(<GridCard key={i} order={i} {...projectsGridCopy[i]} />);
     }
+    const quote = this.selectRandomQuote();
+    console.log('quote', quote);
     // {cards}
     return (
       <div className={styles.projects}>
         <Helmet title="Projects" />
-        <Hero title="Projects" />
+        <Hero smallHeader={'"' + quote.text + '"'} smallText={quote.author} />
         <div className={styles.section}>
           <ul className={styles.grid + ' ' + styles.cards}>
             {cards}

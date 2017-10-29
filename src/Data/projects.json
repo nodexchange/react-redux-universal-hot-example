@@ -30,5 +30,18 @@
       "imageClass": "marvel",
       "link": "projects/renault"
     }
-  ]
+  ],
+  "quotes": [{
+    "text": "Empathy is about standing in someone else's shoes, feeling with his or her heart, seeing with his or her eyes. Not only is empathy hard to outsource and automate, but it makes the world a better place.",
+    "author": "Daniel H. Pink"
+  }, {
+    "text": "When people talk, listen completely. Most people never listen.",
+    "author": "Ernest Hemingway"
+  }, {
+    "text": "Sometimes all a person wants is an empathetic ear; all he or she needs is to talk it out. Just offering a listening ear and an understanding heart for his or her suffering can be a big comfort.",
+    "author": "Roy T. Bennett"
+  }, {
+    "text": "I believe empathy is the most essential quality of civilization.",
+    "author": "Roger Ebert"
+  }]
 }
