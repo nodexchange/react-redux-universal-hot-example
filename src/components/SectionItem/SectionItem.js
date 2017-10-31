@@ -78,7 +78,7 @@ export default class SectionItem extends Component { // eslint-disable-line reac
           <span className={styles.line + ' ' + outOrInView}>{/* eslint-disable-line no-shadow */}</span>
           <div className={styles.description + ' ' + outOrInView}>
             {text.split('\n').map(i =>
-              <div className={styles.descText}>{i}</div>
+              <div className={styles.descText} key={i}>{i}</div>
             )}
           </div>
           {linkNode}

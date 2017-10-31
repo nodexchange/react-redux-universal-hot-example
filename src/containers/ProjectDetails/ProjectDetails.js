@@ -30,13 +30,11 @@ export default class ProjectDetails extends Component {
   render() {
     const styles = require('./ProjectDetails.scss');
 
-    if (this.localeCopy === 'loading...' || this.props.localeCopy[0].default) {
+    if (this.localeCopy === 'loading...' || this.props.localeCopy.default ||
+        typeof this.props.localeCopy[0] === 'undefined') {
       return (<p>Loading...</p>);
     }
     const localeCopy = this.props.localeCopy[0];
-    console.log('____ ', localeCopy);
-    console.log(localeCopy);
-    console.log('===========');
     return (
       <div className={styles.projectDetails}>
         <Helmet title="Project Detail" />
