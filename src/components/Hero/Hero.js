@@ -5,6 +5,9 @@ export default class Hero extends Component { // eslint-disable-line react/prefe
     smallHeader: PropTypes.string,
     header: PropTypes.string,
     smallText: PropTypes.string,
+    client: PropTypes.string,
+    date: PropTypes.string,
+    demo: PropTypes.string,
     background: PropTypes.string
   }
 
@@ -20,6 +23,15 @@ export default class Hero extends Component { // eslint-disable-line react/prefe
           <h1 className={styles.header}>{this.props.header}</h1>
           <span className={styles.line}>{/* eslint-disable-line no-shadow */}</span>
           <span className={styles.smallText}>{this.props.smallText}</span>
+          <div className={styles.projectInfo}>
+            <span className={styles.smallText}>Client name: {this.props.client}</span>
+            <br />
+            <span className={styles.smallText}>Year: {this.props.date}</span>
+            <br />
+            <span className={styles.smallText}>Demo link:
+            <a href={this.props.demo} target="_blank"> {this.props.demo}</a>
+            </span>
+          </div>
         </div>
       </div>
     );

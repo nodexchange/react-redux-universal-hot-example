@@ -118,12 +118,32 @@
   }
   .btn:hover {
     color: #fff;
-    border-color: #16a7f6;
-    background-color: #16a7f6;
+    border-color: #ffbf7c;
+    background-color: #ffbf7c;
+  }
+  .projectInfo {
+    display: block;
   }
 }
+/* Projects section */
+.narrow {
+  height: 49% !important;
+  .info {
+    margin-top: 19px;
+    .projectInfo {
+      display: none;
+    }
+  }
+}
+
 .aib {
   background: url('./aib.jpg');
+  .info {
+    width: 40%;
+    a {
+      color: #ffbf7c;
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {

@@ -45,7 +45,7 @@ export default class Projects extends Component {
     return (
       <div className={styles.projects}>
         <Helmet title="Projects" />
-        <Hero smallHeader={'"' + quote.text + '"'} smallText={quote.author} />
+        <Hero smallHeader={'"' + quote.text + '"'} smallText={quote.author} background="narrow" />
         <div className={styles.section}>
           <ul className={styles.grid + ' ' + styles.cards}>
             {cards}

@@ -41,8 +41,11 @@ export default class ProjectDetails extends Component {
       <div className={styles.projectDetails}>
         <Helmet title="Project Detail" />
         <Hero
-          smallHeader={'Details, year, client etc. here with background image :: ' + localeCopy.header}
+          smallHeader={localeCopy.header}
           background={localeCopy['hero image']}
+          client={localeCopy.client}
+          date={localeCopy.date}
+          demo={localeCopy.demo}
         />
         <GridBack link="projects" />
         <SectionText header={localeCopy.header} copy={localeCopy.description} tags={localeCopy.tags} />
