@@ -3,6 +3,9 @@ export default class Copy {
     // LOCALE?
     let copy = {};
     switch (section) {
+      case 'front':
+        copy = require('./../Data/front.json');
+        break;
       case 'projects':
         copy = require('./../Data/projects.json');
         break;
