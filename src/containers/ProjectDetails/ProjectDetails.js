@@ -13,8 +13,11 @@ import { Divider, GridBack, Hero, SectionText } from 'components';
 export default class ProjectDetails extends Component {
   static propTypes = {
     loadCopy: PropTypes.func.isRequired, // redux-actions
-    localeCopy: PropTypes.array, // eslint-disable-line react/forbid-prop-types
-    params: PropTypes.object // eslint-disable-line react/forbid-prop-types
+    params: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+    localeCopy: PropTypes.oneOfType([
+      PropTypes.object, // eslint-disable-line react/forbid-prop-types
+      PropTypes.array // eslint-disable-line react/forbid-prop-types
+    ])
   }
 
   constructor(props) {

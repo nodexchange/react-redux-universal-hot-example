@@ -13,7 +13,10 @@ import { Divider, GridCard, Hero } from 'components';
 export default class Projects extends Component {
   static propTypes = {
     loadCopy: PropTypes.func.isRequired,
-    localeCopy: PropTypes.object // eslint-disable-line react/forbid-prop-types
+    localeCopy: PropTypes.oneOfType([
+      PropTypes.object, // eslint-disable-line react/forbid-prop-types
+      PropTypes.array // eslint-disable-line react/forbid-prop-types
+    ])
   }
   constructor(props) {
     super(props);
@@ -33,7 +36,7 @@ export default class Projects extends Component {
     // hero as a todo item.
     const projectsGridCopy = this.props.localeCopy.data;
     const cards = [];
-    if (!projectsGridCopy) {
+    if (!projectsGridCopy || !this.props.localeCopy.quotes) {
       return (<p>empty</p>);
     }
     for (let i = 0; i < projectsGridCopy.length; i++) {
