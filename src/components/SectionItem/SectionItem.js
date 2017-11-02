@@ -5,16 +5,14 @@ import { Link } from 'react-router';
 export default class SectionItem extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     inView: PropTypes.bool.isRequired,
-    smallHeader: PropTypes.string.isRequired,
-    header: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    buttonText: PropTypes.string.isRequired,
-    sectionClass: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    order: PropTypes.number.isRequired,
-    // key: PropTypes.number.isRequired,
-    offset: PropTypes.number,
-    // videoLink: PropTypes.string
+    smallHeader: PropTypes.string,
+    header: PropTypes.string,
+    description: PropTypes.string,
+    buttonText: PropTypes.string,
+    sectionClass: PropTypes.string,
+    link: PropTypes.string,
+    order: PropTypes.number,
+    offset: PropTypes.number
   };
 
   calculateTop() {

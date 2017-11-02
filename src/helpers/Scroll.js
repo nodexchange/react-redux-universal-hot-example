@@ -7,11 +7,11 @@
 export default class Scroll {
   static scrollViewportToOffsetRatio() {
     const clientH = window.innerHeight;
-    let scrollBarPosition = window.pageYOffset || document.body.scrollTop;
+    let scrollBarPosition = document.body.scrollTop || window.pageYOffset;
     if (scrollBarPosition === 0) {
       scrollBarPosition = 1;
     }
-    let dividerScrollCorrection = 0.8;
+    let dividerScrollCorrection = 0.99;
     if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
       // Do Firefox-related activities
       dividerScrollCorrection = 0.97;

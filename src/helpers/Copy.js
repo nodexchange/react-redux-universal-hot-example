@@ -4,28 +4,34 @@ export default class Copy {
     let copy = {};
     switch (section) {
       case 'front':
-        copy = require('./../Data/front.json');
+        copy = require('./../data/front.json');
+        break;
+      case 'about':
+        copy = require('./../data/about.json');
+        break;
+      case 'contact':
+        copy = require('./../data/contact.json');
         break;
       case 'projects':
-        copy = require('./../Data/projects.json');
+        copy = require('./../data/projects.json');
         break;
       case 'aib':
-        copy = require('./../Data/aib.json').data;
+        copy = require('./../data/aib.json').data;
         break;
       case 'ducati':
-        copy = require('./../Data/ducati.json').data;
+        copy = require('./../data/ducati.json').data;
         break;
       case 'ebs':
-        copy = require('./../Data/ebs.json').data;
+        copy = require('./../data/ebs.json').data;
         break;
       case 'marvel':
-        copy = require('./../Data/marvel.json').data;
+        copy = require('./../data/marvel.json').data;
         break;
       case 'renault':
-        copy = require('./../Data/renault.json').data;
+        copy = require('./../data/renault.json').data;
         break;
       case 'toyota':
-        copy = require('./../Data/toyota.json').data;
+        copy = require('./../data/toyota.json').data;
         break;
       default :
         copy = [{ default: 'helper default' }];
