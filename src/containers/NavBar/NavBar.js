@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
-import { IndexLink, Link } from 'react-router';
+import { IndexLink, Link, browserHistory } from 'react-router';
 import throttle from '../../helpers/Throttle';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
@@ -10,12 +10,21 @@ import throttle from '../../helpers/Throttle';
 export default class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { navbar: 'sticky' };
+    this.state = { navbar: 'sticky', location: '' };
     this.mScrollHandler = throttle((e) => { this.mScrollHandler(e); }, 150);
   }
 
   componentDidMount() {
     window.addEventListener('scroll', (e) => { this.mScrollHandler(e); });
+    browserHistory.listen(() => {
+      if (document) {
+        const navLoader = document.getElementById('navLoader');
+        navLoader.style.opacity = 1;
+        setTimeout(() => {
+          navLoader.style.opacity = 0;
+        }, 3000);
+      }
+    });
   }
 
   componentWillUnmount() {
@@ -33,14 +42,12 @@ export default class NavBar extends Component {
     if (scrollPercentage > 20) {
       if (this.state) {
         if (this.state.navbar !== 'scroll') {
-          console.log('SCROLL :: ' + this.state.navbar);
           this.setState({ navbar: 'scroll' });
         }
         return;
       }
     } else {
       if (this.state.navbar !== 'sticky') {
-        console.log('STICKYYY ::: ' + this.state.navbar);
         this.setState({ navbar: 'sticky' });
       }
       return;
@@ -95,6 +102,7 @@ export default class NavBar extends Component {
               <li><Link to="/contact" onClick={this.navClickHandler}>Contact Us</Link></li>
             </ul>
           </nav>
+          <div id="navLoader" className={styles.loader} />
         </div>
       </header>
     );
