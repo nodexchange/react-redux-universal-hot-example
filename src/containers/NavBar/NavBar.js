@@ -19,10 +19,10 @@ export default class NavBar extends Component {
     browserHistory.listen(() => {
       if (document) {
         const navLoader = document.getElementById('navLoader');
-        navLoader.style.opacity = 1;
+        navLoader.style.visibility = 'visible';
         setTimeout(() => {
-          navLoader.style.opacity = 0;
-        }, 3000);
+          navLoader.style.visibility = 'hidden';
+        }, 3200);
       }
     });
   }
