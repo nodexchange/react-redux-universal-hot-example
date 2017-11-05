@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="fb: http://www.facebook.com/2008/fbml">
+<head>
+<title>L&#039;Actu en continu - L&#039;Indépendant</title>
+<meta name="description" content="" />
+<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta http-equiv="refresh" content="300">
+<meta name="language" content="fr-FR" />
+<meta name="adpurl-pageid" id="adpurl-pageid" content="lindependant" />
+<meta name="adpurl-keywords" id="adpurl-keywords" content="homeindep" />
+<link rel="alternate" type="application/rss+xml" title="Lindependant : rss actualités" href="/rss.xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-itunes-app" content="app-id=538293020" />
+<meta name="google-play-app" content="app-id=com.lindependant.android" />
+<link type='text/css' rel='stylesheet' href='http://fonts.googleapis.com/css?family=Bitter:400,700' />
+<!--CSS-->
+<link href='http://assets.lindependant.fr/themes/newspress/css/bootstrap.min.css?v=1490650296' rel="stylesheet">
+<link href='http://assets.lindependant.fr/themes/newspress/css/font-awesome.min.css?v=1490650296' rel="stylesheet">
+<link href='http://assets.lindependant.fr/themes/newspress/css/magnific-popup.css?v=1490650297' rel="stylesheet">
+<link href='http://assets.lindependant.fr/themes/newspress/css/owl.carousel.css?v=1490650297' rel="stylesheet">
+<link href='http://assets.lindependant.fr/themes/newspress/css/subscribe-better.css?v=1490650297' rel="stylesheet">
+<link href='http://assets.lindependant.fr/themes/newspress/css/main.css?v=1490650297' rel="stylesheet">
+<link href='http://assets.lindependant.fr/themes/newspress/css/presets/preset2.css?v=1490650297' type="text/css">
+<link href='http://assets.lindependant.fr/js/jquery-ui/jquery-ui.min.css' rel="stylesheet">
+<link href='http://assets.lindependant.fr/js/jquery-ui/jquery-ui.theme.min.css?v=1490650295' rel="stylesheet">
+<link href='http://assets.lindependant.fr/css/jquery.mCustomScrollbar.min.css?v=1490650293' rel="stylesheet">
+<link href='http://assets.lindependant.fr/css/di_custom.css?v=1498725268' rel="stylesheet">
+<link href='http://assets.lindependant.fr/themes/newspress/css/responsive.css?v=1490650297' rel="stylesheet">
+<link href='http://assets.lindependant.fr/css/di_custom_responsive.css?v=1490876468' rel="stylesheet">
+<!--Google Fonts-->
+<link href='https://fonts.googleapis.com/css?family=Signika+Negative:400,300,600,700' rel='stylesheet' type='text/css'>
+<!--<link type='text/css' rel='stylesheet' href='http://assets.lindependant.fr/css/home.css?v=1490650293' />-->
+<script type='text/javascript'>
+var SSOMaintenance = false;
+</script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/jquery.js?v=1490650298"></script>
+<script src="http://assets.lindependant.fr/js/jquery-migrate-1.4.1.min.js?v=1490970439"></script>
+<script src='http://assets.lindependant.fr/js/jquery-ui/jquery-ui.min.js' ></script>
+<script src='http://assets.lindependant.fr/js/jquery-validate/jquery.validate.js?v=1490650295'></script>
+<script src='http://assets.lindependant.fr/js/modernizr-min.js?v=1490650295'></script>
+<script src='http://assets.lindependant.fr/js/commun.js?v=1494344107'></script>
+<script src='http://assets.lindependant.fr/js/profil.js?v=1492184336'></script>
+<script src='http://assets.lindependant.fr/js/jquery.mCustomScrollbar.concat.min.js?v=1490650295'></script>
+<script src='http://assets.lindependant.fr/js/jquery.lazyload.min.js?v=1490650295'></script>
+<script src='http://assets.lindependant.fr/js/bouton_partage.js?v=1490650294'></script>
+<script src='http://assets.lindependant.fr/js/md5.min.js'></script>
+<script src="http://abs.proxistore.com/abe/psversion.jsp" type="text/javascript"></script>
+<script async>
+bw_ps_adspot_id = "68318570";
+if(localStorage) {ps_version = localStorage.getItem('ps_version');}
+if(typeof ps_version =='undefined' || ps_version == null) {ps_version = new Date().getTime();}
+document.write('<scr'+'ipt src="http://abs.proxistore.com/abe/js/psuniversaltag.js?v='+ps_version+'" type="text/javascript"><\/scr'+'ipt>');
+</script>
+<!---- NEWSPRESS --->
+<script src="http://assets.lindependant.fr/themes/newspress/js/bootstrap.min.js?v=1490650297"></script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/jquery.magnific-popup.min.js?v=1490650298"></script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/owl.carousel.min.js?v=1490650299"></script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/moment.min.js?v=1490650299"></script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/jquery.simpleWeather.min.js?v=1490650298"></script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/jquery.sticky-kit.min.js?v=1490650298"></script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/jquery.easy-ticker.min.js?v=1490650298"></script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/jquery.subscribe-better.min.js?v=1490650298"></script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/main.js?v=1490650299"></script>
+<script src="http://assets.lindependant.fr/themes/newspress/js/switcher.js?v=1490650299"></script>
+<!-- ajout elements pour widgets pa surface privee -->
+<script type="text/javascript">
+var link_assets = 'http://assets.lindependant.fr/';
+</script>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+<!--[if !IE]>-->
+<link href='http://assets.lindependant.fr/css/pa_autopromo.css' rel='stylesheet' type='text/css' />
+<!--<![endif]-->
+<link type='image/x-icon' rel='shortcut icon' href="http://assets.lindependant.fr/img/other/favicon.ico" />
+<script type="text/javascript">
+var nugg4Rubicon ="";
+var nuggrid= encodeURIComponent(top.location.href);
+document.write('<scr'+'ipt type=\"text/javascript\" src=\"http://lpm-midilibre.nuggad.net/rc?nuggn=1573103623&nuggsid=1334107126&nuggrid='+nuggrid+'"><\/scr'+'ipt>');
+</script>
+</head>
+<body id="home" >
+<script src='http://assets.lindependant.fr/js/advertisement.js?v=1490650294'></script>
+<div id="pub_dfp_habillage" class="pub hidden-sm hidden-xs"></div>
+<div id="main-wrapper" class="homepage">
+<!-- COL -->
+<!-- BLOC HEADER - header - MANUEL - LARGE-->
+<!--bMext - template :  header.tpl -->
+<div id="fb-root"></div>
+<script>window.___gcfg = {lang: 'fr'};(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<header id="navigation">
+<div class="navbar" role="banner">
+<div class="container">
+<a class="secondary-logo" href="/">
+<img class="img-responsive" src="/img/other/logo_header.png" width="200" alt="logo">
+</a>
+</div>
+<div class="topbar">
+<div class="container">
+<div id="topbar" class="navbar-header">
+<a class="navbar-brand" href="/">
+<img class="main-logo img-responsive" src="/img/other/logo_header.png" alt="logo">
+</a>
+<div id="topbar-right" class="hidden-sm">
+<ul class="nav navbar-nav">
+</ul>
+<div id="date-time">
+<div class="date">Dimanche 05 Novembre</div>
+</div>
+<div id="weather"></div>
+<div><a class="btn btn-subscribe" href="https://abonnement.lindependant.fr#xtatc=INT-2-[header]"><i class="icon-newspaper"></i> S'abonner à partir de 1€</a></div>
+</div>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+</div>
+<div id="menubar" class="container">
+<nav id="mainmenu" class="navbar-left collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+<li><a href="/pyrenees-orientales/perpignan/" onclick="return xt_click(this,'C','2','MenuBDV_Perpignan','A');return true;">Perpignan</a></li>
+<li><a href="/aude/narbonne/" onclick="return xt_click(this,'C','2','MenuBDV_Narbonne','A');return true;">Narbonne</a></li>
+<li><a href="/aude/carcassonne/" onclick="return xt_click(this,'C','2','MenuBDV_Carcassonne','A');return true;">Carcassonne</a></li>
+<li><a href="/societe/catalogne/" onclick="return xt_click(this,'C','2','MenuBDV_Catalogne','A');return true;">Catalogne</a></li>
+<li><a href="/faits-divers/" onclick="return xt_click(this,'C','11','MenuTop_FaitsDiv','A');return true;">Faits divers</a></li>
+<li class="dropdown">
+<a href="/sport/" onclick="return xt_click(this,'C','11','MenuTop_Sport','A');return true;">Sport <i class="fa fa-chevron-down" style="font-size: 12px;"></i></a>
+<ul class="dropdown-menu">
+<li><a href="/sport/rugby-a-xv/">Rugby à XV</a></li>
+<li><a href="/sport/rugby-a-xiii/">Rugby à XIII</a></li>
+<li><a href="/sport/football/">Football</a></li>
+<li><a href="/sport/basket/">Basket</a></li>
+<li><a href="/sport/volley/">Volley-ball</a></li>
+<li><a href="/sport/handball/">Handball</a></li>
+<li><a href="/sport/course-a-pied/">Course à pied</a></li>
+<li><a href="/sport/triathlon/">Triathlon</a></li>
+<li><a href="/sport/tennis/">Tennis</a></li>
+<li><a href="/sport/ski/">Ski</a></li>
+<li><a href="/sport/cyclisme/">Cyclisme</a></li>
+<li><a href="/sport/athletisme/">Athlétisme</a></li>
+<li><a href="/sport/petanque/">Pétanque</a></li>
+<li><a href="/sport/auto-moto/">Automobile</a></li>
+</ul>
+</li>
+<li><a href="/supplement/guide-de-l-ete/" onclick="return xt_click(this,'C','11','MenuTop_guide_ete','A');return true;">Guide d'été</a></li>
+</ul>
+</nav>
+<div class="searchNlogin">
+<ul>
+<li class="destickysant"><i class="fa fa-bars" aria-hidden="true"></i>MENU</li>
+<li class="search-icon"><i class="fa fa-search"></i></li>
+<li class="dropdown user-panel"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<div class="dropdown-menu top-user-section">
+<div class="top-user-form">
+<p>Déjà inscrit ? Connectez-vous</p>
+<form id="top-login" class="col-lg-9 col-md-9 col-sm-9 col-xs-12" role="form" action="http://profil.lindependant.fr/login/login.php" method="post">
+<div class="input-group" id="top-login-username">
+<span class="input-group-addon"><img src="/themes/newspress/images/others/user-icon-blue.png" alt=""></span>
+<input type="text" class="form-control" placeholder="Email" required="" name="login" id="ajaxLogin_login">
+</div>
+<div class="input-group" id="top-login-password">
+<span class="input-group-addon"><img src="/themes/newspress/images/others/password-icon-blue.png" alt=""></span>
+<input type="password" class="form-control" placeholder="Mot de passe" required="" name="password">
+</div>
+<div>
+<p class="reset-user">
+<a href="javascript:lost_password();">Mot de passe oublié ?</a>
+</p>
+<input type="hidden" name="SSO_Context" id="ajaxLogin_SSOContext" value="http://www.lindependant.fr/">
+<span class="hidden">
+<label>Username</label><input type="text" value="" name="username" autocomplete="off" class="txtInput hidden">
+</span>
+<button class="btn btn-danger" type="submit">Se connecter</button>
+</div>
+</form>
+<div class="or col-lg-1 col-md-1 col-sm-1 col-xs-12">
+<span>OU</span>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+<ul class="list-inline social-icons">
+<li><a class="facebook"><i class="fa fa-facebook"></i></a></li>
+<li><a class="twitter"><i class="fa fa-twitter"></i></a></li>
+<li><a class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="create-account">
+<a href="javascript:new_account();">Vous n’êtes pas encore inscrit ?</a>
+</div>
+</div>
+</li>
+</ul>
+<section class="searchBlock" role="search">
+<div class="search">
+<form action="/recherche/index.php" role="form" onsubmit="return searchSolr();" method="get">
+<input name="q" type="text" id="search-input" class="search-form txtInput ui-autocomplete-input" autocomplete="off" placeholder="Recherchez une commune ou un sujet" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+</form>
+</div>
+</section>
+</div>
+</div>
+<div id="third-menu">
+<div class="container">
+<nav class="navbar-left collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li><a href="/pyrenees-orientales/pyrenees/" onclick="return xt_click(this,'C','2','MenuBDV_Pyrenees','A');return true;">Pyrénées</a></li>
+<li><a href="/aude/limoux/" onclick="return xt_click(this,'C','2','MenuBDV_Limoux','A');return true;">Limoux</a></li>
+<li><a href="/aude/lezignan-corbieres/" onclick="return xt_click(this,'C','2','MenuBDV_Lezignan','A');return true;">Lézignan</a></li>
+<li><a href="/pyrenees-orientales/argeles-sur-mer/" onclick="return xt_click(this,'C','2','MenuBDV_Argeles','A');return true;">Argelès</a></li>
+<li><a href="/aude/castelnaudary/" onclick="return xt_click(this,'C','2','MenuBDV_Castelnaudary','A');return true;">Castelnaudary</a></li>
+<li><a href="/pyrenees-orientales/ceret/" onclick="return xt_click(this,'C','2','MenuBDV_Ceret','A');return true;">Céret</a></li>
+<li><a href="/aude/quillan/" onclick="return xt_click(this,'C','2','MenuBDV_Quillan','A');return true;">Quillan</a></li>
+<li><a href="/pyrenees-orientales/agly/" onclick="return xt_click(this,'C','2','MenuBDV_Agly','A');return true;">Agly</a></li>
+<li><a href="/aude/port-la-nouvelle/" onclick="return xt_click(this,'C','2','MenuBDV_port-la-nouvelle','A');return true;">Port-la-Nouvelle</a></li>
+<li class="dropdown">
+<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Annonces <i class="fa fa-chevron-down" style="font-size: 12px;"></i></a>
+<ul class="dropdown-menu">
+<li><a href="http://carnet.lindependant.fr/" target="_blank" rel="nofollow" onclick="return xt_click(this,'C','11','MenuTop_Annonces_Carnet','A');return true;">Avis de décès</a></li>
+<li><a href="http://www.midilibre-annonces.com/auto-moto/voiture/" target="_blank" onclick="return xt_click(this,'C','11','MenuTop_Annonces_AutoMoto','A');return true;">Auto/Moto/bateaux</a></li>
+<li><a href="http://immo.lindependant.fr/" target="_blank" onclick="return xt_click(this,'C','11','MenuTop_Annonces_Immobilier','A');return true;">Immobilier</a></li>
+<li><a href="http://www.midilibre-annonces.com/" target="_blank" onclick="return xt_click(this,'C','11','MenuTop_Annonces_Commerces','A');return true;">Commerces/Entreprises</a></li>
+<li><a href="http://www.midilibre-annonces.com/bonnes-affaires/" target="_blank" onclick="return xt_click(this,'C','11','MenuTop_Annonces_BonnesAffaires','A');return true;">Bonnes affaires</a></li>
+<li><a href="http://www.midilibre-annonces.com/animaux/" target="_blank" onclick="return xt_click(this,'C','11','MenuTop_Annonces_Animaux','A');return true;">Animaux</a></li>
+<li><a href="http://www.midilibre-annonces.com/services-personne/" target="_blank" onclick="return xt_click(this,'C','11','MenuTop_Annonces_Services','A');return true;">Services</a></li>
+<li><a href="http://www.midilibre-annonces.com/rencontres/" target="_blank" onclick="return xt_click(this,'C','11','MenuTop_Annonces_Rencontres','A');return true;">Rencontres</a></li>
+<li><a href="http://emploi.midilibre.com/" target="_blank" onclick="return xt_click(this,'C','11','MenuTop_Annonces_Emploi','A');return true;">Emploi</a></li>
+<li><a href="http://www.lindependant-legales.com/" target="_blank" onclick="return xt_click(this,'C','11','MenuTop_Annonces_Legales','A');return true;">Annonces Légales</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header><!-- /BLOC HEADER - header - MANUEL - LARGE-->
+<!-- BLOC PUB - OAS Banner TOP Position4 - MANUEL - HEADER-->
+<!--bH:-->
+<div class="container text-center">
+<section class="bannerAd top"><div id='pub_dfp_banniere_haute' class='pub'></div></section>
+</div>
+<!-- /BLOC PUB - OAS Banner TOP Position4 - MANUEL - HEADER-->
+<!-- /COL --><div class="main-container container">
+<div class="container on-en-parle-container">
+<nav id="on-en-parle-nav" role="navigation" class="navbar navbar-default">
+<ul class="nav navbar-nav">
+<li class="lbl"> # </li>
+<li><a href='/societe/catalogne/'>Catalogne - Catalunya</a></li><li><a href='/sport/rugby-a-xiii/'>Rugby à XIII</a></li><li><a href='/sport/rugby-a-xv/usap/'>USAP</a></li><li><a href='/sport/rugby-a-xv/rcnm/'>RCNM</a></li></ul>
+</nav>
+</div>
+<div class="main container">
+<div class="section">
+<div class="row">
+<div id="main" role="main" class="col-md-8">
+<div id="site-content">
+<div class="row">
+<div class="col-sm-12">
+<div class="left-content">
+<!-- COL -->
+<!-- BLOC WEB - Bloc liste articles HOME - AUTOCMS – COL1-->
+<!--bMnoniso - template :  blocp_home_articles.tpl -->
+<!-- TODO UNE EVENEMENTIELLE -->
+<section id="leftColumn" role="main">
+<!-- homeFeaturesBlock -->
+<div class="section" id="featuredArticles">
+<article class="mainArticle post">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/05/catalogne-la-justice-belge-ordonne-l-arrestation-de-carles-puigdemont-et-de-ses-quatre-ex-ministres,3066838.php">
+<img class="img-responsive pointer" src="http://images.lindependant.fr/images/2017/11/05/carles-puigdemont-est-a-bruxelles-depuis-une-semaine_1017756_1000x665.jpg?v=1"  alt="Carles Puigdemont est à Bruxelles depuis une semaine." onclick="lighthouse('#Z:Z3L+LJJ1+,/0-?/sFsE=R0=0-?o7.=/0/=0#=?0=?FYE0#rs7Z=/0y-o8=0#=FYs?o?/0--o=y=0FFY#-Y=0ry0p=08s?/7t=oy=0FrYyo?o8MI1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/societe/catalogne/">Catalogne - Catalunya</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 05 novembre 2017</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 6</li>
+</ul>
+</div>
+<h2 class="entry-title"><a href="/2017/11/05/catalogne-la-justice-belge-ordonne-l-arrestation-de-carles-puigdemont-et-de-ses-quatre-ex-ministres,3066838.php">Catalogne - La justice belge ordonne l'arrestation de Carles Puigdemont et de ses quatre ex-ministres</a></h2>
+<div class="entry-content">
+<p>
+Le procureur de Bruxelles a ordonné à la police d'arrêter le président de la Generalitat Carles Puigdemont et les quatre...</p>
+</div>
+</div>
+</article>
+</div>
+<!-- article with photo -->
+<div class="row same-height-container std-section">
+<div class="col-md-6">
+<article class="post ">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/05/coupe-du-monde-coup-de-tonnerre-chez-les-bleus-eloi-pelissier-renvoye-en-france,3066829.php" class="link">
+<img class="pointer img-responsive lazy " data-original="http://images.lindependant.fr/images/2017/11/05/eloi-pelissier-rentre-en-france-dans-les-prochaines-heures_1017737_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="Eloi Pelissier rentre en France dans les prochaines heures." onclick="lighthouse('#Z:Z3%GLJJ1+,08Fo-q=F0=0)YzF0-=-0s//sy0Z=sYy0=/70yp=/0y=S0:8=0--0FFY?=0#=Z7Y8=0#FYE=7#=0Z7Y8MI1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/sport/rugby-a-xiii/">Rugby à XIII</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 09:47</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/05/coupe-du-monde-coup-de-tonnerre-chez-les-bleus-eloi-pelissier-renvoye-en-france,3066829.php" class="link">Coupe du Monde - Coup de tonnerre chez les Bleus: Eloi Pélissier renvoyé en France</a>
+</h2>
+<div class="entry-content">
+<p>
+Le talonneur international français Eloi Pélissier, a été exclu de l'équipe de France de rugby à XIII, actuellement en Australie...</p>
+</div>
+</div>
+</article>
+</div>
+<!-- article with photo -->
+<div class="col-md-6">
+<article class="post  pastille-video">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/05/plus-de-2500-personnes-manifestent-contre-le-projet-tdn-areva-a-narbonne,3066839.php" class="link">
+<img class="pointer img-responsive lazy " data-original="http://images.lindependant.fr/images/2017/11/05/il-y-avait-foule-ce-matin-a-narbonne-pour-manifester-contre_1017763_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="Il y avait foule ce matin à Narbonne pour manifester contre le projet TDN." onclick="lighthouse('#Z:Z3%+LJJ1+,0FFYp-oF=o=oz0-o=F#?=?0tY-Z=0y=0-?FY8=?F0?/0qsFoE=/0FFY/-0Z=11IG=0#=/7yZMI1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/economie/agriculture/viticulture/">viticulture</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 12:49</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/05/plus-de-2500-personnes-manifestent-contre-le-projet-tdn-areva-a-narbonne,3066839.php" class="link">Plus de 2500 personnes manifestent contre le projet TDN-Areva à Narbonne</a>
+</h2>
+<div class="entry-content">
+<p>
+Un incontestable succès. La manifestation organisée, ce dimanche matin à 11 heures sur la place de l'Hôtel de Ville à Narbonne,...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="row same-height-container std-section">
+<div class="col-md-6">
+<article class="post ">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/p-o-73-communes-frappees-par-des-restrictions-d-usage-de-l-eau,3066819.php" class="link">
+<img class="pointer img-responsive lazy " data-original="http://images.lindependant.fr/images/2017/11/04/p-o-73-communes-frappees-par-des-restrictions-d-usage-de-l-e_1017706_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="" onclick="lighthouse('#Z:Z3%nLJJ1+,7o0=y=0#=0ro/7=#=/FYs?8s-?/0-=/0#=-oZ=/00ZZo-q=/0F7EEY8=+K=Y=ZMH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/environnement/">Environnement</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 06:00</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 4</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/p-o-73-communes-frappees-par-des-restrictions-d-usage-de-l-eau,3066819.php" class="link">P.-O.: 73 communes frappées par des restrictions d’usage de l’eau</a>
+</h2>
+<div class="entry-content">
+<p>
+La mesure est exceptionnelle en cette période de l’année où habituellement les pluies sont abondantes. La préfecture des...</p>
+</div>
+</div>
+</article>
+</div>
+<!-- article with photo -->
+<div class="col-md-6">
+<article class="post ">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/05/direct-pro-d2-suivez-le-match-angouleme-usap-sur-lindependant-fr,3066844.php" class="link">
+<img class="pointer img-responsive lazy " data-original="http://images.lindependant.fr/images/2017/11/05/direct-pro-d2-suivez-le-match-angouleme-usap-sur-lindependan_1017773_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="" onclick="lighthouse('#Z:Z3HHLJJ1+,-q=?Fo#F0Z0#Fsy=-7/=Zo/7=0E0y7YrFo=:8?oE=0y=S0zs7/=G#=Y-Z=?80-s#MI1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/sport/rugby-a-xv/pro-d2/">Pro D2</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 12:53</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/05/direct-pro-d2-suivez-le-match-angouleme-usap-sur-lindependant-fr,3066844.php" class="link">[DIRECT] Pro D2 - Suivez le match Angoulême-USAP sur lindependant.fr</a>
+</h2>
+<div class="entry-content">
+<p> </p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/canet-en-roussillon-un-ete-en-demi-teinte-pour-les-commercants,3066813.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/04/les-assises-du-tourisme-se-sont-deroulees-aux-voiles-rouges_1017692_800x600.JPG?v=2" src="/img/lazy_800x600.jpg"  alt="Les assises du tourisme se sont déroulées aux Voiles Rouges." onclick="lighthouse('#Z:Z3+nLJJ1+,/?Fo8-0EEY8=/0y=-7YZ=0?Fs0?=sE0#=F0=0?0=F7=FYyys//7Y-=F0=?0Fo8MH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/societe/tourisme/">Tourisme</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 06:02</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 5</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/canet-en-roussillon-un-ete-en-demi-teinte-pour-les-commercants,3066813.php" class="link">Canet-en-Roussillon: un été en demi-teinte  pour les commerçants</a>
+</h2>
+<div class="entry-content">
+<p>
+Élus et professionnels ont dressé le bilan de la saison écoulée. Constat mitigé.
+Hôteliers, restaurateurs, gérants de...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container pastille-video">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/05/pyrenees-catalanes-les-premieres-neiges-de-l-automne-saupoudrent-le-canigo,3066836.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/05/le-canigo-enneige-ce-dimanche-matin_1017741_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="Le Canigó enneigé ce dimanche matin." onclick="lighthouse('#Z:Z3J+LJJ1+,YrsFo8=0y=?F0-#7YZ7o/=0FEY?7o=y=0#=/0rs0F=/0-0sE0-Z=/0y=/0Foyo?o8=/00F0-)ZMI1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/societe/insolite/">Insolite</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 12:19</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/05/pyrenees-catalanes-les-premieres-neiges-de-l-automne-saupoudrent-le-canigo,3066836.php" class="link">Pyrénées-Catalanes - Les premières neiges de l'automne saupoudrent le Canigó</a>
+</h2>
+<div class="entry-content">
+<p>
+Les précipitations de la nuit se sont transformées en neige sur les sommets des Pyrénées Catalanes dans la nuit de samedi à...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div id='pub_dfp_publi_haut' class='pub hidden-xs hidden-sm'></div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/05/le-billet-du-dimanche-le-poids-de-l-estelada,3066830.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/05/photo-d-illustration-1001426-657x426p_1017728_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="La Catalogne nord (re)découvre le poids des symboles du catalanisme." onclick="lighthouse('#Z:Z31+LJJ1+,o#oy0?/0=y=0#=/#sYZ=0y=0:8FoEs#=7#=?0yysp=0yMI1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/pyrenees-orientales/perpignan/">Perpignan - Perpinya</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 09:35</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 5</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/05/le-billet-du-dimanche-le-poids-de-l-estelada,3066830.php" class="link">Le billet du dimanche - "Le poids de l'estelada" ou quand la Catalogne nord (re)découvre le sens de ses symboles</a>
+</h2>
+<div class="entry-content">
+<p>
+Tous les dimanches, L'Indépendant bouscule les codes de sa pagination et offre depuis un gros mois maintenant une offre dominicale...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/gens-du-voyage-a-narbonne-l-aire-d-accueil-bientot-decidee,3066818.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/04/le-site-de-pradines-propriete-de-la-ville-de-narbonne_1017695_800x600.JPG?v=2" src="/img/lazy_800x600.jpg"  alt="Le site de Pradines, propriété de la Ville de Narbonne serait mis à disposition de l’agglo." onclick="lighthouse('#Z:Z3LnLJJ1+,00#s80#=?Y?F0sp=ys0788o=#=0-so=y=0FFYp-oF=o=0ro)Yz=7#=/F0rMH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/societe/">Société</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 06:04</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/gens-du-voyage-a-narbonne-l-aire-d-accueil-bientot-decidee,3066818.php" class="link">Gens du voyage à Narbonne: l’aire d’accueil bientôt décidée</a>
+</h2>
+<div class="entry-content">
+<p>
+Société. Y aura-t-il consensus au lieu-dit «Pradines»?
+Pradines, route de Marcorignan sera-t-il le prochain terrain choisi pour...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/didier-codorniou-devient-1er-vice-president-de-la-region,3066815.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/04/didier-codorniou-devient-1er-vice-president-de-la-region_1017709_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="" onclick="lighthouse('#Z:Z3InLJJ1+,FYsr0-=oy=0#=?F0#s/0-Z=08sz=-0n=?F0sz0#=7YsF-Y#Y8=-0s#s#MH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/societe/occitanie/">Occitanie</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 06:06</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/didier-codorniou-devient-1er-vice-president-de-la-region,3066815.php" class="link">Didier Codorniou devient 1er vice-président de la Région</a>
+</h2>
+<div class="entry-content">
+<p>
+Didier Codorniou, maire de Gruissan, 1er vice-président du Grand Narbonne délégué à Économie maritime et au Tourisme,...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="row same-height-container std-section">
+<div class="col-md-6">
+<article class="post ">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/federale-2-prades-en-operation-commando,3066816.php" class="link">
+<img class="pointer img-responsive lazy " data-original="http://images.lindependant.fr/images/2017/11/04/sylvain-fabre-et-lamine-tourek-doivent-s-imposer-contre_1017694_800x600.jpg?v=2" src="/img/lazy_800x600.jpg"  alt="Sylvain Fabre et Lamine Tourek doivent s’imposer contre Leucate." onclick="lighthouse('#Z:Z3JnLJJ1+,Y#FoEEY8=FYs?o-0ZY=F0=/0#o-Z=G=0yo-0#0qMH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/sport/rugby-a-xv/">Rugby à XV</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 06:08</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/federale-2-prades-en-operation-commando,3066816.php" class="link">Fédérale 2: Prades en opération commando</a>
+</h2>
+<div class="entry-content">
+<p>
+JO Prades. Les Conflentois (8es) attendent de pied ferme une solide équipe de Leucate (3e) cet après-midi à Clément-Padrixe (15...</p>
+</div>
+</div>
+</article>
+</div>
+<!-- article with photo -->
+<div class="col-md-6">
+<article class="post  pastille-video">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/catalogne-minutes-de-silence-senyera-justicia-et-llibertat-au-camp-nou-et-au-palau-blaugrana-pour-les-prisonniers-politiques,3066670.php" class="link">
+<img class="pointer img-responsive lazy " data-original="http://images.lindependant.fr/images/2017/11/04/pacifiquement-les-supporters-blaugrana-du-fc-barcelone-en_1017541_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="Pacifiquement, les supporters blaugrana du FC Barcelone en football ont condamné les actes de la justice espagnole." onclick="lighthouse('#Z:Z31KJJJ1+,/07.s?syYZ=/-0sFFY/s-Z=/0y=-7YZ=oFo-r7oyp=7oyoZ=7o=?0=7YF=ZEo8=7o=?o?-0psyy=?0=os8s?/7t=o-0)F0/=08F0ys/=0#=/0?7FsE=0FrYyo?o8MH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/societe/barcelone/">Barcelone</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 11:04</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/catalogne-minutes-de-silence-senyera-justicia-et-llibertat-au-camp-nou-et-au-palau-blaugrana-pour-les-prisonniers-politiques,3066670.php" class="link">Catalogne: minutes de silence, senyera, "Justícia" et "Llibertat" au Camp Nou et au Palau Blaugrana pour les prisonniers politiques</a>
+</h2>
+<div class="entry-content">
+</div>
+<div class="list-posts-meme-sujet">
+<h3>Sur le même sujet</h3>
+<ul>
+<li class="">
+<a href="/2017/11/04/perpignan-2000-personnes-dans-les-rues-appellent-a-la-liberation-des-ex-ministres-catalans-emprisonnes,3066671.php">
+<i class="fa fa-angle-right"></i>
+Perpignan: 2000 personnes dans les rues appellent à la libération des ex-ministres catalans emprisonnés          </a>
+</li>
+<li class="">
+<a href="/2017/11/04/la-cup-annonce-a-perpignan-ne-rien-exclure-pour-le-scrutin-du-21-decembre,3066653.php">
+<i class="fa fa-angle-right"></i>
+Catalogne - La CUP annonce à Perpignan ne rien exclure pour le scrutin du 21 décembre          </a>
+</li>
+</ul>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container pastille-video">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/perpignan-2000-personnes-dans-les-rues-appellent-a-la-liberation-des-ex-ministres-catalans-emprisonnes,3066671.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/04/l-actualite-au-sud-des-alberes-s-est-invitee-une-fois-n-est_1017512_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="L’actualité au sud des Albères s’est invitée, une fois n’est pas coutume, à la Diada de Catalogne Nord qui s’est tenue ce samedi en fin de journée à Perpignan." onclick="lighthouse('#Z:Z3nKJJJ1+,/0FFY/s-ZE0=/Foyo?o8=/0-?/sFsE=R0=/0#=FYs?o-0psy=oy=o=?F0yy0ZZo=/07-=/0y=/Fo#=/0FFY/-0Z=111G=FoFrsZ-0ZMH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/formats/synergie/">Synergie</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 15</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/perpignan-2000-personnes-dans-les-rues-appellent-a-la-liberation-des-ex-ministres-catalans-emprisonnes,3066671.php" class="link">Perpignan: 2000 personnes dans les rues appellent à la libération des ex-ministres catalans emprisonnés</a>
+</h2>
+<div class="entry-content">
+<p>
+"Llibertat presos politics". L’actualité au sud des Albères s’est invitée, une fois n’est pas coutume, à la Diada de...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/meurtre-d-alexia-daval-la-joggeuse-a-ete-etranglee-mais-n-aurait-pas-ete-violee,3066817.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/04/les-resultats-de-l-autopsie-pratiquee-jeudi-sur-son-corps_1017705_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="Les résultats de l&#039;autopsie pratiquée jeudi sur son corps calciné ont permis d&#039;établir un décès par strangulation." onclick="lighthouse('#Z:Z3KnLJJ1+,00yYsz=0?0=/oZ=?so-7o=F=/soE=00yrFo-?0=0?0=o=0/70rrYt=oy=yozo#=osR0yo=#=0-?-70EMH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/faits-divers/">Faits divers</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/meurtre-d-alexia-daval-la-joggeuse-a-ete-etranglee-mais-n-aurait-pas-ete-violee,3066817.php" class="link">Meurtre d'Alexia Daval: la joggeuse a été étranglée mais n'aurait pas été violée</a>
+</h2>
+<div class="entry-content">
+<p>
+Alexia Daval, la jeune femme assassinée samedi dernier près de Gray, en Haute-Saône, a été étranglée, a-t-on appris samedi de...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div id='pub_dfp_publi_bas' class='pub hidden-xs hidden-sm'></div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container pastille-video">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/ou-quand-combien-comment-qui-qu-est-ce-qui-va-changer-dans-le-stationnement-a-perpignan-le-1er-janvier-2018,3066630.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/04/il-va-y-avoir-du-changement-dans-le-stationnement-a_1017467_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="Il va y avoir du changement dans le stationnement à Perpignan au 1er janvier 2018." onclick="lighthouse('#Z:Z31+JJJ1+,Ln1G=-0szFot=-0n=0y=FoFrsZ-0Z=o=?F0E0FFYs?o?/=0y=/Fo#=-0rFo:8=oz=s7.=08=?/0=7.=s7.=?F0EEY8=F0spEY8=#Fo7.=7YMH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/pyrenees-orientales/perpignan/">Perpignan - Perpinya</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 21</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/ou-quand-combien-comment-qui-qu-est-ce-qui-va-changer-dans-le-stationnement-a-perpignan-le-1er-janvier-2018,3066630.php" class="link">Où, quand, combien, comment, qui? Qu'est-ce qui va changer dans le stationnement à Perpignan le 1er janvier 2018</a>
+</h2>
+<div class="entry-content">
+<p>
+L'Indépendant consacre ce samedi un dossier complet sur les modifications du stationnement payant de surface à Perpignan.
+Un...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="row same-height-container std-section">
+<div class="col-md-6">
+<article class="post ">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/usap-les-jeunes-au-pouvoir,3066657.php" class="link">
+<img class="pointer img-responsive lazy " data-original="http://images.lindependant.fr/images/2017/11/04/le-pilier-droit-nicolas-lemaire-sera-titulaire-demain_1017492_800x600.jpg?v=2" src="/img/lazy_800x600.jpg"  alt="Le pilier droit Nicolas Lemaire sera titulaire dimanche." onclick="lighthouse('#Z:Z3KIJJJ1+,-sYz7YZ=7o=/0F70t=/0y=Zo/7MH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/sport/rugby-a-xv/pro-d2/">Pro D2</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 8</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/usap-les-jeunes-au-pouvoir,3066657.php" class="link">USAP: les jeunes au pouvoir à Angoulême</a>
+</h2>
+<div class="entry-content">
+<p>
+Ce samedi après-midi, le staff usapiste a dévoilé la composition de l'équipe qui affrontera Soyaux-Angoulême ce dimanche en...</p>
+</div>
+</div>
+</article>
+</div>
+<!-- article with photo -->
+<div class="col-md-6">
+<article class="post  pastille-video">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/pole-dance-la-choregraphie-gagnante-de-la-narbonnaise-celia-suzanna,3066660.php" class="link">
+<img class="pointer img-responsive lazy " data-original="http://images.lindependant.fr/images/2017/11/04/celia-suzanna-dans-son-studio-the-pole-dance-project_1017498_800x600.JPG?v=2" src="/img/lazy_800x600.jpg"  alt="Célia Suzanna, dans son studio &quot;The Pole Dance project&quot;" onclick="lighthouse('#Z:Z31JJJJ1+,oFFoS7/=osy08=0/soFFYp-oF=oy=0#=0?FoFror=0s:Zo-r0-Y:8=oy=08Fo#=0yYZMH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/aude/narbonne/">Narbonne - Narbona</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 4</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/pole-dance-la-choregraphie-gagnante-de-la-narbonnaise-celia-suzanna,3066660.php" class="link">Compétition de Pole Dance en Occitanie: découvrez la chorégraphie gagnante de la Narbonnaise Célia Suzanna</a>
+</h2>
+<div class="entry-content">
+<p>
+Cette vidéo lui a ouvert les portes de l'APFC, première compétition de Pole Dance d'Occitanie. En moins de trois minutes, la...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/la-cup-annonce-a-perpignan-ne-rien-exclure-pour-le-scrutin-du-21-decembre,3066653.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/04/conference-de-presse-ce-samedi-4-novembre-a-perpignan-de-la_1017488_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="Conférence de presse ce samedi 4 novembre à Perpignan de la CUP." onclick="lighthouse('#Z:Z3+IJJJ1+,0-pE080#=nG=7#=Fs?7-8/=0y=-7YZ=0-7y8R0=F0s-=0F=FoFrsZ-0Z=o=08FYFFo=Z78=oyMH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/societe/catalogne/">Catalogne - Catalunya</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 10</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/la-cup-annonce-a-perpignan-ne-rien-exclure-pour-le-scrutin-du-21-decembre,3066653.php" class="link">Catalogne - La CUP annonce à Perpignan ne rien exclure pour le scrutin du 21 décembre</a>
+</h2>
+<div class="entry-content">
+<p>
+MISE A JOUR A 16H40.
+La CUP (Candidatura d'Unitat Popular), le mouvement politique indépendantiste catalan d'extrême gauche,...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/de-gros-petards-devant-la-permanence-du-front-national-a-trebes,3066647.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/04/de-gros-petards-devant-la-permanence-du-front-national-a-tre_1017485_800x600.jpg?v=1" src="/img/lazy_800x600.jpg"  alt="Christophe Barthès" onclick="lighthouse('#Z:Z3KHJJJ1+,/0p0-?=o=yoFYs?oF=?FY-q=7#=08F0FoE-0Z=oy=?Foz0#=/#-o?0Z=/Y-r=0#MH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/politique/">Politique</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/de-gros-petards-devant-la-permanence-du-front-national-a-trebes,3066647.php" class="link">De gros pétards devant la permanence du Front national à Trèbes</a>
+</h2>
+<div class="entry-content">
+<p>
+Un engin artisanal vraisemblablement composé de plusieurs gros pétards entourant des briquets a été retrouvé ce matin devant la...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- article with photo -->
+<div class="health-section std-section">
+<div class="">
+<article class="post same-height-container">
+<div class="entry-header">
+<figure class="entry-thumbnail">
+<a href="/2017/11/04/la-belgique-va-etudier-le-mandat-d-arret-contre-puigdemont-avant-de-prendre-une-decision,3066649.php" class="link">
+<img class="pointer img-responsive lazy img-cover" data-original="http://images.lindependant.fr/images/2017/11/04/le-cas-de-carles-puigdemont-et-de-quatre-autres-ex-ministres_1017484_800x600.JPG?v=1" src="/img/lazy_800x600.jpg"  alt="Le cas de Carles Puigdemont et de quatre autres ex-ministres sera étudié par la justice belge." onclick="lighthouse('#Z:Z3%HJJJ1+,FYs/s80#=0F7=0-#F0-Z=0#=?Fozo=?FYE0#rs7Z=0-?FY8=?0--o=#=?o#FoE=0y=-0s#7?0=oz=07.sry0p=oyMH1MnnMKn1GM')">
+</a>
+</figure>
+<div class="catagory politics"><a href="/societe/catalogne/">Catalogne - Catalunya</a></div>
+</div>
+<div class="post-content flex-column">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+<li class="comments"><i class="fa fa-comment-o"></i> 9</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a href="/2017/11/04/la-belgique-va-etudier-le-mandat-d-arret-contre-puigdemont-avant-de-prendre-une-decision,3066649.php" class="link">La Belgique va "étudier" le mandat d'arrêt contre Puigdemont avant de prendre une décision</a>
+</h2>
+<div class="entry-content">
+<p>
+La procédure d'exécution d'un mandat d'arrêt européen, comme ceux délivrés vendredi soir par l'Espagne contre le leader catalan...</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+<footer class="row">
+<div class="col-sm-12 text-center">
+<ul class="pagination">
+<li>
+<a  aria-label="Précédent" class="prev page-numbers">
+<span aria-hidden="true"><i class="fa fa-long-arrow-left"></i><span class="hidden-xs"> Page précédente</span></span>
+</a>
+</li>
+<li class="active page-numbers"><a href="/">1</a></li>
+<li class="hidden-xs page-numbers"><a href="/index_2.php">2</a></li>
+<li class="hidden-xs page-numbers"><a href="/index_3.php">3</a></li>
+<li class="hidden-xs page-numbers"><a href="/index_4.php">4</a></li>
+<li class="hidden-xs page-numbers"><a href="/index_5.php">5</a></li>
+<li>
+<a href="/index_2.php" aria-label="Suivant" class="next page-numbers">
+<span aria-hidden="true"><span class="hidden-xs">Page suivante </span><i class="fa fa-long-arrow-right"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</footer>
+<div class="clearfix"></div>
+</section>
+<!-- /BLOC WEB - Bloc liste articles HOME - AUTOCMS – COL1-->
+<!-- /COL -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="rightColumn" class="col-md-4">
+<!-- COL -->
+<!-- BLOC WEB - Article Live - AUTO - COL3-->
+<!--bH:-->
+<div class="widget en-direct mini-articles-section"><h2 class="section-title title">En direct</h2><div id="scrollbar-live" class="content mCustomScrollbar post-list" data-mcs-theme="light-thin"><ul><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/05/62626_carles-puigdemont-est-a-bruxelles-depuis-une-semaine_1017756.jpg" alt="Catalogne - La justice belge ordonne l'arrestation de Carles Puigdemont et de ses quatre ex-ministres" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>1 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/05/catalogne-la-justice-belge-ordonne-l-arrestation-de-carles-puigdemont-et-de-ses-quatre-ex-ministres,3066838.php">Catalogne - La justice belge ordonne l'arrestation de Carles Puigdemont et de ses quatre ex-ministres</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/05/62625_le-canigo-enneige-ce-dimanche-matin_1017741.jpg" alt="Pyrénées-Catalanes - Les premières neiges de l'automne saupoudrent le Canigó" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>2 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/05/pyrenees-catalanes-les-premieres-neiges-de-l-automne-saupoudrent-le-canigo,3066836.php">Pyrénées-Catalanes - Les premières neiges de l'automne saupoudrent le Canigó</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/05/62623_eloi-pelissier-rentre-en-france-dans-les-prochaines-heures_1017737.jpg" alt="Coupe du Monde - Coup de tonnerre chez les Bleus: Eloi Pélissier renvoyé en France" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>3 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/05/coupe-du-monde-coup-de-tonnerre-chez-les-bleus-eloi-pelissier-renvoye-en-france,3066829.php">Coupe du Monde - Coup de tonnerre chez les Bleus: Eloi Pélissier renvoyé en France</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/05/62622_photo-d-illustration-1001426-657x426p_1017728.jpg" alt="Le billet du dimanche - "Le poids de l'estelada"" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>4 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/05/le-billet-du-dimanche-le-poids-de-l-estelada,3066830.php">Le billet du dimanche - "Le poids de l'estelada"</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62621_les-resultats-de-l-autopsie-pratiquee-jeudi-sur-son-corps_1017705.jpg" alt="Meurtre d'Alexia Daval: la joggeuse a été étranglée mais n'aurait pas été violée" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>14 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/meurtre-d-alexia-daval-la-joggeuse-a-ete-etranglee-mais-n-aurait-pas-ete-violee,3066817.php">Meurtre d'Alexia Daval: la joggeuse a été étranglée mais n'aurait pas été violée</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62620_pacifiquement-les-supporters-blaugrana-du-fc-barcelone-en_1017541.jpg" alt="Catalogne: minutes de silence, senyera, "Justícia" et "Llibertat" au Camp Nou et au Palau Blaugrana pour les prisonniers politiques" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>15 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/catalogne-minutes-de-silence-senyera-justicia-et-llibertat-au-camp-nou-et-au-palau-blaugrana-pour-les-prisonniers-politiques,3066670.php">Catalogne: minutes de silence, senyera, "Justícia" et "Llibertat" au Camp Nou et au Palau Blaugrana pour les prisonniers politiques</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62619_l-actualite-au-sud-des-alberes-s-est-invitee-une-fois-n-est_1017512.jpg" alt="Perpignan: 2000 personnes dans les rues appellent à la libération des ex-ministres catalans emprisonnés" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>17 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/perpignan-2000-personnes-dans-les-rues-appellent-a-la-liberation-des-ex-ministres-catalans-emprisonnes,3066671.php">Perpignan: 2000 personnes dans les rues appellent à la libération des ex-ministres catalans emprisonnés</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62618_celia-suzanna-dans-son-studio-the-pole-dance-project_1017498.JPG" alt="Compétition de Pole Dance en Occitanie: découvrez la chorégraphie gagnante de la narbonnaise Célia Suzanna" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>18 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/pole-dance-la-choregraphie-gagnante-de-la-narbonnaise-celia-suzanna,3066660.php">Compétition de Pole Dance en Occitanie: découvrez la chorégraphie gagnante de la narbonnaise Célia Suzanna</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62617_le-pilier-droit-nicolas-lemaire-sera-titulaire-demain_1017492.jpg" alt="USAP: les jeunes au pouvoir à Angoulême" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>19 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/usap-les-jeunes-au-pouvoir,3066657.php">USAP: les jeunes au pouvoir à Angoulême</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62616_conference-de-presse-ce-samedi-4-novembre-a-perpignan-de-la_1017488.jpg" alt="Catalogne - La CUP annonce à Perpignan ne rien exclure pour le scrutin du 21 décembre" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>20 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/la-cup-annonce-a-perpignan-ne-rien-exclure-pour-le-scrutin-du-21-decembre,3066653.php">Catalogne - La CUP annonce à Perpignan ne rien exclure pour le scrutin du 21 décembre</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62615_de-gros-petards-devant-la-permanence-du-front-national-a-tre_1017485.jpg" alt="De gros pétards devant la permanence du Front national à Trèbes" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>21 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/de-gros-petards-devant-la-permanence-du-front-national-a-trebes,3066647.php">De gros pétards devant la permanence du Front national à Trèbes</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62614_le-cas-de-carles-puigdemont-et-de-quatre-autres-ex-ministres_1017484.JPG" alt="La Belgique va "étudier" le mandat d'arrêt contre Puigdemont avant de prendre une décision" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>21 h</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/la-belgique-va-etudier-le-mandat-d-arret-contre-puigdemont-avant-de-prendre-une-decision,3066649.php">La Belgique va "étudier" le mandat d'arrêt contre Puigdemont avant de prendre une décision</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62613_jean-marc-pujol-justifie-la-privatisation-du-stationnement_1017466.jpg" alt="J-M. Pujol : "Nous restons une des villes où le stationnement est le moins onéreux"" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>le 04 novembre 2017</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/j-m-pujol-nous-restons-une-des-villes-ou-le-stationnement-est-le-moins-onereux,3066638.php">J-M. Pujol : "Nous restons une des villes où le stationnement est le moins onéreux"</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62612_il-va-y-avoir-du-changement-dans-le-stationnement-a_1017467.jpg" alt="Où, quand, combien, comment, qui? Qu'est-ce qui va changer dans le stationnement à Perpignan le 1er janvier 2018" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>le 04 novembre 2017</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/ou-quand-combien-comment-qui-qu-est-ce-qui-va-changer-dans-le-stationnement-a-perpignan-le-1er-janvier-2018,3066630.php">Où, quand, combien, comment, qui? Qu'est-ce qui va changer dans le stationnement à Perpignan le 1er janvier 2018</a></h2><p class="subtitle"> </p></article><li><article class="post small-post same-height-container"><div class="entry-header"><div class="entry-thumbnail"><img src="/images/live/2017/11/04/62610_linky-ils-n-en-veulent-pas_1017464.jpg" alt="Perpignan : l'installation du compteur Linky ne passe décidément pas" class="img-cover img-responsive"></div></div><div class="post-content flex-column"><div class="publish-date"><i class="fa fa-clock-o"></i>le 04 novembre 2017</div><h2 class="entry-title"><a class="title" href="http://www.lindependant.fr/2017/11/04/perpignan-l-installation-du-compteur-linky-ne-passe-decidement-pas,3066636.php">Perpignan : l'installation du compteur Linky ne passe décidément pas</a></h2><p class="subtitle"> </p></article></ul></div></div><!-- /BLOC WEB - Article Live - AUTO - COL3-->
+<!-- BLOC PUB - OAS Position 2 - MANUEL - COL3-->
+<!--bH:-->
+<section id="Position2" class="advert300x250"><div id='pub_dfp_droite_haute' class='pub'></div></section>
+<!-- /BLOC PUB - OAS Position 2 - MANUEL - COL3-->
+<!-- BLOC WEB - PREMIUM JOURNAL EDITION ABONNES - AUTO - COL3-->
+<!--bH:-->
+<div class="widget follow-us" id="bloc-col-subscribe">
+<h2 class="section-title title">Édition abonnés</h2>
+<div>
+<div class="col-sm-4">
+<img src="http://profil.lindependant.fr/img/unes/small.jpg" style="width: 100%;">
+</div>
+<div class="col-sm-8">
+<h4>Profitez des avantages numériques</h4>
+Le journal du matin + accès intégral aux contenus
+</div>
+<div class="clearfix"></div>
+<div class="text-center">
+<a type="submit" class="btn-premium-abo" name="subscribe" id="subscribe" href="https://logs4.xiti.com/go.url?xts=78692&atc=INT-2-[col_droite_Sabonner]&type=AT&url=https://abonnement.lindependant.fr/">S'abonner à partir de 1€</a>
+<a type="submit" class="btn-premium-abo2"  id="subscribe" name="subscribe" href=" https://abonnement.lindependant.fr/site/lindependantv2/default/fr/abonnement/kiosque.html">Achetez l'édition du jour</a>
+<a href="https://logs4.xiti.com/go.url?xts=78692&atc=INT-2-[col_droite_Reconciliation]&type=AT&url=http://profil.lindependant.fr/journalnumerique/" class="btn-premium-reconciliation">Abonné papier ? Activez votre accès</a>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<!-- /BLOC WEB - PREMIUM JOURNAL EDITION ABONNES - AUTO - COL3-->
+<!-- BLOC PUB - OAS x50 - MANUEL - COL3-->
+<!--bH:-->
+<section id="x50"><div id='pub_dfp_x50' class='pub'></div></section>
+<!-- /BLOC PUB - OAS x50 - MANUEL - COL3-->
+<!-- BLOC WEB - ACTU DES CLUBS-->
+<!--bH:-->
+<div class="widget">
+<h2 class="section-title title">L'actu des clubs</h2>
+<section class="actuClubs">
+<div class="row">
+<div class="col-xs-6">
+<a href="/sport/rugby-a-xv/usap/" class="thumbnail">
+<img src="/img/logo/blason_usap.png" alt="USAP">
+</a>
+</div>
+<div class="col-xs-6">
+<a href="/sport/rugby-a-xiii/dragons-catalans/" class="thumbnail">
+<img src="/img/logo/logo-dragons-catalans.png" alt="Dragons Catalans">
+</a>
+</div>
+<div class="col-xs-6">
+<a href="/sport/rugby-a-xv/rcnm/" class="thumbnail">
+<img src="/img/logo/logo-RCNM.png" alt="RCNM">
+</a>
+</div>
+<div class="col-xs-6">
+<a href="/sport/rugby-a-xv/us-carcassone/" class="thumbnail">
+<img src="/img/logo/logo-USC.png" alt="US Carcassonne">
+</a>
+</div>
+</div>
+</section>
+</div>
+<!-- /BLOC WEB - ACTU DES CLUBS-->
+<!-- BLOC WEB - Bloc Sport - AUTOCMS - COL2-->
+<!--bMext - template :  bloc_home_rubrique_mini.tpl -->
+<div class="widget bloc-sports">
+<h3 class="section-title title">Sport</h3>
+<div class="cat-menu">
+<a href="/sport/">Tout le sport <i class="fa fa-angle-right"></i></a>
+</div>
+<div class="section mini-articles-section">
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/05/direct-pro-d2-suivez-le-match-angouleme-usap-sur-lindependant-fr,3066844.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/05/direct-pro-d2-suivez-le-match-angouleme-usap-sur-lindependan_1017773_250x161.jpg?v=1" alt="[DIRECT] Pro D2 - Suivez le match Angoulême-USAP sur lindependant.fr">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/05/direct-pro-d2-suivez-le-match-angouleme-usap-sur-lindependant-fr,3066844.php">[DIRECT] Pro D2 - Suivez le match Angoulême-USAP sur lindependant.fr</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/05/coupe-du-monde-coup-de-tonnerre-chez-les-bleus-eloi-pelissier-renvoye-en-france,3066829.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/05/eloi-pelissier-rentre-en-france-dans-les-prochaines-heures_1017737_250x161.jpg?v=1" alt="Coupe du Monde - Coup de tonnerre chez les Bleus: Eloi Pélissier renvoyé en France">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/05/coupe-du-monde-coup-de-tonnerre-chez-les-bleus-eloi-pelissier-renvoye-en-france,3066829.php">Coupe du Monde - Coup de tonnerre chez les Bleus: Eloi Pélissier renvoyé en France</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/04/federale-2-prades-en-operation-commando,3066816.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/04/sylvain-fabre-et-lamine-tourek-doivent-s-imposer-contre_1017694_250x161.jpg?v=2" alt="Fédérale 2: Prades en opération commando">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/04/federale-2-prades-en-operation-commando,3066816.php">Fédérale 2: Prades en opération commando</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/04/catalogne-minutes-de-silence-senyera-justicia-et-llibertat-au-camp-nou-et-au-palau-blaugrana-pour-les-prisonniers-politiques,3066670.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/04/pacifiquement-les-supporters-blaugrana-du-fc-barcelone-en_1017541_250x161.jpg?v=1" alt="Catalogne: minutes de silence, senyera, "Justícia" et "Llibertat" au Camp Nou et au Palau Blaugrana pour les prisonniers politiques">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/04/catalogne-minutes-de-silence-senyera-justicia-et-llibertat-au-camp-nou-et-au-palau-blaugrana-pour-les-prisonniers-politiques,3066670.php">Catalogne: minutes de silence, senyera, "Justícia" et "Llibertat" au Camp Nou et au Palau Blaugrana pour les prisonniers politiques</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/04/usap-les-jeunes-au-pouvoir,3066657.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/04/le-pilier-droit-nicolas-lemaire-sera-titulaire-demain_1017492_250x161.jpg?v=2" alt="USAP: les jeunes au pouvoir à Angoulême">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/04/usap-les-jeunes-au-pouvoir,3066657.php">USAP: les jeunes au pouvoir à Angoulême</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/04/pole-dance-la-choregraphie-gagnante-de-la-narbonnaise-celia-suzanna,3066660.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/04/celia-suzanna-dans-son-studio-the-pole-dance-project_1017498_250x161.JPG?v=2" alt="Compétition de Pole Dance en Occitanie: découvrez la chorégraphie gagnante de la Narbonnaise Célia Suzanna">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/04/pole-dance-la-choregraphie-gagnante-de-la-narbonnaise-celia-suzanna,3066660.php">Compétition de Pole Dance en Occitanie: découvrez la chorégraphie gagnante de la Narbonnaise Célia Suzanna</a>
+</h2>
+</div>
+</div>
+</div>
+</div>
+<!-- /BLOC WEB - Bloc Sport - AUTOCMS - COL2-->
+<!-- BLOC PUB - OAS Position 3 - MANUEL - COL3-->
+<!--bH:-->
+<section id="Position3" class="advert300x250"><div id='pub_dfp_droite_basse' class='pub'></div></section>
+<!-- /BLOC PUB - OAS Position 3 - MANUEL - COL3-->
+<!-- BLOC WEB - Bloc suivez-nous - MANUEL - COL3-->
+<!--bH:-->
+<div class="widget">
+<h2 class="section-title title">Suivez-nous</h2>
+<section id="followUsBlock">
+<ul class="list-inline social-icons">
+<li class="facebook"><a href="https://www.facebook.com/lindependant.fr/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li class="twitter"><a href="https://twitter.com/webindep" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li class="gplus"><a href="https://plus.google.com/+lindependant" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+<li class="rss"><a href="http://www.lindependant.fr/rss.xml" target="_blank" onclick="lighthouse('#yER3//-M',0)"><i class="fa fa-rss"></i></a></li>
+<li class="mobile"><a href="http://www.lindependant.fr/apps/" target="_blank"><i class="fa fa-mobile"></i></a></li>
+</ul>
+<div id="form-newsletter" class="form-group">
+<label for="email">S’abonner à la newsletter quotidienne</label>
+<input type="text" id="email" name="prefillEmail" class="form-control" value="" placeholder="Votre email" />
+<input class="btn-primary center-block" type="submit" value="S’abonner" onclick="inscrireLI('email');" />
+</div>
+</section>
+</div>
+<script>
+$(document).ready(function(){
+var current_profile = gtfsb();
+if (typeof SSOMaintenance == 'undefined') SSOMaintenance = false;
+if (!SSOMaintenance) {
+$.getJSON(current_security + '://' + current_profile + '/remote/bloc-newsletter.php?jsonCallback=?', function(remoteData) {
+if (remoteData.userStatus >= 2)
+$("#form-newsletter").remove();
+}
+);
+}
+});
+</script>
+<!-- /BLOC WEB - Bloc suivez-nous - MANUEL - COL3-->
+<!-- BLOC WEB - Archives - Bloc années - AUTO - COL3-->
+<!--bH:-->
+<div class="widget">
+<h3 class="section-title title">Archives</h3>
+<div class="archive tab-content post">
+                <div class="col-md-4 archive-day">
+                <ul><li>
+                <a href="/articles/2017/">2017</a>
+                </li></ul>
+                </div>
+                <div class="col-md-4 archive-day">
+                <ul><li>
+                <a href="/articles/2016/">2016</a>
+                </li></ul>
+                </div>
+                <div class="col-md-4 archive-day">
+                <ul><li>
+                <a href="/articles/2015/">2015</a>
+                </li></ul>
+                </div>
+                <div class="col-md-4 archive-day">
+                <ul><li>
+                <a href="/articles/2014/">2014</a>
+                </li></ul>
+                </div>
+                <div class="col-md-4 archive-day">
+                <ul><li>
+                <a href="/articles/2013/">2013</a>
+                </li></ul>
+                </div>
+                <div class="col-md-4 archive-day">
+                <ul><li>
+                <a href="/articles/2012/">2012</a>
+                </li></ul>
+                </div>
+                <div class="col-md-4 archive-day">
+                <ul><li>
+                <a href="/articles/2011/">2011</a>
+                </li></ul>
+                </div>
+                       
+<div class="clear"></div>
+            <footer class="col-md-12 bloc_footer">
+                <strong><a href="/articles/2017/11/05/" class="lien_voir">Voir tous les articles du jour</a></strong>
+            </footer>
+<div class="clear"></div>
+</div>
+</div>
+
+
+<!-- /BLOC WEB - Archives - Bloc années - AUTO - COL3-->
+<!-- BLOC WEB - BLOC DESSIN DE SEB - COL 3-->
+<!--bH:-->
+<div class="widget">
+<h2 class="section-title title">Goodies</h2>
+<section class="actuClubs">
+<div class="row">
+<div class="col-sm-12">
+<a href="/culture-et-loisirs/le-dessin-de-seb/" class="thumbnail">
+<img src="/img/other/dessin_de_seb.jpg" alt="Le dessin de SEB">
+</a>
+<a href="/le-jt-de-tv-sud/" class="thumbnail">
+<img src="/img/other/JTTVSUDINDEP.jpg" alt="TV SUD">
+</a>
+<a href="/2014/05/21/l-agenda-de-vos-sorties-dans-les-pyrenees-orientales,1885773.php" class="thumbnail">
+<img src="/img/other/agenda_sorties.jpg" alt="L'agenda des sorties">
+</a>
+<a href="/2017/09/08/tous-les-films-de-la-semaine-dans-l-aude-et-les-pyrenees-orientales,3049174.php" class="thumbnail">
+<img src="/img/other/cinemas.jpg" alt="L'agenda des sorties">
+</a>
+</div>
+</div>
+</section>
+</div>
+<!-- /BLOC WEB - BLOC DESSIN DE SEB - COL 3-->
+<!-- BLOC PUB - Bloc PURL - MANUEL - COL3-->
+<!--bH:-->
+<script src="http://midilibre.purl.fr/midilibre/php/ad.php?c=125544966039&adpurl_dim=300.360.1.4"></script>
+<!-- /BLOC PUB - Bloc PURL - MANUEL - COL3-->
+<!-- BLOC WEB - Bloc les + - AUTO - COL3-->
+<!--bH:-->
+<!-- lesPlus -->
+    <div id="les-plus" class="widget">
+        <h3 class="section-title title">Les plus</h3>
+        <div class="meta-tab">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#most-read" data-toggle="tab" aria-expanded="true">
+                        <i class="fa fa-eye"></i>Lus
+                    </a>
+                </li>
+                <li role="presentation" class="">
+                    <a href="#most-commented" data-toggle="tab" aria-expanded="false">
+                        <i class="fa fa-comment-o"></i>Commentés
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#most-shared" data-toggle="tab">
+                        <i class="fa fa-share"></i>Partagés
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                                                        <div role="tabpanel" class="tab-pane active" id="most-read">
+                        <ul class="most-read-post">
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/05/coupe-du-monde-coup-de-tonnerre-chez-les-bleus-eloi-pelissier-renvoye-en-france,3066829.php" class="link">
+                                                    Coupe du Monde - Coup de tonnerre chez les Bleus: Eloi Pélissier renvoyé en France                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/ou-quand-combien-comment-qui-qu-est-ce-qui-va-changer-dans-le-stationnement-a-perpignan-le-1er-janvier-2018,3066630.php" class="link">
+                                                    Où, quand, combien, comment, qui? Qu'est-ce qui va changer dans le stationnement à Perpignan le 1er janvier 2018                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/meurtre-d-alexia-daval-la-joggeuse-a-ete-etranglee-mais-n-aurait-pas-ete-violee,3066817.php" class="link">
+                                                    Meurtre d'Alexia Daval: la joggeuse a été étranglée mais n'aurait pas été violée                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/perpignan-l-installation-du-compteur-linky-ne-passe-decidement-pas,3066636.php" class="link">
+                                                    Perpignan : l'installation du compteur Linky ne passe décidément pas                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>11:04</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/catalogne-en-exil-et-sous-le-coup-d-un-mandat-d-arret-puigdemont-deconcerte-et-divise-a-barcelone,3066627.php" class="link">
+                                                    Catalogne - En exil et sous le coup d'un mandat d'arrêt, Puigdemont déconcerte et divise à Barcelone                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                    </ul>
+                    </div>
+                                                                        <div role="tabpanel" class="tab-pane" id="most-commented">
+                        <ul class="most-commented-post">
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/ou-quand-combien-comment-qui-qu-est-ce-qui-va-changer-dans-le-stationnement-a-perpignan-le-1er-janvier-2018,3066630.php" class="link">
+                                                    Où, quand, combien, comment, qui? Qu'est-ce qui va changer dans le stationnement à Perpignan le 1er janvier 2018                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/perpignan-l-installation-du-compteur-linky-ne-passe-decidement-pas,3066636.php" class="link">
+                                                    Perpignan : l'installation du compteur Linky ne passe décidément pas                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/perpignan-2000-personnes-dans-les-rues-appellent-a-la-liberation-des-ex-ministres-catalans-emprisonnes,3066671.php" class="link">
+                                                    Perpignan: 2000 personnes dans les rues appellent à la libération des ex-ministres catalans emprisonnés                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/catalogne-en-exil-et-sous-le-coup-d-un-mandat-d-arret-puigdemont-deconcerte-et-divise-a-barcelone,3066627.php" class="link">
+                                                    Catalogne - En exil et sous le coup d'un mandat d'arrêt, Puigdemont déconcerte et divise à Barcelone                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>11:04</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/la-cup-annonce-a-perpignan-ne-rien-exclure-pour-le-scrutin-du-21-decembre,3066653.php" class="link">
+                                                    Catalogne - La CUP annonce à Perpignan ne rien exclure pour le scrutin du 21 décembre                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                    </ul>
+                    </div>
+                                                                        <div role="tabpanel" class="tab-pane" id="most-shared">
+                        <ul class="most-shared-post">
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/ou-quand-combien-comment-qui-qu-est-ce-qui-va-changer-dans-le-stationnement-a-perpignan-le-1er-janvier-2018,3066630.php" class="link">
+                                                    Où, quand, combien, comment, qui? Qu'est-ce qui va changer dans le stationnement à Perpignan le 1er janvier 2018                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/perpignan-l-installation-du-compteur-linky-ne-passe-decidement-pas,3066636.php" class="link">
+                                                    Perpignan : l'installation du compteur Linky ne passe décidément pas                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/03/prison-de-perpignan-il-agresse-un-surveillant-a-coups-de-fourchette,3066617.php" class="link">
+                                                    Prison de Perpignan: il agresse un surveillant  à coups de fourchette                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>04 novembre</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/la-belgique-va-etudier-le-mandat-d-arret-contre-puigdemont-avant-de-prendre-une-decision,3066649.php" class="link">
+                                                    La Belgique va "étudier" le mandat d'arrêt contre Puigdemont avant de prendre une décision                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                                                            <li>
+                                    <article class="cf post small-post">
+                                        <div class="post-content">
+                                            <div class="entry-meta">
+                                                <div class="publish-date"><i class="fa fa-clock-o"></i>11:04</div>
+                                            </div>
+                                            <h4 class="entry-title">
+                                                <a href="/2017/11/04/catalogne-minutes-de-silence-senyera-justicia-et-llibertat-au-camp-nou-et-au-palau-blaugrana-pour-les-prisonniers-politiques,3066670.php" class="link">
+                                                    Catalogne: minutes de silence, senyera, "Justícia" et "Llibertat" au Camp Nou et au Palau Blaugrana pour les prisonniers politiques                                                </a>
+                                            </h4>
+                                        </div>
+                                    </article>
+                                </li>
+                                                    </ul>
+                    </div>
+                            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+<!-- /BLOC WEB - Bloc les + - AUTO - COL3-->
+<!-- BLOC WEB - Bloc Home people - AUTOCMS - COL3-->
+<!--bMext - template :  bloc_home_rubrique_mini.tpl -->
+<div class="widget ">
+<h3 class="section-title title">People</h3>
+<div class="section mini-articles-section">
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/10/30/kevin-spacey-revele-qu-il-est-gay-et-s-excuse-d-avoir-ete-entreprenant-avec-l-acteur-anthony-rapp-alors-adolescent,3065114.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/10/30/anthony-rapp-a-gauche-accuse-kevin-spacey-d-avances_1015024_250x161.jpg?v=1" alt="Kevin Spacey révèle qu'il est gay et s'excuse d'avoir été entreprenant avec l'acteur Anthony Rapp alors adolescent">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/10/30/kevin-spacey-revele-qu-il-est-gay-et-s-excuse-d-avoir-ete-entreprenant-avec-l-acteur-anthony-rapp-alors-adolescent,3065114.php">Kevin Spacey révèle qu'il est gay et s'excuse d'avoir été entreprenant avec l'acteur Anthony Rapp alors adolescent</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/10/29/narbonne-le-rendez-vous-de-michael-jones-a-400-enfants-malades,3064959.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/10/29/pres-de-400-enfants-de-toute-la-france-etaient-presents-pour_1014769_250x161.JPG?v=1" alt="Narbonne: le rendez-vous de Michaël Jones à 400 enfants malades">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/10/29/narbonne-le-rendez-vous-de-michael-jones-a-400-enfants-malades,3064959.php">Narbonne: le rendez-vous de Michaël Jones à 400 enfants malades</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/10/29/camille-lacourt-eblouit-le-public-de-danse-avec-les-stars,3064843.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/10/29/camille-lacourt-dans-l-emission-danse-avec-les-stars_1014463_250x161.jpg?v=1" alt="Camille Lacourt éblouit le public de Danse avec les Stars">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/10/29/camille-lacourt-eblouit-le-public-de-danse-avec-les-stars,3064843.php">Camille Lacourt éblouit le public de Danse avec les Stars</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/10/27/le-chanteur-cali-prend-la-plume-un-roman-annonce-en-janvier,3064315.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/10/27/le-chanteur-cali-prend-la-plume-un-roman-annonce-en-janvier_1013093_250x161.jpg?v=1" alt="Le chanteur Cali prend la plume : un roman annoncé en janvier">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/10/27/le-chanteur-cali-prend-la-plume-un-roman-annonce-en-janvier,3064315.php">Le chanteur Cali prend la plume : un roman annoncé en janvier</a>
+</h2>
+</div>
+</div>
+</div>
+</div>
+<!-- /BLOC WEB - Bloc Home people - AUTOCMS - COL3-->
+<!-- BLOC WEB - Bloc Home Culture - AUTOCMS - COL3-->
+<!--bMext - template :  bloc_home_rubrique_mini.tpl -->
+<div class="widget ">
+<h3 class="section-title title">Culture et Loisirs</h3>
+<div class="section mini-articles-section">
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/05/bande-dessinee-matteo-reprend-les-armes-en-catalogne,3066828.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/05/bande-dessinee-matteo-reprend-les-armes-en-catalogne_1017725_250x161.jpg?v=1" alt="Bande dessinée : Mattéo reprend les armes en Catalogne">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/05/bande-dessinee-matteo-reprend-les-armes-en-catalogne,3066828.php">Bande dessinée : Mattéo reprend les armes en Catalogne</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/05/bande-dessinee-la-selection-des-albums-du-week-end,3066826.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/05/bande-dessinee-la-selection-des-albums-du-week-end_1017718_250x161.jpg?v=1" alt="Bande dessinée : la sélection des albums du week-end">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/05/bande-dessinee-la-selection-des-albums-du-week-end,3066826.php">Bande dessinée : la sélection des albums du week-end</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/05/livres-de-poche-pour-les-fetes-10-18-fait-le-maximum,3066825.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/05/livres-de-poche-pour-les-fetes-10-18-fait-le-maximum_1017716_250x161.jpg?v=1" alt="Livres de poche : Pour les fêtes, 10/18 fait le maximum">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/05/livres-de-poche-pour-les-fetes-10-18-fait-le-maximum,3066825.php">Livres de poche : Pour les fêtes, 10/18 fait le maximum</a>
+</h2>
+</div>
+</div>
+<div class="post small-post same-height-container">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/04/de-choses-et-d-autres-70-ans-de-capitalisme-ludique,3066625.php">
+<img class="img-responsive img-cover" src="http://images.lindependant.fr/images/2017/11/04/de-choses-et-d-autres-70-ans-de-capitalisme-ludique_1017409_250x161.jpg?v=1" alt="De choses et d'autres : 70 ans de capitalisme ludique">
+</a>
+</div>
+</div>
+<div class="post-content">
+<h2 class="entry-title">
+<a href="/2017/11/04/de-choses-et-d-autres-70-ans-de-capitalisme-ludique,3066625.php">De choses et d'autres : 70 ans de capitalisme ludique</a>
+</h2>
+</div>
+</div>
+</div>
+</div>
+<!-- /BLOC WEB - Bloc Home Culture - AUTOCMS - COL3-->
+<!-- BLOC PUB - Autopromo - Panel / JEUX - COL2-->
+<!--bH:-->
+<div class="widget">
+<div class="promoBlock text-center">
+<a href="/2016/01/28/pour-suivre-les-courses-hors-stade,2148662.php">
+<img src="/www/marketing/resultats_courses.gif" border="0 solid" width="120" height="120" style="text-align: center; margin: 5px;"/>
+</a>
+<a href="http://www.lindependant.fr/jeux/" target="_blank">
+<img src="http://www.lindependant.fr/img/attrape-jeux.gif" border="0 solid" width="120" height="120" style="text-align: center; margin: 5px;"/>
+</a>
+<!--<a href="http://www.panel.lindependant.fr/" target="_blank">
+<img src="http://midimedia.journaux-du-midi.com/2014/11/1362810050.jpeg" border="0 solid" width="120" height="120" style="text-align: center; margin: 5px;">
+</a>-->
+</div>
+</div>
+<!-- /BLOC PUB - Autopromo - Panel / JEUX - COL2-->
+<!-- /COL --></div>
+</div>
+</div>
+</div><!-- end pageContent -->
+<div class="section">
+<div class=row">
+<section id="middleZone" class="container cf">
+<!-- COL -->
+<!-- BLOC WEB - Bloc Home en images - AUTOCMS - COL1-->
+<!--bMext - template :  bloc_home_en_images.tpl -->
+<div class="widget">
+<h2 class="section-title title">En images</h2>
+<div class="row">
+<div class="en-images site-content col-md-12">
+<div class="row same-height-container">
+<div class="col-sm-8">
+<figure class="post feature-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/07/06/cinema-double-dose-de-mechancete,3032004.php" class="link">
+<img class="img-responsive img-cover lazy img-300 en-images-1" src="http://images.lindependant.fr/images/2017/07/06/gru-toujours-en-noir-gad-elmaleh-pour-la-voix_952739_800x600.jpg?v=1" alt="◗ Gru, toujours en noir (Gad Elmaleh pour la voix française), rencontre son frère jumeau Dru (voix d’Arié Elmaleh, le frère de Gad) blond habillé en blanc.">
+</a>
+</div>
+</div>
+<div class="post-content">
+<figcaption class="entry-title">
+<a href="/2017/07/06/cinema-double-dose-de-mechancete,3032004.php" class="link">[BANDE ANNONCE] Moi, moche et méchant 3 : Double dose de méchanceté</a>
+</figcaption>
+</div>
+</figure><!--/post-->
+</div>
+<div class="col-sm-4">
+<figure class="post feature-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<a href="/2017/11/05/bande-dessinee-la-selection-des-albums-du-week-end,3066826.php" class="link">
+<img class="img-responsive img-cover lazy img-300" src="http://images.lindependant.fr/images/2017/11/05/bande-dessinee-la-selection-des-albums-du-week-end_1017723_800x600.jpg?v=1" alt="">
+</a>
+</div>
+</div>
+<div class="post-content">
+<figcaption class="entry-title">
+<a href="/2017/11/05/bande-dessinee-la-selection-des-albums-du-week-end,3066826.php" class="link">Bande dessinée : la sélection des al...</a>
+</figcaption>
+</div>
+</figure><!--/post-->
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /BLOC WEB - Bloc Home en images - AUTOCMS - COL1-->
+<!-- /COL --><section class="rightCol">
+<!-- COL -->
+<!-- /COL --></section>
+</section>
+</div>
+</div>
+</div>
+<!-- COL -->
+<!-- BLOC WEB - BLOC VIDEO MYVIDEOPLACE - MANUEL - FOOTER-->
+<!--bH:-->
+<section class="container cf">
+<div style="position:relative;padding-bottom:53%;padding-top:20px;height:0;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allowfullscreen src="https://player.myvideoplace.tv/?idplaylist=212"></iframe></div>
+</section>
+<!-- /BLOC WEB - BLOC VIDEO MYVIDEOPLACE - MANUEL - FOOTER-->
+<!-- BLOC WEB - BLOC articles Editions abonnés - AUTO - FOOTER-->
+<!--bMext - template :  bloc_lst_art_payant.tpl -->
+<div class="container">
+<div class="section premium-block">
+<div class="latest-news-wrapper">
+<h2 class="section-title">Édition abonnés</h2>
+<div id="latest-news">
+<article class="post medium-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<img class="img-responsive" src="http://images.lindependant.fr/images/2017/11/04/les-membres-de-l-association-du-groupement-economique_1017497_320x240.JPG?v=1" alt="Les membres de l’association du groupement économique.">
+</div>
+<div class="catagory world"><a href="/economie/">Economie</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a class="link" href="http://logc1.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_A1]&type=AT&url=http://www.lindependant.fr//2017/11/04/tech-oulrich-a-ceret-atteindre-la-barre-des-1000-salaries,3066663.php">Tech-Oulrich à Céret: «Atteindre la barre des 1000 salariés»</a>
+</h2>
+</div>
+</article>
+<article class="post medium-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<img class="img-responsive" src="http://images.lindependant.fr/images/2017/11/04/en-amateur-de-jazz-et-guitariste-qui-se-respecte-le-1er_1017500_320x240.jpg?v=1" alt="En amateur de jazz et guitariste qui se respecte, le 1er adjoint au maire de Conilhac-Corbières, René Grauby sait improviser. Et varier les plaisirs.">
+</div>
+<div class="catagory world"><a href="/aude/conilhac-corbieres/">Conilhac-Corbières</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a  href="http://logc1.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_A2]&type=AT&url=http://www.lindependant.fr//2017/11/04/portrait-narbonne-the-grauby-show,3066661.php">[PORTRAIT] Narbonne: The Grauby show</a>
+</h2>
+</div>
+</article>
+<article class="post medium-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<img class="img-responsive" src="http://images.lindependant.fr/images/2017/11/04/aujourd-hui-en-2017-l-apprenti-ne-l-est-plus-et-depuis_1017499_320x240.jpg?v=1" alt="Aujourd’hui, en 2017, l’apprenti ne l’est plus et depuis 2009, David Pelayo tient «The Saloon», boulevard Omer-Sarraut.">
+</div>
+<div class="catagory world"><a href="/economie/">Economie</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a  href="http://logc1.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_A3]&type=AT&url=http://www.lindependant.fr//2017/11/04/portrait-carcassonne-l-homme-dans-le-sens-du-poil,3066662.php">[PORTRAIT] Carcassonne: l’homme dans le sens du poil</a>
+</h2>
+</div>
+</article>
+<article class="post medium-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<img class="img-responsive" src="http://images.lindependant.fr/images/2017/11/04/il-y-a-66-commercants-aux-halles-elles-sont-ouvertes-tous_1017477_320x240.JPG?v=1" alt="Il y a 66 commerçants aux Halles. Elles sont ouvertes tous les jours de l’année de 6 à 14 h.">
+</div>
+<div class="catagory world"><a href="/edition-abonnes/">Edition Abonnés</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a  href="http://logc1.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_A4]&type=AT&url=http://www.lindependant.fr//2017/11/04/aux-halles-de-narbonne-l-histoire-d-un-malaise,3066642.php">Aux Halles de Narbonne, l’histoire d’un malaise</a>
+</h2>
+</div>
+</article>
+<article class="post medium-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<img class="img-responsive" src="http://images.lindependant.fr/images/2017/11/04/jean-marc-pujol-justifie-la-privatisation-du-stationnement_1017466_320x240.jpg?v=1" alt="Jean-Marc Pujol justifie la privatisation du stationnement.">
+</div>
+<div class="catagory world"><a href="/edition-abonnes/">Edition Abonnés</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 04 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a  href="http://logc1.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_A5]&type=AT&url=http://www.lindependant.fr//2017/11/04/j-m-pujol-nous-restons-une-des-villes-ou-le-stationnement-est-le-moins-onereux,3066638.php">J-M. Pujol : "Nous restons une des villes où le stationnement est le moins onéreux"</a>
+</h2>
+</div>
+</article>
+<article class="post medium-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<img class="img-responsive" src="http://images.lindependant.fr/images/2017/11/03/a-partir-du-1er-janvier-2018-une-entreprise-privee-indigo_1017227_320x240.jpg?v=1" alt="À partir du 1er janvier 2018, une entreprise privée, Indigo, gérera les parkings de surface à Perpignan.">
+</div>
+<div class="catagory world"><a href="/pyrenees-orientales/perpignan/">Perpignan - Perpinya</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 03 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a  href="http://logc1.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_A6]&type=AT&url=http://www.lindependant.fr//2017/11/03/stationnements-payants-ce-qui-change-au-1er-janvier-2018,3066461.php">Stationnements payants : ce qui change au 1er janvier 2018</a>
+</h2>
+</div>
+</article>
+<article class="post medium-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<img class="img-responsive" src="http://images.lindependant.fr/images/2017/11/03/celia-suzanna-dans-son-studio-narbonnais-ou-elle-prepare_1017105_320x240.JPG?v=1" alt="Célia Suzanna dans son studio narbonnais, où elle prépare déjà sa future chorégraphie.">
+</div>
+<div class="catagory world"><a href="/societe/">Société</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 03 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a  href="http://logc1.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_A7]&type=AT&url=http://www.lindependant.fr//2017/11/03/narbonne-celia-suzanna-dans-l-elite-regionale-de-pole-dance,3066440.php">Narbonne: Célia Suzanna dans l’élite régionale de Pole Dance</a>
+</h2>
+</div>
+</article>
+<article class="post medium-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<img class="img-responsive" src="http://images.lindependant.fr/images/2017/11/03/plusieurs-dizaines-d-eoliennes-sont-installees-et-des-sites_1017094_320x240.JPG?v=1" alt="Plusieurs dizaines d’éoliennes sont installées, et des sites ont d’ores et déjà obtenu l’autorisation d’exploitation sur la crête de la Montagne noire. Ce nouveau projet s’implanterait sur la ligne médiane.">
+</div>
+<div class="catagory world"><a href="/environnement/">Environnement</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 03 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a  href="http://logc1.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_A8]&type=AT&url=http://www.lindependant.fr//2017/11/03/carcassonnais-cinq-nouvelles-eoliennes-pourraient-voir-le-jour-en-montagne-noire,3066436.php">Carcassonnais: cinq nouvelles éoliennes pourraient voir le jour en montagne Noire</a>
+</h2>
+</div>
+</article>
+<article class="post medium-post">
+<div class="entry-header">
+<div class="entry-thumbnail">
+<img class="img-responsive" src="http://images.lindependant.fr/images/2017/11/03/l-audience-s-est-deroulee-hier-au-palais-de-justice_1016962_320x240.JPG?v=1" alt="L’audience s’est déroulée jeudi au palais de justice.">
+</div>
+<div class="catagory world"><a href="/societe/justice/">Justice</a></div>
+</div>
+<div class="post-content">
+<div class="entry-meta">
+<ul class="list-inline">
+<li class="publish-date"><i class="fa fa-clock-o"></i> 03 novembre</li>
+</ul>
+</div>
+<h2 class="entry-title">
+<a  href="http://logc1.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_A9]&type=AT&url=http://www.lindependant.fr//2017/11/03/carcassonne-son-permis-de-conduire-annule-il-avait-malgre-tout-pris-le-volant-pour-le-plaisir,3066362.php">Carcassonne: son permis de conduire annulé, il avait malgré tout pris le volant «pour le plaisir»</a>
+</h2>
+</div>
+</article>
+</div>
+</div><!--/.latest-news-wrapper-->
+<footer class="premium-strip-container row">
+<div class="col-md-6">
+<img src="http://profil.lindependant.fr/img/pdf-desktop-ipad-2.png" alt="Profitez des avantages numériques" class="img-responsive">
+</div>
+<div class="col-md-6 premium-strip-right text-center">
+<h4>Profitez des avantages numériques</h4>
+<p>Le journal du matin<br>+ accès intégral aux contenus</p>
+<a class="premium-subscribe" href="https://logs4.xiti.com/go.url?xts=78692&atc=INT-2-[home_col_gauche_Sabonner]&type=AT&url=https://abonnement.lindependant.fr">S'abonner à partir de 1€</a>
+<p>Déjà abonné ? <a href="http://profil.lindependant.fr/login">Se connecter</a></p>
+</div>
+</footer>
+</div>
+</div>
+<!-- /BLOC WEB - BLOC articles Editions abonnés - AUTO - FOOTER-->
+<!-- BLOC PUB - PURL Banner - MANUEL - FOOTER-->
+<!--bH:-->
+<section class="bannerAd bottom hidden-xs hidden-sm"><section class="container cf"><script src="http://midilibre.purl.fr/midilibre/php/ad.php?c=125544966039&adpurl_dim=1000.100.4.1"></script></section></section>
+<!-- /BLOC PUB - PURL Banner - MANUEL - FOOTER-->
+<!-- BLOC PUB - OAS bottom1 - MANUEL - FOOTER-->
+<!--bH:-->
+<section class="bannerAd bottom hidden-xs hidden-sm"><div id='pub_dfp_banniere_basse' class='pub'></div></section>
+<!-- /BLOC PUB - OAS bottom1 - MANUEL - FOOTER-->
+<!-- BLOC FOOTER - Services - MANUEL - LARGE-->
+<!--bMext - template :  footer.tpl -->
+<script>
+    // Initialisation du datalayer pour google Tag manager
+    //console.log(' ######################### DEBUG GTM ');
+    rubs="li:w:home:actualite";
+    rubs = rubs.replace('li:w:', '');
+
+    
+    insee="";
+
+    //console.log('lea_insee : ' + "");
+    //console.log('lea_dfp_insee : ' + );
+
+    var rubriques = rubs.split(":");
+    rubriques = rubriques.slice(0, 3);
+    var jsonData = getCookie('usersdatas');
+    if (typeof(jsonData) !== 'undefined') {
+        var sessionData = JSON.parse(jsonData);
+        var dataLayer = new Array();
+        var dataLayer = [{
+            'visitorType': 'guest',
+            'userEmail': '',
+            'userId': '',
+            'rubriques': rubriques,
+            'Insee': insee,
+            'pagetype': 'topic'
+        }];
+        if (sessionData && sessionData.activeSession === true) {
+            dataLayer[0]["visitorType"] = 'subscriber';
+            dataLayer[0]["userEmail"] = md5(sessionData.userData.email);
+            dataLayer[0]["userId"] = sessionData.userData.id;
+            dataLayer[0]["Insee"] = insee;
+            //console.log(dataLayer);
+        }
+    }
+</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSZQWG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PSZQWG');</script>
+
+
+<!-- Appels DFP -->
+<script type='text/javascript'>
+    var dfp_vars = new Array();
+    dfp_vars["publisherid"] = '31755961'; // variable globale
+    dfp_vars["bloc1"] = 'mm_independant';
+    dfp_vars["bloc2"] = 'home'; // depuis le BO
+    dfp_vars["bloc3"] = ''; // depuis le BO
+    dfp_vars["bloc4"] = ''; // depuis le BO
+    dfp_vars["bloc5"] = ''; // côté vue
+    dfp_vars["ville"] = ''; // depuis le BO
+    dfp_vars["ldi_insee"] = ''; // depuis le BO
+    dfp_vars["code"] = '';
+    dfp_vars["ldi_bassin"] = ''; // depuis le BO
+    dfp_vars["ldi_departement"] = ''; // depuis le BO
+    dfp_vars["responsive"] = false; // variable globale
+    dfp_vars["pagetype"] = 'topic';
+    dfp_vars["usedfp"] = true; // variable globale
+        dfp_vars["ldi_motscles"] = ["home","infoslocales"];
+</script>
+<script src="http://assets.lindependant.fr/js/dfp_lindependant.js?v=1490650294" type="text/javascript"></script><script type='text/javascript'>
+top.ONFOCUS = {
+  app_id:'20105',
+  app_domain:'ufo/uopsgevpmd/r5:ujqp9r:7e4e',
+  ad_query_selector:'.pub', 
+  ad_get_id:function(el) {return el.id},
+  ad_get_name:function(el) {return el.id.slice(8)},
+  pagetype: top.dfp_vars.pagetype,
+  category: top.dfp_vars.bloc2,
+  tag_s:new Date().getTime()
+};
+(function(x, u, h){h=function(s){return s.split('').map(function(c){return String.fromCharCode(c.charCodeAt(0)-1)}).reverse().join(''); };x=new XMLHttpRequest();x.open('GET',top.window.location.protocol+'//'+ h(top.ONFOCUS.app_domain)+'/d');x.onreadystatechange=function(){if(x.readyState===x.DONE && x.status===200 && x.responseText){u = h(x.responseText).split(',');u=(top.window.location.protocol==='http:')?'http://'+u[0]:'https://'+u[1];(function(f,d,a,b){b=top.document.createElement('iframe');b.src='javascript:false',(b.frameElement||b).style.cssText='width: 0; height: 0; border: 0; display:none;';a=top.document.getElementsByTagName('script')[0];a.parentNode.insertBefore(b,a);try{d=b.contentWindow.document;}catch(c){f=top.document.domain;b.src="javascript:var d=document.open();d.domain='"+f+"';void(0);";d=b.contentWindow.document;}d.open()._l=function(){var e=this.createElement('script');f&&(this.domain=f);e.id='boomr-if-as';e.src=u+'/'+top.ONFOCUS.app_id+'/b.js';this.body.appendChild(e);};d.write('<body onload="document._l();">');d.close();}());}};x.send();}());
+</script>
+
+<!-- INTEGRATION DMP -->
+    <!--<script src="http://assets.lindependant.fr/js/md5.min.js"></script>-->
+    <script>
+        /*
+         Explications :
+         pour la home, tcontenu=home
+         pour les famille, tcontenu=famille (famille : topic de niveau 1)
+         pour les topics, tcontenu=topic (topic de niveau 2 ou plus)
+         pour les diaporamas, tcontenu=diaporama
+         pas de DMP sur les autres types de pages
+         */
+        var dmp_vars = new Array();
+        dmp_vars["_cid"] = 'inde'; // fixe pour midilibre
+        dmp_vars["support"] = 'web'; // fixe si on lit depuis le site web (on verra qd la DPM sera sur google amp)
+        dmp_vars["uinfo"] = 1; // il a accepté les cookies. le jour où on gérera les internautes qui ont refusés le cookie il faudra gérer le binaire
+
+        dmp_vars["cpage"] = 'actu'; // rubrique principale de la page
+        dmp_vars["tcontenu"] = 'home'; // type de page
+        dmp_vars["cpvu"] = dfp_vars["ldi_insee"]; // dfp_vars["ldi_insee"]
+        dmp_vars["typeabo"] = getCookie('userstatus'); // utiliser la variable Xiti xt_ac si on a pas d'autre élément
+        dmp_vars["cbassin"] = dfp_vars["ldi_bassin"]; // dfp_vars["ldi_bassin"]
+        dmp_vars["cdpt"] = dfp_vars["ldi_insee"]; // deux premieres chiffres de dfp_vars["ldi_insee"]
+        // kpage : utiliser dfp_vars["ldi_motscles"] à réécrire au bon format et rajouter en dernier l'id de l'article (kpage=agriculture&kpage=economie&kpage=infoslocales&kpage=1532166&)*
+        var kpage = "";
+        if (dfp_vars["ldi_motscles"].indexOf('actu') == -1 ) {
+            dfp_vars["ldi_motscles"].push('actu');
+        }
+        dfp_vars["ldi_motscles"].forEach(function(element){
+            kpage += "&kpage=" + element;
+        });
+        dmp_vars["kpage"] = kpage;
+        // spage : encoder l'url en remplacant les / par des _ et les , par des -
+        var curr_url = '';
+        curr_url = curr_url.replace('/','_');
+        curr_url = curr_url.replace(',','-');
+        dmp_vars["spage"] = curr_url;
+        dmp_vars["sxiti"] = "78692"; // variable xiti xtsite
+        dmp_vars["s2xiti"] = "11"; // variable xiti xtn2
+
+        dmp_vars["md5"] = ''; // email encrypté en md5
+        dmp_vars["idcms"] = ''; // id interne au site du compte internaute (id customer) "id"
+        dmp_vars["idabo"] = ''; // id abonné (netfull) "subscriberId"
+        dmp_vars["md5_opp"] = 0; // est-il optin partenaire ou non
+
+        var jsonData = getCookie('usersdatas');
+        if (typeof(jsonData) !== 'undefined') {
+            var sessionData = JSON.parse(jsonData);
+            if (sessionData && sessionData.activeSession === true) {
+                dmp_vars["md5"] = md5(sessionData.userData.email);
+                dmp_vars["idcms"] = sessionData.userData.id;
+                dmp_vars["idabo"] = sessionData.userData.subscriberId;
+                dmp_vars["md5_opp"] = sessionData.mailingsData.partner ? 1 : 0;
+            }
+        }
+        console.log("########## DEBUG DMP ##########");
+        console.log(dmp_vars);
+        var spage = encodeURIComponent(document.location.href.replace(/^https?:\/\/(.+?)(\?.*|#.*|$)/, "$1").replace(/\//g, "_").replace(/(^_*|_*$)/g, ""));
+        window.dmbgclzvi7of = {'data':'_cid='+dmp_vars["_cid"]+'&support='+dmp_vars["support"]+'&uinfo='+dmp_vars["uinfo"]+'&cpage='+dmp_vars["cpage"]+'&cpvu='+dmp_vars["cpvu"]+'&md5='+dmp_vars["md5"]+'&idcms='+dmp_vars["idcms"]+'&idabo='+dmp_vars["idabo"]+'&typeabo='+dmp_vars["typeabo"]+'&cbassin='+dmp_vars["cbassin"]+'&cdpt='+dmp_vars["cdpt"]+dmp_vars["kpage"]+'&spage='+dmp_vars["spage"]+'&sxiti='+dmp_vars["sxiti"]+'&s2xiti='+dmp_vars["s2xiti"]+'&md5_opp='+dmp_vars["md5_opp"]+'&tcontenu='+dmp_vars["tcontenu"]};
+    </script>
+    <script src="http://dm.lindependant.fr/42?" async></script>
+<footer id="footer">
+<div class="footer-top">
+<div class="container text-center">
+<div class="logo-icon"><img class="img-responsive" width="40" src="http://images.lindependant.fr//img/logo-icon.png" alt="" /></div>
+</div>
+</div>
+<div class="footer-menu">
+<div class="container">
+<ul class="nav navbar-nav">
+<li><a rel="nofollow" href="http://carnet.lindependant.fr/">Carnet</a></li>
+<li><a href="/arches/page2col.php?sk=faq.sk">Mode d'emploi</a></li>
+<li><a href="/arches/page2col.php?sk=mentions-legales.sk">Mentions légales</a></li>
+<li><a href="/arches/page2col.php?sk=charte-de-bonne-conduite.sk">Charte</a></li>
+<li><a href="/arches/page2col.php?sk=qui-sommes-nous.sk">Qui sommes nous ?</a></li>
+<li><a href="/arches/page2col.php?sk=contactez-nous.sk">Contactez-nous</a></li>
+</ul>
+</div>
+</div>
+<div class="bottom-widgets">
+<div class="container">
+<div class="col-sm-2">
+<div class="widget">
+<h2>Suivez-nous</h2>
+<ul>
+<li><a target="_self" href="http://profil.lindependant.fr/login/" title="S'inscrire à la Newsletter">Newsletter</a></li>
+<li><a target="_blank" href="http://www.facebook.com/lindependant.fr" title="Accéder à la page Facebook">Facebook</a></li>
+<li><a target="_blank" href="http://twitter.com/#!/WEBINDEP" title="Accéder à la page Twitter">Twitter</a></li>
+<li><a rel="nofollow" href="/rss.xml" title="Accéder au flux RSS">Rss</a></li>
+</ul>
+</div>
+</div>
+<div class="col-sm-10">
+<div class="widget">
+<h2>Votre commune</h2>
+<ul>
+<li><a href="/pyrenees-orientales/banyuls-sur-mer/">Banyuls-sur-Mer</a></li>
+<li><a href="/pyrenees-orientales/cabestany/">Cabestany</a></li>
+<li><a href="/pyrenees-orientales/canet-en-roussillon/">Canet-en-Roussillon</a></li>
+<li><a href="/aude/carcassonne/">Carcassonne</a></li>
+<li><a href="/aude/castelnaudary/">Castelnaudary</a></li>
+<li><a href="/pyrenees-orientales/cerbere/">Cerbère</a></li>
+</ul>
+<ul>
+<li><a href="/pyrenees-orientales/ceret/">Céret</a></li>
+<li><a href="/pyrenees-orientales/collioure/">Collioure</a></li>
+<li><a href="/aude/coursan/">Coursan</a></li>
+<li><a href="/pyrenees-orientales/formigueres/">Formiguères</a></li>
+<li><a href="/aude/gruissan/">Gruissan</a></li>
+<li><a href="/pyrenees-orientales/le-barcares/">Le Barcarès</a></li>
+</ul>
+<ul>
+<li><a href="/pyrenees-orientales/les-angles/">Les Angles</a></li>
+<li><a href="/aude/leucate/">Leucate</a></li>
+<li><a href="/aude/limoux/">Limoux</a></li>
+<li><a href="/aude/limoux/">Limoux</a></li>
+<li><a href="/pyrenees-orientales/matemale/">Matemale</a></li>
+<li><a href="/aude/narbonne/">Narbonne</a></li>
+</ul>
+<ul>
+<li><a href="/pyrenees-orientales/perpignan/">Perpignan</a></li>
+<li><a href="/pyrenees-orientales/port-vendres/">Port-Vendres</a></li>
+<li><a href="/pyrenees-orientales/prades/">Prades</a></li>
+<li><a href="/aude/puilaurens/">Puilaurens</a></li>
+<li><a href="/aude/quillan/">Quillan</a></li>
+<li><a href="/aude/rennes-le-chateau/">Rennes-le-Château</a></li>
+</ul>
+<ul>
+<li><a href="/pyrenees-orientales/rivesaltes/">Rivesaltes</a></li>
+<li><a href="/pyrenees-orientales/saint-cyprien/">Saint-Cyprien</a></li>
+<li><a href="/pyrenees-orientales/saint-esteve/">Saint-Estève</a></li>
+<li><a href="/pyrenees-orientales/saint-laurent-de-la-salanque/">Saint-Laurent-de-la-Salanque</a></li>
+<li><a href="/aude/sigean/">Sigean</a></li>
+<li><a href="/pyrenees-orientales/thuir/">Thuir</a></li>
+</ul>
+<ul>
+<li><a href="/pyrenees-orientales/torreilles/">Torreilles</a></li>
+<li><a href="/aude/trebes/">Trèbes</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container text-center">
+<p><a href="#">www.lindependant.fr </a>&copy; 2017 </p>
+</div>
+</div>
+</footer>
+<script type='text/javascript'> $(document).ready(function() { initFaceBookAPI(); }); /* A appeler que 1/ Lors du chargement de la page 2/ Si FB.session est null */ function initFaceBookAPI() { $.getScript('https://connect.facebook.net/fr_FR/sdk.js', function(result) { FB.init({appId: '168536253192395', version: 'v2.9', status: true, cookie: true, xfbml: true, oauth: true}); initFBFunctions(); }); } </script> <!-- /BLOC FOOTER - Services - MANUEL - LARGE-->
+<!-- BLOC PUB - OAS BottomLeft - MANUEL - FOOTER-->
+<!--bH:-->
+<div id='pub_dfp_flash_trans' class='pub'></div>
+<!-- /BLOC PUB - OAS BottomLeft - MANUEL - FOOTER-->
+<!-- BLOC WEB - BANDEAU COOKIE - AUTO FOOTER-->
+<!--bH:-->
+<div class="cookie">
+<div class="content">
+<span>
+En poursuivant votre navigation, vous acceptez l’utilisation de cookies pour vous proposer des contenus et des offres adaptés à vos centres d’intérêts.
+<a href="/arches/page2col.php?sk=conditions-generales-utilisation.sk#politique-confidentialite" style="color:#5297d2">
+En savoir plus et gérer ces paramètres.
+</a>
+</span>
+</div>
+<span class="icon-remove"></span>
+</div>
+<!-- /BLOC WEB - BANDEAU COOKIE - AUTO FOOTER-->
+<!-- /COL --></div>
+<!--P:START-->
+<script src='http://assets.lindependant.fr/js/fitie.js?v=1490806447'></script>
+<script>
+<!--
+xtnv=document;
+xtsd="https://logs4";
+xtsite="78692";
+xtn2="11";
+xtpage="Index::homepage";
+xtdi="";
+xt_tags="[actualite-topic]";
+xt_multc="&x1=&x2=&x3=&x4=&x5=&x6=&x7=&x8=&x9=&x10=&x11=&x12=actu&x13=&x14=&x15=&x16=&x17=&x18=&x19=&x20=";
+xt_mtcl="";
+xt_npg="";
+xt_ac = getCookie('userstatus');
+xt_an = getCookie('usersso');
+var xtcustom = getXitiDevice();
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+if(dd<10) {dd='0'+dd}
+if(mm<10) {mm='0'+mm}
+xtcustom.date = today.getFullYear()+mm+dd;
+if (window.xtparam!=null){window.xtparam+="&tag="+xt_tags+xt_multc+"&mc="+xt_mtcl+"&np="+xt_npg+"&ac="+xt_ac+"&an="+xt_an;}
+else{window.xtparam="&tag="+xt_tags+xt_multc+"&mc="+xt_mtcl+"&np="+xt_npg+"&ac="+xt_ac+"&an="+xt_an;}
+//-->
+</script>
+<script src="http://assets.lindependant.fr/js/xtclicks.js"></script>
+<script src="http://assets.lindependant.fr/js/xtcore.js?v=1490650296"></script>
+<noscript>
+<img width="1" height="1" alt="" src="https://logs4.xiti.com/hit.xiti?s=xtsite&s2=11&p=Index::homepage&tag=[actualite-topic]&di=&x1=&x2=&x3=&x4=&x5=&x6=&x7=&x8=&x9=&x10=&x11=&x12=actu&x13=&x14=&x15=&x16=&x17=&x18=&x19=&x20=" />
+</noscript>
+<!--P:END-->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7d7d654e4c","applicationID":"18239206","transactionName":"YgZSZkMHCkJYVhBdDFtMZUBYSQ1fXVAcGhNdEw==","queueTime":0,"applicationTime":32,"ttGuid":"","agentToken":"","atts":"TkFREAsdGUw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<!-- GenTmInf rub=li:w:home:actualite pg= gstart=2017-11-05T12:58:36 -->
+<!-- ExeTmInf tm=2017-11-05T13:02:37 hn=212.95.72.184 dr=0.029283 -->
+</html>
