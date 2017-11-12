@@ -37,6 +37,10 @@
   -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
   box-shadow: 1px 1px 3px rgba(0,0,0,.6);
   padding: 30px;
+  width: 40%;
+  a {
+    color: #ffbf7c;
+  }
   .smallHeader {
     font-size: 24px;
     font-weight: 400;
@@ -127,25 +131,65 @@
 }
 /* Projects section */
 .narrow {
-  height: 49% !important;
+  height: 49%;
   .info {
-    margin-top: 19px;
+    margin-top: 34px;
+    max-width: 60%;
+    width: 60%;
     .projectInfo {
       display: none;
     }
   }
 }
 
+
+.renault {
+  background: url('./renault.jpg');
+}
+.marvel {
+  background: url('./marvel.jpg');
+}
+.ebs {
+  background: url('./ebs.jpg');
+}
+.toyota {
+  background: url('./toyota.jpg');
+}
+.audi {
+  background: url('./audi.jpg');
+}
 .aib {
   background: url('./aib.jpg');
   .info {
-    width: 40%;
-    a {
-      color: #ffbf7c;
-    }
+    
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .narrow {
+    height: 49%;
+    padding-right: 13px;
+    .info {
+      margin-top: 24px;
+      max-width: 80%;
+      width: 80%;
+      .smallHeader {
+        font-size: 18px;
+        padding-bottom: 10px;
+      }
+      .header {
+        font-size: 24px;
+      }
+      .description {
+        font-size: 18px;
+      }
+      .line {
+        width: 30px;
+        margin: 20px 0 23px 5px;
+      }
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
   .info {
     width: 98%;
@@ -166,6 +210,15 @@
     .line {
       width: 30px;
       margin: 20px 0 23px 5px;
+    }
+  }
+  .narrow {
+    height: 49%;
+    padding-right: 13px;
+    .info {
+      margin-top: 24px;
+      width: 100%;
+      max-width: 100%;
     }
   }
 
@@ -194,6 +247,15 @@
       margin: 10px 0 13px 5px;
     }
   }
+  .narrow {
+    height: 49%;
+    padding-right: 13px;
+    .info {
+      margin-top: 24px;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
 }
 @media only screen and (max-height: 400px) {
   .info {
@@ -218,6 +280,15 @@
       font-size: 10px;
       padding: 0 22px;
       line-height: 40px;
+    }
+  }
+  .narrow {
+    height: 49%;
+    padding-right: 13px;
+    .info {
+      margin-top: 24px;
+      width: 100%;
+      max-width: 100%;
     }
   }
 }

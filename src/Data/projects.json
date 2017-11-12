@@ -1,34 +1,34 @@
 {
   "data": [{
-      "header": "Marvel - 3D Augement Reality takeover",
-      "description": "",
-      "imageClass": "marvel",
-      "link": "projects/marvel"
+    "header": "Renault Takeover",
+    "description": "Renault cross-screen video takeover",
+    "imageClass": "renault",
+    "link": "projects/renault"
     }, {
-      "header": "AIB - Takeover",
-      "description": "Unique interactive wallpaper takeover",
-      "imageClass": "marvel",
+      "header": "AIB - Brand Takeover",
+      "description": "Unique interactive Homepage wallpaper takeover.",
+      "imageClass": "aib",
       "link": "projects/aib"
     }, {
-      "header": "EBS - Takeover",
-      "description": "Projects Desc: http://onecreative.aol.com/view/public?ids=359231&keys=3f822c4afb8d4d299b7f1ddfb0e8e731",
-      "imageClass": "marvel",
-      "link": "projects/ebs"
-    }, {
       "header": "Toyota",
-      "description": "360 banner",
-      "imageClass": "marvel",
+      "description": "Vibrant 360 banner to support Toyota Yaris re-launch.",
+      "imageClass": "toyota",
       "link": "projects/toyota"
     }, {
-      "header": "[TODO change video] Ducati",
-      "description": "Ducati",
-      "imageClass": "marvel",
-      "link": "projects/ducati"
+      "header": "Audi",
+      "description": "Pure Imagination - Responsive Header",
+      "imageClass": "audi",
+      "link": "projects/audi"
     }, {
-      "header": "Renault Takeover",
-      "description": "Renault cross-screen video takeover",
+      "header": "EBS - Interactive Wallpaper",
+      "description": "Premium Video takeover from a static wallpaper.",
+      "imageClass": "ebs",
+      "link": "projects/ebs"
+    }, {
+      "header": "Marvel - 3D Virtual Reality takeover",
+      "description": "Bleeding-edge mobile experience.",
       "imageClass": "marvel",
-      "link": "projects/renault"
+      "link": "projects/marvel"
     }
   ],
   "quotes": [{

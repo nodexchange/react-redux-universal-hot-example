@@ -33,7 +33,7 @@ export default class FooterBar extends Component { // eslint-disable-line react/
           </div>
           <b className={styles.horizontal} />
           <div className={styles.leftContainer}>
-            <span className={styles.copyright}>©Quartile 2017. All rights reserved</span>
+            <span className={styles.copyright}>©Quartile 2017. All rights reserved. Icon design by Freepik</span>
             <p className={styles.clear}>{''}</p>
             <nav className={styles.footerMenu}>
               <a href="/contact">Contact us</a>

@@ -18,8 +18,8 @@ export default class Copy {
       case 'aib':
         copy = require('./../data/aib.json').data;
         break;
-      case 'ducati':
-        copy = require('./../data/ducati.json').data;
+      case 'audi':
+        copy = require('./../data/audi.json').data;
         break;
       case 'ebs':
         copy = require('./../data/ebs.json').data;

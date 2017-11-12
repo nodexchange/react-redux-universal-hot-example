@@ -11,61 +11,137 @@
   // box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
   opacity:1;
 }
+.info {
+  display: block;
+  height: 100%;
+  min-height: 250px;
+  position: relative;
+  top:0px;
+  left: 0px;
+}
+.blue {
+  background: url(./blue.jpg) center center no-repeat scroll rgb(79, 164, 220);
+}
+.orange {
+  background: url(./orange.jpg) center center no-repeat scroll #DC554F;
+  .smallBox {
+    left: auto !important;
+    right: 8%;
+  }
+}
+.imageBg {
+  width: 100%;
+  height: 100%;
+}
+.oneBg {
+  background: url(./section-1-twitter-heart.png) center right no-repeat scroll;
+}
+.twoBg {
+  background: url(./section2-conversions-high.png) center left no-repeat scroll;
+}
+.threeBg {
+  background: url(./section3-boy.png) center right no-repeat scroll;
+}
+.fourBg {
+  background: url(./section4.png) center left no-repeat scroll;
+}
+.fiveBg {
+  background: url(./section5-system.png) center right no-repeat scroll;
+}
+.sixBg {
+  margin-left: 10vw;
+  background: url(./section6-idea.png) center left no-repeat scroll;
+}
+.contactBg {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  background: url(./section-contact.png) center right no-repeat scroll;
+  margin-left: -10px;
+  animation: pulse 3.7s infinite;
+  -webkit-animation: pulse 3.7s infinite;
+}
+@keyframes pulse{
+  0%{
+    transform: scale(-0.998, 0.99);
+  }
+  20%{
+    transform: scale(-1.02, 1.02);
+  }
+  50%{ 
+    transform: scale(-0.998, 0.99);
+  }
+  100% {
+    transform: scale(-0.998, 0.99);
+  }
+}
+@-webkit-keyframes pulse{
+  0%{
+    -webkit-transform: scaleX(-0.98);
+  }
+  50%{
+    -webkit-transform: scaleX(-1.1);
+  }
+  100%{ 
+    -webkit-transform: scaleX(-0.98);
+  }
+}
 #one {
-  /* background: url(http://cloud.niklausgerber.com/432W0y1g2h05/orange.png) center center no-repeat scroll #FF905E; */
-  background: url(./panel1.jpg) center center no-repeat scroll #DC554F;
   z-index: 150;
 }
 
 #two {
-  background: url(./panel1white.jpg) center center no-repeat scroll #ffffff;
+  // background: url(./panel1white.jpg) center center no-repeat scroll #ffffff;
   z-index: 160;
 }
 
 #three {
-  background: url(./panel2.jpg) center center no-repeat scroll #DC554F;
+  // background: url(./panel2.jpg) center center no-repeat scroll #DC554F;
   z-index: 170;
 }
 
 #four {
-  background: url(./panel2white.jpg) center center no-repeat scroll #ffffff;
+  // background: url(./panel2white.jpg) center center no-repeat scroll #ffffff;
   z-index: 180;
 }
 
 #five {
-  background: url(./panel3.jpg) center center no-repeat scroll #DC554F;
+  // background: url(./panel3.jpg) center center no-repeat scroll #DC554F;
   z-index: 190;
 }
 
 #six {
-  background: url(./panel3white.jpg) center center no-repeat scroll #ffffff;
+  // background: url(./panel3white.jpg) center center no-repeat scroll #ffffff;
   z-index: 200;
 }
 
 
 #seven {
-  background: url(./panel4.jpg) center center no-repeat scroll #DC554F;
+  // background: url(./panel4.jpg) center center no-repeat scroll #DC554F;
   z-index: 210;
 }
 
 
 #nine {
-  background: url(./panel4white.jpg) center center no-repeat scroll #ffffff;
+  // background: url(./panel4white.jpg) center center no-repeat scroll #ffffff;
   z-index: 220;
 }
 
 #ten {
-  background: url(./panel5.jpg) center center no-repeat scroll #DC554F;
+  // background: url(./panel5.jpg) center center no-repeat scroll #DC554F;
   z-index: 230;
 }
 
 #eleven {
-  background: url(./panel5white.jpg) center center no-repeat scroll #ffffff;
+  // background: url(./panel5white.jpg) center center no-repeat scroll #ffffff;
   z-index: 240;
 }
 
 #twelve {
-  background: url(./panel6.jpg) center center no-repeat scroll #DC554F;
+  // background: url(./panel6.jpg) center center no-repeat scroll #DC554F;
   z-index: 250;
 }
 
@@ -79,14 +155,17 @@
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
-#contact {
-  background: url(./contact.jpg) center center no-repeat scroll #FF905E;
+#contact {    
+  z-index: 240;
+  .smallBox {
+    margin-top: 2%;
+  }
 }
 #about {
   background: url(./about.jpg) center center no-repeat scroll #FF905E;
 }
-.info {
-  position: relative;
+.smallBox {
+  position: absolute;
   top: 15%;
   left: 8%;
   z-index: 2;
@@ -122,7 +201,7 @@
     transition: opacity .3s,transform 1s cubic-bezier(0.2,1,.3,1);
   }
   .header {
-    font-size: 50px;
+    font-size: 46px;
     font-weight: 400;
     font-style: normal;
     margin: 1px 0 0;
@@ -208,7 +287,7 @@
   }
 }
 @media only screen and (max-width: 600px) {
-  .info {
+  .smallBox {
     width: 98%;
     left: 0px;
     margin-left: 1%;
@@ -233,7 +312,7 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .info {
+  .smallBox {
     width: 98%;
     left: 0px;
     margin-left: 1%;
@@ -257,7 +336,7 @@
   }
 }
 @media only screen and (max-height: 400px) {
-  .info {
+  .smallBox {
     font-size: 12px;
     .smallHeader {
       font-size: 14px;

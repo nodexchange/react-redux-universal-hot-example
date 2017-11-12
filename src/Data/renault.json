@@ -1,12 +1,11 @@
 {
   "data": [{
     "hero image":"renault",
-    "header": "Renault - Takeover",
-    "description": "Renault cross-screen video takeover",
+    "header": "Renault - Responsive Takeover",
+    "description": "By working closely with the French publisher and their significant strategic advertiser Renault, our team decided to challenge the norm of video takeovers. We aimed to deliver a sublime video takeover that blends visually impressive advertiser's content with an engaging interactive way of allocating it within their article page across Desktop, Tablet, and Mobile. Throughout the campaign, we were monitoring the performance and adjusting the immersive experience daily to ensure the execution that it had no negative impact on the end audience and instead submerged them into an aesthetically pleasing emotional & artistical product overview.",
     "date": "2017",
-    "client": "AOL",
-    "test": "[TODO] http://onecreative.aol.com/#ad:167149",
+    "client": "366",
     "demo": "/lIndependant-renault.html",
-    "tags":""
+    "tags":"Homepage, Takeover, Responsive, Cross-screen, Cross-device"
   }]
 }

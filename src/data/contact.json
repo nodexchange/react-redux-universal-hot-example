@@ -2,10 +2,11 @@
   "data": [{
     "smallHeader": "More than just an",
     "header": "Ad Agency",
-    "description": "Use our team as an extension to yours and take advantage of our technical and creative expertise.\nIf you have any questions or would like to pick up brain on something do not hestiate, message us now.",
-    "buttonText": "Contact us",
+    "description": "Use our team as an extension of yours and leverage our technical and creative expertise. Let us show you how data, emotions and metrics can transform your business. If you have any questions or simply want to challenge us, do not hesitate, message us now.",
+    "buttonText": "Get in touch",
     "link": "",
     "sectionClass": "contact",
+    "backgroundClass":"orange",
     "videoLink": ""
   }]
 }

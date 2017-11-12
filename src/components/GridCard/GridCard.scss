@@ -31,8 +31,9 @@
       }
       p {
         margin-top: 0;
-        opacity: 1;
-        color: #e88790;
+        opacity: 1;        
+        color: #ffbf7c;
+        font-weight: bold;
       }
     }
 
@@ -83,13 +84,31 @@
     height: 100%;
     background: url('https://images.unsplash.com/photo-1506755027586-c15c804d854f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=741ef0d381d9cec2bf29a405cb82066c');
     background-repeat: none;
-    background-size: cover;
+    background-size: cover !important;
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     -moz-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+  .marvel {
+    background: url(./marvel.jpg) center center no-repeat scroll rgb(79, 164, 220);
+  }
+  .aib {
+    background: url(./aib.jpg) center center no-repeat scroll rgb(79, 164, 220);
+  }
+  .ebs {
+    background: url(./ebs.jpg) center center no-repeat scroll rgb(79, 164, 220);
+  }
+  .toyota {
+    background: url(./toyota.jpg) center center no-repeat scroll rgb(79, 164, 220);
+  }
+  .audi {
+    background: url(./audi.jpg) center center no-repeat scroll rgb(79, 164, 220);
+  }
+  .renault {
+    background: url(./renault.jpg) center center no-repeat scroll rgb(79, 164, 220);
   }
 }
 
