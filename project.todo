@@ -1,10 +1,24 @@
+#Wercker
+✔ Wercker deploy (404 on docker error) @done (2017-10-14 20:14:09)
+☐ Wercker Docker build to work better.
+☐ Wercker tests
 
 2.1
-Navigation issue (stick)
-Contact us number
-Contact us map
-☐ improve 404.
-
+ ☐ shadow under heart / contact us.
+ ☐ Navigation issue (stick)
+ ☐ Contact us number
+ ☐ Contact us map
+ ☐ improve 404.
+ ☐ meta for page and images - make it look sexy for outlook and facebook share.
+ ☐ signature fix.
+ ☐ better about us section: https://www.dogstudio.co/studio/
+ ☐ SVG(snap.js) quartile icon to love symbol <3 (maybe adobe animate cc animation svg animations).
+ ☐ personality.
+ ☐ emotional design / algorithm for optimisation.
+ ☐ load animation between sections?
+ ☐ animation as a reward.
+ ☐ reproduce quartile logo as SVG (footer).
+ ☐ create instagram.
 
 2.0
 ✔ redux data for front.
@@ -16,29 +30,16 @@ Contact us map
 ✔ pagenumber issue. @done (2017-10-15 00:02:36)
 ✔ project links effects on buttons http://www.kikk.be/2016/en/program/workshops/machine-learning-for-artists. 
 ✔ project lists https://www.dogstudio.co/projects/ 
-☐ better about us section: https://www.dogstudio.co/studio/
-☐ SVG(snap.js) quartile icon to love symbol <3 (maybe adobe animate cc animation svg animations).
-☐ personality.
-☐ emotional design / algorithm for optimisation.
 ✔ media queries for mobile portrait. @done (2017-10-14 14:32:40)
 ✔ title change for sections. @done (2017-10-15 00:02:40)
 ✔ media queries for landscape heights. @done (2017-10-14 00:18:59)
 ✔ loader. @done (November 3rd 2017, 21:11)
-☐ load animation between sections?
-☐ animation as a reward.
 ✔ firefox sections calc. @done (2017-10-14 19:37:44)
-☐ reproduce quartile logo as SVG (footer).
 ✔ social links on footer. @done (2017-10-14 04:43:42)
-☐ create instagram.
 ✔ create ONE Creative icon. @done (2017-10-14 04:43:45)
 ✔ footer media queries. @done (2017-10-14 14:32:16)
 ✔ analytics. @done (2017-10-14 10:29:58)
 
-
-#Wercker
-✔ Wercker deploy (404 on docker error) @done (2017-10-14 20:14:09)
-☐ Wercker Docker build to work better.
-☐ Wercker tests
 
 1.0
 #HOME
