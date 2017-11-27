@@ -21,7 +21,7 @@ export default class FooterBar extends Component { // eslint-disable-line react/
     // eslint-disable-next-line global-require
     const styles = require('./FooterBar.scss');
     const certificateImg = require('./one.png');
-    const quartileLogoImg = require('./../../containers/NavBar/quartile-logo.png');
+    const quartileLogoImg = require('./../../containers/NavBar/logo.png');
 
     return (
       <footer className={`${styles.footerbar}  well`}>

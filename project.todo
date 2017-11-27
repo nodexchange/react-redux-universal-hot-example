@@ -4,8 +4,12 @@
 ☐ Wercker tests
 
 2.1
+ ✔ softer divider. @done (November 27th 2017, 5:49)
+ ☐ softer blue divider.
+ ☐ projects section tiles animtion on load.
  ☐ shadow under heart / contact us.
  ✔ Navigation issue (stick) @done (November 26th 2017, 23:25)
+ ✔ Navigation cool text decoration @done (November 26th 2017, 23:25)
  ☐ Contact us number
  ☐ Contact us map
  ✔ improve 404. @done (November 27th 2017, 0:13)
@@ -17,7 +21,7 @@
  ☐ emotional design / algorithm for optimisation.
  ☐ load animation between sections?
  ☐ animation as a reward.
- ☐ reproduce quartile logo as SVG (footer).
+ ✔ reproduce quartile logo as SVG (footer). @done (November 27th 2017, 5:32)
  ☐ create instagram.
 
 2.0

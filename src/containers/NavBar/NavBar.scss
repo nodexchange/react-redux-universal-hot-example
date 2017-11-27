@@ -57,6 +57,7 @@
     color: #fff;
     margin-right: 4px;
   }
+
   .contactButton {
     font-size: 16px;
     font-family: Arial;
@@ -267,9 +268,29 @@ nav ul a {
       color: #ffffff;
       text-decoration: none;
       transition: all 1s;
+      position: relative;
     }
     a:hover {
       color: #ffbf7c;
+    }
+    a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -1px;
+      left: 0;
+      background-color: #ffbf7c;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+    a:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
     }
   }
 }
