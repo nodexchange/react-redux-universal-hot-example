@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+
+import { PropTypes } from 'prop-types';
 
 export default class BackgroundRow extends Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {

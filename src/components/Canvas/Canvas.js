@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import Helmet from 'react-helmet';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies

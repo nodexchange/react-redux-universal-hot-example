@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import { IndexLink, Link, browserHistory } from 'react-router';
-import throttle from '../../helpers/Throttle';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 // import config from '../../config';
@@ -11,25 +10,29 @@ export default class NavBar extends Component {
   constructor(props) {
     super(props);
     this.state = { navbar: 'sticky', location: '' };
-    this.mScrollHandler = throttle((e) => { this.mScrollHandler(e); }, 150);
   }
 
   componentDidMount() {
     window.addEventListener('scroll', (e) => { this.mScrollHandler(e); });
     browserHistory.listen(() => {
-      if (document) {
-        const navLoader = document.getElementById('navLoader');
-        navLoader.style.visibility = 'visible';
-        setTimeout(() => {
-          navLoader.style.visibility = 'hidden';
-        }, 3200);
-      }
+      this.showLoader();
     });
+    this.showLoader();
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', (e) => { this.mScrollHandler(e); });
     this.state = {};
+  }
+
+  showLoader = () => {
+    if (document) {
+      const navLoader = document.getElementById('navLoader');
+      navLoader.style.visibility = 'visible';
+      setTimeout(() => {
+        navLoader.style.visibility = 'hidden';
+      }, 3200);
+    }
   }
 
   scrollPageHandler = (e) => {
@@ -53,7 +56,7 @@ export default class NavBar extends Component {
       return;
     }
   }
-  navClickHandler = () => {
+  mobileNavClickHandler = () => {
     if (this.state) {
       if (this.state.mobileNav === 'open-nav') {
         this.setState({ mobileNav: '' });
@@ -62,6 +65,14 @@ export default class NavBar extends Component {
       this.setState({ mobileNav: 'open-nav' });
     }
   }
+  navClickHandler = () => {
+    if (this.state) {
+      if (this.state.mobileNav === 'open-nav') {
+        this.setState({ mobileNav: '' });
+      }
+    }
+  }
+
   render() {
     // eslint-disable-next-line global-require
     const styles = require('./NavBar.scss');
@@ -89,7 +100,7 @@ export default class NavBar extends Component {
             role="button"
             tabIndex="0"
             className={styles.mobileToggle}
-            onClick={this.navClickHandler}>
+            onClick={this.mobileNavClickHandler}>
             <span>{}</span>
             <span>{}</span>
             <span>{}</span>

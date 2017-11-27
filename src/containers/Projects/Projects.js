@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import * as copyActions from 'redux/modules/copy';
 import Helmet from 'react-helmet';
@@ -43,7 +44,6 @@ export default class Projects extends Component {
       cards.push(<GridCard key={i} order={i} {...projectsGridCopy[i]} />);
     }
     const quote = this.selectRandomQuote();
-    console.log('quote', quote);
     // {cards}
     return (
       <div className={styles.projects}>

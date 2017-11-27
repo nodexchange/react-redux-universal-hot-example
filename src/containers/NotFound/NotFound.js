@@ -8,8 +8,13 @@ export default class NotFound extends Component {
 
     return (
       <div className={styles.containerNotFound}>
-        <h1>Doh! 404!</h1>
-        <p>These are <em>not</em> the droids you are looking for!</p>
+        <div id={styles.notFoundText}>
+          <h1>Oopps! Page Not Found!</h1>
+          <p>The infamous error 404, these sadly happen!</p>
+          <p>If the page has been moved or you found a deadlink...</p>
+          <span>Please let us know, our front-end team might cry a little, but ultimately they will appreciate the info!</span>
+        </div>
+        <div id={styles.upset}>{''}</div>
       </div>
     );
   }

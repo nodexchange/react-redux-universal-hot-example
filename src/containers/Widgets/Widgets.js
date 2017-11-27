@@ -1,8 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { initializeWithKey } from 'redux-form';
-import { asyncConnect } from 'redux-async-connect';
+import { asyncConnect } from 'redux-connect';
 
 // eslint-disable-next-line import/extensions
 import * as widgetActions from 'redux/modules/widgets';

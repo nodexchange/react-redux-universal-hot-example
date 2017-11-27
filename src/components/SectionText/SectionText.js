@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class SectionText extends Component {

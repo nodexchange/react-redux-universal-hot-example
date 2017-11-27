@@ -1,6 +1,6 @@
 import Express from 'express';
 import React from 'react';
-import ReactDOM from 'react-dom/server';
+import { renderToString } from 'react-dom/server';
 import favicon from 'serve-favicon';
 import compression from 'compression';
 import httpProxy from 'http-proxy';
@@ -9,7 +9,7 @@ import PrettyError from 'pretty-error';
 import http from 'http';
 import { match } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-import { ReduxAsyncConnect, loadOnServer } from 'redux-async-connect';
+import { ReduxAsyncConnect, loadOnServer } from 'redux-connect';
 import createHistory from 'react-router/lib/createMemoryHistory';
 import { Provider } from 'react-redux';
 
@@ -78,7 +78,7 @@ app.use((req, res) => {
 
   function hydrateOnClient() {
     res.send(`<!doctype html>\n
-      ${ReactDOM.renderToString(<Html assets={webpackIsomorphicTools.assets()} store={store} />)}`);
+      ${renderToString(<Html assets={webpackIsomorphicTools.assets()} store={store} />)}`);
   }
 
   if (__DISABLE_SSR__) {
@@ -106,7 +106,7 @@ app.use((req, res) => {
         global.navigator = { userAgent: req.headers['user-agent'] };
 
         res.send(`<!doctype html>\n
-          ${ReactDOM.renderToString(<Html assets={webpackIsomorphicTools.assets()} component={component} store={store} />)}`); // eslint-disable-line max-len
+          ${renderToString(<Html assets={webpackIsomorphicTools.assets()} component={component} store={store} />)}`); // eslint-disable-line max-len
       });
     } else {
       res.status(404).send('Not found');

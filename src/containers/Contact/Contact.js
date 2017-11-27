@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import * as copyActions from 'redux/modules/copy';
 import Helmet from 'react-helmet';
