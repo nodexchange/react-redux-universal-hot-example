@@ -9,6 +9,7 @@ export default class GridCard extends Component {
     header: PropTypes.string,
     description: PropTypes.string,
     imageClass: PropTypes.string,
+    order: PropTypes.number,
     link: PropTypes.string.isRequired
   };
   render() {
@@ -16,7 +17,7 @@ export default class GridCard extends Component {
     const styles = require('./GridCard.scss');
 
     return (
-      <li className={styles.gridItem}>
+      <li className={styles.gridItem + ' ' + styles['grid' + this.props.order]}>
         <Link to={'/' + this.props.link}>
           <div className={styles.gridBackground + ' ' + styles[this.props.imageClass]} />
           <div className={styles.gridTitle}>

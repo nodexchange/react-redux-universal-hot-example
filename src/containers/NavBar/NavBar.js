@@ -45,8 +45,8 @@ export default class NavBar extends Component {
     }
   }
 
-  scrollPageHandler = (e) => {
-    console.log('Math.random ' + Math.random() + ' e ' + e);
+  scrollPageHandler = () => {
+    // console.log('Math.random ' + Math.random() + ' e ' + e);
   }
 
   mScrollHandler = () => {
@@ -115,7 +115,6 @@ export default class NavBar extends Component {
     ];
     const navButtons = [];
     for (let i = 0; i < navConfig.length; i++) {
-      console.log('___ : ' + this.state.location + ' ::: ' + navConfig[i].to);
       if (this.state.location === navConfig[i].to) {
         navButtons.push(
           <li key={'navBtn' + i}><Link className={styles.activeNavButton} to={navConfig[i].to} onClick={navConfig[i].onClick}>{navConfig[i].name}</Link></li>

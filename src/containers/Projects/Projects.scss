@@ -19,7 +19,7 @@
     background: -webkit-linear-gradient(top, #2989d8 0%,#5497b7 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #2989d8 0%,#5497b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#5497b7',GradientType=0 ); /* IE6-9 */
-    
+
     .cards {
       list-style: none;
       margin: 0;
@@ -28,23 +28,52 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(2,1fr);
-      /*grid-template-columns: repeat(auto-fill, minmax(200px 1fr));*/
       grid-gap: 0px;
     }
+    ul {
+      transform: translateY(-4rem);
+    }
     li {
+      opacity: 0;
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
       transition: all 0.5s linear;
-      transform: translateY(1rem);
-      animation: reveal 2s 1;
-      animation-delay: random(3)s;
+      animation: reveal 2.2s 1;
+      animation-fill-mode: forwards;
+      perspective: 20px;
     }
   }
 }
 @keyframes reveal {
 	0% {
-		transform: translateY(0);
-	}
+    opacity: 0;
+    transform: translateY(0) ;
+    -webkit-filter: grayscale(100%) brightness(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(0);
+  }
+  15% {
+    opacity: 0.5;
+    transform: translateY(2rem) ;
+    -webkit-filter: grayscale(100%) brightness(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(4rem) ;
+    -webkit-filter: grayscale(100%) brightness(0.5); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(0.5);
+  }
+  70% {
+    -webkit-filter: grayscale(60%) brightness(1); /* Safari 6.0 - 9.0 */
+    filter: grayscale(60%) brightness(1);
+    opacity: 1;
+    transform: translateY(4rem) ;
+  }
 	100% {
-		transform: translateY(1rem);
+    -webkit-filter: grayscale(0%) brightness(1); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+    transform: translateY(4rem);
 	}
 }
 @media only screen and (max-width: 600px) {

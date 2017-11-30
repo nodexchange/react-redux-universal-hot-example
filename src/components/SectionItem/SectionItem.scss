@@ -83,7 +83,7 @@
   20%{
     transform: scale(-1.02, 1.02);
   }
-  50%{ 
+  50%{
     transform: scale(-0.998, 0.99);
   }
   100% {
@@ -97,7 +97,7 @@
   50%{
     -webkit-transform: scale(-1.02, 1.02);
   }
-  100%{ 
+  100%{
     -webkit-transform: scale(-0.998, 0.99);
   }
 }
@@ -109,7 +109,7 @@
   20%{
     transform: scale(-1.12, 1.12);
   }
-  50%{ 
+  50%{
     transform: scale(-0.958, 0.94);
   }
   100% {
@@ -123,7 +123,7 @@
   50%{
     -webkit-transform: scale(-1.02, 1.02);
   }
-  100%{ 
+  100%{
     -webkit-transform: scale(-0.998, 0.99);
   }
 }
@@ -194,7 +194,7 @@
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
-#contact {    
+#contact {
   z-index: 240;
   .smallBox {
     margin-top: 2%;
@@ -357,16 +357,18 @@
     margin-left: 1%;
     line-height: 1.5;
     padding: 40px;
+    right: auto !important;
+    top: 5%;
     .smallHeader {
-      font-size: 14px;
+      font-size: 19px;
       padding-bottom: 10px;
     }
     .header {
-      font-size: 20px;
+      font-size: 23px;
     }
 
     .description {
-      font-size: 14px;
+      font-size: 20px;
     }
     .line {
       width: 20px;
