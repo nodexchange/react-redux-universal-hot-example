@@ -35,7 +35,7 @@ export default class Contact extends Component {
       <div className={styles.contact}>
         <Helmet title="Contact" />
         <SectionItem inView key={0} offset={0} order={0} {...contactCopy[0]} />
-        <Divider />
+        <Divider colour="orange" />
       </div>
     );
   }

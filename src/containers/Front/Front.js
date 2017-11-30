@@ -89,7 +89,7 @@ export default class Front extends Component {
       <div className={styles.front}>
         <Helmet title="Home" />
         {rows}
-        <Divider />
+        <Divider colour="orange" />
       </div>
     );
   }

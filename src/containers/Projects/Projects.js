@@ -38,7 +38,7 @@ export default class Projects extends Component {
     const projectsGridCopy = this.props.localeCopy.data;
     const cards = [];
     if (!projectsGridCopy || !this.props.localeCopy.quotes) {
-      return (<p>empty</p>);
+      return (<p>Loading...</p>);
     }
     for (let i = 0; i < projectsGridCopy.length; i++) {
       cards.push(<GridCard key={i} order={i} {...projectsGridCopy[i]} />);
@@ -54,10 +54,10 @@ export default class Projects extends Component {
             {cards}
           </ul>
         </div>
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
+        <Divider colour="" />
+        <Divider colour="" />
+        <Divider colour="" />
+        <Divider colour="" />
       </div>
     );
   }

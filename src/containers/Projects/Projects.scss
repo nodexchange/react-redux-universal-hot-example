@@ -31,7 +31,21 @@
       /*grid-template-columns: repeat(auto-fill, minmax(200px 1fr));*/
       grid-gap: 0px;
     }
+    li {
+      transition: all 0.5s linear;
+      transform: translateY(1rem);
+      animation: reveal 2s 1;
+      animation-delay: random(3)s;
+    }
   }
+}
+@keyframes reveal {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(1rem);
+	}
 }
 @media only screen and (max-width: 600px) {
   .projects {

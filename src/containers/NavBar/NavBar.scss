@@ -33,11 +33,14 @@
   background: url('./quartile-logo.png') no-repeat center center;
   background-size: 80%;
   margin: 0 10px 0 0;
-  transition: all 0.4s ease 0s;
+  transform: scale(1);
+  transition: all 0.8s ease 0s;
 }
 .brandScrolled {
   height: 95px;
   width: 180px;
+  transform: scale(0.8);
+  top: -11px;
 }
 .brandNormal {
   height: 85px;
@@ -110,11 +113,11 @@
   background-color: rgba(0, 0, 0, 0.63);
   border-bottom: 1px solid rgba(255, 255, 255, 0.63);
   opacity: 1;
-  top: -20px;
+  top: -37px;
   nav ul a {
     font-size: 15px;
     position: relative;
-    top: -4px; 
+    top: 2px; 
   }
 }
 .loader {
@@ -269,6 +272,9 @@ nav ul a {
       text-decoration: none;
       transition: all 1s;
       position: relative;
+    }
+    .activeNavButton {
+      color: #ffbf7c;
     }
     a:hover {
       color: #ffbf7c;

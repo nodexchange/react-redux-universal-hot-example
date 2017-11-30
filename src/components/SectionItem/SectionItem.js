@@ -60,7 +60,9 @@ export default class SectionItem extends Component { // eslint-disable-line reac
     let linkNode = (
       <Link to={this.props.link} className={styles.btn + ' ' + outOrInView}>{this.props.buttonText}</Link>
     );
+    let contactSection = false;
     if (this.props.link === '') {
+      contactSection = true;
       linkNode = (
         <a
           href="mailto:hello@quartile.io?Subject=Hello%20Quartile%21"
@@ -79,6 +81,9 @@ export default class SectionItem extends Component { // eslint-disable-line reac
       <div id={selectedClass} className={styles.section + ' ' + inset + ' ' + backgroundClass}>
         <div className={styles.info}>
           <div className={selectedImageClass + ' ' + styles.imageBg}>{''}</div>
+          {contactSection &&
+            <div className={styles.contactShadow}>{''}</div>
+          }
           <div className={styles.smallBox + ' ' + infoOutOrInView} style={topStyle}>
             <span className={styles.smallHeader + ' ' + outOrInView}>{this.props.smallHeader}</span>
             <h1 className={styles.header + ' ' + outOrInView}>{this.props.header}</h1>

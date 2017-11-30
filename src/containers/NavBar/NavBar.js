@@ -14,15 +14,25 @@ export default class NavBar extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', (e) => { this.mScrollHandler(e); });
-    browserHistory.listen(() => {
-      this.showLoader();
+    browserHistory.listen((e) => {
+      if (e.pathname !== this.state.location) {
+        this.showLoader();
+        this.setState({ location: e.pathname });
+      }
     });
     this.showLoader();
+    this.saveLocation();
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', (e) => { this.mScrollHandler(e); });
     this.state = {};
+  }
+
+  saveLocation() {
+    if (this.state.location === '') {
+      this.setState({ location: browserHistory.getCurrentLocation().pathname });
+    }
   }
 
   showLoader = () => {
@@ -89,6 +99,33 @@ export default class NavBar extends Component {
         mobileNavType = styles.openNav;
       }
     }
+    const navConfig = [
+      {
+        to: '/', name: 'Home', onClick: this.navClickHandler
+      },
+      {
+        to: '/about', name: 'About', onClick: this.navClickHandler
+      },
+      {
+        to: '/projects', name: 'Projects', onClick: this.navClickHandler
+      },
+      {
+        to: '/contact', name: 'Contact Us', onClick: this.navClickHandler
+      }
+    ];
+    const navButtons = [];
+    for (let i = 0; i < navConfig.length; i++) {
+      console.log('___ : ' + this.state.location + ' ::: ' + navConfig[i].to);
+      if (this.state.location === navConfig[i].to) {
+        navButtons.push(
+          <li key={'navBtn' + i}><Link className={styles.activeNavButton} to={navConfig[i].to} onClick={navConfig[i].onClick}>{navConfig[i].name}</Link></li>
+        );
+      } else {
+        navButtons.push(
+          <li key={'navBtn' + i}><Link to={navConfig[i].to} onClick={navConfig[i].onClick}>{navConfig[i].name}</Link></li>
+        );
+      }
+    }
     /* eslint-disable */
     return (
       <header className={styles.mainHeader + ' ' + navType + ' ' + mobileNavType }>
@@ -107,10 +144,7 @@ export default class NavBar extends Component {
           </div>
           <nav className={styles.navBar}>
             <ul>
-              <li><Link to="/" onClick={this.navClickHandler}>Home</Link></li>
-              <li><Link to="/projects" onClick={this.navClickHandler}>Projects</Link></li>
-              <li><Link to="/about" onClick={this.navClickHandler}>About</Link></li>
-              <li><Link to="/contact" onClick={this.navClickHandler}>Contact Us</Link></li>
+              {navButtons}
             </ul>
           </nav>
           <div id="navLoader" className={styles.loader} />

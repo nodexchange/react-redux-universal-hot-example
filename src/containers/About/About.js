@@ -35,7 +35,7 @@ export default class About extends Component {
       <div className={styles.about}>
         <Helmet title="About" />
         <SectionItem inView key={0} offset={0} order={0} {...aboutCopy[0]} />
-        <Divider />
+        <Divider colour="white" />
       </div>
     );
   }

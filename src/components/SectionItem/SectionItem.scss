@@ -64,6 +64,18 @@
   animation: pulse 3.7s infinite;
   -webkit-animation: pulse 3.7s infinite;
 }
+.contactShadow {
+  width: 20%;
+  height: 25px;
+  background: #383838;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: shadowPulse 3.7s infinite;
+  -webkit-animation: shadowPulse 3.7s infinite;
+  position: absolute;
+  left: 19.5%;
+  bottom: 7px;
+}
 @keyframes pulse{
   0%{
     transform: scale(-0.998, 0.99);
@@ -80,15 +92,42 @@
 }
 @-webkit-keyframes pulse{
   0%{
-    -webkit-transform: scaleX(-0.98);
+    -webkit-transform: scale(-0.998, 0.99);
   }
   50%{
-    -webkit-transform: scaleX(-1.1);
+    -webkit-transform: scale(-1.02, 1.02);
   }
   100%{ 
-    -webkit-transform: scaleX(-0.98);
+    -webkit-transform: scale(-0.998, 0.99);
   }
 }
+
+@keyframes shadowPulse{
+  0%{
+    transform: scale(-0.998, 0.99);
+  }
+  20%{
+    transform: scale(-1.12, 1.12);
+  }
+  50%{ 
+    transform: scale(-0.958, 0.94);
+  }
+  100% {
+    transform: scale(-0.998, 0.99);
+  }
+}
+@-webkit-keyframes shadowPulse{
+  0%{
+    -webkit-transform: scale(-0.998, 0.99);
+  }
+  50%{
+    -webkit-transform: scale(-1.02, 1.02);
+  }
+  100%{ 
+    -webkit-transform: scale(-0.998, 0.99);
+  }
+}
+
 #one {
   z-index: 150;
 }
