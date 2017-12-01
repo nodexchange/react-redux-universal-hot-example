@@ -16,6 +16,9 @@ export default class Scroll {
       // Do Firefox-related activities
       dividerScrollCorrection = 0.97;
     }
+    if (window.innerHeight < 700) {
+      dividerScrollCorrection = 0.82;
+    }
     // divider included 0.8
     const ratioValue = Math.round(((scrollBarPosition * dividerScrollCorrection) / clientH) * 100) / 100;
     return ratioValue; 

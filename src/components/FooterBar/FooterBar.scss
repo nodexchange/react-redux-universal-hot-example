@@ -138,3 +138,13 @@
     }
   }
 }
+@media only screen and (max-width: 430px) {
+  .footerbar {
+    font-size: 9px;
+    .container {
+      .certification {
+        width: 100px;
+      }
+    }
+  }
+}

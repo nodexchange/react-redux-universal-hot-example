@@ -219,7 +219,7 @@ nav ul a {
   cursor: pointer;
   font-size: 20px;
   position: absolute;
-  right: 22px;
+  right: 12px;
   top: 0;
   width: 30px;
   -webkit-transition: all 200ms ease-in;
@@ -240,7 +240,8 @@ nav ul a {
   }
   .scroll {
     .mobileToggle {
-      margin-top: 7px;
+      margin-top: 15px;
+      transform: scale(0.7);
     }
   }
 }
