@@ -2,6 +2,7 @@
 require('../server.babel'); // babel registration (runtime transpilation for node)
 var path = require('path');
 var rootDir = path.resolve(__dirname, '..');
+
 /**
  * Define isomorphic constants.
  */
@@ -24,5 +25,5 @@ var WebpackIsomorphicTools = require('webpack-isomorphic-tools');
 global.webpackIsomorphicTools = new WebpackIsomorphicTools(require('../webpack/webpack-isomorphic-tools'))
   // .development(__DEVELOPMENT__)
   .server(rootDir, function() {
-    require('../src/server');
+      require('../src/server');
   });

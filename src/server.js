@@ -3,10 +3,12 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import favicon from 'serve-favicon';
 import compression from 'compression';
+
 import httpProxy from 'http-proxy';
 import path from 'path';
 import PrettyError from 'pretty-error';
 import http from 'http';
+
 import { match } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { ReduxAsyncConnect, loadOnServer } from 'redux-connect';
@@ -71,6 +73,7 @@ app.use((req, res) => {
     // hot module replacement is enabled in the development env
     webpackIsomorphicTools.refresh();
   }
+  
   const client = new ApiClient(req);
   const memoryHistory = createHistory(req.originalUrl);
   const store = createStore(memoryHistory, client);
@@ -100,7 +103,6 @@ app.use((req, res) => {
             <ReduxAsyncConnect {...renderProps} />
           </Provider>
         );
-
         res.status(200);
 
         global.navigator = { userAgent: req.headers['user-agent'] };
