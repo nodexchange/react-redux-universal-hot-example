@@ -65,23 +65,27 @@ export default class Front extends Component {
     this.props.updateMaxPages(1);
   }
 
+  defaultCopy = () => (
+   'Quartile - Creative Ad Agency. DATA & EMPATHY DRIVEN SOLUTIONS. We are data obsessed innovators, day dreamers, creative ad specialists, always striving to push the boundaries of our emotional & bleeding edge digital executions.'
+  )
+
   render() {
     // eslint-disable-next-line global-require
     const styles = require('./Front.scss');
 
     const frontPanelsCopy = this.props.localeCopy.data;
     if (!frontPanelsCopy) {
-      return (<p>Loading...</p>);
+      return (<p>{this.defaultCopy()}</p>);
     }
     const rows = [];
     for (let i = 0; i < frontPanelsCopy.length; i++) {
       if (this.currentPanel === i) {
         rows.push(
-          <SectionItem inView key={i} order={i} {...frontPanelsCopy[i]} offset={this.props.offsetRatio} />
+          <SectionItem inView key={i} order={i} {...frontPanelsCopy[i]} offset={this.props.offsetRatio} link="home" />
         );
       } else {
         rows.push(
-          <SectionItem inView={false} key={i} order={i} {...frontPanelsCopy[i]} offset={this.props.offsetRatio} />
+          <SectionItem inView={false} key={i} order={i} {...frontPanelsCopy[i]} offset={this.props.offsetRatio} link="home" />
         );
       }
     }

@@ -22,19 +22,23 @@ export default class About extends Component {
     this.props.loadCopy('about');
   }
 
+  defaultCopy = () => (
+    'We are advocates of simplicity and transparency. It is safe to say that we gained excellent exposure and grasp in all industry-leading RichMedia and advertising solutions.'
+  )
+
   render() {
     // eslint-disable-next-line global-require
     const styles = require('./About.scss');
 
     const aboutCopy = this.props.localeCopy.data;
     if (!aboutCopy) {
-      return (<p>Loading...</p>);
+      return (<p>{this.defaultCopy()}</p>);
     }
 
     return (
       <div className={styles.about}>
         <Helmet title="About" />
-        <SectionItem inView key={0} offset={0} order={0} {...aboutCopy[0]} />
+        <SectionItem inView key={0} offset={0} order={0} {...aboutCopy[0]} link="about" />
         <Divider colour="white" />
       </div>
     );

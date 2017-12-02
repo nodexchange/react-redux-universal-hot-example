@@ -61,7 +61,7 @@ export default class SectionItem extends Component { // eslint-disable-line reac
       <Link to={this.props.link} className={styles.btn + ' ' + outOrInView}>{this.props.buttonText}</Link>
     );
     let contactSection = false;
-    if (this.props.link === '') {
+    if (this.props.link === 'contact') {
       contactSection = true;
       linkNode = (
         <a

@@ -22,19 +22,23 @@ export default class Contact extends Component {
     this.props.loadCopy('contact');
   }
 
+  defaultCopy = () => (
+    'Let us show you how data, emotions and metrics can transform your business. If you have any questions or simply want to challenge us, do not hesitate, message us now.'
+   )
+
   render() {
     // eslint-disable-next-line global-require
     const styles = require('./Contact.scss');
 
     const contactCopy = this.props.localeCopy.data;
     if (!contactCopy) {
-      return (<p>Loading...</p>);
+      return (<p>{this.defaultCopy()}</p>);
     }
 
     return (
       <div className={styles.contact}>
         <Helmet title="Contact" />
-        <SectionItem inView key={0} offset={0} order={0} {...contactCopy[0]} />
+        <SectionItem inView key={0} offset={0} order={0} {...contactCopy[0]} link="contact" />
         <Divider colour="orange" />
       </div>
     );
