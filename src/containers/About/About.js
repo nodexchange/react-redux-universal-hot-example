@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as copyActions from 'redux/modules/copy';
+import * as scrollActions from 'redux/modules/scroll';
 import Helmet from 'react-helmet';
 import { Divider, SectionItem } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 @connect(
   state => ({ localeCopy: state.copy.localeCopy }),
-  copyActions
+  dispatch => bindActionCreators({ ...scrollActions, ...copyActions }, dispatch)
 )
 export default class About extends Component {
   static propTypes = {
@@ -16,10 +18,12 @@ export default class About extends Component {
     localeCopy: PropTypes.oneOfType([
       PropTypes.object, // eslint-disable-line react/forbid-prop-types
       PropTypes.array // eslint-disable-line react/forbid-prop-types
-    ])
+    ]),
+    updateMaxPages: PropTypes.func.isRequired
   }
   componentDidMount() {
     this.props.loadCopy('about');
+    this.props.updateMaxPages(1);
   }
 
   defaultCopy = () => (

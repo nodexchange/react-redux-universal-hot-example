@@ -110,6 +110,9 @@ export default class NavBar extends Component {
         to: '/projects', name: 'Projects', onClick: this.navClickHandler
       },
       {
+        to: '/services', name: 'Services', onClick: this.navClickHandler
+      },
+      {
         to: '/contact', name: 'Contact Us', onClick: this.navClickHandler
       }
     ];

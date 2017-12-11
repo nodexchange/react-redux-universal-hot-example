@@ -1,0 +1,34 @@
+{
+  "data": [{
+      "header": "Renault Takeover",
+      "description": "Renault cross-screen video takeover",
+      "imageClass": "renault",
+      "link": "projects/renault"
+    }, {
+      "header": "AIB - Brand Takeover",
+      "description": "Unique interactive Homepage wallpaper takeover.",
+      "imageClass": "aib",
+      "link": "projects/aib"
+    }, {
+      "header": "Toyota",
+      "description": "Vibrant 360 banner to support Toyota Yaris re-launch.",
+      "imageClass": "toyota",
+      "link": "projects/toyota"
+    }, {
+      "header": "Audi",
+      "description": "Pure Imagination - Responsive Header",
+      "imageClass": "audi",
+      "link": "projects/audi"
+    }, {
+      "header": "EBS - Interactive Wallpaper",
+      "description": "Premium Video takeover from a static wallpaper.",
+      "imageClass": "ebs",
+      "link": "projects/ebs"
+    }, {
+      "header": "Marvel - 3D Virtual Reality takeover",
+      "description": "Bleeding-edge mobile experience.",
+      "imageClass": "marvel",
+      "link": "projects/marvel"
+    }
+  ]
+}

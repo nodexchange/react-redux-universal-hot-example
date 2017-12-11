@@ -52,7 +52,6 @@ export default class ArrowNav extends Component {
     if (this.props.maxPages === 1) {
       return (<div className={styles.arrowNav} />);
     }
-
     return (
       <div className={styles.arrowNav}>
         <button className={styles.baseArrow + ' ' + styles.arrowUp} onClick={this.arrowUpHandler} />

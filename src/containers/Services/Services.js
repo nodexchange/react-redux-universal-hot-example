@@ -5,15 +5,14 @@ import { bindActionCreators } from 'redux';
 import * as copyActions from 'redux/modules/copy';
 import * as scrollActions from 'redux/modules/scroll';
 import Helmet from 'react-helmet';
-import { Divider, GridCard, Hero } from 'components';
+import { Divider, GridCard } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 @connect(
   state => ({ localeCopy: state.copy.localeCopy }),
   dispatch => bindActionCreators({ ...scrollActions, ...copyActions }, dispatch)
 )
-
-export default class Projects extends Component {
+export default class Services extends Component {
   static propTypes = {
     loadCopy: PropTypes.func.isRequired,
     localeCopy: PropTypes.oneOfType([
@@ -22,37 +21,31 @@ export default class Projects extends Component {
     ]),
     updateMaxPages: PropTypes.func.isRequired
   }
-  constructor(props) {
-    super(props);
-    this.localeCopy = this.props.localeCopy || 'pending';
-  }
   componentDidMount() {
-    this.props.loadCopy('projects');
+    this.props.loadCopy('services');
     this.props.updateMaxPages(1);
   }
-  selectRandomQuote() {
-    const quotes = this.props.localeCopy.quotes;
-    return quotes[Math.floor(Math.random() * quotes.length)];
-  }
+
+  defaultCopy = () => (
+    'We are advocates of simplicity and transparency. It is safe to say that we gained excellent exposure and grasp in all industry-leading RichMedia and advertising solutions.'
+  )
 
   render() {
-    const styles = require('./Projects.scss');
+    // eslint-disable-next-line global-require
+    const styles = require('./Services.scss');
 
-    // hero as a todo item.
-    const projectsGridCopy = this.props.localeCopy.data;
+    const servicesCopy = this.props.localeCopy.data;
+    if (!servicesCopy) {
+      return (<p>{this.defaultCopy()}</p>);
+    }
     const cards = [];
-    if (!projectsGridCopy || !this.props.localeCopy.quotes) {
-      return (<p>Loading...</p>);
+    for (let i = 0; i < servicesCopy.length; i++) {
+      cards.push(<GridCard key={i} order={i} {...servicesCopy[i]} />);
     }
-    for (let i = 0; i < projectsGridCopy.length; i++) {
-      cards.push(<GridCard key={i} order={i} {...projectsGridCopy[i]} />);
-    }
-    const quote = this.selectRandomQuote();
-    // {cards}
+
     return (
-      <div className={styles.projects}>
-        <Helmet title="Projects" />
-        <Hero smallHeader={'"' + quote.text + '"'} smallText={quote.author} background="narrow" />
+      <div className={styles.services}>
+        <Helmet title="Services" />
         <div className={styles.section}>
           <ul className={styles.grid + ' ' + styles.cards}>
             {cards}

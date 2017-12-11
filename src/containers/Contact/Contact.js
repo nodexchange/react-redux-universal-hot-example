@@ -2,13 +2,15 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as copyActions from 'redux/modules/copy';
+import * as scrollActions from 'redux/modules/scroll';
 import Helmet from 'react-helmet';
 import { Divider, SectionItem } from 'components';
 
 @connect(
   state => ({ localeCopy: state.copy.localeCopy }),
-  copyActions
+  dispatch => bindActionCreators({ ...scrollActions, ...copyActions }, dispatch)
 )
 export default class Contact extends Component {
   static propTypes = {
@@ -16,10 +18,12 @@ export default class Contact extends Component {
     localeCopy: PropTypes.oneOfType([
       PropTypes.object, // eslint-disable-line react/forbid-prop-types
       PropTypes.array // eslint-disable-line react/forbid-prop-types
-    ])
+    ]),
+    updateMaxPages: PropTypes.func.isRequired
   }
   componentDidMount() {
     this.props.loadCopy('contact');
+    this.props.updateMaxPages(1);
   }
 
   defaultCopy = () => (

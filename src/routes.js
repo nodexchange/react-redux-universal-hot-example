@@ -15,6 +15,7 @@ import {
     NotFound,
     ProjectDetails,
     Projects,
+    Services,
     Survey,
     Widgets
   } from 'containers'; // eslint-disable-line import/extensions
@@ -52,14 +53,15 @@ export default (store) => {
 
       { /* Routes */ }
       <Route path="about" component={About} />
-      <Route path="login" component={Login} />
-      <Route path="survey" component={Survey} />
-      <Route path="widgets" component={Widgets} />
       <Route path="contact" component={Contact} />
+      <Route path="login" component={Login} />
       <Route path="projects">
         <IndexRoute component={Projects} />
         <Route path=":projectName" component={ProjectDetails} />
       </Route>
+      <Route path="survey" component={Survey} />
+      <Route path="services" component={Services} />
+      <Route path="widgets" component={Widgets} />
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />
     </Route>

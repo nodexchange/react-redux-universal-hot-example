@@ -10,5 +10,6 @@ export NavBar from './NavBar/NavBar';
 export NotFound from './NotFound/NotFound';
 export ProjectDetails from './ProjectDetails/ProjectDetails';
 export Projects from './Projects/Projects';
+export Services from './Services/Services';
 export Survey from './Survey/Survey';
 export Widgets from './Widgets/Widgets';

@@ -1,0 +1,79 @@
+.services {
+  height: 100%;
+  background: #e2764c; /* Old browsers */
+  background: -moz-linear-gradient(top, #e06919 0%, #e2764c 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #e06919 0%,#e2764c 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e06919 0%,#e2764c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e06919', endColorstr='#e2764c',GradientType=0 ); /* IE6-9 */
+  .section {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+   
+    .cards {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 0px;
+    }
+    ul {
+      transform: translateY(-4rem);
+    }
+    li {
+      opacity: 0;
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+      transition: all 0.5s linear;
+      animation: reveal 2.2s 1;
+      animation-fill-mode: forwards;
+      perspective: 20px;
+    }
+  }
+}
+@keyframes reveal {
+	0% {
+    opacity: 0;
+    transform: translateY(0) ;
+    -webkit-filter: grayscale(100%) brightness(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(0);
+  }
+  15% {
+    opacity: 0.5;
+    transform: translateY(2rem) ;
+    -webkit-filter: grayscale(100%) brightness(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(4rem) ;
+    -webkit-filter: grayscale(100%) brightness(0.5); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(0.5);
+  }
+  70% {
+    -webkit-filter: grayscale(60%) brightness(1); /* Safari 6.0 - 9.0 */
+    filter: grayscale(60%) brightness(1);
+    opacity: 1;
+    transform: translateY(4rem) ;
+  }
+	100% {
+    -webkit-filter: grayscale(0%) brightness(1); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+    transform: translateY(4rem);
+	}
+}
+@media only screen and (max-width: 600px) {
+  .projects {
+    .section {
+      .grid {
+        grid-template-columns: repeat(1,1fr);
+      }
+    }
+  }
+}

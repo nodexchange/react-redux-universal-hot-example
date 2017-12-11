@@ -104,7 +104,7 @@
 }
 
 .sticky {
-  background-color: rgba(0, 0, 0, 0.43);
+  background-color: rgba(0, 0, 0, 0.68);
   opacity: 1;
   top: 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.23);
@@ -171,7 +171,7 @@
 
 nav {
   float: right;
-  width: 60%;
+  width: 75%;
 }
 @media only screen and (max-width: 766px) {
   nav {
@@ -198,8 +198,13 @@ nav ul {
 }
 nav ul li {
   display: inline-block;
-  margin-left: 35px;
+  margin-left: 30px;
   line-height: 1.5;
+}
+@media only screen and (max-width: 866px) {
+  nav ul li {
+    margin-left: 15px;
+  }
 }
 @media only screen and (max-width: 766px) {
   nav ul li {
