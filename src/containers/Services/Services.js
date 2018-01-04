@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import * as copyActions from 'redux/modules/copy';
 import * as scrollActions from 'redux/modules/scroll';
 import Helmet from 'react-helmet';
-import { Divider, GridCard } from 'components';
+import { Divider, ServiceCard } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 @connect(
@@ -40,18 +40,18 @@ export default class Services extends Component {
     }
     const cards = [];
     for (let i = 0; i < servicesCopy.length; i++) {
-      cards.push(<GridCard key={i} order={i} {...servicesCopy[i]} />);
+      cards.push(<ServiceCard key={i} order={i} {...servicesCopy[i]} />);
     }
 
     return (
       <div className={styles.services}>
         <Helmet title="Services" />
+        <div className={styles.heartBackground}>{' '}</div>
         <div className={styles.section}>
           <ul className={styles.grid + ' ' + styles.cards}>
             {cards}
           </ul>
         </div>
-        <Divider colour="" />
         <Divider colour="" />
         <Divider colour="" />
         <Divider colour="" />

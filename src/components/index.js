@@ -14,6 +14,7 @@ export Divider from './Divider/Divider';
 export FooterBar from './FooterBar/FooterBar';
 export GridBack from './GridBack/GridBack';
 export GridCard from './GridCard/GridCard';
+export ServiceCard from './ServiceCard/ServiceCard';
 export GithubButton from './GithubButton/GithubButton';
 export Hero from './Hero/Hero';
 export MiniInfoBar from './MiniInfoBar/MiniInfoBar';
