@@ -3,29 +3,40 @@
 ☐ Wercker Docker build to work better.
 ☐ Wercker tests
 
+☐ https://helixsleep.com/ “Our site colors change every few hours. That’s because they’re a reflection of the circadian rhythm, the light based biological phenomenon that governs how, and when, we sleep.”
+☐ https://iabuk.net/blog/the-iab-uk-gold-standard-where-we-are-and-where-we-re-going
+☐ unique buisness cards? 
+☐ HTTPS? 
+
 # future
- ☐ get in touch emphisesed.
- ☐ services section.
- ☐ projects - animated gif or media gallery slide show for project details.
- ☐ better about us section: https://www.dogstudio.co/studio/
- ☐ Contact us number
- ☐ Contact us map
- ☐ SVG(snap.js) quartile icon to love symbol <3 (maybe adobe animate cc animation svg animations).
- ☐ personality.
- ☐ emotional design / algorithm for optimisation.
- ☐ load animation between sections?
- ☐ animation as a reward.
- ☐ create instagram.
- ☐ 3D Quartiles
- ☐ Add ford.
- ☐ Add INSIDE section (tweets plus blogs).
+☐ certification divider section.
+☐ projects - animated gif or media gallery slide show for project details.
+☐ better about us section: https://www.dogstudio.co/studio/
+☐ Contact us number
+☐ personality.
+☐ emotional design / algorithm for optimisation.
+☐ load animation between sections?
+☐ create instagram.
+☐ 3D Quartiles
+☐ Add ford.
+☐ Add INSIDE section (tweets plus blogs).
  
+ 2.2.0
+ ☐ trusted by section / divider .
+ ☐ Contact us map
+ ☐ canvas text backup
+ ☐ canvas animation for services
+ ✔ SVG(snap.js) quartile icon to love symbol <3 (maybe adobe animate cc animation svg animations).
+ ✔ get in touch emphisesed.
+ ✔ services section.
+
+
  2.1.1
  ✔ fix test pages (FHM priority 1)
  ✔ arrownav to hide when section is loaded directly.
 
 2.1.0
- ☐ signature fix. ~update (files in the folder, awaits deploy and html update)
+ ✔ signature fix. ~update (files in the folder, awaits deploy and html update)
  ✔ nav logo animation - better tween. @done (December 10th 2017, 9:07)
  ✔ meta for page and images - make it look sexy for outlook and facebook share. @done (December 2nd 2017, 17:43)
  ✔ softer divider. @done (November 27th 2017, 5:49)

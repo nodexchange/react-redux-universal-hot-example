@@ -27,11 +27,11 @@
 }
 .brand {
   position: absolute;
-  top: -18px;
+  top: -20px;
   left: 8px;
   display: inline-block;
-  background: url('./quartile-logo.png') no-repeat center center;
-  background-size: 80%;
+  // background: url('./quartile-logo.png') no-repeat center center;
+  // background-size: 80%;
   margin: 0 10px 0 0;
   transform: scale(1);
   transition: all 0.8s ease 0s;
@@ -39,8 +39,8 @@
 .brandScrolled {
   height: 95px;
   width: 180px;
-  transform: scale(0.8);
-  top: -11px;
+  transform: scale(0.63);
+  top: -8px;
 }
 .brandNormal {
   height: 85px;
@@ -278,6 +278,13 @@ nav ul a {
       text-decoration: none;
       transition: all 1s;
       position: relative;
+    }
+    .contactUsButton {
+      font-weight: bold;
+      padding-left: 3px;
+      border: 1px solid #ffbf7c;
+      color: #ffbf7c;
+      padding-right: 3px;
     }
     .activeNavButton {
       color: #ffbf7c;

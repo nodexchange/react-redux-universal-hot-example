@@ -83,6 +83,13 @@ export default class NavBar extends Component {
     }
   }
 
+  retrieveIframeElement = () => {
+    const iframeElement = '<iframe frameborder=0 scrolling=no src="/logo-animation-completed.html" width="250" height="90"></iframe>';
+    return {
+      __html: iframeElement
+    };
+  }
+
   render() {
     // eslint-disable-next-line global-require
     const styles = require('./NavBar.scss');
@@ -101,30 +108,31 @@ export default class NavBar extends Component {
     }
     const navConfig = [
       {
-        to: '/', name: 'Home', onClick: this.navClickHandler
+        to: '/', name: 'Home', className: '', onClick: this.navClickHandler
       },
       {
-        to: '/about', name: 'About', onClick: this.navClickHandler
+        to: '/about', name: 'About', className: '', onClick: this.navClickHandler
       },
       {
-        to: '/projects', name: 'Projects', onClick: this.navClickHandler
+        to: '/projects', name: 'Projects', className: '', onClick: this.navClickHandler
       },
       {
-        to: '/services', name: 'Services', onClick: this.navClickHandler
+        to: '/services', name: 'Services', className: '', onClick: this.navClickHandler
       },
       {
-        to: '/contact', name: 'Contact Us', onClick: this.navClickHandler
+        to: '/contact', name: 'Contact Us', className: 'contactUsButton', onClick: this.navClickHandler
       }
     ];
     const navButtons = [];
+
     for (let i = 0; i < navConfig.length; i++) {
       if (this.state.location === navConfig[i].to) {
         navButtons.push(
-          <li key={'navBtn' + i}><Link className={styles.activeNavButton} to={navConfig[i].to} onClick={navConfig[i].onClick}>{navConfig[i].name}</Link></li>
+          <li key={'navBtn' + i}><Link className={styles.activeNavButton + ' ' + styles[navConfig[i].className]} to={navConfig[i].to} onClick={navConfig[i].onClick}>{navConfig[i].name}</Link></li>
         );
       } else {
         navButtons.push(
-          <li key={'navBtn' + i}><Link to={navConfig[i].to} onClick={navConfig[i].onClick}>{navConfig[i].name}</Link></li>
+          <li key={'navBtn' + i}><Link className={styles[navConfig[i].className]} to={navConfig[i].to} onClick={navConfig[i].onClick}>{navConfig[i].name}</Link></li>
         );
       }
     }
@@ -133,7 +141,9 @@ export default class NavBar extends Component {
       <header className={styles.mainHeader + ' ' + navType + ' ' + mobileNavType }>
         <div className={styles.row}>
           <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
-            <div className={styles.brand + ' ' + brandType} />
+            <div className={styles.brand + ' ' + brandType}>
+              <div dangerouslySetInnerHTML={this.retrieveIframeElement()} />
+            </div>
           </IndexLink>
           <div
             role="button"

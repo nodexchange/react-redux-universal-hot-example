@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import * as copyActions from 'redux/modules/copy';
 import * as scrollActions from 'redux/modules/scroll';
 import Helmet from 'react-helmet';
-import { Divider, ServiceCard } from 'components';
+import { Divider } from 'components';
 
 // eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 @connect(
@@ -30,6 +30,13 @@ export default class Services extends Component {
     'We are advocates of simplicity and transparency. It is safe to say that we gained excellent exposure and grasp in all industry-leading RichMedia and advertising solutions.'
   )
 
+  retrieveIframeElement = () => {
+    const iframeElement = '<iframe frameborder=0 scrolling=no src="/services.html" width="100%" height="100%"></iframe>';
+    return {
+      __html: iframeElement
+    };
+  }
+
   render() {
     // eslint-disable-next-line global-require
     const styles = require('./Services.scss');
@@ -38,20 +45,15 @@ export default class Services extends Component {
     if (!servicesCopy) {
       return (<p>{this.defaultCopy()}</p>);
     }
-    const cards = [];
-    for (let i = 0; i < servicesCopy.length; i++) {
-      cards.push(<ServiceCard key={i} order={i} {...servicesCopy[i]} />);
-    }
 
     return (
       <div className={styles.services}>
         <Helmet title="Services" />
-        <div className={styles.heartBackground}>{' '}</div>
         <div className={styles.section}>
-          <ul className={styles.grid + ' ' + styles.cards}>
-            {cards}
-          </ul>
+          <div className={styles.servicesCanvas} dangerouslySetInnerHTML={this.retrieveIframeElement()} />
         </div>
+        <Divider colour="" />
+        <Divider colour="" />
         <Divider colour="" />
         <Divider colour="" />
         <Divider colour="" />
