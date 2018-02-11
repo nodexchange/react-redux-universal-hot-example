@@ -9,6 +9,7 @@ export Arrow from './Arrow/Arrow';
 export BackgroundRow from './BackgroundRow/BackgroundRow';
 export CanvasBall from './CanvasBall/CanvasBall';
 export Canvas from './Canvas/Canvas';
+export Clients from './Clients/Clients';
 export CounterButton from './CounterButton/CounterButton';
 export Divider from './Divider/Divider';
 export FooterBar from './FooterBar/FooterBar';

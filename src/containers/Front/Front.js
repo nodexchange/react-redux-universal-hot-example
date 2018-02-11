@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { Divider, SectionItem } from 'components';
+import { Clients, Divider, SectionItem } from 'components';
 import { bindActionCreators } from 'redux';
 import * as resizeActions from 'redux/modules/resize';
 import * as scrollActions from 'redux/modules/scroll';
@@ -93,7 +93,9 @@ export default class Front extends Component {
       <div className={styles.front}>
         <Helmet title="Home" />
         {rows}
-        <Divider colour="orange" />
+        <Clients />
+        <Divider colour="blue" />
+        <Divider />
       </div>
     );
   }

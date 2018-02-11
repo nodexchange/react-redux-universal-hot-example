@@ -104,7 +104,7 @@
 }
 
 .sticky {
-  background-color: rgba(0, 0, 0, 0.68);
+  background-color: rgba(0, 0, 0, 0.1);
   opacity: 1;
   top: 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.23);
@@ -117,7 +117,10 @@
   nav ul a {
     font-size: 15px;
     position: relative;
-    top: 2px; 
+    top: 1px; 
+  }
+  .navBar {
+    margin-top: 3px !important;
   }
 }
 .loader {
@@ -263,9 +266,12 @@ nav ul a {
 .navBar {
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
-  margin-top: 3px;
+  margin-top: -8px;
   font-weight: bold;
   font-size: 17px;
+  -webkit-transition: margin-top 200ms ease-in;
+  -moz-transition: margin-top 200ms ease-in;
+  transition: margin-top 200ms ease-in;
   h1 {
     font-size: 30px;
     line-height: 1.8;

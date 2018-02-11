@@ -30,12 +30,6 @@ export default class Services extends Component {
     'We are advocates of simplicity and transparency. It is safe to say that we gained excellent exposure and grasp in all industry-leading RichMedia and advertising solutions.'
   )
 
-  retrieveIframeElement = () => {
-    const iframeElement = '<iframe frameborder=0 scrolling=no src="/services.html" width="100%" height="100%"></iframe>';
-    return {
-      __html: iframeElement
-    };
-  }
 
   render() {
     // eslint-disable-next-line global-require
@@ -50,9 +44,28 @@ export default class Services extends Component {
       <div className={styles.services}>
         <Helmet title="Services" />
         <div className={styles.section}>
-          <div className={styles.servicesCanvas} dangerouslySetInnerHTML={this.retrieveIframeElement()} />
+          <div className={styles.phone} />
+          <div className={styles.logo} />
+          <div className={styles.logoShadow} />
+          <div className={styles.stars}>
+            <div className={styles.numbers}>
+              <div className={styles.number1 + ' ' + styles.numberEl}>{servicesCopy[0].service1}</div>
+              <div className={styles.number2 + ' ' + styles.numberEl}>{servicesCopy[0].service2}</div>
+              <div className={styles.number3 + ' ' + styles.numberEl}>{servicesCopy[0].service3}</div>
+              <div className={styles.number4 + ' ' + styles.numberEl}>{servicesCopy[0].service4}</div>
+              <div className={styles.number5 + ' ' + styles.numberEl}>{servicesCopy[0].service5}</div>
+              <div className={styles.number6 + ' ' + styles.numberEl}>{servicesCopy[0].service6}</div>
+            </div>
+          </div>
+          <div className={styles.mobileServices}>
+            <div className={styles.number1 + ' ' + styles.numberEl}>{servicesCopy[0].service1}</div>
+            <div className={styles.number2 + ' ' + styles.numberEl}>{servicesCopy[0].service2}</div>
+            <div className={styles.number3 + ' ' + styles.numberEl}>{servicesCopy[0].service3}</div>
+            <div className={styles.number4 + ' ' + styles.numberEl}>{servicesCopy[0].service4}</div>
+            <div className={styles.number5 + ' ' + styles.numberEl}>{servicesCopy[0].service5}</div>
+            <div className={styles.number6 + ' ' + styles.numberEl}>{servicesCopy[0].service6}</div>
+          </div>
         </div>
-        <Divider colour="" />
         <Divider colour="" />
         <Divider colour="" />
         <Divider colour="" />

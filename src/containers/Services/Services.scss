@@ -12,12 +12,279 @@
     padding-left: 1%;
     padding-right: 1%;
     position: absolute;
-    top: -2vw;
-
-    .servicesCanvas {
-      min-height: 910px;
+    top: 2vw;
+    .mobileServices {
+      display: none;
+      position: relative;
+        height:  100%;
+        width: 50%;
+        margin: 0 auto;
+        .numberEl {
+          position: relative;
+          top: 0;
+          left: 0;
+          text-indent: 200%;
+          white-space: nowrap;
+          overflow: hidden;
+          animation: fadein 2s;
+        }
+        .number1 {
+          top: 0px;
+          left: 0px;
+          width: 408px;
+          height: 358px;
+          background: url(/services1.png) center center no-repeat scroll;
+        }
+        .number2 {
+          top: 0px;
+          left: 0px;
+          width: 408px;
+          height: 361px;
+          background: url(/services2.png) center center no-repeat scroll;
+        }
+        .number3 {
+          top: 0px;
+          left: 0px;
+          width: 408px;
+          height: 322px;
+          background: url(/services3.png) center center no-repeat scroll;
+        }
+        .number4 {
+          top: 0px;
+          left: 0px;
+          width: 408px;
+          height: 409px;
+          background: url(/services4.png) center center no-repeat scroll;
+        }
+        .number5 {
+          top: 0px;
+          left: 0px;
+          width: 408px;
+          height: 453px;
+          background: url(/services5.png) center center no-repeat scroll;
+        }
+        .number6 {
+          top: 0px;
+          left: 0px;
+          width: 408px;
+          height: 400px;
+          background: url(/services6.png) center center no-repeat scroll;
+        }
+    }
+    .stars {
+      position: absolute;
       width:  100%;
       height:  100%;
+      background: url(./stars.png) center center no-repeat scroll;
+      background-size: cover;
     }
+    .phone {
+      position: absolute;
+      width:  100%;
+      height:  100%;
+      background: url(./phone.png) center center no-repeat scroll;
+    }
+    .logo {
+      margin-top: -86px;
+      position: absolute;
+      width:  100%;
+      height:  100%;
+      opacity: 0;
+      // -webkit-transition:  all 1200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      // -moz-transition:  all 1200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      // -o-transition:  all 1200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      // transition:  all 1200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background: url(./logo.png) center center no-repeat scroll;
+      animation: revealLogo 2s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.5s;
+    }
+    .logoShadow {
+      margin-top: 26px;
+      opacity: 0;
+      // -webkit-transition:  all 1200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      // -moz-transition:  all 1200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      // -o-transition:  all 1200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      // transition:  all 1200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: absolute;
+      width:  100%;
+      height:  100%;
+      -webkit-filter: contrast(0);
+      filter: contrast(0);
+      transform: scale(1, 0.6);
+      background: url(./logo.png) center center no-repeat scroll;
+      animation: revealShadow 2s;
+      animation-delay: 1.5s;
+      animation-fill-mode: forwards;
+    }
+    .numbers {
+      position: relative;
+      height:  100%;
+      width: 50%;
+      margin: 0 auto;
+      .numberEl {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: fadein 2s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+      .number1 {
+        top: 40px;
+        left: -206px;
+        width: 244px;
+        height: 428px;
+        background: url(./number1.png) center center no-repeat scroll;
+        animation-delay: 1s;
+      }
+      .number2 {
+        top: 374px;
+        left: -215px;
+        width: 358px;
+        height: 480px;
+        background: url(./number2.png) center center no-repeat scroll;
+        animation-delay: 1.5s;
+      }
+      .number3 {
+        top: 402px;
+        left: 27px;
+        width: 200px;
+        height: 388px;
+        background: url(./number3.png) center center no-repeat scroll;
+        animation-delay: 2s;
+
+      }
+      .number4 {
+        top: 377px;
+        left: 203px;
+        width: 221px;
+        height: 512px;
+        background: url(./number4.png) center center no-repeat scroll;
+        animation-delay: 2.5s;
+      }
+      .number5 {
+        top: 397px;
+        left: 339px;
+        width: 383px;
+        height: 477px;
+        background: url(./number5.png) center center no-repeat scroll;
+        animation-delay: 3s;
+      
+      }
+      .number6 {
+        top: 57px;
+        left: 441px;
+        width: 262px;
+        height: 413px;
+        background: url(./number6.png) center center no-repeat scroll;
+        animation-delay: 3.5s;
+      }
+    }
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes revealLogo {
+  0% { margin-top: -86px; opacity:0 }
+  30%   { margin-top: -66px; opacity:0.4}
+  70%   { margin-top: -56px; opacity:0.8}
+  100%   { margin-top: -66px; opacity:1}
+}
+@keyframes revealShadow {
+  0% { margin-top: 26px; opacity:0 }
+  30%   { margin-top: -7px; opacity:0.1}
+  70%   { margin-top: -10px; opacity:0.3}
+  100%   { margin-top: -7px; opacity:0.4}
+}
+
+@media only screen and (min-width: 1610px) {
+  .numbers {
+    left: 11vw;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .numbers {
+    left: 9vw;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .numbers {
+    left: 5vw;
+  }
+}
+@media only screen and (max-width: 1375px) {
+  .numbers {
+    left: 7vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .numbers {
+    left: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .section {
+    transform: scale(0.8);
+  }
+  .numbers {
+    left: 0vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .section {
+    transform: scale(0.7);
+  }
+  .numbers {
+    left: -2vw;
+  }
+}
+
+
+@media only screen and (max-width: 766px) {
+  .services {
+    height: 2100px !important;
+  }
+  .section {
+    transform: scale(1);
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    top: -240px !important;
+  }
+
+  .numbers {
+    display: none;
+  }
+  .stars {
+    display: none;
+  }
+  .mobileServices {
+    display: block !important;
+    left: -10vw;
+    top: 400px;
+    height: 800px;
+  }
+}
+
+
+@media only screen and (max-width: 556px) {
+  .services {
+    height: 1900px !important;
+  }
+  .mobileServices {
+    display: block !important;
+    transform: scale(0.8);
+    left: -20vw;
   }
 }
