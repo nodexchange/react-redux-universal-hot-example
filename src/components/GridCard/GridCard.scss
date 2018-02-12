@@ -4,7 +4,7 @@
   border-radius:5px;
   color: #fff;
   flex: 1 1 200px;
-  height: 35vw;
+  height: 20vw;
   overflow: hidden;
   font-family: 'Didact Gothic', sans-serif;
   filter: contrast(100%) brightness(100%);
@@ -110,6 +110,12 @@
   .renault {
     background: url(./renault.jpg) center center no-repeat scroll rgb(79, 164, 220);
   }
+  .ford {
+    background: url(./ford.jpg) center center no-repeat scroll rgb(79, 164, 220);
+  }
+  .brazil {
+    background: url(./brazil.jpg) center center no-repeat scroll rgb(79, 164, 220);
+  }
 }
 .grid0 {
   -webkit-animation-delay: 0s !important; /* Safari 4.0 - 8.0 */
@@ -134,6 +140,24 @@
 .grid5 {
   -webkit-animation-delay: 1.5s !important; /* Safari 4.0 - 8.0 */
   animation-delay: 1.5s !important;
+}
+.grid6 {
+  -webkit-animation-delay: 1.8s !important; /* Safari 4.0 - 8.0 */
+  animation-delay: 1.8s !important;
+}
+.grid7 {
+  -webkit-animation-delay: 2.1s !important; /* Safari 4.0 - 8.0 */
+  animation-delay: 2.1s !important;
+}
+.grid8 {
+  -webkit-animation-delay: 2.4s !important; /* Safari 4.0 - 8.0 */
+  animation-delay: 2.4s !important;
+}
+
+@media only screen and (max-width: 1300px) {
+  .gridItem {
+    height: 39vw;
+  }
 }
 
 @media only screen and (max-width: 610px) {

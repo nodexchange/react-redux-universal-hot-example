@@ -27,7 +27,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(4,1fr);
       grid-gap: 0px;
     }
     ul {
@@ -75,6 +75,24 @@
     opacity: 1;
     transform: translateY(4rem);
 	}
+}
+@media only screen and (min-width: 1301px) {
+  .projects {
+    .section {
+      .grid {
+        grid-template-columns: repeat(4,1fr);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .projects {
+    .section {
+      .grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
 }
 @media only screen and (max-width: 600px) {
   .projects {

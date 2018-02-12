@@ -36,6 +36,12 @@ export default class Copy {
       case 'toyota':
         copy = require('./../data/toyota.json').data;
         break;
+      case 'ford':
+        copy = require('./../data/ford.json').data;
+        break;
+      case 'brazil':
+        copy = require('./../data/brazil.json').data;
+        break;
       default :
         copy = [{ default: 'helper default' }];
     }
