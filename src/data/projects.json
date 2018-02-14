@@ -1,12 +1,12 @@
 {
   "data": [{
       "header": "Ford F-150 360°",
-      "description": "360° InApp Car Experience ",
+      "description": "360° In-Car Experience ",
       "imageClass": "ford",
       "link": "projects/ford"
     },{
       "header": "Brazil Tourism",
-      "description": "Virtual 360° Tour",
+      "description": "Virtual 360° Video Tour",
       "imageClass": "brazil",
       "link": "projects/brazil"
     },{
@@ -21,7 +21,7 @@
       "link": "projects/aib"
     }, {
       "header": "Toyota",
-      "description": "Vibrant 360 banner to support Toyota Yaris re-launch.",
+      "description": "Vibrant 360° banner to support Toyota Yaris re-launch.",
       "imageClass": "toyota",
       "link": "projects/toyota"
     }, {
@@ -35,7 +35,7 @@
       "imageClass": "ebs",
       "link": "projects/ebs"
     }, {
-      "header": "Marvel - 3D Virtual Reality takeover",
+      "header": "Marvel - VR Virtual Reality takeover",
       "description": "Bleeding-edge mobile experience.",
       "imageClass": "marvel",
       "link": "projects/marvel"

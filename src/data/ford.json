@@ -1,11 +1,11 @@
 {
   "data": [{
     "hero image":"ford",
-    "header": "Ford - Takeover",
-    "description": "Thanks to the close collaboration with the Irish Independent website team, we could achieve a truly unique way of emotionally engaging their audience with the AIB brand. Our initial conversations made it clear that wallpaper formats combined with banners as static homepage takeovers, rarely produce any form of satisfying results for the advertiser. We wanted to challenge that. Make sure to visit the demo page (link above) and click on the advert to understand the Quartile approach to the traditional formats.",
+    "header": "Ford - 360° Experience",
+    "description": "For our Canadian client, our team decided to offer a unique peak through experience for the new Ford F-150. Using mobile's phone gyroscope the user can freely navigate through the car's inside and explore some of the key features. Click on the link above and tell us what you think about this experience.",
     "date": "2017",
-    "client": "Independent IE",
+    "client": "Ford Canada",
     "demo": "/ie-aib-wallpaper.html",
-    "tags":"Homepage, Wallpaper, Unique"
+    "tags":"Interstitial, InApp, 360°, Responsive, MRAID, Mobile, Tablet"
   }]
 }
