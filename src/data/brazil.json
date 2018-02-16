@@ -2,10 +2,10 @@
   "data": [{
     "hero image":"brazil",
     "header": "Brazil - 360° Video Experience",
-    "description": "Through the partnership with the Brazil Tourism Board, our team had a pleasure to work on this astonishing 360° video experience; all fully optimised to run even on a slower 3g mobile connection. The immersive experience takes user through a paragliding above the Rio De Janeiro. Hope you will like it.",
+    "description": "Through the partnership with the Brazil Tourism Board, our team had a pleasure to work on this extraordinary 360° video experience; all fully optimised to run even on a slower 3g mobile connection. The immersive experience gives the user a taste of what is like to take part in the paragliding experience above Rio De Janeiro. Hope you will like it. We would recommend viewing this experience on your mobile phone, Virtual Reality headset or to resize the width of your browser to mimic the portrait mode. Also, please be warned, this experience might not be suitable for people that are afraid of heights.",
     "date": "2018",
     "client": "Brazil Tourism Board",
-    "demo": "/ie-aib-wallpaper.html",
+    "demo": "/brazil.html",
     "tags":"Interstitial, InApp, 360°, Video, Responsive, MRAID, Mobile, Tablet"
   }]
 }

@@ -2,10 +2,10 @@
   "data": [{
     "hero image":"ford",
     "header": "Ford - 360° Experience",
-    "description": "For our Canadian client, our team decided to offer a unique peak through experience for the new Ford F-150. Using mobile's phone gyroscope the user can freely navigate through the car's inside and explore some of the key features. Click on the link above and tell us what you think about this experience.",
+    "description": "For our Canadian client, our team decided to offer a unique peak through experience for the new Ford F-150. Using mobile's phone gyroscope the user can freely navigate through the car's inside and explore some of the key features. Click on the link above and tell us what you think about this experience. We would recommend viewing this experience on your mobile phone.",
     "date": "2017",
     "client": "Ford Canada",
-    "demo": "/ie-aib-wallpaper.html",
+    "demo": "/ford.html",
     "tags":"Interstitial, InApp, 360°, Responsive, MRAID, Mobile, Tablet"
   }]
 }

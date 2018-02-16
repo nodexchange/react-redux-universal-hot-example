@@ -3,7 +3,7 @@
   "description": "Quartile IO",
   "author": "Hello Quartile <hello@quartile.io> (https://github.com/nodexchange/)",
   "license": "MIT",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/nodexchange/react-redux-universal-hot-example.git"
