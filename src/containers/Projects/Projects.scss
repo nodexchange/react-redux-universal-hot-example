@@ -97,8 +97,14 @@
 @media only screen and (max-width: 600px) {
   .projects {
     .section {
+      padding-left: 2%;
+      padding-right: 2%;
+      height: 70%;
+      ul {
+        transform: translateY(-6rem);
+      }
       .grid {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
       }
     }
   }

@@ -1,5 +1,5 @@
 .services {
-  height: 100%;
+  height: 105%;
   background: #e2764c; /* Old browsers */
   background: -moz-linear-gradient(top, #e06919 0%, #e2764c 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #e06919 0%,#e2764c 100%); /* Chrome10-25,Safari5.1-6 */
@@ -11,7 +11,7 @@
     width: 100%;
     padding-left: 1%;
     padding-right: 1%;
-    position: absolute;
+    position: relative;
     top: 2vw;
     .mobileServices {
       display: none;
@@ -280,11 +280,33 @@
 
 @media only screen and (max-width: 556px) {
   .services {
-    height: 1900px !important;
+    height: 2220px !important;
+    .section {
+      .phone {
+        display: none;
+      }
+      .logo {
+        transform: scale(0.6);
+        height: 200px;
+        position: relative;
+        top: 349px;
+        width: 120%;
+        left: -41px;
+      }
+      .logoShadow {
+        transform: scale(0.6);
+        height: 200px;
+        position: relative;
+        top: 190px;
+        width: 120%;
+        left: -41px;
+      }
+    }
   }
   .mobileServices {
     display: block !important;
     transform: scale(0.8);
     left: -20vw;
+    top: -50px;
   }
 }

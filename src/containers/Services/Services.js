@@ -69,7 +69,6 @@ export default class Services extends Component {
         <Divider colour="" />
         <Divider colour="" />
         <Divider colour="" />
-        <Divider colour="" />
       </div>
     );
   }

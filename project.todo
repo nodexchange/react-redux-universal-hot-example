@@ -3,18 +3,92 @@
 ☐ Wercker Docker build to work better.
 ☐ Wercker tests
 
+# pERFORM GROUP? 
+
+CERTIFICATION HTTPS EXPIRES:
+
+    2018-05-17
+
+    https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+    sudo certbot renew --dry-run
+
+    You should test your configuration at:
+        https://www.ssllabs.com/ssltest/analyze.html?d=quartile.io
+
 ☐ https://helixsleep.com/ “Our site colors change every few hours. That’s because they’re a reflection of the circadian rhythm, the light based biological phenomenon that governs how, and when, we sleep.”
 ☐ https://iabuk.net/blog/the-iab-uk-gold-standard-where-we-are-and-where-we-re-going
 ☐ unique buisness cards? 
 
+3.0 TODO
+Center align top Nav (logo middle/maybe)
+nav - project - to our work
+orange quartile accent 
+new nav font (https://codepen.io/Pete55/pen/KQMYGR)
+Programmatic - home page text fixes
+Privacy and policy - gdpr chat
+shorter sub sections (homepage)
+side nav menu - improvements 
+Learn more - 404 wtf (homepage)
+footer - stand outs 
+footer - remove one creative
+footer - social media icons 
+footer - links (https://www.madebymany.com/)
+Logo clickable 
+learn more - to different sections.
+mobile improvements. 
+_______
+Gallery fixes (our work) verticises and filters
+____
+Services improvements 
+
+(like clients grid)
+
+____
+get intouch - basic info (SAY HELLO
+
+Based in the heart of London. Drop by and say hello or give us a call.
+REQUEST A QUOTE
+
+Have an urgent project and need a quote? Send us a few details and we'll respond within 2 hours.
+SEND US A BRIEF
+
+We regularly help clients win bookings, by providing creative ideas and mockups.
+_______
+
+=== our purpose ===
+
+About
+Our purpose
+
+Deviceful’s primary aim is to support brands, agencies and media owners engineer creative suitable for cross-device programmatic deployment. By partnering with the leading Dynamic Creative Optimisation (DCO) providers, it is our mission to produce creative capable of harnessing the rich data available through real-time and impression level buying. With a growing team of London based HTML5 creative strategists, Deviceful is at the fore-front of helping marketers bring their digital campaigns to life.
+
+Going native: – With huge advances in audience targeting, brands are now able to have one-to-one dialogue with their audience across multiple devices. Unfortunately, many marketers are still deploying creative assets designed for one-to-many communications. As more campaigns go native, the need for customisable creative will  become even more relevant and this is a service area we are already investing in for our clients.
+
+===
+
+===
+footer
+30 Great Guildford St,
+London, SE1 0HS
+T: 0203 735 5600
+E: info@deviceful.co.uk 
+===
+Digital creative production studio based in London, specialising in Rich Media advertising, Dynamic Campaign production and consulting.
+===
+
+http://sodaspeaks.com/members/
+
 
 # future
+☐ projects mobile phone tiles
+☐ mobile menu (transparency too strong)
 ☐ better about us section: https://www.dogstudio.co/studio/
 ☐ Contact us number.
 ☐ Contact us map.
 ☐ personality.
 ☐ emotional design / algorithm for optimisation.
-☐ load animation between sections?
+☐ load animation between sections (cutout mask polygons? https://codepen.io/shshaw/pen/PPEMYX) 
+
 ☐ create instagram.
 ☐ 3D Quartiles.
 ☐ Add INSIDE section (tweets plus blogs).

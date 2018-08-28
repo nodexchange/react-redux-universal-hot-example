@@ -4,7 +4,7 @@ npm run dev
 # start prod
 npm run prod
 
-# release
+# release (docker operations within the docker terminal pls)
 
 1. (sudo) docker build -t nodexchange/marcin-js-app:dev .
 2. (sudo) docker push nodexchange/marcin-js-app:dev

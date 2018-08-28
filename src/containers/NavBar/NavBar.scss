@@ -97,6 +97,7 @@
 
 .openNav {
   max-height: 400px !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
 }
 .openNav .mobileToggle {
   transform: rotate(-90deg);
@@ -192,7 +193,7 @@ nav ul {
 }
 @media only screen and (max-width: 766px) {
   nav ul {
-    padding-top: 10px;
+    padding-top: 22px;
     margin-bottom: 22px;
     float: left;
     text-align: center;
@@ -269,9 +270,9 @@ nav ul a {
   margin-top: -8px;
   font-weight: bold;
   font-size: 17px;
-  -webkit-transition: margin-top 200ms ease-in;
-  -moz-transition: margin-top 200ms ease-in;
-  transition: margin-top 200ms ease-in;
+  -webkit-transition: margin-top 300ms ease-in;
+  -moz-transition: margin-top 300ms ease-in;
+  transition: margin-top 300ms ease-in;
   h1 {
     font-size: 30px;
     line-height: 1.8;
