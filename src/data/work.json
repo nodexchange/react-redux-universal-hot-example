@@ -3,42 +3,42 @@
       "header": "Ford F-150 360°",
       "description": "360° In-Car Experience ",
       "imageClass": "ford",
-      "link": "projects/ford"
+      "link": "work/ford"
     },{
       "header": "Brazil Tourism",
       "description": "Virtual 360° Video Tour",
       "imageClass": "brazil",
-      "link": "projects/brazil"
+      "link": "work/brazil"
     },{
       "header": "Renault Takeover",
       "description": "Renault cross-screen video takeover",
       "imageClass": "renault",
-      "link": "projects/renault"
+      "link": "work/renault"
     }, {
       "header": "AIB - Brand Takeover",
       "description": "Unique interactive Homepage wallpaper takeover.",
       "imageClass": "aib",
-      "link": "projects/aib"
+      "link": "work/aib"
     }, {
       "header": "Toyota",
       "description": "Vibrant 360° banner to support Toyota Yaris re-launch.",
       "imageClass": "toyota",
-      "link": "projects/toyota"
+      "link": "work/toyota"
     }, {
       "header": "Audi",
       "description": "Pure Imagination - Responsive Header",
       "imageClass": "audi",
-      "link": "projects/audi"
+      "link": "work/audi"
     }, {
       "header": "EBS - Interactive Wallpaper",
       "description": "Premium Video takeover from a static wallpaper.",
       "imageClass": "ebs",
-      "link": "projects/ebs"
+      "link": "work/ebs"
     }, {
       "header": "Marvel - VR Virtual Reality takeover",
       "description": "Bleeding-edge mobile experience.",
       "imageClass": "marvel",
-      "link": "projects/marvel"
+      "link": "work/marvel"
     }
   ],
   "quotes": [{

@@ -49,7 +49,7 @@ export default class ProjectDetails extends Component {
           date={localeCopy.date}
           demo={localeCopy.demo}
         />
-        <GridBack link="projects" />
+        <GridBack link="work" />
         <SectionText header={localeCopy.header} copy={localeCopy.description} tags={localeCopy.tags} />
         <Divider />
         <Divider />

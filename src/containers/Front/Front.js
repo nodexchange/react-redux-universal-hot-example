@@ -81,11 +81,11 @@ export default class Front extends Component {
     for (let i = 0; i < frontPanelsCopy.length; i++) {
       if (this.currentPanel === i) {
         rows.push(
-          <SectionItem inView key={i} order={i} {...frontPanelsCopy[i]} offset={this.props.offsetRatio} link="home" />
+          <SectionItem inView key={i} order={i} {...frontPanelsCopy[i]} offset={this.props.offsetRatio} />
         );
       } else {
         rows.push(
-          <SectionItem inView={false} key={i} order={i} {...frontPanelsCopy[i]} offset={this.props.offsetRatio} link="home" />
+          <SectionItem inView={false} key={i} order={i} {...frontPanelsCopy[i]} offset={this.props.offsetRatio} />
         );
       }
     }

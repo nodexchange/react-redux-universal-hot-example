@@ -14,7 +14,7 @@ import {
     LoginSuccess,
     NotFound,
     ProjectDetails,
-    Projects,
+    Work,
     Services,
     Survey,
     Widgets
@@ -55,8 +55,8 @@ export default (store) => {
       <Route path="about" component={About} />
       <Route path="contact" component={Contact} />
       <Route path="login" component={Login} />
-      <Route path="projects">
-        <IndexRoute component={Projects} />
+      <Route path="work">
+        <IndexRoute component={Work} />
         <Route path=":projectName" component={ProjectDetails} />
       </Route>
       <Route path="survey" component={Survey} />

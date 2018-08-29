@@ -12,8 +12,8 @@ export default class Copy {
       case 'contact':
         copy = require('./../data/contact.json');
         break;
-      case 'projects':
-        copy = require('./../data/projects.json');
+      case 'work':
+        copy = require('./../data/work.json');
         break;
       case 'services':
         copy = require('./../data/services.json');

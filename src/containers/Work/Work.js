@@ -13,7 +13,7 @@ import { Divider, GridCard, Hero } from 'components';
   dispatch => bindActionCreators({ ...scrollActions, ...copyActions }, dispatch)
 )
 
-export default class Projects extends Component {
+export default class Work extends Component {
   static propTypes = {
     loadCopy: PropTypes.func.isRequired,
     localeCopy: PropTypes.oneOfType([
@@ -27,7 +27,7 @@ export default class Projects extends Component {
     this.localeCopy = this.props.localeCopy || 'pending';
   }
   componentDidMount() {
-    this.props.loadCopy('projects');
+    this.props.loadCopy('work');
     this.props.updateMaxPages(1);
   }
   selectRandomQuote() {
@@ -36,7 +36,7 @@ export default class Projects extends Component {
   }
 
   render() {
-    const styles = require('./Projects.scss');
+    const styles = require('./Work.scss');
 
     // hero as a todo item.
     const projectsGridCopy = this.props.localeCopy.data;
@@ -51,7 +51,7 @@ export default class Projects extends Component {
     // {cards}
     return (
       <div className={styles.projects}>
-        <Helmet title="Projects" />
+        <Helmet title="Our Work" />
         <Hero smallHeader={'"' + quote.text + '"'} smallText={quote.author} background="narrow" />
         <div className={styles.section}>
           <ul className={styles.grid + ' ' + styles.cards}>

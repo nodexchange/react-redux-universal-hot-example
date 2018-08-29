@@ -20,7 +20,7 @@ module.exports = Object.assign({
     head: {
       titleTemplate: 'Quartile',
       meta: [
-        { name: 'description', content: 'We are london based Creative Ad Agency and RichMedia solutions experts, specialising in emotion and data-driven creative ad executions.' },
+        { name: 'description', content: 'We are london based Creative Ad Agency and Rich Media solutions experts, specialising in emotion and data-driven creative ad executions.' },
         { name: 'keywords', content: 'Great RichMedia Ads, London Ad Agency, Creative Ad Agency, Ad Agency, Unique Homepage takeovers, Billboard Ads, Leaderboards Ads, Skyscrapper Ads, Portrait Ads, Custom Formats, RichMedia templates, Emotional Optimisation, Data-driven ads, RichMedia Experts, IAB Ads, DoubleClck Agency, DoubleClick Studio Ads, ONE Creative Ads, Creative Ad Agency, Affordable Ad Solutions, Great Ads, Engagement Ads' },
         { charset: 'utf-8' },
         { property: 'og:site_name', content: 'Quartile - Creative Ad Agency' },
