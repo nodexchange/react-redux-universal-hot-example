@@ -12,7 +12,7 @@
   opacity: 0;
   top: -100px;
   padding-bottom: 6px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 @media only screen and (max-width: 766px) {
   .mainHeader {
@@ -36,6 +36,16 @@
   transform: scale(1);
   transition: all 0.8s ease 0s;
 }
+.brandClick {
+  position: absolute;
+  top: -20px;
+  left: -28px;
+  background-color: black;
+  width: 305px;
+  height: 95px;
+  z-index: 200;
+  opacity: 0;
+}
 .brandScrolled {
   height: 95px;
   width: 180px;
@@ -51,7 +61,7 @@
     margin-left: 9px;
     padding: 9px 23px 8px 22px;
     font-size: 16px;
-    font-family: "AvenirLTStd-Light", sans-serif;
+    font-family: "Roboto", sans-serif;
     opacity: 0.97;
     background: #41C3B6;
     box-shadow: 0 2px 7px 0 rgba(69, 119, 126, 0.37);
@@ -105,7 +115,7 @@
 }
 
 .sticky {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   opacity: 1;
   top: 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.23);
@@ -121,7 +131,7 @@
     top: 1px; 
   }
   .navBar {
-    margin-top: 3px !important;
+    margin-top: 6px !important;
   }
 }
 .loader {
@@ -142,7 +152,7 @@
   left: -200px;
   width: 200px;
   height: 2px;
-  background-color: #ffbf7c;
+  background-color: #ec8112;
   animation: loading 3s linear infinite;
 }
 
@@ -265,10 +275,10 @@ nav ul a {
 }
 
 .navBar {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #ffffff;
-  margin-top: -8px;
-  font-weight: bold;
+  margin-top: -8px;  
+  font-weight: 100;
   font-size: 17px;
   -webkit-transition: margin-top 300ms ease-in;
   -moz-transition: margin-top 300ms ease-in;
@@ -289,15 +299,15 @@ nav ul a {
     .contactUsButton {
       font-weight: bold;
       padding-left: 3px;
-      border: 1px solid #ffbf7c;
-      color: #ffbf7c;
+      border: 1px solid #ec8112;
+      color: #ec8112;
       padding-right: 3px;
     }
     .activeNavButton {
-      color: #ffbf7c;
+      color: #ec8112;
     }
     a:hover {
-      color: #ffbf7c;
+      color: #ec8112;
     }
     a:before {
       content: "";
@@ -306,7 +316,7 @@ nav ul a {
       height: 1px;
       bottom: -1px;
       left: 0;
-      background-color: #ffbf7c;
+      background-color: #ec8112;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);

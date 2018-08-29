@@ -108,10 +108,7 @@ export default class NavBar extends Component {
     }
     const navConfig = [
       {
-        to: '/', name: 'Home', className: '', onClick: this.navClickHandler
-      },
-      {
-        to: '/about', name: 'About', className: '', onClick: this.navClickHandler
+        to: '/about', name: 'About Us', className: '', onClick: this.navClickHandler
       },
       {
         to: '/work', name: 'Our Work', className: '', onClick: this.navClickHandler
@@ -141,6 +138,7 @@ export default class NavBar extends Component {
       <header className={styles.mainHeader + ' ' + navType + ' ' + mobileNavType }>
         <div className={styles.row}>
           <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
+            <div className={styles.brandClick} />
             <div className={styles.brand + ' ' + brandType}>
               <div dangerouslySetInnerHTML={this.retrieveIframeElement()} />
             </div>
