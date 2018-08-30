@@ -114,10 +114,10 @@ export default class NavBar extends Component {
         to: '/work', name: 'Our Work', className: '', onClick: this.navClickHandler
       },
       {
-        to: '/services', name: 'Services', className: '', onClick: this.navClickHandler
+        to: '/services', name: 'What we do', className: '', onClick: this.navClickHandler
       },
       {
-        to: '/contact', name: 'Contact Us', className: 'contactUsButton', onClick: this.navClickHandler
+        to: '/contact', name: 'Contact', className: 'contactUsButton', onClick: this.navClickHandler
       }
     ];
     const navButtons = [];

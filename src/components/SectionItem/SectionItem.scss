@@ -20,18 +20,10 @@
   left: 0px;
 }
 .blue {
-  background: #2989d8; /* Old browsers */
-  background: -moz-linear-gradient(top, #2989d8 0%, #5497b7 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #2989d8 0%,#5497b7 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #2989d8 0%,#5497b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#5497b7',GradientType=0 ); /* IE6-9 */
+  background: rgba(44,7,61, 0);
 }
 .orange {
-  background: #e2764c; /* Old browsers */
-  background: -moz-linear-gradient(top, #e06919 0%, #e2764c 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #e06919 0%,#e2764c 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #e06919 0%,#e2764c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e06919', endColorstr='#e2764c',GradientType=0 ); /* IE6-9 */
+  background: rgba(44,7,61, 0);
   .smallBox {
     left: auto !important;
     right: 8%;

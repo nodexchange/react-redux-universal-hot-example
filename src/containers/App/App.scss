@@ -7,9 +7,25 @@
   #envolopeIcon {
     font-size: 16px;
   }
-  @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Quicksand|Roboto);
+  @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Quicksand);
   // @import url(https://fonts.googleapis.com/css?family=Quicksand);
   // @import url(AvenirLTStd-Light);
+
+@font-face {
+    font-family:'Travels';
+    src: url('/fonts/TT_demibold.woff2') format('woff2'), url('/fonts/TT_demibold.woff') format('woff'), url('/fonts/TT_demibold.ttf') format('truetype');
+    font-weight:500;font-style:normal;font-stretch:normal;unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'Travels';
+    src: url('/fonts/TT_m.woff2') format('woff2'), url('/fonts/TT_m.woff') format('woff'), url('/fonts/TT_m.ttf') format('truetype');
+    font-weight:600;font-style:normal;font-stretch:normal;unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'Travels';
+    src: url('/fonts/TT_b.woff2') format('woff2'), url('/fonts/TT_b.woff') format('woff'), url('/fonts/TT_b.ttf') format('truetype');
+    font-weight:700;font-style:normal;font-stretch:normal;unicode-range: U+0020-00FE;
+}
 
   @mixin button-bg($bg) {
     background: $bg;
@@ -64,7 +80,7 @@ html, body {
 }
 
 body {
-  background-color: #5497b7;
+  background-color: #2e1438;
 }
 
 .content {

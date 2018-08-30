@@ -4,15 +4,15 @@
   max-height: 70px;
   z-index: 4;
   width: 100%;
-  padding-top: 17px;
+  padding-top: 7px;
   background: none;
   overflow: hidden;
   -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  transition: all 0.4s, background-color 1.5s;
   opacity: 0;
   top: -100px;
   padding-bottom: 6px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Travels", sans-serif;
 }
 @media only screen and (max-width: 766px) {
   .mainHeader {
@@ -59,9 +59,9 @@
 .navButton {
     margin-top: 2px;
     margin-left: 9px;
-    padding: 9px 23px 8px 22px;
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
+    padding: 10px 25px 10px 25px;
+    font-weight: 500;
     opacity: 0.97;
     background: #41C3B6;
     box-shadow: 0 2px 7px 0 rgba(69, 119, 126, 0.37);
@@ -73,8 +73,6 @@
 
   .contactButton {
     font-size: 16px;
-    font-family: Arial;
-    font-weight: normal;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
@@ -115,16 +113,17 @@
 }
 
 .sticky {
-  background-color: rgba(0, 0, 0, 0.3);
+  // background-color: rgba(0, 0, 0, 0.3);
   opacity: 1;
   top: 0px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.23);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+  background-color: rgba(0, 0, 0, 0);
 }
 .scroll {
-  background-color: rgba(0, 0, 0, 0.63);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.63);
+  background-color: rgba(0, 0, 0, 0.2);
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.0);
   opacity: 1;
-  top: -37px;
+  top: -17px;
   nav ul a {
     font-size: 15px;
     position: relative;
@@ -275,10 +274,10 @@ nav ul a {
 }
 
 .navBar {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Travels', sans-serif;
   color: #ffffff;
   margin-top: -8px;  
-  font-weight: 100;
+  font-weight: 500;
   font-size: 17px;
   -webkit-transition: margin-top 300ms ease-in;
   -moz-transition: margin-top 300ms ease-in;
@@ -295,13 +294,6 @@ nav ul a {
       text-decoration: none;
       transition: all 1s;
       position: relative;
-    }
-    .contactUsButton {
-      font-weight: bold;
-      padding-left: 3px;
-      border: 1px solid #ec8112;
-      color: #ec8112;
-      padding-right: 3px;
     }
     .activeNavButton {
       color: #ec8112;
