@@ -296,10 +296,10 @@ nav ul a {
       position: relative;
     }
     .activeNavButton {
-      color: #ec8112;
+      color: #ff3d59;
     }
     a:hover {
-      color: #ec8112;
+      color: #ff3d59;
     }
     a:before {
       content: "";
@@ -308,7 +308,7 @@ nav ul a {
       height: 1px;
       bottom: -1px;
       left: 0;
-      background-color: #ec8112;
+      background-color: #ff3d59;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
