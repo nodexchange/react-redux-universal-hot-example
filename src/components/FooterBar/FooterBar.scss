@@ -1,12 +1,10 @@
 /* Footer */
-
 footer {
   display: inline-block;
   position: relative;
   width: 100%;
   color: #e5e6eb;
   box-sizing: border-box;
-  padding: 1.5% 0 0 0;
   background-color: #151515;
   text-align: left;
   p, a {
@@ -17,7 +15,6 @@ footer {
   .center {
     display: inline-block;
     vertical-align: top;
-    width: 16%;
     float: left;
     a {
       position: relative;
@@ -27,17 +24,6 @@ footer {
       clear: left;
       line-height: 240%;
       float: left;
-    }
-  }
-  .logo {
-    position: absolute;
-    left: 3vw;
-    top: auto;
-    bottom: 3vw;
-    opacity: 1;
-    transition: none;
-    .logosvg .st0 {
-      fill: #555;
     }
   }
   .copyright {

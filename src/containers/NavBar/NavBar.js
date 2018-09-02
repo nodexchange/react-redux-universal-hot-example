@@ -135,22 +135,31 @@ export default class NavBar extends Component {
     }
 
     const logo = [];
-    if (window.location.host !== 'localhost:3000') {
-      logo.push(
-        <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
-          <div className={styles.brandClick} />
-          <div className={styles.brand + ' ' + brandType}>
-            <div dangerouslySetInnerHTML={this.retrieveIframeElement()} />
-          </div>
-        </IndexLink>
-      );
-    } else {
+    try {
+      if (window.location.host !== 'localhost:3000') {
+        logo.push(
+          <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
+            <div className={styles.brandClick} />
+            <div className={styles.brand + ' ' + brandType}>
+              <div dangerouslySetInnerHTML={this.retrieveIframeElement()} />
+            </div>
+          </IndexLink>
+        );
+      } else {
+        logo.push(
+          <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
+            <div className={styles.brandClick} />
+          </IndexLink>
+        );
+      }
+    } catch (e) {
       logo.push(
         <IndexLink to="/" activeStyle={{ color: '#33e0ff' }}>
           <div className={styles.brandClick} />
         </IndexLink>
       );
     }
+
     /* eslint-disable */
     return (
       <header className={styles.mainHeader + ' ' + navType + ' ' + mobileNavType }>

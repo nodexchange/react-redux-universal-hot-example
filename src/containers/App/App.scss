@@ -81,10 +81,14 @@ html, body {
 
 body {
   background-color: #2e1438;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #8f8f8f;
+  font-family: "Cardo", serif;
+  font-weight: 300;
 }
 
 .content {
-  height:100%;
   min-height:800px;/*for mozilla*/
   z-index: 2;
   position: relative;

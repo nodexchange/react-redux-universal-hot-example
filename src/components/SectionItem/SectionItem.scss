@@ -4,6 +4,11 @@
   background-size: cover !important;
   overflow: hidden;
   position: relative;
+  display:block;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  text-align: left;
+  box-sizing: border-box;
 }
 .inset {
   // -webkit-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.75);
@@ -312,7 +317,7 @@
 
 @media only screen and (max-height: 590px) {
   .section {
-    height: 75%;
+    height: 75vh;
   }
 }
 @media only screen and (max-height: 450px) {
