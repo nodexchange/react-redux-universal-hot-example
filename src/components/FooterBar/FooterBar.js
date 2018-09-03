@@ -48,27 +48,28 @@ export default class FooterBar extends Component { // eslint-disable-line react/
     // const { info, load } = this.props; // eslint-disable-line no-shadow
     // eslint-disable-next-line global-require
     /* eslint-disable */
-    // <a href="/faq">FAQs</a>
     const styles = require('./FooterBar.scss');
     const certificateImg = require('./one.png');
     const quartileLogoImg = require('./../../components/FooterBar/logo.png');
-
+    
     return (
       <footer>
-        <div className={styles.logo}></div>
+        <div className={styles.brand}></div>
         <div className={styles.copyright}>© Quartile. All rights reserved.</div>
         <section className={styles.center + ' ' + styles.a}>
-          <h4>Get in Touch</h4>
-          <p>
-            <a href="mailto:hello@quartile.io">hello@quartile.io</a><br/><br/>
-            <a href="tel:+44-7500905701">+44 7500905701</a><br/><br/>
-            Quartile Studios<br/>Unit 3, The Island<br/>Church Path, <br/>W4 5BL<br/><br/>
-            <br/>
-          </p>
+        <h4>Get in Touch</h4>
+        <p>
+        <a href="mailto:hello@quartile.io">hello@quartile.io</a><br/><br/>
+        <a href="tel:+44-7500905701">+44 7500905701</a><br/><br/>
+        Quartile Studios<br/>Unit 3, The Island<br/>Church Path, <br/>W4 5BL<br/><br/>
+        <br/>
+        </p>
         </section>
         <section className={styles.center + ' ' + styles.b}>
           <h4>Assistance</h4>
           <a href="/contact">Contact</a><br />
+          <a href="/faq">FAQs</a>
+          <a href="/careers">Careers</a>
           <a href="/legal">Legal Notices</a><br/>
         </section>
         <section className={styles.social}>

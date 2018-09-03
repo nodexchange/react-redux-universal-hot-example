@@ -9,8 +9,11 @@ import {
     About,
     Chat,
     Contact,
+    Careers,
+    FrequentlyAsked,
     Front,
     Login,
+    Legal,
     LoginSuccess,
     NotFound,
     ProjectDetails,
@@ -54,6 +57,9 @@ export default (store) => {
       { /* Routes */ }
       <Route path="about" component={About} />
       <Route path="contact" component={Contact} />
+      <Route path="careers" component={Careers} />
+      <Route path="faq" component={FrequentlyAsked} />
+      <Route path="legal" component={Legal} />
       <Route path="login" component={Login} />
       <Route path="work">
         <IndexRoute component={Work} />

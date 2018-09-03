@@ -7,6 +7,17 @@ footer {
   box-sizing: border-box;
   background-color: #151515;
   text-align: left;
+  .brand {
+    position: absolute;
+    top: -20px;
+    left: 8px;
+    display: inline-block;
+    background: url('/logo-animation-bck.png') no-repeat center center;
+    background-size: 80%;
+    margin: 0 10px 0 0;
+    transform: scale(1);
+    transition: all 0.8s ease 0s;
+  }
   p, a {
     font-weight: 500;
     font-size: .85vw;
